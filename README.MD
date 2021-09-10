@@ -1,13 +1,12 @@
-
-Implementation
+**Implementation**
 
 FF_GenOpt was developed and tested on Debian with Linux kernel 4.9. It is written in Python and works with Python 3.5.3+. It consists of multiple modular components which can be adapted for other fitness functions and use cases. 
 
-Requirements
+**Requirements**
 
 The program requires a Python interpreter with numpy and matplotlib. The fitness computation modules requires scipy and a CHARMM installation.
 
-Architecture
+**Architecture**
 
 The program consists of multiple files which have to be in the same directory.
 
@@ -19,10 +18,11 @@ FF_GenOpt_fitness.py wraps the fitness function which depends on the file below.
 
 FF_GenOpt_extern.py contains modified code from AFMM and Florian Jörg (from the Department of Computational Biological Chemistry at the University of Vienna) for calculating the fitness function.
 
-Configuration
+**Configuration**
 
 FF_GenOpt uses configuration files that can be created and edited in any editor. The configuration files contain the execution command for CHARMM, the path to input files and output files, the optimization algorithm settings, and the parameter names, type, range, and initial values. Similar to Python, comments can be added by using \# in the beginning. A typical configuration file is shown below:
 
+```
 MDEXEC                      charmm
 MDINP                       Molecules/oac/oac.inp
 MDOUT                       /dev/shm/opt.log
@@ -53,6 +53,8 @@ PARAMETER oaca3 angle 0 200 70.0
 PARAMETER oaca4 angle 0 200 35.7
 PARAMETER oacd1 dihedral 0 30 0.0
 PARAMETER oaci1 improper 0 200 71.000
+```
+
 
 MDINP points at the CHARMM input file, which contains all commands for reading the force field parameters, computing the normal modes with vibran, and must point at the same file as PARAM_FILENAME (which is rewritten each time the fitness function is computed).
 
@@ -80,11 +82,12 @@ MINIMUM_DIVERSITY is a parameter that prevents the algorithm from getting stuck 
 
 Finally, the PARAMETER keyword is used to define the parameter names and parameter type as well as the minimum, maximum, and original values. Genetic algorithms are designed for searching wide parameter ranges, but narrowing the parameter range down will lead to faster results.
 
-Population files
+**Population files**
 Population files are generated at the end of each new generation and consist of three parts: All population members with their respective fitness value, the QM vibrational frequencies (multiplied by the QM factor of 0.957) and MM vibrational frequencies in absolute values and as a ratio (for the candidate with the best fitness), and the CHARMM script for setting the parameters of the population member with the best fitness.
 
 Example population file for OAc-:
 
+```
 Generation 1244
 22.39,[316.2, 47.47, 581.35, 33.73, 75.29, 18.96, 21.96, 0.16, 75.17]
 22.65,[316.31, 43.64, 579.66, 33.47, 75.37, 18.79, 22.56, 0.15, 77.39]
@@ -133,11 +136,14 @@ set oaca3 18.96
 set oaca4 21.96
 set oacd1 0.16
 set oaci1 75.17
+```
 
-Log files
+
+**Log files**
 
 When starting an optimization process, the parameter settings are written into the log. The log is in TSV format and can be parsed easily by Excel-like tools or programming languages for analysis and plotting. A new line with 11 columns is appended after each generation. Example log file:
 
+```
 Gen	BestF	MeanF	TEvals	GEvals	REvals	t	t/eval
 15	61.53	94.68	3092	1883	1209	1558.78	0.50
 16	48.35	86.30	3201	1991	1210	1617.76	0.51
@@ -147,21 +153,23 @@ Delta	Improv	Divers
 0.00	0.00	582.28
 13.19	0.00	2639.27
 6.55	0.00	345.59
+```
+
 
 The Gen column shows the current generation number. BestF and MeanF represent best fitness and mean fitness of the respective generation. GEvals and REvals show the number of function evaluations triggered by the genetic algorithm and by the rest of the algorithm (e.g. random search). TEvals is the sum of both. t is the total passed computation time in seconds while t/eval is the average time per evaluation. Delta is the improvement since the last generation, Improv is the improvement per evaluation, and Divers is the estimated diversity of the population.
 
-Running FF_GenOpt
+**Running FF_GenOpt**
 
 After creating the configuration file and setting up CHARMM inputs, the program can be started with
 
-python3 FF_GenOpt.py configuration_file.cfg
+`python3 FF_GenOpt.py configuration_file.cfg`
 
 It can be stopped by killing the process or keeping Ctrl+C pressed. Multiple sessions can be run at the same time remotely via the Linux tool tmux.
 
-Slicing
+**Slicing**
 
 The axis-parallel curve visualizations are created by a simple tool named GridSlicer. It is based on the first version FF_GenOpt and uses the same configuration files. However, it requires different files to avoid interference with the optimization process and requires additional parameters.
 
-python3 GridSlicer.py im1.cfg im1/im1.inp /dev/shm/im1.log im1/im1.log im1/parameters.str im1/ 50 21
+`python3 GridSlicer.py im1.cfg im1/im1.inp /dev/shm/im1.log im1/im1.log im1/parameters.str im1/ 50 21`
 
 The parameters are: configuration file, CHARMM input file, CHARMM output file, log file, CHARMM force field parameters file, image output path, number of focus points (a point that all curves cross), number of computations per curve per dimension. The number of dimensions can be added as an additional parameter to cut down computation time for testing purposes. The output files are in PNG format. 
