@@ -1,5 +1,3 @@
-**Implementation**
-
 FF_GenOpt was developed and tested on Debian with Linux kernel 4.9. It is written in Python and works with Python 3.5.3+. It consists of multiple modular components which can be adapted for other fitness functions and use cases. 
 
 **Requirements**
@@ -83,6 +81,7 @@ MINIMUM_DIVERSITY is a parameter that prevents the algorithm from getting stuck 
 Finally, the PARAMETER keyword is used to define the parameter names and parameter type as well as the minimum, maximum, and original values. Genetic algorithms are designed for searching wide parameter ranges, but narrowing the parameter range down will lead to faster results.
 
 **Population files**
+
 Population files are generated at the end of each new generation and consist of three parts: All population members with their respective fitness value, the QM vibrational frequencies (multiplied by the QM factor of 0.957) and MM vibrational frequencies in absolute values and as a ratio (for the candidate with the best fitness), and the CHARMM script for setting the parameters of the population member with the best fitness.
 
 Example population file for OAc-:
