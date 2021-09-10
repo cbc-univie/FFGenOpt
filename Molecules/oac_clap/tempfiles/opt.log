@@ -1,0 +1,597 @@
+1
+                 Chemistry at HARvard Macromolecular Mechanics
+           (CHARMM) - Developmental Version 43a1     August 15, 2017            
+       Copyright(c) 1984-2014  President and Fellows of Harvard College
+                              All Rights Reserved
+  Current operating system: Linux-4.9.0-16-amd64(x86_64)@chi.mdy.univie.ac.at   
+                 Created on  7/24/21 at 16:08:37 by user: aleksandar  
+
+            Maximum number of ATOMS:    360720, and RESidues:      120240
+ RDTITL> * CHARMM NORMAL MODE
+ RDTITL> *
+  
+ CHARMM>    !stream bonds.str
+ CHARMM>    !stream angles.str
+ CHARMM>    !stream dihedrals.str
+ CHARMM>    !
+ CHARMM>    !stream new.par
+ CHARMM>     
+  
+ CHARMM>    stream "/home/aleksandar/Project/Molecules/oac_clap/tempfiles/parameters.str"
+ VOPEN> Attempting to open::/home/aleksandar/Project/Molecules/oac_clap/tempfiles/parameters.str::
+ OPNLGU> Unit 99 opened for READONLY access to /home/aleksandar/Project/Molecules/oac_clap/tempfiles/parameters.str
+
+                    INPUT STREAM SWITCHING TO UNIT    99
+ RDTITL> SET OACB1 791.304005320927
+ RDTITL> No title read.
+
+      ***** LEVEL  1 WARNING FROM <RDTITL> *****
+      ***** Title expected.
+      ******************************************
+      BOMLEV (  0) IS NOT REACHED. WRNLEV IS  5
+
+ Parameter: IN1 <- "" <empty>
+  
+ CHARMM>    set oacb1 791.304005320927
+ Parameter: OACB1 <- "791.304005320927"
+  
+ CHARMM>    set oacb2 981.9178856232219
+ Parameter: OACB2 <- "981.9178856232219"
+  
+ CHARMM>    set oacb3 961.623268155903
+ Parameter: OACB3 <- "961.623268155903"
+  
+ CHARMM>    set oaca1 88.59241853039879
+ Parameter: OACA1 <- "88.59241853039879"
+  
+ CHARMM>    set oaca2 764.1381222818187
+ Parameter: OACA2 <- "764.1381222818187"
+  
+ CHARMM>    set oaca3 429.72111013148464
+ Parameter: OACA3 <- "429.72111013148464"
+  
+ CHARMM>    set oaca4 171.32735727334548
+ Parameter: OACA4 <- "171.32735727334548"
+  
+ CHARMM>    set oacd1 20.0
+ Parameter: OACD1 <- "20.0"
+  
+ VCLOSE: Closing unit   99 with status "KEEP"
+
+                    RETURNING TO INPUT STREAM     5
+  
+ CHARMM>     
+  
+ CHARMM>    ioformat extended
+ MISCOM> Expanded I/O format is used.
+  
+ CHARMM>    bomblev -1
+  
+ CHARMM>     
+  
+ CHARMM>    open  unit 10 read form name "/home/aleksandar/Project/Molecules/oac_clap/pol_mod_oac.rtf"
+ VOPEN> Attempting to open::/home/aleksandar/Project/Molecules/oac_clap/pol_mod_oac.rtf::
+ OPNLGU> Unit 10 opened for READONLY access to /home/aleksandar/Project/Molecules/oac_clap/pol_mod_oac.rtf
+  
+ CHARMM>    read  unit 10 rtf card
+ MAINIO> Residue topology file being read from unit  10.
+ TITLE> *.......................................................................
+ TITLE> *.              POLARIZABLE CANONGIA LOPES--PADUA
+ TITLE> *.......................................................................
+ TITLE> *.              LAST CHANGED TIME-STAMP: <2016-01-15 18:36:41 CHRISTIAN>
+ TITLE> *.......................................................................
+ TITLE> *
+
+ DRUDES PARTICLES WILL BE GENERATED AUTOMATICALLY FOR ALL ATOMS WITH NON-ZERO ALPHA
+ Thole-type dipole screening, Slater-Delta shape {S(u) = 1 - (1+u/2)*exp(-u)}, default radius =  1.300000
+  
+ CHARMM>    close unit 10
+ VCLOSE: Closing unit   10 with status "KEEP"
+  
+ CHARMM>     
+  
+ CHARMM>    open  unit 10 read form name "/home/aleksandar/Project/Molecules/oac_clap/polarizable_oms_oac.prm"
+ VOPEN> Attempting to open::/home/aleksandar/Project/Molecules/oac_clap/polarizable_oms_oac.prm::
+ OPNLGU> Unit 10 opened for READONLY access to /home/aleksandar/Project/Molecules/oac_clap/polarizable_oms_oac.prm
+  
+ CHARMM>    read  unit 10 para card
+
+          PARAMETER FILE BEING READ FROM UNIT 10
+ TITLE> *.......................................................................
+ TITLE> *.              POLARIZABLE CANONGIA LOPES--PADUA
+ TITLE> *.......................................................................
+ TITLE> *.              LAST CHANGED TIME-STAMP: <2016-01-18 09:16:53 CHRISTIAN>
+ TITLE> *.......................................................................
+ TITLE> *
+
+ PARRDR> WARNING: ATOMS IN BOND DRUD     X         500.00000   0.00000 DONT EXIST
+ PARMIO> NONBOND, HBOND lists and IMAGE atoms cleared.
+  
+ CHARMM>    close unit 10
+ VCLOSE: Closing unit   10 with status "KEEP"
+  
+ CHARMM>     
+  
+ CHARMM>    read sequence OAC 1
+  
+ CHARMM>    generate OAC setup warn drude dmass 0.4
+ Drude polarizability will be setup for SEGID: OAC     mass of Drudes particles =    0.4000
+ NO PATCHING WILL BE DONE ON THE FIRST RESIDUE
+ NO PATCHING WILL BE DONE ON THE LAST  RESIDUE
+
+ MKDRUDE generate list and setup for drude polarizability
+
+ All okay for      4 added Drude particles 
+
+ GENPSF> Segment   1 has been generated. Its identifier is OAC.
+ PSFSUM> PSF modified: NONBOND lists and IMAGE atoms cleared.
+ PSFSUM> Summary of the structure file counters :
+         Number of segments      =        1   Number of residues   =        1
+         Number of atoms         =       11   Number of groups     =        1
+         Number of bonds         =       10   Number of angles     =        9
+         Number of dihedrals     =        6   Number of impropers  =        0
+         Number of cross-terms   =        0
+         Number of HB acceptors  =        2   Number of HB donors  =        0
+         Number of NB exclusions =        0   Total charge =   -1.00000
+         Number of Drudes        =        4
+         Number of true-bonds    =       10   Number of zero-bonds =        0
+         Number of aniso. terms  =        0   Number of lone-pairs =        0
+  
+ CHARMM>     
+  
+ CHARMM>    !=======================================================================
+ CHARMM>    ! Optimize new coordinates
+ CHARMM>    !=======================================================================
+ CHARMM>    read coor card name "/home/aleksandar/Project/Molecules/oac_clap/oac.cor"
+ VOPEN> Attempting to open::/home/aleksandar/Project/Molecules/oac_clap/oac.cor::
+          SPATIAL COORDINATES BEING READ FROM UNIT 90
+ TITLE> * GENERATED BY GAUPY
+ TITLE> * GAUSSIAN FILE = OAC.LOG
+ TITLE> 7
+ ** WARNING ** After reading, there are no coordinates for selected atom:     2     1 OAC  DCT1
+ ** WARNING ** After reading, there are no coordinates for selected atom:     7     1 OAC  DCO1
+ ** WARNING ** After reading, there are no coordinates for selected atom:     9     1 OAC  DO1 
+ ** WARNING ** After reading, there are no coordinates for selected atom:    11     1 OAC  DO2 
+
+ ** A total of     4 selected atoms have no coordinates
+ *** LEVEL  2 WARNING *** BOMLEV IS   -1
+ VCLOSE: Closing unit   90 with status "KEEP"
+  
+ CHARMM>     
+  
+ CHARMM>    coor sdrude
+  
+ CHARMM>    !coor shake
+ CHARMM>     
+  
+ CHARMM>     
+  
+ CHARMM>    energy -
+ CHARMM>    nbonds elec atom fswitch vdw vatom vshift cdie eps 1.0 wmin 1.5  -
+ CHARMM>           CUTNB 14.0 CTONNB 8.0 CTOFNB 12.0
+
+ NONBOND OPTION FLAGS: 
+     ELEC     VDW      ATOMs    CDIElec  FSWItch  VATOm    VSHIft  
+     BYGRoup  NOEXtnd  NOEWald 
+ CUTNB  = 14.000 CTEXNB =999.000 CTONNB =  8.000 CTOFNB = 12.000
+ CGONNB =  0.000 CGOFNB = 10.000
+ WMIN   =  1.500 WRNMXD =  0.500 E14FAC =  0.500 EPS    =  1.000
+ NBXMOD =      5
+ There are        0 atom  pairs and        0 atom  exclusions.
+ There are        0 group pairs and        0 group exclusions.
+ <MAKINB> with mode   5 found     43 exclusions and     12 interactions(1-4)
+ <MAKGRP> found      0 group exclusions.
+ Generating nonbond list with Exclusion mode = 5
+ == PRIMARY == SPACE FOR      243 ATOM PAIRS AND        0 GROUP PAIRS
+
+ General atom nonbond list generation found:
+       12 ATOM PAIRS WERE FOUND FOR ATOM LIST
+        0 GROUP PAIRS REQUIRED ATOM SEARCHES
+
+ENER ENR:  Eval#     ENERgy      Delta-E         GRMS
+ENER INTERN:          BONDs       ANGLes       UREY-b    DIHEdrals    IMPRopers
+ENER EXTERN:        VDWaals         ELEC       HBONds          ASP         USER
+ ----------       ---------    ---------    ---------    ---------    ---------
+ENER>        0    117.04912      0.00000     58.60887
+ENER INTERN>        3.59121      5.20726      0.00000    120.00000      0.00000
+ENER EXTERN>        0.04103    -11.79037      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+ **** Warning ****  The following extraneous characters
+ were found while command processing in CHARMM
+ NBONDS
+  
+ CHARMM>     
+  
+ CHARMM>    !mini sd   nstep  5000 nprint 50 tolene 0.001
+ CHARMM>    !mini abnr nstep 10000 nprint 50 tolene 0.001
+ CHARMM>     
+  
+ CHARMM>    ioformat extended
+ MISCOM> Expanded I/O format is used.
+  
+ CHARMM>    !write coor card name "oac_opt.crd"
+ CHARMM>    !write psf  card name "oac.psf"
+ CHARMM>     
+  
+ CHARMM>    !=======================================================================
+ CHARMM>    ! Normal mode analysis
+ CHARMM>    !=======================================================================
+ CHARMM>    define DUMMY sele type LP* .or. type D* end
+ SELRPN>      4 atoms have been selected out of     11
+  
+ CHARMM>     
+  
+ CHARMM>    vibran nmod
+
+ NONBOND OPTION FLAGS: 
+     ELEC     VDW      ATOMs    CDIElec  FSWItch  VATOm    VSHIft  
+     BYGRoup  NOEXtnd  NOEWald 
+ CUTNB  = 14.000 CTEXNB =999.000 CTONNB =  8.000 CTOFNB = 12.000
+ CGONNB =  0.000 CGOFNB = 10.000
+ WMIN   =  1.500 WRNMXD =  0.500 E14FAC =  0.500 EPS    =  1.000
+ NBXMOD =      5
+ There are       12 atom  pairs and       55 atom  exclusions.
+ There are        0 group pairs and        0 group exclusions.
+ Generating nonbond list with Exclusion mode = 5
+ == PRIMARY == SPACE FOR      243 ATOM PAIRS AND        0 GROUP PAIRS
+
+ General atom nonbond list generation found:
+       12 ATOM PAIRS WERE FOUND FOR ATOM LIST
+        0 GROUP PAIRS REQUIRED ATOM SEARCHES
+
+ VIBRAN: Space allocated for    33 vectors of length    33
+  
+ VIBRAN>    diag  finite step 0.001
+ SECOND DERIVATIVE CALCULATED BY FINITE DIFFERENCES
+ Numerical increment STEP =  0.0010000
+  Drudes are considered as regular particles
+ NUMBER OF ENERGY EVALUATIONS:       67
+ TOTAL NUMBER OF CYCLES:             33
+VIBR ENR:  Eval#     ENERgy      Delta-E         GRMS
+VIBR INTERN:          BONDs       ANGLes       UREY-b    DIHEdrals    IMPRopers
+VIBR EXTERN:        VDWaals         ELEC       HBONds          ASP         USER
+ ----------       ---------    ---------    ---------    ---------    ---------
+VIBR>        1    117.04912      0.00000     58.60887
+VIBR INTERN>        3.59121      5.20726      0.00000    120.00000      0.00000
+VIBR EXTERN>        0.04103    -11.79037      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+
+               DIAGONALIZATION COMPLETED
+
+               FREQUENCIES
+
+   1-1658.763616   2   -0.001388   3   -0.000546   4   -0.000261   5  163.306767
+   6  174.112530   7  231.635089   8 1031.297538   9 1198.187892  10 1246.585916
+  11 1553.212201  12 1819.829321  13 1915.607534  14 2280.125076  15 2327.096630
+  16 2558.850698  17 2568.159282  18 2948.873986  19 4379.594640  20 4524.433825
+  21 4543.081534  22 5490.093808  23 5491.312510  24 5503.625529  25 5504.384137
+  26 5505.560259  27 5507.951246  28 5523.254914  29 5535.904893  30 5539.005476
+  31 5545.612182  32 5554.946800  33 5558.141093
+  
+ VIBRAN>     
+  
+ VIBRAN>    mass
+  
+ VIBRAN>    !print norm mode 13 thru 33 temp 300.0 vect sele .not. DUMMY end
+ VIBRAN>    print norm mode 1 thru 21 vect sele .not. DUMMY end
+ SELRPN>      7 atoms have been selected out of     11
+
+               NORMAL MODES
+
+     1  -1658.76     2     -0.00     3     -0.00     4     -0.00     5    163.31
+     6    174.11     7    231.64     8   1031.30     9   1198.19    10   1246.59
+    11   1553.21    12   1819.83    13   1915.61    14   2280.13    15   2327.10
+    16   2558.85    17   2568.16    18   2948.87    19   4379.59    20   4524.43
+    21   4543.08
+
+  VIBRATION MODE   1  FREQUENCY=-1658.763616  TRANS ROT %=    0.176373
+  EIGENVALUE= -233.331512  ENERGY DERIVATIVE=   -0.006372
+  TYPE  'FACT'    1.0000   MASS   NORM  STEP=    1.000000
+
+   EIGENVECTOR:
+              1    1 OAC      CT1        0.00000  -0.00000   0.02237
+              3    1 OAC      H1        -0.00000  -0.00001  -0.35458
+              4    1 OAC      H2        -0.06334  -0.30762   0.23200
+              5    1 OAC      H3         0.06335   0.30764   0.23199
+              6    1 OAC      CO1       -0.00000   0.00000  -0.18594
+              8    1 OAC      O1         0.00000   0.00000   0.02244
+             10    1 OAC      O2         0.00000  -0.00000   0.09337
+
+  VIBRATION MODE   2  FREQUENCY=   -0.001388  TRANS ROT %=  100.000000
+  EIGENVALUE=   -0.000000  ENERGY DERIVATIVE=   -0.000000
+  TYPE  'FACT'    1.0000   MASS   NORM  STEP=    1.000000
+
+   EIGENVECTOR:
+              1    1 OAC      CT1       -0.00018   0.00002  -0.13014
+              3    1 OAC      H1        -0.00018   0.00002  -0.13014
+              4    1 OAC      H2        -0.00018   0.00002  -0.13014
+              5    1 OAC      H3        -0.00018   0.00002  -0.13014
+              6    1 OAC      CO1       -0.00018   0.00002  -0.13014
+              8    1 OAC      O1        -0.00018   0.00002  -0.13014
+             10    1 OAC      O2        -0.00018   0.00002  -0.13014
+
+  VIBRATION MODE   3  FREQUENCY=   -0.000546  TRANS ROT %=  100.000000
+  EIGENVALUE=   -0.000000  ENERGY DERIVATIVE=   -0.000000
+  TYPE  'FACT'    1.0000   MASS   NORM  STEP=    1.000000
+
+   EIGENVECTOR:
+              1    1 OAC      CT1        0.03138  -0.12630  -0.00007
+              3    1 OAC      H1         0.03138  -0.12630  -0.00007
+              4    1 OAC      H2         0.03138  -0.12630  -0.00007
+              5    1 OAC      H3         0.03138  -0.12630  -0.00007
+              6    1 OAC      CO1        0.03138  -0.12630  -0.00007
+              8    1 OAC      O1         0.03138  -0.12630  -0.00007
+             10    1 OAC      O2         0.03138  -0.12630  -0.00007
+
+  VIBRATION MODE   4  FREQUENCY=   -0.000261  TRANS ROT %=  100.000000
+  EIGENVALUE=   -0.000000  ENERGY DERIVATIVE=    0.000004
+  TYPE  'FACT'    1.0000   MASS   NORM  STEP=    1.000000
+
+   EIGENVECTOR:
+              1    1 OAC      CT1        0.12630   0.03138  -0.00017
+              3    1 OAC      H1         0.12630   0.03138  -0.00017
+              4    1 OAC      H2         0.12630   0.03138  -0.00017
+              5    1 OAC      H3         0.12630   0.03138  -0.00017
+              6    1 OAC      CO1        0.12630   0.03138  -0.00017
+              8    1 OAC      O1         0.12630   0.03138  -0.00017
+             10    1 OAC      O2         0.12630   0.03138  -0.00017
+
+  VIBRATION MODE   5  FREQUENCY=  163.306767  TRANS ROT %=   99.651340
+  EIGENVALUE=    2.261584  ENERGY DERIVATIVE=    0.000132
+  TYPE  'FACT'    1.0000   MASS   NORM  STEP=    1.000000
+
+   EIGENVECTOR:
+              1    1 OAC      CT1        0.00000   0.00001  -0.19871
+              3    1 OAC      H1         0.00001   0.00002  -0.24933
+              4    1 OAC      H2         0.11204  -0.00853  -0.24351
+              5    1 OAC      H3        -0.11205   0.00856  -0.24351
+              6    1 OAC      CO1        0.00000  -0.00000   0.01716
+              8    1 OAC      O1        -0.00001  -0.00001   0.12990
+             10    1 OAC      O2         0.00001  -0.00001   0.05282
+
+  VIBRATION MODE   6  FREQUENCY=  174.112530  TRANS ROT %=   99.918443
+  EIGENVALUE=    2.570777  ENERGY DERIVATIVE=   -0.220492
+  TYPE  'FACT'    1.0000   MASS   NORM  STEP=    1.000000
+
+   EIGENVECTOR:
+              1    1 OAC      CT1       -0.00566  -0.14947  -0.00002
+              3    1 OAC      H1        -0.10243  -0.18477  -0.00002
+              4    1 OAC      H2         0.04269  -0.18435  -0.00070
+              5    1 OAC      H3         0.04267  -0.18435   0.00066
+              6    1 OAC      CO1       -0.00003   0.00822   0.00000
+              8    1 OAC      O1         0.12171   0.06542   0.00001
+             10    1 OAC      O2        -0.11636   0.07552   0.00000
+
+  VIBRATION MODE   7  FREQUENCY=  231.635089  TRANS ROT %=   99.942527
+  EIGENVALUE=    4.550018  ENERGY DERIVATIVE=   -0.000245
+  TYPE  'FACT'    1.0000   MASS   NORM  STEP=    1.000000
+
+   EIGENVECTOR:
+              1    1 OAC      CT1        0.00000   0.00000   0.04351
+              3    1 OAC      H1         0.00000  -0.00000  -0.10402
+              4    1 OAC      H2        -0.03080  -0.13322   0.13706
+              5    1 OAC      H3         0.03080   0.13323   0.13705
+              6    1 OAC      CO1       -0.00000  -0.00000  -0.00969
+              8    1 OAC      O1        -0.00000  -0.00000   0.14771
+             10    1 OAC      O2         0.00000  -0.00000  -0.18382
+
+  VIBRATION MODE   8  FREQUENCY= 1031.297538  TRANS ROT %=    0.013374
+  EIGENVALUE=   90.192901  ENERGY DERIVATIVE=   -5.370200
+  TYPE  'FACT'    1.0000   MASS   NORM  STEP=    1.000000
+
+   EIGENVECTOR:
+              1    1 OAC      CT1        0.00360   0.12174   0.00000
+              3    1 OAC      H1         0.17681   0.19224   0.00000
+              4    1 OAC      H2        -0.07929   0.23067  -0.02363
+              5    1 OAC      H3        -0.07929   0.23067   0.02363
+              6    1 OAC      CO1       -0.00108  -0.03536   0.00000
+              8    1 OAC      O1         0.12648  -0.05798  -0.00000
+             10    1 OAC      O2        -0.12952  -0.04804   0.00000
+
+  VIBRATION MODE   9  FREQUENCY= 1198.187892  TRANS ROT %=    0.000137
+  EIGENVALUE=  121.745873  ENERGY DERIVATIVE=  -20.517178
+  TYPE  'FACT'    1.0000   MASS   NORM  STEP=    1.000000
+
+   EIGENVECTOR:
+              1    1 OAC      CT1        0.09421  -0.00353   0.00000
+              3    1 OAC      H1         0.12231   0.00360   0.00000
+              4    1 OAC      H2         0.12503  -0.00757  -0.00794
+              5    1 OAC      H3         0.12503  -0.00758   0.00794
+              6    1 OAC      CO1       -0.00060  -0.00002  -0.00000
+              8    1 OAC      O1        -0.04026   0.15702   0.00000
+             10    1 OAC      O2        -0.05343  -0.15363  -0.00000
+
+  VIBRATION MODE  10  FREQUENCY= 1246.585916  TRANS ROT %=    0.000635
+  EIGENVALUE=  131.779794  ENERGY DERIVATIVE=   -1.848206
+  TYPE  'FACT'    1.0000   MASS   NORM  STEP=    1.000000
+
+   EIGENVECTOR:
+              1    1 OAC      CT1        0.17703  -0.00596  -0.00000
+              3    1 OAC      H1         0.23652   0.00943  -0.00000
+              4    1 OAC      H2         0.24159  -0.01438  -0.01683
+              5    1 OAC      H3         0.24159  -0.01437   0.01683
+              6    1 OAC      CO1       -0.01726   0.00120   0.00000
+              8    1 OAC      O1        -0.08539  -0.08106  -0.00000
+             10    1 OAC      O2        -0.07984   0.08584   0.00000
+
+  VIBRATION MODE  11  FREQUENCY= 1553.212201  TRANS ROT %=    0.211344
+  EIGENVALUE=  204.581322  ENERGY DERIVATIVE=   -0.003928
+  TYPE  'FACT'    1.0000   MASS   NORM  STEP=    1.000000
+
+   EIGENVECTOR:
+              1    1 OAC      CT1       -0.00000   0.00000  -0.03538
+              3    1 OAC      H1        -0.00001   0.00001   0.62726
+              4    1 OAC      H2        -0.31895   0.21636  -0.02835
+              5    1 OAC      H3         0.31896  -0.21637  -0.02834
+              6    1 OAC      CO1       -0.00000   0.00000  -0.12942
+              8    1 OAC      O1         0.00000  -0.00000   0.07044
+             10    1 OAC      O2         0.00000   0.00000   0.01746
+
+  VIBRATION MODE  12  FREQUENCY= 1819.829321  TRANS ROT %=    0.043552
+  EIGENVALUE=  280.844362  ENERGY DERIVATIVE=   11.788079
+  TYPE  'FACT'    1.0000   MASS   NORM  STEP=    1.000000
+
+   EIGENVECTOR:
+              1    1 OAC      CT1        0.00531   0.10776   0.00000
+              3    1 OAC      H1        -0.55743  -0.07322  -0.00001
+              4    1 OAC      H2         0.25474  -0.30783   0.15218
+              5    1 OAC      H3         0.25471  -0.30785  -0.15217
+              6    1 OAC      CO1        0.00412   0.07967  -0.00000
+              8    1 OAC      O1         0.02150  -0.04964   0.00000
+             10    1 OAC      O2        -0.02558  -0.04792  -0.00000
+
+  VIBRATION MODE  13  FREQUENCY= 1915.607534  TRANS ROT %=    0.017825
+  EIGENVALUE=  311.184149  ENERGY DERIVATIVE=    0.004901
+  TYPE  'FACT'    1.0000   MASS   NORM  STEP=    1.000000
+
+   EIGENVECTOR:
+              1    1 OAC      CT1       -0.00000   0.00000  -0.11906
+              3    1 OAC      H1        -0.00002   0.00000   0.23848
+              4    1 OAC      H2        -0.30896  -0.38875   0.22070
+              5    1 OAC      H3         0.30898   0.38874   0.22067
+              6    1 OAC      CO1        0.00000   0.00000   0.11253
+              8    1 OAC      O1         0.00000  -0.00000  -0.03673
+             10    1 OAC      O2        -0.00000  -0.00000  -0.00110
+
+  VIBRATION MODE  14  FREQUENCY= 2280.125076  TRANS ROT %=    0.006183
+  EIGENVALUE=  440.881358  ENERGY DERIVATIVE=   -6.324369
+  TYPE  'FACT'    1.0000   MASS   NORM  STEP=    1.000000
+
+   EIGENVECTOR:
+              1    1 OAC      CT1       -0.01576  -0.05060   0.00000
+              3    1 OAC      H1        -0.35100  -0.18926   0.00001
+              4    1 OAC      H2         0.24948   0.39046  -0.39493
+              5    1 OAC      H3         0.24947   0.39048   0.39491
+              6    1 OAC      CO1       -0.00352   0.05904   0.00000
+              8    1 OAC      O1         0.00318  -0.02142  -0.00000
+             10    1 OAC      O2         0.00203  -0.02202  -0.00000
+
+  VIBRATION MODE  15  FREQUENCY= 2327.096630  TRANS ROT %=    0.000306
+  EIGENVALUE=  459.233148  ENERGY DERIVATIVE=   -0.000112
+  TYPE  'FACT'    1.0000   MASS   NORM  STEP=    1.000000
+
+   EIGENVECTOR:
+              1    1 OAC      CT1       -0.00000   0.00000   0.00384
+              3    1 OAC      H1        -0.00000  -0.00001  -0.57083
+              4    1 OAC      H2        -0.47905   0.30058   0.03855
+              5    1 OAC      H3         0.47907  -0.30057   0.03857
+              6    1 OAC      CO1       -0.00000  -0.00000   0.04342
+              8    1 OAC      O1         0.00000   0.00000  -0.00567
+             10    1 OAC      O2         0.00000   0.00000   0.00104
+
+  VIBRATION MODE  16  FREQUENCY= 2558.850698  TRANS ROT %=    0.000025
+  EIGENVALUE=  555.257313  ENERGY DERIVATIVE=   32.929267
+  TYPE  'FACT'    1.0000   MASS   NORM  STEP=    1.000000
+
+   EIGENVECTOR:
+              1    1 OAC      CT1        0.10413  -0.01607   0.00000
+              3    1 OAC      H1        -0.41739  -0.23369   0.00000
+              4    1 OAC      H2        -0.41769   0.16591   0.14266
+              5    1 OAC      H3        -0.41768   0.16590  -0.14267
+              6    1 OAC      CO1        0.10282   0.02104  -0.00000
+              8    1 OAC      O1        -0.03840  -0.00793   0.00000
+             10    1 OAC      O2        -0.03903  -0.00195  -0.00000
+
+  VIBRATION MODE  17  FREQUENCY= 2568.159282  TRANS ROT %=    0.017493
+  EIGENVALUE=  559.304490  ENERGY DERIVATIVE=   -1.275434
+  TYPE  'FACT'    1.0000   MASS   NORM  STEP=    1.000000
+
+   EIGENVECTOR:
+              1    1 OAC      CT1       -0.01286  -0.06656   0.00000
+              3    1 OAC      H1         0.36455   0.03544  -0.00000
+              4    1 OAC      H2        -0.12614  -0.05156   0.01590
+              5    1 OAC      H3        -0.12612  -0.05157  -0.01590
+              6    1 OAC      CO1        0.00228   0.23067   0.00000
+              8    1 OAC      O1         0.00745  -0.05951   0.00000
+             10    1 OAC      O2        -0.00649  -0.05977  -0.00000
+
+  VIBRATION MODE  18  FREQUENCY= 2948.873986  TRANS ROT %=    0.000000
+  EIGENVALUE=  737.423244  ENERGY DERIVATIVE=  -86.303970
+  TYPE  'FACT'    1.0000   MASS   NORM  STEP=    1.000000
+
+   EIGENVECTOR:
+              1    1 OAC      CT1        0.10156  -0.00516  -0.00000
+              3    1 OAC      H1        -0.12367  -0.12348   0.00000
+              4    1 OAC      H2        -0.12247   0.07178   0.09042
+              5    1 OAC      H3        -0.12247   0.07178  -0.09042
+              6    1 OAC      CO1       -0.23090   0.01207   0.00000
+              8    1 OAC      O1         0.06038   0.00114  -0.00000
+             10    1 OAC      O2         0.06000  -0.00760   0.00000
+
+  VIBRATION MODE  19  FREQUENCY= 4379.594640  TRANS ROT %=    0.000028
+  EIGENVALUE= 1626.568004  ENERGY DERIVATIVE=  -38.320596
+  TYPE  'FACT'    1.0000   MASS   NORM  STEP=    1.000000
+
+   EIGENVECTOR:
+              1    1 OAC      CT1       -0.05712   0.00121  -0.00000
+              3    1 OAC      H1         0.21545  -0.53263   0.00001
+              4    1 OAC      H2         0.21590   0.26014   0.43825
+              5    1 OAC      H3         0.21590   0.26012  -0.43826
+              6    1 OAC      CO1        0.00816  -0.00032  -0.00000
+              8    1 OAC      O1        -0.00073  -0.00011  -0.00000
+             10    1 OAC      O2        -0.00071   0.00017  -0.00000
+
+  VIBRATION MODE  20  FREQUENCY= 4524.433825  TRANS ROT %=    0.000099
+  EIGENVALUE= 1735.932664  ENERGY DERIVATIVE=   -0.003047
+  TYPE  'FACT'    1.0000   MASS   NORM  STEP=    1.000000
+
+   EIGENVECTOR:
+              1    1 OAC      CT1        0.00000   0.00000  -0.08667
+              3    1 OAC      H1         0.00001  -0.00002   0.01065
+              4    1 OAC      H2         0.22632   0.30678   0.53978
+              5    1 OAC      H3        -0.22632  -0.30677   0.53981
+              6    1 OAC      CO1       -0.00000  -0.00000   0.00206
+              8    1 OAC      O1         0.00000   0.00000  -0.00069
+             10    1 OAC      O2         0.00000  -0.00000   0.00030
+
+  VIBRATION MODE  21  FREQUENCY= 4543.081534  TRANS ROT %=    0.000000
+  EIGENVALUE= 1750.271641  ENERGY DERIVATIVE=    6.175934
+  TYPE  'FACT'    1.0000   MASS   NORM  STEP=    1.000000
+
+   EIGENVECTOR:
+              1    1 OAC      CT1        0.00160   0.09136   0.00000
+              3    1 OAC      H1         0.24165  -0.70600   0.00001
+              4    1 OAC      H2        -0.13079  -0.20064  -0.30528
+              5    1 OAC      H3        -0.13078  -0.20061   0.30527
+              6    1 OAC      CO1       -0.00007  -0.00801  -0.00000
+              8    1 OAC      O1         0.00121   0.00106   0.00000
+             10    1 OAC      O2        -0.00121   0.00120   0.00000
+  
+ VIBRAN>    end
+  
+ CHARMM>    !write para used card name "parameters.par"
+ CHARMM>     
+  
+ CHARMM>     
+  
+      $$$$$$  New timer profile Local node$$$$$
+   List time                       0.00 Other:            0.00
+      Nonbond force                   0.00 Other:            0.00
+         Bond energy                     0.00 Other:            0.00
+         Angle energy                    0.00 Other:            0.00
+         Dihedral energy                 0.00 Other:            0.00
+         Restraints energy               0.00 Other:            0.00
+      INTRNL energy                   0.00 Other:            0.00
+      Comm energy                     0.00 Other:            0.00
+      Comm force                      0.00 Other:            0.00
+   Energy time                     0.00 Other:            0.00
+ Total time                      0.04 Other:            0.03
+         $$$$$$  Average   profile $$$$$
+   List time                       0.00 Other:            0.00
+      Nonbond force                   0.00 Other:            0.00
+         Bond energy                     0.00 Other:            0.00
+         Angle energy                    0.00 Other:            0.00
+         Dihedral energy                 0.00 Other:            0.00
+         Restraints energy               0.00 Other:            0.00
+      INTRNL energy                   0.00 Other:            0.00
+      Comm energy                     0.00 Other:            0.00
+      Comm force                      0.00 Other:            0.00
+   Energy time                     0.00 Other:            0.00
+ Total time                      0.04 Other:            0.03
+
+                    NORMAL TERMINATION BY END OF FILE
+                    MOST SEVERE WARNING WAS AT LEVEL  1
+
+                    $$$$$ JOB ACCOUNTING INFORMATION $$$$$
+                     ELAPSED TIME:     0.04  SECONDS 
+                         CPU TIME:     0.04  SECONDS 

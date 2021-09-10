@@ -1,0 +1,221 @@
+* Topology file for im1h, oac, im1, hoac
+* based on dgenff with fm optimized
+* Sept 2020
+*
+41
+
+MASS    1 HDP1A     1.00800   ! polar H, general 
+MASS   11 HDA3A     1.00800   ! aliphatic H, (-CH3), general 
+MASS   14 HDR5A     1.00800   ! 5-membered ring, HG and HD2 in imidazole 
+MASS   15 HDR5B     1.00800   ! 5-membered ring, HE1 in imidazole 
+!MASS   16 HDR5C     1.00800   ! 5-membered ring, H on carbon adjacent to N in pyrrole 
+MASS   17 HDR5D     1.00800   ! 5-membered ring, HG and HD2 in imidazolium 
+MASS   18 HDR5E     1.00800   ! 5-membered ring, HE1 in imidazolium 
+
+!MASS   25 CD2O1A   12.01100   ! carbonyl C, amide
+MASS   28 CD2O2A   12.01100   ! carboxylate C, anionic 
+MASS   29 CD2O3A   12.01100   ! carbonyl C, in esters and acids (neutral)
+MASS   33 CD2R5A   12.01100   ! 5-membered ring, CG and CD2 in imidazole 
+MASS   34 CD2R5B   12.01100   ! 5-membered ring, CE1 in imidazole 
+!MASS   35 CD2R5C   12.01100   ! 5-membered ring, pyrole, adjacent to N 
+MASS   36 CD2R5D   12.01100   ! 5-membered ring, CG and CD2 in imidizolium 
+MASS   37 CD2R5E   12.01100   ! 5-membered ring, CE1 in imidizolium 
+MASS   70 CD33A    12.01100   ! aliphatic sp3 C, 3 H 
+MASS   72 CD33C    12.01100   ! aliphatic sp3 C, 3 H, special case for C adjacent to carbonyls/phosphate
+
+MASS   79 ND2R5A   14.00700   ! neutral his protonated ring nitrogen 
+MASS   80 ND2R5B   14.00700   ! neutral his unprotonated ring nitrogen 
+MASS   81 ND2R5C   14.00700   ! positive his protonated ring nitrogen 
+!MASS   82 ND2R5D   14.00700   ! aromatic N, 5-membered, purine NA bases
+!MASS   83 ND2R5E   14.00700   ! neutral unprotonated ring nitrogen in NA purines
+!MASS   84 ND2R5F   14.00700   ! N9 in NA GUA
+
+MASS   98 OD2C2A   15.99940   ! carboxylate O, anionic (acetate) 
+MASS  101 OD2C3A   15.99940   ! carbonyl O, neutral (esters) 
+MASS  118 OD31F    15.99900   ! hydroxyl oxygen in acids 
+MASS  144 LPD       0.00000   ! general lone pair without LJ parameters, NBFIX or NBTHOLE
+MASS  150 DRUD      0.00000 
+
+!own atom types (florian)
+MASS  171 CD33F   12.01100 C  ! Methyl C in 1-Methylimidazolim (IM1H)
+MASS  172 CD33G   12.01100 C  ! Methyl C in 1-Methylimidazole (IM1) 
+
+auto angle dihe drud
+
+
+RESI  IM1H      1.0000
+GROUP
+ATOM  C1     CD33F     0.220  ALPHA   -1.007  THOLE    1.3 !2.278 !          H1
+ATOM  N1     ND2R5C   -0.538  ALPHA   -0.944  THOLE    1.3 !0.434 !          |
+ATOM  C2     CD2R5D    0.165  ALPHA   -1.182  THOLE    1.3 !0.353 !          N2
+ATOM  C3     CD2R5D    0.187  ALPHA   -1.183  THOLE    1.3 !0.353 !        /   \
+ATOM  N2     ND2R5C   -0.477  ALPHA   -1.141  THOLE    1.3 !0.434 !  H6--C3     \
+ATOM  H1     HDP1A     0.420                                      !      ||     C4--H7
+ATOM  C4     CD2R5E    0.350  ALPHA   -1.253  THOLE    1.3!0.125  !  H5--C2    //
+ATOM  H2     HDA3A     0.090                                      !        \  //
+ATOM  H3     HDA3A     0.090                                      !         N1 (+)
+ATOM  H4     HDA3A     0.090                                      !         |       
+ATOM  H5     HDR5D     0.116                                      !     H4--C1--H2
+ATOM  H6     HDR5D     0.120                                      !         |
+ATOM  H7     HDR5E     0.167                                      !         H3
+
+BOND C1  N1 
+BOND C1  H2 
+BOND C1  H3 
+BOND C1  H4 
+BOND N1  C2 
+BOND N1  C4 
+BOND C2  C3 
+BOND C2  H5 
+BOND C3  N2 
+BOND C3  H6 
+BOND N2  H1 
+BOND N2  C4 
+BOND C4  H7 
+
+IMPR C2 C3 N1 H5
+IMPR C3 C2 N2 H6
+IMPR C4 N1 N2 H7
+IMPR N2 C4 C3 H1
+IMPR N1 C4 C2 C1
+
+
+
+RESI  IM1      0.0000
+GROUP
+ATOM  N1     ND2R5A    0.264  ALPHA   -1.063  THOLE    1.3 !1.585 !          LP
+ATOM  C1     CD2R5B    0.190  ALPHA   -1.268  THOLE    1.3 !0.797 !          |
+ATOM  N2     ND2R5B    0.000  ALPHA   -1.140  THOLE    1.3 !0.261 !          N2
+ATOM  C2     CD2R5A   -0.085  ALPHA   -1.369  THOLE    1.300      !        /  \\
+ATOM  C3     CD2R5A   -0.293  ALPHA   -1.387  THOLE    1.300      !  H2--C2    \\
+ATOM  C4     CD33G    -0.282  ALPHA   -1.507  THOLE    1.3 !1.554 !      ||     C1--H1  
+ATOM  H1     HDR5B     0.101                                      !  H3--C3    /
+ATOM  H2     HDR5A     0.092                                      !        \  /
+ATOM  H3     HDR5A     0.140                                      !         N1 
+ATOM  H4     HDA3A     0.101                                      !         |  
+ATOM  H5     HDA3A     0.101                                      !     H4--C4--H6
+ATOM  H6     HDA3A     0.101                                      !         |
+ATOM  LPN21  LPD      -0.430                                      !         H5
+                                                                  
+BOND N1  C1 
+BOND N1  C3 
+BOND N1  C4 
+BOND C1  N2 
+BOND C1  H1 
+BOND C3  C2 
+BOND C3  H3 
+BOND C4  H4 
+BOND C4  H5 
+BOND C4  H6 
+BOND N2  C2 
+BOND C2  H2 
+BOND  LPN21  N2 
+
+IMPR C2 C3 N2 H2
+IMPR C3 C2 N1 H3
+IMPR C1 N1 N2 H1
+IMPR N1 C1 C3 C4
+!IMPR N2 C1 C2 LPN21
+
+LONEPAIR BISECTOR LPN21  N2  C1  C2 DIST 0.3000 ANGLE  179.99 DIHE  179.99 ! war 0.3 180 180 ev dist 0.35 angle 179.99 dihe 179.99 so jedenfalls für IMID in toppar model
+ANISOTROPY        N2 LPN21 C1 C2  A11 0.808   A22 1.384 ! so jednefalls für IMID in toppar model 
+
+
+
+
+RESI OAC         -1.000 ! acetate, Harder, Sep 09
+! Topologies copied from /site/raid9/florian/im1h_oac_500/drude_toppar/toppar_drude_model_2013f.str
+!
+!   H1      O1
+!     \    //
+! H2--C1--C2 (-1)
+!     /    \
+!   H3      O2
+!
+GROUP
+ATOM C1     CD33A   -0.194  ALPHA -2.528  THOLE 1.414
+ATOM H1     HDA3A    0.004
+ATOM H2     HDA3A    0.004
+ATOM H3     HDA3A    0.004
+ATOM C2     CD2O2A   0.708  ALPHA -1.016  THOLE 0.899
+ATOM O1     OD2C2A   0.003  ALPHA -0.699  THOLE 2.399
+ATOM O2     OD2C2A   0.003  ALPHA -0.699  THOLE 2.399
+ATOM LPO11  LPD     -0.383
+ATOM LPO12  LPD     -0.383
+ATOM LPO21  LPD     -0.383
+ATOM LPO22  LPD     -0.383
+
+BOND C1 C2
+BOND C2 O1
+BOND C2 O2
+BOND C1 H1
+BOND C1 H2
+BOND C1 H3
+BOND O1 LPO11
+BOND O1 LPO12
+BOND O2 LPO21
+BOND O2 LPO22
+
+IMPR O1 C1 O2 C2
+
+LONEPAIR relative LPO11 O1 C2 C1  distance 0.35 angle 110.0 dihe   0.0
+LONEPAIR relative LPO12 O1 C2 C1  distance 0.35 angle 110.0 dihe 180.0
+ANISOTROPY O1 C2 LPO11 LPO12 A11 0.7229 A22 1.265
+LONEPAIR relative LPO21 O2 C2 C1  distance 0.35 angle 110.0 dihe   0.0
+LONEPAIR relative LPO22 O2 C2 C1  distance 0.35 angle 110.0 dihe 180.0
+ANISOTROPY O2 C2 LPO21 LPO22 A11 0.7229 A22 1.265
+
+IC  O1  C2 C1  H1   1.2543  118.04  180.00  111.57   1.1108
+IC  O1  O2 *C2 C1   1.2543  122.88  180.00  119.08   1.5229
+IC  H1  C2 *C1 H2   1.1108  111.57  120.15  110.12   1.1112
+IC  H1  C2 *C1 H3   1.1108  111.57 -120.15  110.12   1.1112
+IC  H1  C1 C2  O2   1.1108  111.57    0.00  119.08   1.2536
+PATCH FIRST NONE LAST NONE
+
+
+RESI HOAC          0.000 ! acetic acid
+!
+!  H1      O1
+!    \    //
+! H2-C1--C2
+!    /     \
+!  H3       O2-HO1
+
+GROUP
+ATOM C1   CD33C   -0.300  ALPHA -2.114 THOLE  0.750
+ATOM H1   HDA3A    0.092
+ATOM H2   HDA3A    0.092
+ATOM H3   HDA3A    0.092
+ATOM C2   CD2O3A   0.858  ALPHA -1.207 THOLE  0.708
+ATOM O2   OD2C3A   0.000  ALPHA -0.922 THOLE  1.539
+ATOM LP2A LPD     -0.319
+ATOM LP2B LPD     -0.319
+ATOM O1   OD31F    0.000  ALPHA -1.280 THOLE  1.124
+ATOM LP1A LPD     -0.285
+ATOM LP1B LPD     -0.285
+ATOM HO1  HDP1A    0.374
+
+BOND C2 O1   O1 HO1  C2 O2 
+BOND C1 C2   C1 H1   C1 H2  C1 H3 
+BOND O2 LP2A O2 LP2B 
+BOND O1 LP1A O1 LP1B 
+
+IMPR O2 C1 O1 C2 !analogous to acetate
+
+!LP positions and anistropic polarization from NMA 
+LONEPAIR relative LP2A O2 C2 O1 distance 0.30 angle 91.0 dihe   0.0 
+LONEPAIR relative LP2B O2 C2 O1 distance 0.30 angle 91.0 dihe 180.0 
+ANISOTROPY O2 C2 LP2A LP2B  A11 0.6968  A22 1.2194 
+!LP positions and anistropic polarization from MeOH 
+LONEPAIR relative LP1A O1 C2 HO1 distance 0.35 angle 110.9 dihe  91.0 
+LONEPAIR relative LP1B O1 C2 HO1 distance 0.35 angle 110.9 dihe 269.0 
+ANISOTROPY O1 C2 LP1A LP1B A11 0.8108 A22 1.2162 
+ 
+IC  O2   C2  C1  H1         1.2000  126.00    0.00  109.50   1.1110 
+IC  HO1  O1  C2  O2         0.9700  110.00    0.00  123.00   1.2000 
+IC  HO1  O1  C2  C1         0.9700  110.00  180.00  111.00   1.5100 
+IC  O1   C2  C1  H1         1.3300  111.00  180.00  109.50   1.1110 
+IC  O1   C2  C1  H2         1.3300  111.00   60.00  109.50   1.1110 
+IC  O1   C2  C1  H3         1.3300  111.00  -60.00  109.50   1.1110 
+
+END

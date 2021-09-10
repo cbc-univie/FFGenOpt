@@ -1,0 +1,1527 @@
+1
+                 Chemistry at HARvard Macromolecular Mechanics
+           (CHARMM) - Developmental Version 43a1     August 15, 2017            
+       Copyright(c) 1984-2014  President and Fellows of Harvard College
+                              All Rights Reserved
+  Current operating system: Linux-4.9.0-16-amd64(x86_64)@chi.mdy.univie.ac.at   
+                 Created on  7/24/21 at 15:59:25 by user: aleksandar  
+
+            Maximum number of ATOMS:    360720, and RESidues:      120240
+ RDTITL> * CHARMM NORMAL MODE
+ RDTITL> *
+  
+ CHARMM>    !stream bonds.str
+ CHARMM>    !stream angles.str
+ CHARMM>    !stream dihedrals.str
+ CHARMM>     
+  
+ CHARMM>    !stream new.par
+ CHARMM>    stream "/home/aleksandar/Project/Molecules/hoac/tempfiles/parameters.str"
+ VOPEN> Attempting to open::/home/aleksandar/Project/Molecules/hoac/tempfiles/parameters.str::
+ OPNLGU> Unit 99 opened for READONLY access to /home/aleksandar/Project/Molecules/hoac/tempfiles/parameters.str
+
+                    INPUT STREAM SWITCHING TO UNIT    99
+ RDTITL> SET HOACB1 425.4774453792438
+ RDTITL> No title read.
+
+      ***** LEVEL  1 WARNING FROM <RDTITL> *****
+      ***** Title expected.
+      ******************************************
+      BOMLEV (  0) IS NOT REACHED. WRNLEV IS  5
+
+ Parameter: IN1 <- "" <empty>
+  
+ CHARMM>    set hoacb1 425.4774453792438
+ Parameter: HOACB1 <- "425.4774453792438"
+  
+ CHARMM>    set hoacb2 788.9322754521286
+ Parameter: HOACB2 <- "788.9322754521286"
+  
+ CHARMM>    set hoacb3 907.6819148711129
+ Parameter: HOACB3 <- "907.6819148711129"
+  
+ CHARMM>    set hoacb4 550.5172334406845
+ Parameter: HOACB4 <- "550.5172334406845"
+  
+ CHARMM>    set hoacb5 430.79658830879805
+ Parameter: HOACB5 <- "430.79658830879805"
+  
+ CHARMM>    set hoaca1 129.9242250195248
+ Parameter: HOACA1 <- "129.9242250195248"
+  
+ CHARMM>    set hoaca2 151.9901457986817
+ Parameter: HOACA2 <- "151.9901457986817"
+  
+ CHARMM>    set hoaca3 177.276908419737
+ Parameter: HOACA3 <- "177.276908419737"
+  
+ CHARMM>    set hoaca4 154.42140496696283
+ Parameter: HOACA4 <- "154.42140496696283"
+  
+ CHARMM>    set hoaca5 195.6944566636762
+ Parameter: HOACA5 <- "195.6944566636762"
+  
+ CHARMM>    set hoaca6 187.37267840258193
+ Parameter: HOACA6 <- "187.37267840258193"
+  
+ CHARMM>    set hoacd1 8.8865994193539
+ Parameter: HOACD1 <- "8.8865994193539"
+  
+ CHARMM>    set hoacd2 24.052335521950578
+ Parameter: HOACD2 <- "24.052335521950578"
+  
+ CHARMM>    set hoacd3 5.499346500446053
+ Parameter: HOACD3 <- "5.499346500446053"
+  
+ CHARMM>    set hoacd4 26.159718260869084
+ Parameter: HOACD4 <- "26.159718260869084"
+  
+ CHARMM>    set hoaci1 300.0
+ Parameter: HOACI1 <- "300.0"
+  
+ VCLOSE: Closing unit   99 with status "KEEP"
+
+                    RETURNING TO INPUT STREAM     5
+  
+ CHARMM>     
+  
+ CHARMM>    ioformat extended
+ MISCOM> Expanded I/O format is used.
+  
+ CHARMM>    bomblev -1
+  
+ CHARMM>     
+  
+ CHARMM>    !stream params.str
+ CHARMM>     
+  
+ CHARMM>    !Reference files:
+ CHARMM>    !   /site/raid1/florian/str/together/pol_fm.rtf
+ CHARMM>    !   /site/raid1/florian/str/together/pol_fm.prm
+ CHARMM>     
+  
+ CHARMM>     
+  
+ CHARMM>    open  unit 10 read form name "/home/aleksandar/Project/Molecules/pol_fm.rtf"
+ VOPEN> Attempting to open::/home/aleksandar/Project/Molecules/pol_fm.rtf::
+ OPNLGU> Unit 10 opened for READONLY access to /home/aleksandar/Project/Molecules/pol_fm.rtf
+  
+ CHARMM>    read  unit 10 rtf card
+ MAINIO> Residue topology file being read from unit  10.
+ TITLE> * TOPOLOGY FILE FOR IM1H, OAC, IM1, HOAC
+ TITLE> * BASED ON DGENFF WITH FM OPTIMIZED
+ TITLE> * SEPT 2020
+ TITLE> *
+
+ DRUDES PARTICLES WILL BE GENERATED AUTOMATICALLY FOR ALL ATOMS WITH NON-ZERO ALPHA
+ Thole-type dipole screening, Slater-Delta shape {S(u) = 1 - (1+u/2)*exp(-u)}, default radius =  1.300000
+  
+ CHARMM>    close unit 10
+ VCLOSE: Closing unit   10 with status "KEEP"
+  
+ CHARMM>     
+  
+ CHARMM>    open  unit 10 read form name "/home/aleksandar/Project/Molecules/pol_fm.prm"
+ VOPEN> Attempting to open::/home/aleksandar/Project/Molecules/pol_fm.prm::
+ OPNLGU> Unit 10 opened for READONLY access to /home/aleksandar/Project/Molecules/pol_fm.prm
+  
+ CHARMM>    read  unit 10 para card
+
+          PARAMETER FILE BEING READ FROM UNIT 10
+ TITLE> * PARAMETER FILE FOR IM1H, OAC, IM1, HOAC
+ TITLE> * BASED ON DGENFF WITH FM OPTIMIZED FOR IM1H AND IM1
+ TITLE> * OAC, HOAC ORIG DGENFF
+ TITLE> * SEPT 2020
+ TITLE> *
+
+ PARRDR> WARNING: ATOMS IN BOND DRUD     X        1000.00000   0.00000 DONT EXIST
+  * WARNING * <PARSUB> Command ignored. Token not found: >IM1HB1<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >IM1HB2<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >IM1HB3<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >IM1HB4<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >IM1HB5<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >IM1HB6<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >IM1HB7<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >IM1HB8<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >IM1B1<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >IM1B2<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >IM1B3<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >IM1B4<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >IM1B5<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >IM1B6<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >IM1B7<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >IM1B8<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >IM1B9<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >OACB1<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >OACB2<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >OACB3<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >IM1HA1<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >IM1HA2<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >IM1HA3<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >IM1HA4<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >IM1HA5<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >IM1HA6<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >IM1HA7<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >IM1HA8<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >IM1HA9<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >IM1HA10<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >IM1HA11<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >IM1HA12<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >IM1A1<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >IM1A2<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >IM1A3<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >IM1A4<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >IM1A5<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >IM1A6<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >IM1A7<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >IM1A8<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >IM1A9<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >IM1A10<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >IM1A11<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >IM1A12<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >IM1A13<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >IM1A14<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >OACA1<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >OACA2<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >OACA3<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >OACA4<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >IM1HD1<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >IM1HD2<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >IM1HD3<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >IM1HD4<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >IM1HD5<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >IM1HD6<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >IM1HD7<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >IM1HD8<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >IM1HD9<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >IM1HD10<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >IM1HD11<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >IM1HD12<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >IM1HD13<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >IM1HD14<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >IM1HD15<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >IM1HD16<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >IM1HD17<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >IM1D1<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >IM1D2<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >IM1D3<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >IM1D4<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >IM1D5<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >IM1D6<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >IM1D7<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >IM1D8<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >IM1D9<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >IM1D10<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >IM1D11<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >IM1D12<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >IM1D13<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >IM1D14<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >IM1D15<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >IM1D16<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >IM1D17<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >IM1D18<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >OACD1<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >OACI1<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >IM1I1<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >IM1I2<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >IM1I3<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >IM1I4<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >IM1HI1<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >IM1HI2<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >IM1HI3<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >IM1HI4<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+ PARMIO> NONBOND, HBOND lists and IMAGE atoms cleared.
+  
+ CHARMM>    close unit 10
+ VCLOSE: Closing unit   10 with status "KEEP"
+  
+ CHARMM>     
+  
+ CHARMM>    read sequence HOAC 1
+  
+ CHARMM>    generate HOAC setup warn drude dmass 0.4
+ Drude polarizability will be setup for SEGID: HOAC    mass of Drudes particles =    0.4000
+ NO PATCHING WILL BE DONE ON THE FIRST RESIDUE
+ NO PATCHING WILL BE DONE ON THE LAST  RESIDUE
+
+ MKDRUDE generate list and setup for drude polarizability
+
+ All okay for      4 added Drude particles 
+
+ GENPSF> Segment   1 has been generated. Its identifier is HOAC.
+ PSFSUM> PSF modified: NONBOND lists and IMAGE atoms cleared.
+ PSFSUM> Summary of the structure file counters :
+         Number of segments      =        1   Number of residues   =        1
+         Number of atoms         =       16   Number of groups     =        1
+         Number of bonds         =       15   Number of angles     =       10
+         Number of dihedrals     =        8   Number of impropers  =        1
+         Number of cross-terms   =        0
+         Number of HB acceptors  =        0   Number of HB donors  =        0
+         Number of NB exclusions =        0   Total charge =    0.00000
+         Number of Drudes        =        4
+         Number of true-bonds    =       15   Number of zero-bonds =        0
+         Number of aniso. terms  =        2   Number of lone-pairs =        4
+  
+ CHARMM>     
+  
+ CHARMM>    !=======================================================================
+ CHARMM>    ! Optimize new coordinates
+ CHARMM>    !=======================================================================
+ CHARMM>    read coor card name "/home/aleksandar/Project/Molecules/hoac/hoac.cor"
+ VOPEN> Attempting to open::/home/aleksandar/Project/Molecules/hoac/hoac.cor::
+          SPATIAL COORDINATES BEING READ FROM UNIT 90
+ TITLE> * COORDS FROM STANDARDORIENTATION FROM HOAC.LOG FILE
+ TITLE> 8
+ ** WARNING ** After reading, there are no coordinates for selected atom:     2     1 HOAC DC1 
+ ** WARNING ** After reading, there are no coordinates for selected atom:     7     1 HOAC DC2 
+ ** WARNING ** After reading, there are no coordinates for selected atom:     9     1 HOAC DO2 
+ ** WARNING ** After reading, there are no coordinates for selected atom:    10     1 HOAC LP2A
+ ** WARNING ** After reading, there are no coordinates for selected atom:    11     1 HOAC LP2B
+ ** WARNING ** After reading, there are no coordinates for selected atom:    13     1 HOAC DO1 
+ ** WARNING ** After reading, there are no coordinates for selected atom:    14     1 HOAC LP1A
+ ** WARNING ** After reading, there are no coordinates for selected atom:    15     1 HOAC LP1B
+
+ ** A total of     8 selected atoms have no coordinates
+ *** LEVEL  2 WARNING *** BOMLEV IS   -1
+ VCLOSE: Closing unit   90 with status "KEEP"
+  
+ CHARMM>     
+  
+ CHARMM>    coor sdrude
+  
+ CHARMM>    coor shake
+ SELECTED COORDINATES CONSTRAINED IN THE MAIN SET.
+
+  
+ CHARMM>     
+  
+ CHARMM>    energy
+
+ NONBOND OPTION FLAGS: 
+     ELEC     VDW      ATOMs    CDIElec  SWITch   VATOm    VSWItch 
+     BYGRoup  NOEXtnd  NOEWald 
+ CUTNB  = 16.000 CTEXNB =999.000 CTONNB = 10.000 CTOFNB = 12.000
+ CGONNB =  0.000 CGOFNB = 10.000
+ WMIN   =  1.500 WRNMXD =  0.500 E14FAC =  1.000 EPS    =  1.000
+ NBXMOD =      5
+ There are        0 atom  pairs and        0 atom  exclusions.
+ There are        0 group pairs and        0 group exclusions.
+ <MAKINB> with mode   5 found     87 exclusions and     30 interactions(1-4)
+ <MAKGRP> found      0 group exclusions.
+ Generating nonbond list with Exclusion mode = 5
+ == PRIMARY == SPACE FOR      513 ATOM PAIRS AND        0 GROUP PAIRS
+
+ General atom nonbond list generation found:
+       33 ATOM PAIRS WERE FOUND FOR ATOM LIST
+        0 GROUP PAIRS REQUIRED ATOM SEARCHES
+
+ENER ENR:  Eval#     ENERgy      Delta-E         GRMS
+ENER INTERN:          BONDs       ANGLes       UREY-b    DIHEdrals    IMPRopers
+ENER EXTERN:        VDWaals         ELEC       HBONds          ASP         USER
+ ----------       ---------    ---------    ---------    ---------    ---------
+ENER>        0    -50.67507      0.00000     25.09191
+ENER INTERN>        4.12727      0.78983     10.65398      0.04420      0.00000
+ENER EXTERN>        0.20814    -66.49849      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+  
+ CHARMM>    nbonds elec atom fswitch vdw vatom vshift cdie eps 1.0 wmin 1.5  -
+ CHARMM>           CUTNB 14.0 CTONNB 8.0 CTOFNB 12.0
+
+ NONBOND OPTION FLAGS: 
+     ELEC     VDW      ATOMs    CDIElec  FSWItch  VATOm    VSHIft  
+     BYGRoup  NOEXtnd  NOEWald 
+ CUTNB  = 14.000 CTEXNB =999.000 CTONNB =  8.000 CTOFNB = 12.000
+ CGONNB =  0.000 CGOFNB = 10.000
+ WMIN   =  1.500 WRNMXD =  0.500 E14FAC =  1.000 EPS    =  1.000
+ NBXMOD =      5
+ There are       33 atom  pairs and      117 atom  exclusions.
+ There are        0 group pairs and        0 group exclusions.
+ Generating nonbond list with Exclusion mode = 5
+ == PRIMARY == SPACE FOR      513 ATOM PAIRS AND        0 GROUP PAIRS
+
+ General atom nonbond list generation found:
+       33 ATOM PAIRS WERE FOUND FOR ATOM LIST
+        0 GROUP PAIRS REQUIRED ATOM SEARCHES
+
+  
+ CHARMM>     
+  
+ CHARMM>    mini sd   nstep  5000 nprint 50 tolene 0.001
+
+ NONBOND OPTION FLAGS: 
+     ELEC     VDW      ATOMs    CDIElec  FSWItch  VATOm    VSHIft  
+     BYGRoup  NOEXtnd  NOEWald 
+ CUTNB  = 14.000 CTEXNB =999.000 CTONNB =  8.000 CTOFNB = 12.000
+ CGONNB =  0.000 CGOFNB = 10.000
+ WMIN   =  1.500 WRNMXD =  0.500 E14FAC =  1.000 EPS    =  1.000
+ NBXMOD =      5
+ There are       33 atom  pairs and      117 atom  exclusions.
+ There are        0 group pairs and        0 group exclusions.
+ Generating nonbond list with Exclusion mode = 5
+ == PRIMARY == SPACE FOR      513 ATOM PAIRS AND        0 GROUP PAIRS
+
+ General atom nonbond list generation found:
+       33 ATOM PAIRS WERE FOUND FOR ATOM LIST
+        0 GROUP PAIRS REQUIRED ATOM SEARCHES
+
+
+
+ STEEPD> An energy minimization has been requested.
+
+ NSTEP  =         5000   NPRINT =           50
+ STEP   =    0.0200000   TOLFUN =    0.0010000
+ TOLGRD =    0.0000000   TOLSTP =    0.0000000
+
+MINI MIN: Cycle      ENERgy      Delta-E         GRMS    Step-size
+MINI INTERN:          BONDs       ANGLes       UREY-b    DIHEdrals    IMPRopers
+MINI EXTERN:        VDWaals         ELEC       HBONds          ASP         USER
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>        0    -31.53569    -19.13938     25.09191      0.02000
+MINI INTERN>        4.12727      0.78983     10.65398      0.04420      0.00000
+MINI EXTERN>        0.20864    -47.35961      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+
+ STEEPD> Minimization exiting with function tolerance ( 0.0010000) satisfied.
+
+STPD MIN: Cycle      ENERgy      Delta-E         GRMS    Step-size
+STPD INTERN:          BONDs       ANGLes       UREY-b    DIHEdrals    IMPRopers
+STPD EXTERN:        VDWaals         ELEC       HBONds          ASP         USER
+ ----------       ---------    ---------    ---------    ---------    ---------
+STPD>       41    -36.50189      4.96620      1.68822      0.00048
+STPD INTERN>        4.57161      1.66381      9.14031      0.00181      0.00000
+STPD EXTERN>        0.26401    -52.14344      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+  
+ CHARMM>    mini abnr nstep 10000 nprint 50 tolene 0.001
+
+ NONBOND OPTION FLAGS: 
+     ELEC     VDW      ATOMs    CDIElec  FSWItch  VATOm    VSHIft  
+     BYGRoup  NOEXtnd  NOEWald 
+ CUTNB  = 14.000 CTEXNB =999.000 CTONNB =  8.000 CTOFNB = 12.000
+ CGONNB =  0.000 CGOFNB = 10.000
+ WMIN   =  1.500 WRNMXD =  0.500 E14FAC =  1.000 EPS    =  1.000
+ NBXMOD =      5
+ There are       33 atom  pairs and      117 atom  exclusions.
+ There are        0 group pairs and        0 group exclusions.
+ Generating nonbond list with Exclusion mode = 5
+ == PRIMARY == SPACE FOR      513 ATOM PAIRS AND        0 GROUP PAIRS
+
+ General atom nonbond list generation found:
+       33 ATOM PAIRS WERE FOUND FOR ATOM LIST
+        0 GROUP PAIRS REQUIRED ATOM SEARCHES
+
+
+
+ ABNER> An energy minimization has been requested.
+
+ EIGRNG =    0.0005000   MINDIM =            5
+ NPRINT =           50   NSTEP  =        10000
+ PSTRCT =    0.0000000   SDSTP  =    0.0200000
+ STPLIM =    1.0000000   STRICT =    0.1000000
+ TOLFUN =    0.0010000   TOLGRD =    0.0000000
+ TOLITR =          100   TOLSTP =    0.0000000
+ FMEM   =    0.0000000
+MINI MIN: Cycle      ENERgy      Delta-E         GRMS    Step-size
+MINI INTERN:          BONDs       ANGLes       UREY-b    DIHEdrals    IMPRopers
+MINI EXTERN:        VDWaals         ELEC       HBONds          ASP         USER
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>        0    -36.50189      4.96620      1.68822      0.00000
+MINI INTERN>        4.57161      1.66381      9.14031      0.00181      0.00000
+MINI EXTERN>        0.26401    -52.14344      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+
+ ABNER> Minimization exiting with function tolerance ( 0.0010000) satisfied.
+
+ABNR MIN: Cycle      ENERgy      Delta-E         GRMS    Step-size
+ABNR INTERN:          BONDs       ANGLes       UREY-b    DIHEdrals    IMPRopers
+ABNR EXTERN:        VDWaals         ELEC       HBONds          ASP         USER
+ ----------       ---------    ---------    ---------    ---------    ---------
+ABNR>        5    -36.49320     -0.00869      5.32647      0.00648
+ABNR INTERN>        4.78275      1.83910      9.17475      0.00003      0.00000
+ABNR EXTERN>        0.25454    -52.54438      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+  
+ CHARMM>     
+  
+ CHARMM>    ioformat extended
+ MISCOM> Expanded I/O format is used.
+  
+ CHARMM>    !write coor card name "oac_opt.crd"
+ CHARMM>    !write coor pdb name "oac.pdb"
+ CHARMM>    !write psf  card name "oac.psf"
+ CHARMM>     
+  
+ CHARMM>    !=======================================================================
+ CHARMM>    ! Normal mode analysis
+ CHARMM>    !=======================================================================
+ CHARMM>    !define DUMMY sele type LP* .or. type D* end
+ CHARMM>     
+  
+ CHARMM>    drude reset
+ DRUDE> Drude particles ready to be deleted
+
+        Call: DELETE ATOMS SELECT TYPE D* END
+
+ PSFSUM> PSF modified: NONBOND lists and IMAGE atoms cleared.
+ PSFSUM> Summary of the structure file counters :
+         Number of segments      =        1   Number of residues   =        1
+         Number of atoms         =       16   Number of groups     =        1
+         Number of bonds         =       15   Number of angles     =       10
+         Number of dihedrals     =        8   Number of impropers  =        1
+         Number of cross-terms   =        0
+         Number of HB acceptors  =        0   Number of HB donors  =        0
+         Number of NB exclusions =        0   Total charge =    0.00000
+  
+ CHARMM>    delete atom sele type D* end
+ SELRPN>      4 atoms have been selected out of     16
+
+ Message from MAPIC: Atom numbers are changed.
+ DELTIC:         4 bonds deleted
+ PSFSUM> PSF modified: NONBOND lists and IMAGE atoms cleared.
+ PSFSUM> Summary of the structure file counters :
+         Number of segments      =        1   Number of residues   =        1
+         Number of atoms         =       12   Number of groups     =        1
+         Number of bonds         =       11   Number of angles     =       10
+         Number of dihedrals     =        8   Number of impropers  =        1
+         Number of cross-terms   =        0
+         Number of HB acceptors  =        0   Number of HB donors  =        0
+         Number of NB exclusions =        0   Total charge =    0.00000
+  
+ CHARMM>     
+  
+ CHARMM>    scalar charge add -0.570 sele atom * * O1 end ! add LP1A and LP1B charge to O1
+ SELRPN>      1 atoms have been selected out of     12
+
+ Warning from SCALAR: The sum of charges (   -0.570000) is not an integer
+
+  
+ CHARMM>    scalar charge add -0.638 sele atom * * O2 end ! add LP2A and LP2B charge to O2
+ SELRPN>      1 atoms have been selected out of     12
+
+ Warning from SCALAR: The sum of charges (   -1.208000) is not an integer
+
+  
+ CHARMM>     
+  
+ CHARMM>    delete atom sele type LP* end ! delete Lonepairs
+ SELRPN>      4 atoms have been selected out of     12
+
+ Message from MAPIC: Atom numbers are changed.
+ LONEPRD:    4 lonepair atoms deleted
+ DELTIC:         4 bonds deleted
+ PSFSUM> PSF modified: NONBOND lists and IMAGE atoms cleared.
+ PSFSUM> Summary of the structure file counters :
+         Number of segments      =        1   Number of residues   =        1
+         Number of atoms         =        8   Number of groups     =        1
+         Number of bonds         =        7   Number of angles     =       10
+         Number of dihedrals     =        8   Number of impropers  =        1
+         Number of cross-terms   =        0
+         Number of HB acceptors  =        0   Number of HB donors  =        0
+         Number of NB exclusions =        0   Total charge =    0.00000
+  
+ CHARMM>     
+  
+ CHARMM>    vibran nmod
+
+ NONBOND OPTION FLAGS: 
+     ELEC     VDW      ATOMs    CDIElec  FSWItch  VATOm    VSHIft  
+     BYGRoup  NOEXtnd  NOEWald 
+ CUTNB  = 14.000 CTEXNB =999.000 CTONNB =  8.000 CTOFNB = 12.000
+ CGONNB =  0.000 CGOFNB = 10.000
+ WMIN   =  1.500 WRNMXD =  0.500 E14FAC =  1.000 EPS    =  1.000
+ NBXMOD =      5
+ There are        0 atom  pairs and        0 atom  exclusions.
+ There are        0 group pairs and        0 group exclusions.
+ <MAKINB> with mode   5 found     17 exclusions and      8 interactions(1-4)
+ <MAKGRP> found      0 group exclusions.
+ Generating nonbond list with Exclusion mode = 5
+ == PRIMARY == SPACE FOR      513 ATOM PAIRS AND        0 GROUP PAIRS
+
+ General atom nonbond list generation found:
+       11 ATOM PAIRS WERE FOUND FOR ATOM LIST
+        0 GROUP PAIRS REQUIRED ATOM SEARCHES
+
+ VIBRAN: Space allocated for    24 vectors of length    24
+  
+ VIBRAN>    diag  finite step 0.001 !dscf ganz cool, liefert quasi gleiches ergebnis wie ohne aber dauert 1s statt 0.03s...
+ SECOND DERIVATIVE CALCULATED BY FINITE DIFFERENCES
+ NUMBER OF ENERGY EVALUATIONS:       49
+ TOTAL NUMBER OF CYCLES:             24
+VIBR ENR:  Eval#     ENERgy      Delta-E         GRMS
+VIBR INTERN:          BONDs       ANGLes       UREY-b    DIHEdrals    IMPRopers
+VIBR EXTERN:        VDWaals         ELEC       HBONds          ASP         USER
+ ----------       ---------    ---------    ---------    ---------    ---------
+VIBR>        1    -34.98948     -1.50372      2.86553
+VIBR INTERN>        2.36832      1.66831      9.22318      0.00068      0.00000
+VIBR EXTERN>        0.26684    -48.51682      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+
+               DIAGONALIZATION COMPLETED
+
+               FREQUENCIES
+
+   1  -43.261767   2  -37.956747   3  -29.137011   4   -0.000293   5    0.001281
+   6    0.005961   7  705.690143   8  955.482469   9 1158.733532  10 1267.835572
+  11 1458.568611  12 1698.431076  13 1927.120649  14 2229.060411  15 2276.990774
+  16 2424.813614  17 2748.927478  18 3316.453941  19 3330.495868  20 3335.913307
+  21 3722.523186  22 3892.815879  23 4409.151144  24 4448.053441
+  
+ VIBRAN>    mass
+  
+ VIBRAN>    !print norm mode 13 thru 33 temp 300.0 vect sele .not. DUMMY end
+ VIBRAN>    print norm mode 1 thru 24 vect !sele .not. DUMMY end !achtung wegen lkonepairs und mode auswahl
+
+               NORMAL MODES
+
+     1    -43.26     2    -37.96     3    -29.14     4     -0.00     5      0.00
+     6      0.01     7    705.69     8    955.48     9   1158.73    10   1267.84
+    11   1458.57    12   1698.43    13   1927.12    14   2229.06    15   2276.99
+    16   2424.81    17   2748.93    18   3316.45    19   3330.50    20   3335.91
+    21   3722.52    22   3892.82    23   4409.15    24   4448.05
+
+  VIBRATION MODE   1  FREQUENCY=  -43.261767  TRANS ROT %=   99.999963
+  EIGENVALUE=   -0.158713  ENERGY DERIVATIVE=    0.000000
+  TYPE  'FACT'    1.0000   MASS   NORM  STEP=    1.000000
+
+   EIGENVECTOR:
+              1    1 HOAC     C1        -0.00000  -0.00000  -0.16986
+              2    1 HOAC     H1         0.00000  -0.00000  -0.14830
+              3    1 HOAC     H2        -0.10278   0.07311  -0.25056
+              4    1 HOAC     H3         0.10278  -0.07311  -0.25056
+              5    1 HOAC     C2        -0.00000  -0.00000   0.01572
+              6    1 HOAC     O2         0.00000   0.00000   0.16799
+              7    1 HOAC     O1        -0.00000   0.00000  -0.00286
+              8    1 HOAC     HO1       -0.00000  -0.00000  -0.13384
+
+  VIBRATION MODE   2  FREQUENCY=  -37.956747  TRANS ROT %=   99.999842
+  EIGENVALUE=   -0.122175  ENERGY DERIVATIVE=    0.000129
+  TYPE  'FACT'    1.0000   MASS   NORM  STEP=    1.000000
+
+   EIGENVECTOR:
+              1    1 HOAC     C1        -0.00948  -0.14671   0.00000
+              2    1 HOAC     H1         0.09194  -0.19921  -0.00000
+              3    1 HOAC     H2        -0.06755  -0.17845   0.00008
+              4    1 HOAC     H3        -0.06755  -0.17845  -0.00008
+              5    1 HOAC     C2         0.01065   0.00671  -0.00000
+              6    1 HOAC     O2         0.12190   0.06524  -0.00000
+              7    1 HOAC     O1        -0.10841   0.07423   0.00000
+              8    1 HOAC     HO1       -0.18483   0.01030   0.00000
+
+  VIBRATION MODE   3  FREQUENCY=  -29.137011  TRANS ROT %=   99.999369
+  EIGENVALUE=   -0.071994  ENERGY DERIVATIVE=   -0.000000
+  TYPE  'FACT'    1.0000   MASS   NORM  STEP=    1.000000
+
+   EIGENVECTOR:
+              1    1 HOAC     C1         0.00000   0.00000  -0.10612
+              2    1 HOAC     H1        -0.00000   0.00000  -0.26737
+              3    1 HOAC     H2        -0.07438  -0.10917  -0.06319
+              4    1 HOAC     H3         0.07438   0.10917  -0.06319
+              5    1 HOAC     C2        -0.00000  -0.00000  -0.00709
+              6    1 HOAC     O2        -0.00000  -0.00000  -0.09191
+              7    1 HOAC     O1         0.00000  -0.00000   0.18729
+              8    1 HOAC     HO1        0.00000  -0.00000   0.22821
+
+  VIBRATION MODE   4  FREQUENCY=   -0.000293  TRANS ROT %=  100.000000
+  EIGENVALUE=   -0.000000  ENERGY DERIVATIVE=   -0.000000
+  TYPE  'FACT'    1.0000   MASS   NORM  STEP=    1.000000
+
+   EIGENVECTOR:
+              1    1 HOAC     C1         0.12898   0.00397   0.00000
+              2    1 HOAC     H1         0.12898   0.00397   0.00000
+              3    1 HOAC     H2         0.12898   0.00397   0.00000
+              4    1 HOAC     H3         0.12898   0.00397   0.00000
+              5    1 HOAC     C2         0.12898   0.00397   0.00000
+              6    1 HOAC     O2         0.12898   0.00397   0.00000
+              7    1 HOAC     O1         0.12898   0.00397   0.00000
+              8    1 HOAC     HO1        0.12898   0.00397   0.00000
+
+  VIBRATION MODE   5  FREQUENCY=    0.001281  TRANS ROT %=  100.000000
+  EIGENVALUE=    0.000000  ENERGY DERIVATIVE=    0.000000
+  TYPE  'FACT'    1.0000   MASS   NORM  STEP=    1.000000
+
+   EIGENVECTOR:
+              1    1 HOAC     C1        -0.00397   0.12898   0.00000
+              2    1 HOAC     H1        -0.00397   0.12897   0.00000
+              3    1 HOAC     H2        -0.00398   0.12897   0.00000
+              4    1 HOAC     H3        -0.00398   0.12897   0.00000
+              5    1 HOAC     C2        -0.00397   0.12898   0.00000
+              6    1 HOAC     O2        -0.00397   0.12898   0.00000
+              7    1 HOAC     O1        -0.00398   0.12899   0.00000
+              8    1 HOAC     HO1       -0.00398   0.12898   0.00000
+
+  VIBRATION MODE   6  FREQUENCY=    0.005961  TRANS ROT %=  100.000000
+  EIGENVALUE=    0.000000  ENERGY DERIVATIVE=   -0.000000
+  TYPE  'FACT'    1.0000   MASS   NORM  STEP=    1.000000
+
+   EIGENVECTOR:
+              1    1 HOAC     C1        -0.00000  -0.00000   0.12906
+              2    1 HOAC     H1        -0.00000  -0.00000   0.12904
+              3    1 HOAC     H2         0.00001  -0.00002   0.12907
+              4    1 HOAC     H3        -0.00001   0.00002   0.12907
+              5    1 HOAC     C2        -0.00000  -0.00000   0.12904
+              6    1 HOAC     O2        -0.00000  -0.00000   0.12901
+              7    1 HOAC     O1        -0.00000  -0.00000   0.12906
+              8    1 HOAC     HO1       -0.00000  -0.00000   0.12908
+
+  VIBRATION MODE   7  FREQUENCY=  705.690143  TRANS ROT %=    0.000045
+  EIGENVALUE=   42.231110  ENERGY DERIVATIVE=   -0.124566
+  TYPE  'FACT'    1.0000   MASS   NORM  STEP=    1.000000
+
+   EIGENVECTOR:
+              1    1 HOAC     C1        -0.04210  -0.13204   0.00000
+              2    1 HOAC     H1         0.08982  -0.21001   0.00000
+              3    1 HOAC     H2        -0.12172  -0.17803  -0.00387
+              4    1 HOAC     H3        -0.12172  -0.17803   0.00387
+              5    1 HOAC     C2        -0.01212   0.04904   0.00000
+              6    1 HOAC     O2        -0.09993   0.03742   0.00000
+              7    1 HOAC     O1         0.13560   0.05237   0.00000
+              8    1 HOAC     HO1        0.23354   0.13001   0.00000
+
+  VIBRATION MODE   8  FREQUENCY=  955.482469  TRANS ROT %=    0.000033
+  EIGENVALUE=   77.419407  ENERGY DERIVATIVE=   -0.494527
+  TYPE  'FACT'    1.0000   MASS   NORM  STEP=    1.000000
+
+   EIGENVECTOR:
+              1    1 HOAC     C1         0.15542  -0.02666   0.00000
+              2    1 HOAC     H1         0.17805  -0.04112   0.00000
+              3    1 HOAC     H2         0.16234  -0.03073   0.00515
+              4    1 HOAC     H3         0.16234  -0.03073  -0.00515
+              5    1 HOAC     C2         0.06289   0.00540   0.00000
+              6    1 HOAC     O2        -0.11984  -0.07402  -0.00000
+              7    1 HOAC     O1        -0.06413   0.09595  -0.00000
+              8    1 HOAC     HO1       -0.18399   0.00792   0.00000
+
+  VIBRATION MODE   9  FREQUENCY= 1158.733532  TRANS ROT %=    0.000040
+  EIGENVALUE=  113.860096  ENERGY DERIVATIVE=   -0.918302
+  TYPE  'FACT'    1.0000   MASS   NORM  STEP=    1.000000
+
+   EIGENVECTOR:
+              1    1 HOAC     C1         0.08796  -0.02319  -0.00000
+              2    1 HOAC     H1         0.17655  -0.07407  -0.00000
+              3    1 HOAC     H2         0.05607  -0.04596   0.00211
+              4    1 HOAC     H3         0.05607  -0.04596  -0.00211
+              5    1 HOAC     C2         0.01893   0.07046  -0.00000
+              6    1 HOAC     O2        -0.05754   0.13865   0.00000
+              7    1 HOAC     O1        -0.03924  -0.15407   0.00000
+              8    1 HOAC     HO1       -0.02638  -0.15259  -0.00000
+
+  VIBRATION MODE  10  FREQUENCY= 1267.835572  TRANS ROT %=    0.000512
+  EIGENVALUE=  136.310798  ENERGY DERIVATIVE=   -0.000000
+  TYPE  'FACT'    1.0000   MASS   NORM  STEP=    1.000000
+
+   EIGENVECTOR:
+              1    1 HOAC     C1         0.00000  -0.00000  -0.01970
+              2    1 HOAC     H1         0.00000  -0.00000   0.16823
+              3    1 HOAC     H2        -0.17271   0.23824  -0.23669
+              4    1 HOAC     H3         0.17271  -0.23824  -0.23669
+              5    1 HOAC     C2        -0.00000   0.00000   0.17375
+              6    1 HOAC     O2         0.00000   0.00000  -0.06768
+              7    1 HOAC     O1         0.00000  -0.00000  -0.05629
+              8    1 HOAC     HO1        0.00000  -0.00000   0.43725
+
+  VIBRATION MODE  11  FREQUENCY= 1458.568611  TRANS ROT %=    0.000109
+  EIGENVALUE=  180.408967  ENERGY DERIVATIVE=    0.000000
+  TYPE  'FACT'    1.0000   MASS   NORM  STEP=    1.000000
+
+   EIGENVECTOR:
+              1    1 HOAC     C1         0.00000   0.00000  -0.00882
+              2    1 HOAC     H1         0.00000   0.00000  -0.05472
+              3    1 HOAC     H2         0.10597  -0.07995   0.07789
+              4    1 HOAC     H3        -0.10597   0.07995   0.07789
+              5    1 HOAC     C2         0.00000   0.00000  -0.10436
+              6    1 HOAC     O2        -0.00000  -0.00000   0.06650
+              7    1 HOAC     O1        -0.00000   0.00000  -0.04113
+              8    1 HOAC     HO1       -0.00000   0.00000   0.84495
+
+  VIBRATION MODE  12  FREQUENCY= 1698.431076  TRANS ROT %=    0.000000
+  EIGENVALUE=  244.624668  ENERGY DERIVATIVE=    1.009077
+  TYPE  'FACT'    1.0000   MASS   NORM  STEP=    1.000000
+
+   EIGENVECTOR:
+              1    1 HOAC     C1        -0.06314   0.03441  -0.00000
+              2    1 HOAC     H1         0.22781  -0.11802   0.00000
+              3    1 HOAC     H2        -0.28114  -0.03633  -0.03500
+              4    1 HOAC     H3        -0.28114  -0.03633   0.03500
+              5    1 HOAC     C2         0.11010   0.17099   0.00000
+              6    1 HOAC     O2         0.01217  -0.10005  -0.00000
+              7    1 HOAC     O1        -0.01983  -0.03579   0.00000
+              8    1 HOAC     HO1       -0.10351  -0.10069  -0.00000
+
+  VIBRATION MODE  13  FREQUENCY= 1927.120649  TRANS ROT %=    0.000000
+  EIGENVALUE=  314.935925  ENERGY DERIVATIVE=   -0.663167
+  TYPE  'FACT'    1.0000   MASS   NORM  STEP=    1.000000
+
+   EIGENVECTOR:
+              1    1 HOAC     C1        -0.06603  -0.00844  -0.00000
+              2    1 HOAC     H1        -0.25585   0.09403   0.00000
+              3    1 HOAC     H2        -0.03943   0.00969  -0.00803
+              4    1 HOAC     H3        -0.03943   0.00969   0.00803
+              5    1 HOAC     C2         0.12567  -0.06812   0.00000
+              6    1 HOAC     O2        -0.04218   0.05526  -0.00000
+              7    1 HOAC     O1         0.05181   0.02395  -0.00000
+              8    1 HOAC     HO1       -0.52869  -0.45843   0.00000
+
+  VIBRATION MODE  14  FREQUENCY= 2229.060411  TRANS ROT %=    0.000025
+  EIGENVALUE=  421.354922  ENERGY DERIVATIVE=   -0.000000
+  TYPE  'FACT'    1.0000   MASS   NORM  STEP=    1.000000
+
+   EIGENVECTOR:
+              1    1 HOAC     C1         0.00000   0.00000  -0.08378
+              2    1 HOAC     H1         0.00000  -0.00000   0.11336
+              3    1 HOAC     H2         0.63201   0.12349   0.03850
+              4    1 HOAC     H3        -0.63201  -0.12349   0.03850
+              5    1 HOAC     C2        -0.00000  -0.00000   0.06928
+              6    1 HOAC     O2         0.00000  -0.00000  -0.01355
+              7    1 HOAC     O1         0.00000   0.00000   0.01345
+              8    1 HOAC     HO1       -0.00000  -0.00000  -0.01605
+
+  VIBRATION MODE  15  FREQUENCY= 2276.990774  TRANS ROT %=    0.000004
+  EIGENVALUE=  439.670104  ENERGY DERIVATIVE=   -2.848181
+  TYPE  'FACT'    1.0000   MASS   NORM  STEP=    1.000000
+
+   EIGENVECTOR:
+              1    1 HOAC     C1         0.03926   0.05740   0.00000
+              2    1 HOAC     H1         0.56932  -0.21551  -0.00000
+              3    1 HOAC     H2        -0.15842   0.03328  -0.03208
+              4    1 HOAC     H3        -0.15842   0.03328   0.03208
+              5    1 HOAC     C2        -0.13560  -0.04792  -0.00000
+              6    1 HOAC     O2         0.01949   0.00020   0.00000
+              7    1 HOAC     O1         0.05720   0.02139  -0.00000
+              8    1 HOAC     HO1       -0.32180  -0.30682   0.00000
+
+  VIBRATION MODE  16  FREQUENCY= 2424.813614  TRANS ROT %=    0.000025
+  EIGENVALUE=  498.610153  ENERGY DERIVATIVE=   -0.376941
+  TYPE  'FACT'    1.0000   MASS   NORM  STEP=    1.000000
+
+   EIGENVECTOR:
+              1    1 HOAC     C1         0.00726  -0.05447   0.00000
+              2    1 HOAC     H1        -0.28825   0.05833   0.00000
+              3    1 HOAC     H2         0.31228  -0.03696   0.10273
+              4    1 HOAC     H3         0.31228  -0.03696  -0.10273
+              5    1 HOAC     C2        -0.11394   0.14873  -0.00000
+              6    1 HOAC     O2         0.03114  -0.04876   0.00000
+              7    1 HOAC     O1         0.04443  -0.00344  -0.00000
+              8    1 HOAC     HO1       -0.26454  -0.27892   0.00000
+
+  VIBRATION MODE  17  FREQUENCY= 2748.927478  TRANS ROT %=    0.000001
+  EIGENVALUE=  640.812477  ENERGY DERIVATIVE=    2.984151
+  TYPE  'FACT'    1.0000   MASS   NORM  STEP=    1.000000
+
+   EIGENVECTOR:
+              1    1 HOAC     C1        -0.12457   0.01968   0.00000
+              2    1 HOAC     H1         0.33725  -0.40209   0.00000
+              3    1 HOAC     H2         0.37021   0.12913   0.29844
+              4    1 HOAC     H3         0.37021   0.12913  -0.29844
+              5    1 HOAC     C2         0.05166  -0.01906   0.00000
+              6    1 HOAC     O2        -0.00721   0.00653  -0.00000
+              7    1 HOAC     O1        -0.00807  -0.00059  -0.00000
+              8    1 HOAC     HO1        0.03348   0.04203  -0.00000
+
+  VIBRATION MODE  18  FREQUENCY= 3316.453941  TRANS ROT %=    0.000000
+  EIGENVALUE=  932.722244  ENERGY DERIVATIVE=    2.663919
+  TYPE  'FACT'    1.0000   MASS   NORM  STEP=    1.000000
+
+   EIGENVECTOR:
+              1    1 HOAC     C1        -0.08365   0.01445  -0.00000
+              2    1 HOAC     H1         0.35728   0.37391  -0.00000
+              3    1 HOAC     H2         0.28372  -0.26625  -0.40939
+              4    1 HOAC     H3         0.28372  -0.26625   0.40939
+              5    1 HOAC     C2         0.00760  -0.00186  -0.00000
+              6    1 HOAC     O2        -0.00069   0.00043  -0.00000
+              7    1 HOAC     O1        -0.00030  -0.00017   0.00000
+              8    1 HOAC     HO1       -0.00286   0.00450   0.00000
+
+  VIBRATION MODE  19  FREQUENCY= 3330.495868  TRANS ROT %=    0.000012
+  EIGENVALUE=  940.637292  ENERGY DERIVATIVE=    0.000000
+  TYPE  'FACT'    1.0000   MASS   NORM  STEP=    1.000000
+
+   EIGENVECTOR:
+              1    1 HOAC     C1        -0.00000  -0.00000   0.06074
+              2    1 HOAC     H1         0.00000   0.00000   0.16554
+              3    1 HOAC     H2         0.14465  -0.45750  -0.47856
+              4    1 HOAC     H3        -0.14465   0.45750  -0.47856
+              5    1 HOAC     C2         0.00000  -0.00000   0.01214
+              6    1 HOAC     O2        -0.00000   0.00000   0.00051
+              7    1 HOAC     O1         0.00000   0.00000  -0.00515
+              8    1 HOAC     HO1        0.00000  -0.00000  -0.00311
+
+  VIBRATION MODE  20  FREQUENCY= 3335.913307  TRANS ROT %=    0.000001
+  EIGENVALUE=  943.699892  ENERGY DERIVATIVE=   -0.076256
+  TYPE  'FACT'    1.0000   MASS   NORM  STEP=    1.000000
+
+   EIGENVECTOR:
+              1    1 HOAC     C1        -0.01209  -0.06195  -0.00000
+              2    1 HOAC     H1         0.33822   0.70998  -0.00000
+              3    1 HOAC     H2        -0.09685   0.02321   0.39130
+              4    1 HOAC     H3        -0.09685   0.02321  -0.39130
+              5    1 HOAC     C2        -0.00005  -0.00103  -0.00000
+              6    1 HOAC     O2        -0.00101  -0.00012  -0.00000
+              7    1 HOAC     O1         0.00087  -0.00004   0.00000
+              8    1 HOAC     HO1        0.00246  -0.00330   0.00000
+
+  VIBRATION MODE  21  FREQUENCY= 3722.523186  TRANS ROT %=    0.000004
+  EIGENVALUE= 1175.111880  ENERGY DERIVATIVE=    0.404158
+  TYPE  'FACT'    1.0000   MASS   NORM  STEP=    1.000000
+
+   EIGENVECTOR:
+              1    1 HOAC     C1         0.00108  -0.00037  -0.00000
+              2    1 HOAC     H1        -0.00265   0.00079   0.00000
+              3    1 HOAC     H2        -0.00173  -0.00331   0.00439
+              4    1 HOAC     H3        -0.00173  -0.00331  -0.00439
+              5    1 HOAC     C2        -0.00414   0.00159   0.00000
+              6    1 HOAC     O2         0.00103   0.00136  -0.00000
+              7    1 HOAC     O1         0.04085  -0.04825  -0.00000
+              8    1 HOAC     HO1       -0.62228   0.73555  -0.00000
+
+  VIBRATION MODE  22  FREQUENCY= 3892.815879  TRANS ROT %=    0.000002
+  EIGENVALUE= 1285.085787  ENERGY DERIVATIVE=   -0.000000
+  TYPE  'FACT'    1.0000   MASS   NORM  STEP=    1.000000
+
+   EIGENVECTOR:
+              1    1 HOAC     C1        -0.00000  -0.00000   0.00139
+              2    1 HOAC     H1         0.00000  -0.00000   0.70722
+              3    1 HOAC     H2        -0.03126   0.26951  -0.16967
+              4    1 HOAC     H3         0.03126  -0.26951  -0.16967
+              5    1 HOAC     C2         0.00000   0.00000  -0.13074
+              6    1 HOAC     O2         0.00000   0.00000   0.00161
+              7    1 HOAC     O1         0.00000  -0.00000   0.07247
+              8    1 HOAC     HO1        0.00000   0.00000  -0.00234
+
+  VIBRATION MODE  23  FREQUENCY= 4409.151144  TRANS ROT %=    0.000005
+  EIGENVALUE= 1648.596476  ENERGY DERIVATIVE=   -0.683390
+  TYPE  'FACT'    1.0000   MASS   NORM  STEP=    1.000000
+
+   EIGENVECTOR:
+              1    1 HOAC     C1        -0.01582  -0.12019   0.00000
+              2    1 HOAC     H1         0.12510   0.07923  -0.00000
+              3    1 HOAC     H2         0.01908   0.56638  -0.27076
+              4    1 HOAC     H3         0.01908   0.56638   0.27076
+              5    1 HOAC     C2         0.00171   0.02232  -0.00000
+              6    1 HOAC     O2        -0.00042  -0.00168   0.00000
+              7    1 HOAC     O1         0.00109  -0.00126  -0.00000
+              8    1 HOAC     HO1       -0.00560   0.00094   0.00000
+
+  VIBRATION MODE  24  FREQUENCY= 4448.053441  TRANS ROT %=    0.000007
+  EIGENVALUE= 1677.816214  ENERGY DERIVATIVE=    0.000000
+  TYPE  'FACT'    1.0000   MASS   NORM  STEP=    1.000000
+
+   EIGENVECTOR:
+              1    1 HOAC     C1         0.00000   0.00000   0.12374
+              2    1 HOAC     H1        -0.00000  -0.00000  -0.55698
+              3    1 HOAC     H2         0.13242   0.34412  -0.30202
+              4    1 HOAC     H3        -0.13242  -0.34412  -0.30202
+              5    1 HOAC     C2         0.00000  -0.00000  -0.05645
+              6    1 HOAC     O2         0.00000   0.00000   0.00175
+              7    1 HOAC     O1        -0.00000  -0.00000   0.02102
+              8    1 HOAC     HO1       -0.00000   0.00000  -0.00212
+  
+ VIBRAN>    end
+  
+ CHARMM>    !write para used card name "parameters.par"
+      $$$$$$  New timer profile Local node$$$$$
+   Shake time                      0.00 Other:            0.00
+      Heuristic check                 0.00 Other:            0.00
+   List time                       0.00 Other:            0.00
+         Electrostatic & VDW             0.00 Other:            0.00
+      Nonbond force                   0.00 Other:            0.00
+         Bond energy                     0.00 Other:            0.00
+         Angle energy                    0.00 Other:            0.00
+         Dihedral energy                 0.00 Other:            0.00
+         Restraints energy               0.00 Other:            0.00
+      INTRNL energy                   0.00 Other:            0.00
+      Comm energy                     0.00 Other:            0.00
+      Comm force                      0.00 Other:            0.00
+   Energy time                     0.00 Other:            0.00
+ Total time                      0.04 Other:            0.03
+         $$$$$$  Average   profile $$$$$
+   Shake time                      0.00 Other:            0.00
+      Heuristic check                 0.00 Other:            0.00
+   List time                       0.00 Other:            0.00
+         Electrostatic & VDW             0.00 Other:            0.00
+      Nonbond force                   0.00 Other:            0.00
+         Bond energy                     0.00 Other:            0.00
+         Angle energy                    0.00 Other:            0.00
+         Dihedral energy                 0.00 Other:            0.00
+         Restraints energy               0.00 Other:            0.00
+      INTRNL energy                   0.00 Other:            0.00
+      Comm energy                     0.00 Other:            0.00
+      Comm force                      0.00 Other:            0.00
+   Energy time                     0.00 Other:            0.00
+ Total time                      0.04 Other:            0.03
+
+                    NORMAL TERMINATION BY END OF FILE
+                    MOST SEVERE WARNING WAS AT LEVEL  0
+
+                    $$$$$ JOB ACCOUNTING INFORMATION $$$$$
+                     ELAPSED TIME:     0.04  SECONDS 
+                         CPU TIME:     0.04  SECONDS 

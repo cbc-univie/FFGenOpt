@@ -1,0 +1,23 @@
+REMARK  CHARMM NORMAL MODE                                                            
+REMARK   DATE:    12/11/20      8:39:23      CREATED BY USER: florian                 
+ATOM      1  C1  IM1H    1       2.114  -0.007   0.000  1.00  0.00      IM1H
+ATOM      2  DC1 IM1H    1       2.114  -0.007   0.000  1.00  0.00      IM1H
+ATOM      3  N1  IM1H    1       0.643   0.002   0.000  1.00  0.00      IM1H
+ATOM      4  DN1 IM1H    1       0.643   0.002   0.000  1.00  0.00      IM1H
+ATOM      5  C2  IM1H    1      -0.154   1.137   0.000  1.00  0.00      IM1H
+ATOM      6  DC2 IM1H    1      -0.154   1.137   0.000  1.00  0.00      IM1H
+ATOM      7  C3  IM1H    1      -1.455   0.719   0.000  1.00  0.00      IM1H
+ATOM      8  DC3 IM1H    1      -1.455   0.719   0.000  1.00  0.00      IM1H
+ATOM      9  N2  IM1H    1      -1.419  -0.661   0.000  1.00  0.00      IM1H
+ATOM     10  DN2 IM1H    1      -1.419  -0.661   0.000  1.00  0.00      IM1H
+ATOM     11  H1  IM1H    1      -2.226  -1.279  -0.000  1.00  0.00      IM1H
+ATOM     12  C4  IM1H    1      -0.145  -1.077   0.000  1.00  0.00      IM1H
+ATOM     13  DC4 IM1H    1      -0.145  -1.077   0.000  1.00  0.00      IM1H
+ATOM     14  H2  IM1H    1       2.480   0.505  -0.900  1.00  0.00      IM1H
+ATOM     15  H3  IM1H    1       2.464  -1.046   0.000  1.00  0.00      IM1H
+ATOM     16  H4  IM1H    1       2.480   0.505   0.900  1.00  0.00      IM1H
+ATOM     17  H5  IM1H    1       0.268   2.137   0.000  1.00  0.00      IM1H
+ATOM     18  H6  IM1H    1      -2.384   1.279  -0.000  1.00  0.00      IM1H
+ATOM     19  H7  IM1H    1       0.189  -2.111   0.000  1.00  0.00      IM1H
+TER      20      IM1H     1
+END
