@@ -15,6 +15,7 @@ class Config:
             configFile = "FF_GenOpt.cfg"
             
         #Default general settings
+        self.extern = False
         self.mdexec = "charmm"
         self.mdinp = "oac.inp" #CHARMM input file that reads from parameters.str
         self.mdout = "opt.log" #CHARMM computer logfile with vibration vectors
@@ -48,8 +49,18 @@ class Config:
                 lines = f.readlines()
                 for line in lines:
                     e = " ".join(line.split()).split("#")[0].strip().split(" ")
+                    if(e[0] == "EXTERN"):
+                        self.extern = e[1]
                     if(e[0] == "MDEXEC"):
                         self.mdexec = e[1]
+                    if(e[0] == "PSF"):
+                        self.psf = e[1]
+                    if(e[0] == "CRD"):
+                        self.crd = e[1]
+                    if(e[0] == "PARAMS"):
+                        self.params = e[1]
+                    if(e[0] == "VARFILE"):
+                        self.varfile = e[1]
                     if(e[0] == "MDINP"):
                         self.mdinp = e[1]
                     if(e[0] == "MDOUT"):

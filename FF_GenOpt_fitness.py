@@ -5,6 +5,11 @@ from FF_GenOpt_extern import read_gaussian
 from FF_GenOpt_extern import read_charmm
 from FF_GenOpt_extern import RunMD
 from FF_GenOpt_extern import Compute
+from FF_GenOpt_extern import create_context
+from FF_GenOpt_extern import update_context
+from FF_GenOpt_extern import to_change
+from FF_GenOpt_extern import get_varnames
+from pathlib import Path
 
 class TestFitnessFunction:
     def __init__(self,paramSettings):
@@ -21,17 +26,35 @@ class TestFitnessFunction:
         return np.sum((parameters-self.target)**2) #test
 
 class FitnessFunction:
-    def __init__(self,paramSettings,mdexec,mdinp,mdout,qmout,paramfilename):
+    def __init__(self,paramSettings,extern,psf,crd,params,varfile,mdexec,mdinp,mdout,qmout,paramfilename):
         self.parameterNames = paramSettings.names
         self.dim = paramSettings.dim
         self.numOfEvaluations = 0
         self.numOfGeneticEvaluations = 0
         self.qmReferenceData = read_gaussian(qmout)
+        self.psf = Path(psf)
+        self.crd = Path(crd)
+        self.params = Path(params)
         self.mdexec = mdexec
         self.mdinp = mdinp
         self.mdout = mdout
         self.qmout = qmout
         self.paramfilename = paramfilename
+        print(paramfilename)
+        self.extern = extern
+        self.context = None
+        self.topology = None
+        self.system = None
+        self.integrator = None
+        self.positions = None
+        self.psf = None
+        self.bonds = None
+        self.angles = None
+        self.dihedrals = None
+        if self.extern == "False":
+            self.context,self.topology,self.system,self.integrator,self.position,self.psf = create_context(
+                psf,crd,params)
+            self.bonds, self.angles, self.dhis = to_change(self.parameterNames, varfile, self.psf)
     def writeParameters(self, plist):
         assert(len(plist)==self.dim)
         output = ""
@@ -44,14 +67,22 @@ class FitnessFunction:
         if(typeOfEvaluation=="genetic"):
             self.numOfGeneticEvaluations += 1
         self.writeParameters(parameters)
-        try:
-            RunMD(self.mdexec, self.mdinp, self.mdout)
-            mdfreq, mdX, mdY, mdZ = read_charmm(self.mdout)
-            qmfreq, qmX, qmY, qmZ = self.qmReferenceData
-            fitness = Compute(mdfreq, mdX, mdY, mdZ, qmfreq, qmX, qmY, qmZ)[0]
-            return fitness
-        except:
-            return 9999999.0
+        if self.extern:
+            try:
+                RunMD(self.mdexec, self.mdinp, self.mdout)
+                mdfreq, mdX, mdY, mdZ = read_charmm(self.mdout)
+                qmfreq, qmX, qmY, qmZ = self.qmReferenceData
+                fitness = Compute(mdfreq, mdX, mdY, mdZ, qmfreq, qmX, qmY, qmZ)[0]
+                return fitness
+            except:
+                return 9999999.0
+        else:
+            try:
+                qmfreq, qmX, qmY, qmZ = self.qmReferenceData
+                fitness = Compute(mdfreq, mdX, mdY, mdZ, qmfreq, qmX, qmY, qmZ)[0]
+                return fitness
+            except:
+                return 9999999.0
     def dumpFrequencies(self, parameters):
         output = ""
         self.compute(parameters)

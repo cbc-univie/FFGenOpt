@@ -104,6 +104,7 @@ class Population:
     def readPopulation(self,fileName):
         if(path.exists(fileName)):
             print("Found population file!")
+            print(fileName)
             print("Recomputing fitness... this may take a while.")
             with open(fileName,'r') as f:
                 lines = f.readlines()[1:]
@@ -112,6 +113,7 @@ class Population:
                         break
                     #fitness = float(line.replace("\n","").split(",[")[0])
                     plist = [float(p) for p in line.replace("\n","").split(",[")[1].replace("]","").split(",")]
+                    print(plist)
                     fitness = self.fn.compute(plist)
                     self.addPopulationMember(PopulationMember(np.array(plist),fitness))
                     print("Found population member with fitness",fitness)
@@ -324,7 +326,7 @@ conf.load()
 paramSettings = ParameterSettings()
 for p in conf.PARAMETER_SETTINGS:
     paramSettings.addParameterSetting(name=p[0],ptype=p[1],pmin=p[2],pmax=p[3],initVal=p[4])
-fitnessFunction = FitnessFunction(paramSettings,conf.mdexec,conf.mdinp,conf.mdout,conf.qmout,conf.paramfilename)
+fitnessFunction = FitnessFunction(paramSettings,conf.extern,conf.psf,conf.crd,conf.params,conf.varfile,conf.mdexec,conf.mdinp,conf.mdout,conf.qmout,conf.paramfilename)
 
 core = GenOptCore(paramSettings,conf,fitnessFunction,generations=conf.GENERATIONS,populationSize=conf.POPULATION_SIZE,mutationsPerGeneration=conf.MUTATIONS_PER_GENERATION,stepSize=conf.STEP_SIZE,selectionProbabilities=[conf.CROSSOVER_BLX,conf.CROSSOVER_SBX,conf.CROSSOVER_UNIFORM],minimumImprovement=conf.MINIMUM_IMPROVEMENT,minimumDiversity=conf.MINIMUM_DIVERSITY)
 
