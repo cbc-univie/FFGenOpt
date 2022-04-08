@@ -80,10 +80,10 @@ class FitnessFunction:
             #try:
             varnames = get_varnames(self.paramfilename)
             update_context(self.system,self.context,varnames,self.bonds,self.angles,self.dihedrals)
-            mdfreq, mdX, mdY, mdZ = normal_mode(self.topology, self.system, self.integrator, self.positions)
+            self.mdfreq, mdX, mdY, mdZ = normal_mode(self.topology, self.system, self.integrator, self.positions)
             #raise StopIteration
             qmfreq, qmX, qmY, qmZ = self.qmReferenceData
-            fitness = Compute(mdfreq, mdX, mdY, mdZ, qmfreq, qmX, qmY, qmZ)[0]
+            fitness = Compute(self.mdfreq, mdX, mdY, mdZ, qmfreq, qmX, qmY, qmZ)[0]
             return fitness
             #except:
             #    return 9999999.0
@@ -91,7 +91,10 @@ class FitnessFunction:
         output = ""
         self.compute(parameters)
         qfreq = np.array(read_gaussian(self.qmout)[0])*0.957 #qm factor from external file
-        mdfreq = np.array(read_charmm(self.mdout)[0])
+        if self.extern == "True":
+            mdfreq = np.array(read_charmm(self.mdout)[0])
+        else:
+            mdfreq = self.mdfreq
         #print freq
         for i in range(len(qfreq)):
            output += (str("{:10.4f}".format(qfreq[i])) + "\t:" + str("{:10.4f}".format(mdfreq[i])))

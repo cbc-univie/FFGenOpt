@@ -392,7 +392,7 @@ def update_context(system, context, varnames, bonds_to_change, angles_to_change,
                 if impinfo in dihs_to_change:
                     f.setTorsionParameters(iidx, impinfo[0], impinfo[1],
                         impinfo[2], impinfo[3],
-                        (varnames[dihs_to_change[dihinfo]]*kilocalories*mole**-1, theta0))
+                        (varnames[dihs_to_change[dihinfo]], theta0))
                     f.updateParametersInContext(context)
 
 def normal_mode(toplogy, system, integrator, positions):

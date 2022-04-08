@@ -113,7 +113,6 @@ class Population:
                         break
                     #fitness = float(line.replace("\n","").split(",[")[0])
                     plist = [float(p) for p in line.replace("\n","").split(",[")[1].replace("]","").split(",")]
-                    print(plist)
                     fitness = self.fn.compute(plist)
                     self.addPopulationMember(PopulationMember(np.array(plist),fitness))
                     print("Found population member with fitness",fitness)
