@@ -9,6 +9,7 @@ from FF_GenOpt_extern import create_context
 from FF_GenOpt_extern import update_context
 from FF_GenOpt_extern import to_change
 from FF_GenOpt_extern import get_varnames
+from FF_GenOpt_extern import normal_mode
 from pathlib import Path
 
 class TestFitnessFunction:
@@ -40,7 +41,6 @@ class FitnessFunction:
         self.mdout = mdout
         self.qmout = qmout
         self.paramfilename = paramfilename
-        print(paramfilename)
         self.extern = extern
         self.context = None
         self.topology = None
@@ -52,7 +52,7 @@ class FitnessFunction:
         self.angles = None
         self.dihedrals = None
         if self.extern == "False":
-            self.context,self.topology,self.system,self.integrator,self.position,self.psf = create_context(
+            self.context,self.topology,self.system,self.integrator,self.positions,self.psf = create_context(
                 psf,crd,params)
             self.bonds, self.angles, self.dhis = to_change(self.parameterNames, varfile, self.psf)
     def writeParameters(self, plist):
@@ -67,7 +67,7 @@ class FitnessFunction:
         if(typeOfEvaluation=="genetic"):
             self.numOfGeneticEvaluations += 1
         self.writeParameters(parameters)
-        if self.extern:
+        if self.extern == "True":
             try:
                 RunMD(self.mdexec, self.mdinp, self.mdout)
                 mdfreq, mdX, mdY, mdZ = read_charmm(self.mdout)
@@ -77,12 +77,16 @@ class FitnessFunction:
             except:
                 return 9999999.0
         else:
-            try:
-                qmfreq, qmX, qmY, qmZ = self.qmReferenceData
-                fitness = Compute(mdfreq, mdX, mdY, mdZ, qmfreq, qmX, qmY, qmZ)[0]
-                return fitness
-            except:
-                return 9999999.0
+            #try:
+            varnames = get_varnames(self.paramfilename)
+            update_context(self.system,self.context,varnames,self.bonds,self.angles,self.dihedrals)
+            mdfreq, mdX, mdY, mdZ = normal_mode(self.topology, self.system, self.integrator, self.positions)
+            #raise StopIteration
+            qmfreq, qmX, qmY, qmZ = self.qmReferenceData
+            fitness = Compute(mdfreq, mdX, mdY, mdZ, qmfreq, qmX, qmY, qmZ)[0]
+            return fitness
+            #except:
+            #    return 9999999.0
     def dumpFrequencies(self, parameters):
         output = ""
         self.compute(parameters)

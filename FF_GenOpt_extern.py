@@ -201,8 +201,15 @@ def create_context(psffile,crdfile,paramsfile):
     """Create simulation objects in OpenMM"""
     psf = CharmmPsfFile(psffile)
     crd = CharmmCrdFile(crdfile)
-    print(paramsfile)
-    params = CharmmParameterSet(paramsfile)
+
+    parFiles = ()
+    for line in open(paramsfile, 'r'):
+        if '!' in line: line = line.split('!')[0]
+        parfile = line.strip()
+        if len(parfile) != 0: parFiles += ( parfile, )
+
+    params = CharmmParameterSet( *parFiles )
+    #params = CharmmParameterSet(paramsfile)
 
     nonbondedCutoff = 100.*nanometers
     constraintTolerance = 0.000001
@@ -243,7 +250,7 @@ def to_change(vars, varfile, psf):
     bond_types = {}
     angle_types = {}
     dih_types = {}
-    param_orig = open(parmafile, 'r')
+    param_orig = open(varfile, 'r')
     x = param_orig.readline()
     while len(x) != 0:
         if len(x.split()) > 0 and x.split()[0].startswith("!"):
@@ -284,14 +291,16 @@ def to_change(vars, varfile, psf):
                 or (psf.bond_list[j].atom1.attype == bond_types[i][1]\
                 and psf.bond_list[j].atom2.attype == bond_types[i][0]):
     
-                bonds_to_change[(j, psf.bond_list[j].atom1.idx, psf.bond_list[j].atom2.idx)] = i
+                bonds_to_change[(psf.bond_list[j].atom1.idx, psf.bond_list[j].atom2.idx)] = i
     
-            elif (psf.urey_bradley_list[j].atom1.attype == bond_types[i][0]
+    for i in bond_types:
+        for j in range(len(psf.urey_bradley_list)):
+            if (psf.urey_bradley_list[j].atom1.attype == bond_types[i][0]
                 and psf.urey_bradley_list[j].atom2.attype == bond_types[i][1])\
                 or (psf.urey_bradley_list[j].atom1.attype == bond_types[i][1]\
                 and psf.urey_bradley_list[j].atom2.attype == bond_types[i][0]):
     
-                bonds_to_change[(j, psf.bond_list[j].atom1.idx, psf.bond_list[j].atom2.idx)] = i
+                bonds_to_change[(psf.bond_list[j].atom1.idx, psf.bond_list[j].atom2.idx)] = i
     #print(bonds_to_change)
     
     angles_to_change = {}
@@ -304,7 +313,7 @@ def to_change(vars, varfile, psf):
                 and psf.angle_list[j].atom2.attype == angle_types[i][1]\
                 and psf.angle_list[j].atom3.attype == angle_types[i][0]):
     
-                angles_to_change[(j, psf.angle_list[j].atom1.idx,
+                angles_to_change[(psf.angle_list[j].atom1.idx,
                     psf.angle_list[j].atom2.idx, psf.angle_list[j].atom3.idx)] = i
     #print(angles_to_change)
 
@@ -320,10 +329,12 @@ def to_change(vars, varfile, psf):
                 and psf.dihedral_list[j].atom3.attype == dih_types[i][1]\
                 and psf.dihedral_list[j].atom4.attype == dih_types[i][0]):
     
-                dihs_to_change[(j, psf.dihedral_list[j].atom1.idx, psf.dihedral_list[j].atom2.idx,
+                dihs_to_change[(psf.dihedral_list[j].atom1.idx, psf.dihedral_list[j].atom2.idx,
                     psf.dihedral_list[j].atom3.idx, psf.dihedral_list[j].atom4.idx)] = i
     
-            elif (psf.improper_list[j].atom1.attype == dih_types[i][0]
+    for i in dih_types:
+        for j in range(len(psf.improper_list)):
+            if (psf.improper_list[j].atom1.attype == dih_types[i][0]
                 and psf.improper_list[j].atom2.attype == dih_types[i][1]\
                 and psf.improper_list[j].atom3.attype == dih_types[i][2]\
                 and psf.improper_list[j].atom4.attype == dih_types[i][3])\
@@ -332,55 +343,67 @@ def to_change(vars, varfile, psf):
                 and psf.improper_list[j].atom2.attype == dih_types[i][1]\
                 and psf.improper_list[j].atom4.attype == dih_types[i][0]):
     
-                dihs_to_change[(j, psf.improper_list[j].atom1.idx, psf.improper_list[j].atom2.idx,
+                dihs_to_change[(psf.improper_list[j].atom1.idx, psf.improper_list[j].atom2.idx,
                     psf.improper_list[j].atom3.idx, psf.improper_list[j].atom4.idx)] = i
     
     #print(dihs_to_change)
     return bonds_to_change, angles_to_change, dihs_to_change
 
-def update_context(system, context, varnames, bonds_to_change, angles_to_chage, dihs_to_change):
+def update_context(system, context, varnames, bonds_to_change, angles_to_change, dihs_to_change):
     """Update force constants in OpenMM context"""
     for f in system.getForces():
         if type(f).__name__ == "HarmonicBondForce":
             for bidx in range(f.getNumBonds()):
                 bond = f.getBondParameters(bidx)
-                bondinfo = (bidx, bond[0], bond[1])
+                bondinfo = (bond[0], bond[1])
                 l  = bond[2]
                 if bondinfo in bonds_to_change:
-                    f.setBondParameters(bondinfo[0], bondinfo[1], bondinfo[2],
+                    f.setBondParameters(bidx, bondinfo[0], bondinfo[1],
                         l, varnames[bonds_to_change[bondinfo]]*kilocalories*angstrom**-2*mole**-1)
-                    f.updateParametersInContext(simulation.context)
+                    f.updateParametersInContext(context)
     
         elif type(f).__name__ == "HarmonicAngleForce":
             for aidx in range(f.getNumAngles()):
                 angle = f.getAngleParameters(aidx)
-                angleinfo = (aidx, angle[0], angle[1], angle[2])
+                angleinfo = (angle[0], angle[1], angle[2])
                 l = angle[3]
                 if angleinfo in angles_to_change:
-                    f.setAngleParameters(angleinfo[0], angleinfo[1], angleinfo[2], angleinfo[3],
+                    f.setAngleParameters(aidx, angleinfo[0], angleinfo[1], angleinfo[2],
                         l, varnames[angles_to_change[angleinfo]]*kilocalories*mole**-1*radian**-2)
-                    f.updateParametersInContext(simulation.context)
+                    f.updateParametersInContext(context)
     
         elif type(f).__name__ == "PeriodicTorsionForce":
             for didx in range(f.getNumTorsions()):
                 dih = f.getTorsionParameters(didx)
-                dihinfo = (didx, dih[0], dih[1], dih[2], dih[3])
+                dihinfo = (dih[0], dih[1], dih[2], dih[3])
                 n = dih[4]
                 delta = dih[5]
                 if dihinfo in dihs_to_change:
-                    f.setTorsionParameters(dihinfo[0], dihinfo[1], dihinfo[2], dihinfo[3],
-                        dihinfo[4], n, delta,
+                    f.setTorsionParameters(didx, dihinfo[0], dihinfo[1], dihinfo[2],
+                        dihinfo[3], n, delta,
                         varnames[dihs_to_change[dihinfo]]*kilocalories*mole**-1)
-                    f.updateParametersInContext(simulation.context)
+                    f.updateParametersInContext(context)
     
         elif type(f).__name__ == "CustomTorsionForce":
             for iidx in range(f.getNumTorsions()):
                 imp = f.getTorsionParameters(iidx)
-                impinfo = (iidx, imp[0], imp[1], imp[2], imp[3])
+                impinfo = (imp[0], imp[1], imp[2], imp[3])
                 theta0 = imp[4][1]
                 if impinfo in dihs_to_change:
-                    f.setTorsionParameters(impinfo[0], impinfo[1], impinfo[2],
-                        impinfo[3], impinfo[4],
+                    f.setTorsionParameters(iidx, impinfo[0], impinfo[1],
+                        impinfo[2], impinfo[3],
                         (varnames[dihs_to_change[dihinfo]]*kilocalories*mole**-1, theta0))
-                    f.updateParametersInContext(simulation.context)
+                    f.updateParametersInContext(context)
 
+def normal_mode(toplogy, system, integrator, positions):
+    #platform = Platform.getPlatformByName('CPU')
+    #simulation = Simulation(topology, system, integrator, platform)
+    #simulation.cotext.setPositions(positions)
+    nma = NormalModeAnalysis(topology, system, integrator, positions, CPUOnly=True)
+    nma.CPUPreMinimization()
+    nma.CPUMinimizationCycle()
+    nma.CalculateNormalModes()
+    vib_spec = []
+    for i in nma.VibrationalSpectrum:
+        vib_spec.append(float(i._value))
+    return vib_spec, nma.NormalModes[6:,0::3].flatten(), nma.NormalModes[6:,1::3].flatten(),nma.NormalModes[6:,2::3].flatten(),
