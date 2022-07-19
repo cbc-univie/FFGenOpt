@@ -6,6 +6,7 @@ from scipy.optimize import linear_sum_assignment
 from simtk.openmm import *
 from simtk.openmm.app import *
 from simtk.unit import *
+import parmed
 
 qmfactor = 0.957
 
@@ -138,7 +139,7 @@ def Compute(mdfreq, mdX, mdY, mdZ, qmfreq, qmX, qmY, qmZ):
             qmstart = qmidx * N
             proj = DotProduct(mdX[mdstart:mdstart+N], mdY[mdstart:mdstart+N], mdZ[mdstart:mdstart+N], qmX[qmstart:qmstart+N], qmY[qmstart:qmstart+N], qmZ[qmstart:qmstart+N])
             #build the costmatrix 
-            costmatrix[mdidx][qmidx] = proj    #1-proj if not maximizue=True
+            costmatrix[mdidx][qmidx] = proji * min([mdfreq[mdidx]/qmfreq[qmidx], qmfreq[qmidx]/mdfreq[mdidx]])    #1-proj if not maximizue=True
     #hungarian method, to ensure the best 1:1 mapping of QM and MM freqs
     row_ind, col_ind = linear_sum_assignment(costmatrix, maximize=True)
     maxprojidxs = col_ind
@@ -207,6 +208,11 @@ def create_context(psffile,crdfile,paramsfile):
         if '!' in line: line = line.split('!')[0]
         parfile = line.strip()
         if len(parfile) != 0: parFiles += ( parfile, )
+
+    parmed_prm = parmed.charmm.CharmmParameterSet( *parFiles )
+    pmff = parmed.openmm.parameters.OpenMMParameterSet.from_parameterset(parmed_prm,
+            unique_atom_types = True)
+    pmff.write('parmed_omm.xml', separate_ljforce = True)
 
     params = CharmmParameterSet( *parFiles )
     #params = CharmmParameterSet(paramsfile)
