@@ -1,0 +1,45 @@
+PSF EXT CMAP CHEQ XPLOR
+
+         2 !NTITLE
+* CHARMM NORMAL MODE                                                            
+*  DATE:     7/25/22      9:48:54      CREATED BY USER: andras                  
+
+         5 !NATOM
+         1 DCA      1        DCA      N        N1      -0.611000       14.0100           0   0.00000     -0.301140E-02
+         2 DCA      1        DCA      C        CG       0.419000       12.0100           0   0.00000     -0.301140E-02
+         3 DCA      1        DCA      N1       NE      -0.616000       14.0100           0   0.00000     -0.301140E-02
+         4 DCA      1        DCA      C1       CG       0.419000       12.0100           0   0.00000     -0.301140E-02
+         5 DCA      1        DCA      N2       N1      -0.611000       14.0100           0   0.00000     -0.301140E-02
+
+         4 !NBOND: bonds
+         1         2         2         3         3         4         4         5
+
+         3 !NTHETA: angles
+         1         2         3         2         3         4         3         4         5
+
+         2 !NPHI: dihedrals
+         1         2         3         4         2         3         4         5
+
+         0 !NIMPHI: impropers
+
+
+         0 !NDON: donors
+
+
+         0 !NACC: acceptors
+
+
+         0 !NNB
+
+         0         0         0         0         0
+
+         1         0 !NGRP NST2
+         0         2         0
+
+         1 !MOLNT
+         1         1         1         1         1
+
+         0         0 !NUMLP NUMLPH
+
+         0 !NCRTERM: cross-terms
+

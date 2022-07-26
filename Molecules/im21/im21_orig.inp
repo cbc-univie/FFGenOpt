@@ -6,16 +6,16 @@
 
 !stream new.par
 
-stream "/home/aleksandar/Project/FF_GenOpt_results/im21_clap/parameters.str"
+!stream "/site/raid4/student6/johnny/ir_optimization/FF_GenOpt_results/im21_clap/parameters.str"
 
 ioformat extended
 bomblev -1
 
-open  unit 10 read form name "/home/aleksandar/Project/Molecules/im21_clap/pol_mod_clap.rtf"
+open  unit 10 read form name "/site/raid4/student6/johnny/sandbox/il_pol.rtf"
 read  unit 10 rtf card 
 close unit 10
 
-open  unit 10 read form name "/home/aleksandar/Project/Molecules/im21_clap/pol_mod_im21.prm"
+open  unit 10 read form name "/site/raid4/student6/johnny/sandbox/il_pol_04_orig.prm"
 read  unit 10 para card
 close unit 10
 
@@ -25,7 +25,7 @@ generate IM21 setup warn drude dmass 0.4
 !=======================================================================
 ! Optimize new coordinates 
 !=======================================================================
-read coor card name "/home/aleksandar/Project/Molecules/im21_clap/im21_freq.cor"
+read coor card name "/site/raid4/student6/johnny/qm/Output_files/emim_mp2.crd"
 
 coor sdrude
 !coor shake
@@ -39,9 +39,7 @@ mini sd   nstep  5000 nprint 50 tolene 0.001
 mini abnr nstep 10000 nprint 50 tolene 0.001
 
 ioformat extended
-!write coor card name "im1h_opt.crd"
-!write psf  card name "im1h_init_frompdb.psf"
-
+!stop
 !=======================================================================
 ! Normal mode analysis
 !=======================================================================
@@ -49,8 +47,9 @@ ioformat extended
 
 drude reset
 delete atom sele type D* end
-writ psf card name "im21.psf"
 
+write coor card name "im21.crd"
+write psf  card name "im21.psf"
 vibran nmod
 diag  finite step 0.001 
 mass

@@ -46,7 +46,6 @@ mini abnr nstep 10000 nprint 50 !tolene 0.001
 ioformat extended
 !write coor card name "im1h_opt.crd"
 !write coor pdb name "im1h.pdb"
-!write psf  card name "im1h.psf"
 
 !=======================================================================
 ! Normal mode analysis
@@ -55,6 +54,7 @@ ioformat extended
 
 drude reset
 delete atom sele type D* end
+write psf  card name "im1h.psf"
 
 vibran nmod
 diag  finite step 0.001 

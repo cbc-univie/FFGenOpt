@@ -64,6 +64,7 @@ scalar charge add -0.766 sele atom * * O1 end ! add LPO11 and LPO12 charge to O1
 scalar charge add -0.766 sele atom * * O2 end ! add LPO21 and LPO22 charge to O2
 
 delete atom sele type LP* end ! delete Lonepairs
+writ psf card name "oac.psf"
 
 vibran nmod
 diag  finite step 0.001 !dscf ganz cool, liefert quasi gleiches ergebnis wie ohne aber dauert 1s statt 0.03s...

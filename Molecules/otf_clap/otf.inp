@@ -49,6 +49,7 @@ ioformat extended
 
 drude reset
 delete atom sele type D* end
+writ psf card name "otf.psf"
 
 vibran nmod
 diag  finite step 0.001 

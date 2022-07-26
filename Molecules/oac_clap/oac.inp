@@ -46,6 +46,7 @@ ioformat extended
 ! Normal mode analysis
 !=======================================================================
 define DUMMY sele type LP* .or. type D* end
+writ psf card name "oac.psf"
 
 vibran nmod
 diag  finite step 0.001 

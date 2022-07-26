@@ -7,6 +7,7 @@ from simtk.openmm import *
 from simtk.openmm.app import *
 from simtk.unit import *
 import parmed
+from copy import deepcopy
 
 qmfactor = 0.957
 
@@ -138,8 +139,12 @@ def Compute(mdfreq, mdX, mdY, mdZ, qmfreq, qmX, qmY, qmZ):
             mdstart = mdidx * N
             qmstart = qmidx * N
             proj = DotProduct(mdX[mdstart:mdstart+N], mdY[mdstart:mdstart+N], mdZ[mdstart:mdstart+N], qmX[qmstart:qmstart+N], qmY[qmstart:qmstart+N], qmZ[qmstart:qmstart+N])
-            #build the costmatrix 
-            costmatrix[mdidx][qmidx] = proji * min([mdfreq[mdidx]/qmfreq[qmidx], qmfreq[qmidx]/mdfreq[mdidx]])    #1-proj if not maximizue=True
+            #build the costmatrix
+            try:
+                costmatrix[mdidx][qmidx] = proj * min([mdfreq[mdidx]/qmfreq[qmidx], qmfreq[qmidx]/mdfreq[mdidx]])    #1-proj if not maximizue=True
+            except ZeroDivisionError:
+                print(f"MDFREQ: {mdfreq[mdidx]}, QMFREQ: {qmfreq[mdidx]}")
+                costmatrix[mdidx][qmidx] = 0.0
     #hungarian method, to ensure the best 1:1 mapping of QM and MM freqs
     row_ind, col_ind = linear_sum_assignment(costmatrix, maximize=True)
     maxprojidxs = col_ind
@@ -213,6 +218,7 @@ def create_context(psffile,crdfile,paramsfile):
     pmff = parmed.openmm.parameters.OpenMMParameterSet.from_parameterset(parmed_prm,
             unique_atom_types = True)
     pmff.write('parmed_omm.xml', separate_ljforce = True)
+    ff = ForceField('parmed_omm.xml')
 
     params = CharmmParameterSet( *parFiles )
     #params = CharmmParameterSet(paramsfile)
@@ -223,18 +229,33 @@ def create_context(psffile,crdfile,paramsfile):
     temperature = 300*kelvin
     friction = 1.0/picosecond
     pressure = 1.0*atmospheres
+    coll_freq = 10.0/picosecond
+    drud_coll_freq = 200.0/picosecond
+    drud_temp = 1*kelvin
+
     platform = Platform.getPlatformByName('CPU')
 
     topology = psf.topology
     positions = crd.positions
-    system = psf.createSystem(params, nonbondedCutoff=nonbondedCutoff)
+    mod = Modeller(topology, positions)
+    mod.addExtraParticles(ff)
 
-    integrator = NoseHooverIntegrator(temperature, friction, dt)
-    integrator.setConstraintTolerance(constraintTolerance)
-    simulation = Simulation(topology, system, integrator, platform)
-    simulation.context.setPositions(positions)
+    system = []
+    system.append(ff.createSystem(mod.topology, nonbondedCutoff=nonbondedCutoff))
+    system.append(psf.createSystem(params, nonbondedCutoff=nonbondedCutoff))
 
-    return simulation.context, topology, system, integrator, positions, psf
+    integrator = []
+    integrator.append(DrudeNoseHooverIntegrator(temperature, coll_freq, drud_temp, drud_coll_freq, dt))
+    integrator[0].setConstraintTolerance(constraintTolerance)
+    integrator.append(NoseHooverIntegrator(temperature, coll_freq, dt))
+    integrator[1].setConstraintTolerance(constraintTolerance)
+    simulation = []
+    simulation.append(Simulation(mod.topology, system[0], integrator[0], platform))
+    simulation[0].context.setPositions(mod.positions)
+    simulation.append(Simulation(psf.topology, system[1], integrator[1], platform))
+    simulation[1].context.setPositions(crd.positions)
+
+    return simulation, mod, system, integrator, psf
 
 def get_varnames(streamfile):
     """Get new force constants from stream file"""
@@ -290,6 +311,7 @@ def to_change(vars, varfile, psf):
     #print(dih_types)
 
     bonds_to_change = {}
+
     for i in bond_types:
         for j in range(len(psf.bond_list)):
             if (psf.bond_list[j].atom1.attype == bond_types[i][0]
@@ -298,16 +320,17 @@ def to_change(vars, varfile, psf):
                 and psf.bond_list[j].atom2.attype == bond_types[i][0]):
     
                 bonds_to_change[(psf.bond_list[j].atom1.idx, psf.bond_list[j].atom2.idx)] = i
-    
-    for i in bond_types:
-        for j in range(len(psf.urey_bradley_list)):
-            if (psf.urey_bradley_list[j].atom1.attype == bond_types[i][0]
-                and psf.urey_bradley_list[j].atom2.attype == bond_types[i][1])\
-                or (psf.urey_bradley_list[j].atom1.attype == bond_types[i][1]\
-                and psf.urey_bradley_list[j].atom2.attype == bond_types[i][0]):
-    
-                bonds_to_change[(psf.bond_list[j].atom1.idx, psf.bond_list[j].atom2.idx)] = i
-    #print(bonds_to_change)
+ 
+    if hasattr(psf, "urey_bradley_list"):
+        for i in bond_types:
+            for j in range(len(psf.urey_bradley_list)):
+                if (psf.urey_bradley_list[j].atom1.attype == bond_types[i][0]
+                    and psf.urey_bradley_list[j].atom2.attype == bond_types[i][1])\
+                    or (psf.urey_bradley_list[j].atom1.attype == bond_types[i][1]\
+                    and psf.urey_bradley_list[j].atom2.attype == bond_types[i][0]):
+        
+                    bonds_to_change[(psf.bond_list[j].atom1.idx, psf.bond_list[j].atom2.idx)] = i
+        #print(bonds_to_change)
     
     angles_to_change = {}
     for i in angle_types:
@@ -401,15 +424,32 @@ def update_context(system, context, varnames, bonds_to_change, angles_to_change,
                         (varnames[dihs_to_change[dihinfo]], theta0))
                     f.updateParametersInContext(context)
 
-def normal_mode(toplogy, system, integrator, positions):
-    #platform = Platform.getPlatformByName('CPU')
-    #simulation = Simulation(topology, system, integrator, platform)
-    #simulation.cotext.setPositions(positions)
-    nma = NormalModeAnalysis(topology, system, integrator, positions, CPUOnly=True)
+def normal_mode(simulation):
+    """Compute frequencies and normal modes"""
+    platform = Platform.getPlatformByName('CPU')
+    nma = NormalModeAnalysis(simulation[0].topology, simulation[0].system,
+            simulation[0].integrator,
+            simulation[0].context.getState(getPositions=True).getPositions(asNumpy=True),
+            CPUOnly=True)
     nma.CPUPreMinimization()
     nma.CPUMinimizationCycle()
-    nma.CalculateNormalModes()
+
+    # TODO update mod topology and positions
+    heavy_atoms = []
+    for i,j in enumerate(simulation[0].topology.atoms()):
+        if j.element is not None:
+            heavy_atoms.append(i)
+
+    minState = nma.CPUSimulation.context.getState(getPositions=True, getEnergy=True, getForces=True)
+    minPos   = minState.getPositions(asNumpy=True)[heavy_atoms]
+    simulation[1].context.setPositions(minPos)
+    nma2 = NormalModeAnalysis(simulation[1].topology, simulation[1].system,
+            simulation[1].integrator,
+            simulation[1].context.getState(getPositions=True).getPositions(asNumpy=True),
+            CPUOnly=True)
+
+    nma2.CalculateNormalModes()
     vib_spec = []
-    for i in nma.VibrationalSpectrum:
+    for i in nma2.VibrationalSpectrum:
         vib_spec.append(float(i._value))
-    return vib_spec, nma.NormalModes[6:,0::3].flatten(), nma.NormalModes[6:,1::3].flatten(),nma.NormalModes[6:,2::3].flatten(),
+    return vib_spec, nma2.NormalModes[6:,0::3].flatten(), nma2.NormalModes[6:,1::3].flatten(),nma2.NormalModes[6:,2::3].flatten(),

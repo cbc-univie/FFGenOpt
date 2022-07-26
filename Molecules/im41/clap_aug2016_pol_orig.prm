@@ -1,0 +1,270 @@
+*.......................................................................
+*.              Nonpolarizable Canongia Lopes--Padua     
+*.......................................................................
+*.              Last changed Time-stamp: <2016-08-26 15:25:07 christian>
+*.......................................................................
+*
+
+ATOMS
+!~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+MASS    1      HA     1.008 ! aromatic hydrogen
+MASS    2      HC     1.008 ! hydrogen attached to carbon = aliphatic
+MASS    3      HN     1.008 ! hydrogen attached to nitrogen
+MASS    4      HO     1.008 ! hydrogen attached to oxygen
+MASS   10      B     10.811 !
+MASS   20      CA    12.011 ! aromatic carbon
+MASS   21      CT    12.011 ! aliphatic carbon
+MASS   22      CR    12.011 ! imidazolium carbon
+MASS   23      CW    12.011 ! imidazolium carbon
+MASS   24      CO    12.011 ! carbon attached to oxygen
+MASS   25      CZ    12.011 ! cyanide carbon
+MASS   26      CZ2   12.011 ! thiocyanide carbon
+MASS   30      NA    14.007 ! aromatic nitrogen
+MASS   31      NO    14.007 ! nitrogen attached to oxygen
+MASS   32      NT    14.007 ! aliphatic nitrogen
+MASS   33      NY    14.007 ! triflate nitrogen
+MASS   34      NZ    14.007 ! cyanide nitrogen
+MASS   40      OC    15.999 ! oxygen attached to carbon
+MASS   41      OH    15.999 ! hydroxyl oxygen
+MASS   42      ON    15.999 ! oxygen attached to nitrogen
+MASS   43      OY    15.999 ! triflate oxygen
+MASS   44      OS    15.999 ! oxygen attached to sulfur
+MASS   45      O2    15.999 ! carboxyl oxygen
+MASS   50      F     18.998 !
+MASS   51      FY    18.998 ! triflate fluorine
+MASS   60      SO    32.066 ! sulfur attached to oxygen
+MASS   61      SY    32.066 ! triflate sulfur
+MASS   70      CL    35.453 !
+MASS   71      BR    79.904 !
+MASS  101      OSWM4 16.000
+MASS  102      HSWM4  1.008
+MASS  103      LP     0.000
+MASS  104      DRUD   0.000
+
+BONDS
+!~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+! U_bond = k ( r - r0 )^2
+!~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+!TYPE1 TYPE2  k [kcal/mol Angstroem^2]  r0 [Angstroem]
+!~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+B      F            386.3332               1.412 ! orig: 386.3332 !  <----- BF4 HERE 
+CA     CA           468.7351               1.380 ! orig: 468.7351
+CA     HA           366.7478               1.080 ! orig: 366.7478 
+CA     NA           482.7076               1.340 ! orig: 482.7076
+CO     CT           316.8300               1.522 ! orig: 316.8300 
+CO     O2           655.5126               1.250 ! orig: 655.5126
+CR     HA           367.0000               1.080 ! orig: 367.0000
+CR     NA           476.6817               1.315 ! orig: 476.6817
+CT     HC           340.0000               1.090 ! orig: 340.0000
+CT     CT           267.8204               1.529 ! orig: 267.8204
+CT     FY           441.6263               1.323 ! orig: 441.6263 
+CT     NT           367.0000               1.471 ! orig: 367.0000
+CT     OC           89.0656                1.402 ! orig: 89.0656
+CT     OH           320.0000               1.410 ! orig: 320.0000
+CT     SO           235.2632               1.792 ! orig: 235.2632
+CT     SY           232.8749               1.818 ! orig: 232.8749
+CW     HA           367.0000               1.080 ! orig: 367.0000
+CW     CW           519.6525               1.341 ! orig: 519.6525
+CW     NA           426.7151               1.378 ! orig: 426.7151
+CZ     NY           502.2930               1.310 ! orig: 502.2930 
+CZ     NZ           925.0500               1.157 ! orig: 925.0500
+HN     NA           474.0000               1.010 ! orig: 474.0000
+HN     NT           434.0000               1.010 ! orig: 434.0000 
+HO     OH           552.6300               0.945 ! orig: 552.6300
+NA     CT           336.7752               1.466 ! orig: 336.7752 
+NO     ON           633.7776               1.226 ! orig: 633.7776 
+NY     SY           374.6300               1.570 ! orig: 374.6300 
+OC     SO           213.7193               1.633 ! orig: 213.7193
+OS     SO           636.6440               1.455 ! orig: 636.6440
+OY     SY           636.6440               1.437 ! orig: 636.6440 
+LP     OSWM4          0.0000               0.2403  ! SWM4
+HSWM4  HSWM4          0.0000               1.5139  ! SWM4
+HSWM4  OSWM4        450.0000               0.9572  ! SWM4
+X      DRUD         500.0000               0.0000
+
+ANGLES
+!~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+! U_angle = k ( theta - theta0 )^2
+!~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+!TYPE1 TYPE2 TYPE3  k [kcal/mol rad^2]   theta0 [deg]
+!~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+CA     CA    CA         70.0000             120.0 ! orig: 70.0000
+CA     CA    HA         35.0000             120.0 ! orig: 35.0000
+CA     CA    NA         70.0000             120.0 ! orig: 70.0000
+CA     NA    CA         70.0000             120.4 ! orig: 70.0000
+CA     NA    CT         70.0000             119.8 ! orig: 70.0000
+CR     NA    CW         69.9532             108.0 ! orig: 69.9532 
+CR     NA    HN         35.0000             125.4 ! orig: 35.0000
+CT     CO    O2         70.0000             117.0 ! orig: 70.0000
+CT     CT    CT         58.3142             112.7 ! orig: 58.3142
+CT     CT    HC         37.4749             110.7 ! orig: 37.4749
+CT     CT    NA         58.3142             112.7 ! orig: 58.3142
+CT     CT    NT         80.0000             109.5 ! orig: 80.0000
+CT     CT    OC         91.4302             107.8 ! orig: 91.4302
+CT     CT    OH         50.0000             109.5 ! orig: 50.0000 
+CT     NA    CW         69.9532             125.6 ! orig: 69.9532
+CT     NA    CR         69.9532             126.4 ! orig: 69.9532 
+CT     NT    CT         50.0000             109.5 ! orig: 50.0000
+CT     OC    SO         35.8866             116.6 ! orig: 35.8866
+CT     OH    HO         55.0000             108.5 ! orig: 55.0000
+CT     SO    OS         103.9000            104.5 ! orig: 103.9000 
+CT     SY    NY         91.2392             103.5 ! orig: 91.2392
+CT     SY    OY         103.8980            102.6 ! orig: 103.8980
+CW     CW    HA         34.9766             130.9 ! orig: 34.9766 
+CW     CW    NA         69.9532             107.1 ! orig: 69.9532 
+CW     NA    HN         35.0000             126.6 ! orig: 35.0000
+F      B     F          80.0000             109.5 ! orig: 80.0000 !  <----- BF4 HERE
+FY     CT    FY         93.2694             107.1 ! orig: 93.2694
+FY     CT    SY         82.8796             111.8 ! orig: 82.8796
+HA     CA    NA         35.0000             120.0 ! orig: 35.0000
+HA     CR    NA         34.9766             125.1 ! orig: 34.9766 
+HA     CW    NA         34.9766             122.0 ! orig: 34.9766
+HC     CT    CO         35.7000             109.5 ! orig: 35.7000
+HC     CT    NA         37.4749             110.7 ! orig: 37.4749
+HC     CT    NT         25.0000             109.5 ! orig: 25.0000
+HC     CT    HC         33.0000             107.8 ! orig: 33.0000
+HC     CT    OC         58.3620             109.7 ! orig: 58.3620  
+HC     CT    OH         35.0000             109.5 ! orig: 35.0000 
+HC     CT    SO         46.6108             107.3 ! orig: 46.6108 
+HN     NT    CT         50.0000             109.5 ! orig: 50.0000
+HN     NT    HN         43.6000             109.5 ! orig: 43.6000 ! J.Am.Chem.Soc. 121(1999),4827
+NA     CR    NA         69.9532             109.8 ! orig: 69.9532
+NY     SY    OY         94.2247             113.6 ! orig: 94.2247 
+OC     SO    OS         148.0367            103.5 ! orig: 148.0367 
+ON     NO    ON         120.7366            120.0 ! orig: 120.7366
+OS     SO    OS         115.7208            114.0 ! orig: 115.7208
+OY     SY    OY         115.7209            118.5 ! orig: 115.7209
+O2     CO    O2         79.9417             126.0 ! orig: 79.9417  
+SY     NY    SY         80.1328             125.6 ! orig: 80.1328
+CZ     NY    CZ         43.2311             118.5 ! orig: 43.2311 
+NY     CZ    NZ         50.7547             175.2 ! orig: 50.7547
+HSWM4  OSWM4 HSWM4      55.0000             104.52 ! SWM4
+
+
+DIHEDRALS
+!~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+! U_dihedral = k ( 1 + Cos[n phi - delta] )
+!~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+!TYPE1 TYPE2 TYPE3 TYPE4   k [kcal/mol]     n     delta [deg]
+!~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+CA     NA    CT    CT          0.130         2      180.0 ! orig:  0.130
+CA     NA    CT    CT          0.0947        4      180.0 ! orig:  0.0947
+CA     NA    CT    HC          0.000         2      180.0 ! orig:  0.000 
+CR     NA    CT    CT         -0.629         1        0.0 ! orig: -0.629
+CR     NA    CT    HC          0.000         3        0.0 ! orig:  0.000
+CT     CT    CT    CT          0.869         1        0.0 ! orig:  0.869
+CT     CT    CT    CT         -0.078         2      180.0 ! orig: -0.078 
+CT     CT    CT    CT          0.139         3        0.0 ! orig:  0.139 
+CT     CT    CT    HC          0.183         3        0.0 ! orig:  0.183
+CT     CT    CT    NT          1.195         1        0.0 ! orig:  1.195 
+CT     CT    CT    NT         -0.337         2      180.0 ! orig: -0.337
+CT     CT    CT    NT          0.275         3        0.0 ! orig:  0.275
+CT     CT    CT    OC          0.5242        1        0.0 ! orig:  0.5242
+CT     CT    CT    OC         -0.2182        2      180.0 ! orig: -0.2182
+CT     CT    CT    OC          0.3547        3        0.0 ! orig:  0.3547
+CT     CT    CT    SO         -1.9227        1        0.0 ! orig: -1.9227
+CT     CT    CT    SO         -0.2394        2      180.0 ! orig: -0.2394
+CT     CT    CT    SO         -0.0916        3        0.0 ! orig: -0.0916
+CT     CT    NT    CT          0.2078        1        0.0 ! orig:  0.2078
+CT     CT    NT    CT         -0.0640        2      180.0 ! orig: -0.0640
+CT     CT    NT    CT          0.3473        3        0.0 ! orig:  0.3473
+CT     CT    NT    HN          0.000         3        0.0 ! orig:  0.000
+CT     CT    OC    SO         -0.7182        1        0.0 ! orig: -0.7182
+CT     CT    OC    SO         -0.3718        2      180.0 ! orig: -0.3718
+CT     CT    OC    SO          0.1784        3        0.0 ! orig:  0.1784
+CT     CT    OH    HO         -0.178         1        0.0 ! orig: -0.178
+CT     CT    OH    HO         -0.087         2      180.0 ! orig: -0.087
+CT     CT    OH    HO          0.246         3        0.0 ! orig:  0.246
+CT     CT    SO    OS          0.1665        3        0.0 ! orig:  0.1665
+CT     NT    CT    HC          0.2798        3        0.0 ! orig:  0.2798
+CT     OC    SO    OS          0.29634       3        0.0 ! orig:  0.29634
+CT     SY    NY    SY          3.9140        1        0.0 ! orig:  3.9140
+CT     SY    NY    SY         -1.2440        2      180.0 ! orig: -1.2440
+CT     SY    NY    SY         -0.3820        3        0.0 ! orig: -0.3820
+CW     NA    CT    HC          0.062         3        0.0 ! orig:  0.062
+CW     NA    CT    CT         -0.854         1        0.0 ! orig: -0.854
+CW     NA    CT    CT          0.729         2      180.0 ! orig:  0.729
+CW     NA    CT    CT          0.095         3        0.0 ! orig:  0.095
+CZ     NY    CZ    NZ          0.4872        1        0.0 ! orig:  0.4872
+FY     CT    SY    NY          0.158         3        0.0 ! orig:  0.158
+FY     CT    SY    OY          0.173         3        0.0 ! orig:  0.173
+HC     CT    CO    O2          0.000         3        0.0 ! orig:  0.000
+HC     CT    CT    HC          0.159         3        0.0 ! orig:  0.159
+HC     CT    CT    NT         -0.507         1        0.0 ! orig: -0.507 
+HC     CT    CT    NT         -0.355         2      180.0 ! orig: -0.355
+HC     CT    CT    NT          0.237         3        0.0 ! orig:  0.237
+HC     CT    CT    OC          0.2718        3        0.0 ! orig:  0.2718
+HC     CT    CT    OH          0.234         3        0.0 ! orig:  0.234
+HC     CT    CT    SO          0.1648        3        0.0 ! orig:  0.1648
+HC     CT    NT    HN          0.000         3        0.0 ! orig:  0.000
+HC     CT    OC    SO          0.2013        3        0.0 ! orig:  0.2013
+HC     CT    OH    HO          0.225         3        0.0 ! orig:  0.225
+HC     CT    SO    OC          0.2963        3        0.0 ! orig:  0.2963
+HC     CT    SO    OS          0.1941        3        0.0 ! orig:  0.1941
+NA     CT    CT    CT         -0.893         1        0.0 ! orig: -0.893
+NA     CT    CT    CT          0.378         2      180.0 ! orig:  0.378
+NA     CT    CT    CT          0.144         3        0.0 ! orig:  0.144
+NA     CT    CT    HC          0.000         1        0.0 ! orig:  0.000
+OH     CT    CT    NT         -5.261         1        0.0 ! orig: -5.261
+OH     CT    CT    NT         -0.649         2      180.0 ! orig: -0.649 
+OY     SY    NY    SY         -0.0018        3        0.0 ! orig: -0.0018
+X      CA    CA    X           3.623         2      180.0 ! orig:  3.623
+X      CW    CW    X           5.371         2      180.0 ! orig:  5.371
+X      NA    CA    X           1.500         2      180.0 ! orig:  1.500
+X      NA    CR    X           2.324         2      180.0 ! orig:  2.324
+X      NA    CW    X           1.500         2      180.0 ! orig:  1.500
+
+
+IMPROPERS
+!~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+! n > 0:      U_improper = k ( 1 + Cos[n phi - delta] )
+! n = 0:      U_improper = k ( phi - delta )^2
+!~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+!TYPE1 TYPE2 TYPE3 TYPE4    k [kcal/mol]    n     delta [deg]
+!~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+! imidazolium
+CA     X     X     CT          2.2000      0        0.0  ! orig:	  2.2000
+CA     X     X     HA          2.2000      0        0.0  ! orig:	  2.2000
+CR     X     X     HA          2.2000      0        0.0  ! orig:	  2.2000
+CW     X     X     HA          2.0000      0        0.0  ! orig:	  2.0000
+NA     X     X     CT          2.0000      0        0.0  ! orig:	  2.0000
+NA     X     X     HN          2.0000      0        0.0  ! orig:	  2.0000
+
+
+NONBONDED NBXMOD 5 E14FAC 1.000 
+!~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+!TYPE1          epsilon    rmin/2         epsilon14    rmin14/2 
+!           [kcal/mol] [Angstroem]      [kcal/mol]  [Angstroem]
+!~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+B       0.00  -0.0949    2.00921
+BR      0.00  -0.2055    2.22810
+CA      0.00  -0.0700    1.99237   0.00   -0.0350     1.99237
+CL      0.00  -0.1984    2.04850
+CR      0.00  -0.0700    1.99237   0.00   -0.0350     1.99237
+CT      0.00  -0.0660    1.96431   0.00   -0.0330     1.96431
+CW      0.00  -0.0700    1.99237   0.00   -0.0350     1.99237
+CZ      0.00  -0.0660    1.82521   0.00   -0.0330     1.82521
+F       0.00  -0.0610    1.75104
+FY      0.00  -0.0530    1.65563   0.00   -0.0265     1.65563
+HA      0.00  -0.0300    1.40308   0.00   -0.0150     1.40308
+HC      0.00  -0.0300    1.40308   0.00   -0.0150     1.40308
+HN      0.00  -0.0300    1.40308   0.00   -0.0150     1.40308
+HO      0.00  -0.0000    0.00000   0.00   -0.0000     0.00000
+NA      0.00  -0.1700    1.82400   0.00   -0.0850     1.82400
+NO      0.00  -0.0807    1.71737
+NT      0.00  -0.1700    1.82400   0.00   -0.0850     1.82400
+NY      0.00  -0.1700    1.82400   0.00   -0.0850     1.82400
+NZ      0.00  -0.1700    1.79594   0.00   -0.1700     1.79594
+OC      0.00  -0.1400    1.62757   0.00   -0.0700     1.62757
+OH      0.00  -0.1700    1.75104   0.00   -0.0850     1.75104
+ON      0.00  -0.1457    1.55461
+OS      0.00  -0.2000    1.76788   0.00   -0.1000     1.76788
+OY      0.00  -0.2100    1.66124   0.00   -0.1050     1.66124
+O2      0.00  -0.2100    1.66124   0.00   -0.1050     1.66124  
+SO      0.00  -0.2500    1.99237   0.00   -0.1250     1.99237
+SY      0.00  -0.2500    1.99237   0.00   -0.1250     1.99237
+OSWM4   0.00  -0.21094   1.78693
+HSWM4   0.00  -0.00000   0.00000
+LP      0.00  -0.00000   0.00000
+DRUD    0.00  -0.00000   0.00000
+END

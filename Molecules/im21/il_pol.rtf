@@ -1,0 +1,315 @@
+* TOPOLOGY FILE.
+* 
+   99   1
+MASS     1 h1      1.008000
+MASS     2 h4      1.008000
+MASS     3 h5      1.008000
+MASS     4 hc      1.008000
+MASS     6 c3     12.010000
+MASS     7 cc     12.010000
+MASS     8 cd     12.010000
+MASS     9 cg     12.010000
+MASS    10 o      16.000000
+MASS    13 n1     14.010000
+MASS    14 na     14.010000
+MASS    15 ne     14.010000
+MASS    16 f      19.000000
+MASS    18 s6     32.060000
+MASS    19 c      12.010000
+MASS    20 oa     16.000000
+MASS    51 ODW    15.999400   ! water oxygen
+MASS    52 HDW     1.008000   ! water hydrogen
+MASS    60 LP      0.000000   ! general lone pair
+MASS    61 DRUD    0.000000   ! drude particle
+
+AUTOGENERATE DRUDE  !note use of DRUDE
+
+!==================================================================
+!EMIM / IM21
+!==================================================================
+RESI IM21  1.000
+GROUP
+ATOM C      C3       0.045  ALPHA -2.025  THOLE 1.135	!          H
+ATOM H      H1       0.053				!          |
+ATOM H1     H1       0.053				!     H2-- C --H1 
+ATOM H2     H1       0.053				!          |
+ATOM N      NA       0.102  ALPHA -0.901  THOLE 1.138	!          N1(+)
+ATOM C1     CC       0.003  ALPHA -1.533  THOLE 1.409	!        //   \
+ATOM N1     NA       0.102  ALPHA -0.901  THOLE 1.138	!       //     C2--H4
+ATOM C2     CC      -0.076  ALPHA -1.563  THOLE 1.324	!  H3--C1      ||
+ATOM C3     CD      -0.076  ALPHA -1.563  THOLE 1.324	!       \      C3--H5
+ATOM H3     H5       0.183			 	!        \    /
+ATOM H4     H4       0.168				!          N
+ATOM H5     H4       0.168				!          |
+ATOM C4     C3      -0.005  ALPHA -1.675  THOLE 1.109	!      H7--C4--H6
+ATOM H6     H1       0.075				!          |
+ATOM H7     H1       0.075				!      H8--C5--H9
+ATOM C5     C3       0.008  ALPHA -2.049  THOLE 1.125	!          |
+ATOM H8     HC       0.023				!    	   H10
+ATOM H9     HC       0.023
+ATOM H10    HC       0.023
+
+BOND C      H            	! DIST	    1.0796
+BOND C      H1           	! DIST	    1.0785
+BOND C      H2           	! DIST	    1.0794
+BOND C      N1           	! DIST	    1.4658
+BOND N      C1           	! DIST	    1.3138
+BOND N      C3           	! DIST	    1.3781
+BOND N      C4           	! DIST	    1.4777
+BOND C1     N1           	! DIST	    1.3157
+BOND C1     H3           	! DIST	    1.0692
+BOND N1     C2           	! DIST	    1.3785
+BOND C2     C3           	! DIST	    1.3416
+BOND C2     H4           	! DIST	    1.0679
+BOND C3     H5           	! DIST	    1.0688
+BOND C4     H6           	! DIST	    1.0814
+BOND C4     H7           	! DIST	    1.0798
+BOND C4     C5           	! DIST	    1.5218
+BOND C5     H8           	! DIST	    1.0835
+BOND C5     H9           	! DIST	    1.0834
+BOND C5     H10          	! DIST	    1.0837
+ 
+ANGL C      N1    C1           	! ANGLE	  126.4111
+ANGL C      N1    C2           	! ANGLE	  125.6300
+ANGL H      C     H1           	! ANGLE	  109.5510
+ANGL H      C     H2           	! ANGLE	  110.2559
+ANGL H      C     N1           	! ANGLE	  109.2611
+ANGL H1     C     H2           	! ANGLE	  109.5172
+ANGL H1     C     N1           	! ANGLE	  108.8792
+ANGL H2     C     N1           	! ANGLE	  109.3538
+ANGL N      C1    N1           	! ANGLE	  109.8941
+ANGL N      C1    H3           	! ANGLE	  125.1030
+ANGL N      C3    C2           	! ANGLE	  107.1959
+ANGL N      C3    H5           	! ANGLE	  122.1025
+ANGL N      C4    H6           	! ANGLE	  106.7043
+ANGL N      C4    H7           	! ANGLE	  106.9082
+ANGL N      C4    C5           	! ANGLE	  112.0836
+ANGL C1     N     C3           	! ANGLE	  107.9285
+ANGL C1     N     C4           	! ANGLE	  126.1921
+ANGL C1     N1    C2           	! ANGLE	  107.9577
+ANGL N1     C1    H3           	! ANGLE	  125.0025
+ANGL N1     C2    C3           	! ANGLE	  107.0236
+ANGL N1     C2    H4           	! ANGLE	  122.0406
+ANGL C2     C3    H5           	! ANGLE	  130.7003
+ANGL C3     N     C4           	! ANGLE	  125.8669
+ANGL C3     C2    H4           	! ANGLE	  130.9352
+ANGL C4     C5    H8           	! ANGLE	  111.2780
+ANGL C4     C5    H9           	! ANGLE	  111.5813
+ANGL C4     C5    H10          	! ANGLE	  109.0336
+ANGL H6     C4    H7           	! ANGLE	  107.7086
+ANGL H6     C4    C5           	! ANGLE	  111.3594
+ANGL H7     C4    C5           	! ANGLE	  111.7864
+ANGL H8     C5    H9           	! ANGLE	  108.5717
+ANGL H8     C5    H10          	! ANGLE	  108.3168
+ANGL H9     C5    H10          	! ANGLE	  107.9497
+
+DIHE H      C     N1    C1   	! DIHE	 -120.0991
+DIHE H1     C     N1    C1   	! DIHE	   -0.4861
+DIHE H2     C     N1    C1   	! DIHE	  119.1407
+DIHE H      C     N1    C2   	! DIHE	   60.3500
+DIHE H1     C     N1    C2   	! DIHE	  179.9630
+DIHE H2     C     N1    C2   	! DIHE	  -60.4102
+DIHE C3     N     C1    N1   	! DIHE	   -0.0723
+DIHE C4     N     C1    N1   	! DIHE	 -178.8479
+DIHE C3     N     C1    H3   	! DIHE	 -179.8641
+DIHE C4     N     C1    H3   	! DIHE	    1.3603
+DIHE C1     N     C3    C2   	! DIHE	    0.1214
+DIHE C4     N     C3    C2   	! DIHE	  178.9021
+DIHE C1     N     C3    H5   	! DIHE	  179.7449
+DIHE C4     N     C3    H5   	! DIHE	   -1.4744
+DIHE C1     N     C4    H6   	! DIHE	  -17.3257
+DIHE C3     N     C4    H6   	! DIHE	  164.1119
+DIHE C1     N     C4    H7   	! DIHE	 -132.3592
+DIHE C3     N     C4    H7   	! DIHE	   49.0783
+DIHE C1     N     C4    C5   	! DIHE	  104.8236
+DIHE C3     N     C4    C5   	! DIHE	  -73.7389
+DIHE N      C1    N1    C    	! DIHE	 -179.6202
+DIHE H3     C1    N1    C    	! DIHE	    0.1719
+DIHE N      C1    N1    C2   	! DIHE	   -0.0039
+DIHE H3     C1    N1    C2   	! DIHE	  179.7882
+DIHE C      N1    C2    C3   	! DIHE	  179.7003
+DIHE C1     N1    C2    C3   	! DIHE	    0.0802
+DIHE C      N1    C2    H4   	! DIHE	   -0.0517
+DIHE C1     N1    C2    H4   	! DIHE	 -179.6718
+DIHE N1     C2    C3    N    	! DIHE	   -0.1217
+DIHE H4     C2    C3    N    	! DIHE	  179.6001
+DIHE N1     C2    C3    H5   	! DIHE	 -179.7009
+DIHE H4     C2    C3    H5   	! DIHE	    0.0208
+DIHE N      C4    C5    H8   	! DIHE	  -60.5075
+DIHE H6     C4    C5    H8   	! DIHE	   58.9472
+DIHE H7     C4    C5    H8   	! DIHE	  179.4809
+DIHE N      C4    C5    H9   	! DIHE	   60.9322
+DIHE H6     C4    C5    H9   	! DIHE	 -179.6130
+DIHE H7     C4    C5    H9   	! DIHE	  -59.0794
+DIHE N      C4    C5    H10  	! DIHE	 -179.9216
+DIHE H6     C4    C5    H10  	! DIHE	  -60.4668
+DIHE H7     C4    C5    H10  	! DIHE	   60.0669
+  
+IMPH C4     C1    N     C3   
+IMPH H3     N1    C1    N    
+IMPH C      C1    N1    C2   
+IMPH C3     H4    C2    N1   
+IMPH C2     H5    C3    N    
+
+!==================================================================
+!TRIF / OTf
+!==================================================================
+RESI OTF -1.000
+GROUP
+ATOM C      C3       0.366  ALPHA -1.227  THOLE 1.068	!	F2   O2
+ATOM F      F       -0.190  ALPHA -0.028  THOLE 1.450	!	|    |
+ATOM F1     F       -0.190  ALPHA -0.028  THOLE 1.450	!   F-- C -- S -- O
+ATOM F2     F       -0.190  ALPHA -0.028  THOLE 1.450	!       |    |      (-)
+ATOM S      S6       0.998  ALPHA -2.658  THOLE 1.128	!       F1   O1
+ATOM O      O       -0.353  ALPHA -0.271  THOLE 1.471	!
+ATOM LPAO   LP      -0.145
+ATOM LPBO   LP      -0.100
+ATOM O1     O       -0.353  ALPHA -0.271  THOLE 1.471
+ATOM LPAO1  LP      -0.145
+ATOM LPBO1  LP      -0.100
+ATOM O2     O       -0.353  ALPHA -0.271  THOLE 1.471
+ATOM LPAO2  LP      -0.145
+ATOM LPBO2  LP      -0.100
+
+BOND C     F            	! DIST	    1.3239
+BOND C     F1           	! DIST	    1.3237
+BOND C     F2           	! DIST	    1.3237
+BOND C     S            	! DIST	    1.8184
+BOND S     O            	! DIST	    1.4431
+BOND S     O1           	! DIST	    1.4425
+BOND S     O2           	! DIST	    1.4425
+BOND        O    LPAO         O    LPBO
+BOND       O1   LPAO1        O1   LPBO1
+BOND       O2   LPAO2        O2   LPBO2
+
+LONEPAIR relative LPAO   O      S      C       distance 0.35 angle 110.00 dihe   0.00
+LONEPAIR relative LPBO   O      S      C       distance 0.35 angle 110.00 dihe 180.00
+ANISOTROPY       O       S    LPAO    LPBO  A11  0.56750 A22  0.37401 
+LONEPAIR relative LPAO1  O1     S      C       distance 0.35 angle 110.00 dihe   0.00
+LONEPAIR relative LPBO1  O1     S      C       distance 0.35 angle 110.00 dihe 180.00
+ANISOTROPY      O1       S   LPAO1   LPBO1  A11  0.56750 A22  0.37401 
+LONEPAIR relative LPAO2  O2     S      C       distance 0.35 angle 110.00 dihe   0.00
+LONEPAIR relative LPBO2  O2     S      C       distance 0.35 angle 110.00 dihe 180.00
+ANISOTROPY      O2       S   LPAO2   LPBO2  A11  0.56750 A22  0.37401 
+
+ANGL C     S     O             	! ANGLE	  102.6274
+ANGL C     S     O1            	! ANGLE	  102.6487
+ANGL C     S     O2            	! ANGLE	  102.6487
+ANGL F     C     F1            	! ANGLE	  107.1013
+ANGL F     C     F2            	! ANGLE	  107.1013
+ANGL F     C     S             	! ANGLE	  111.7239
+ANGL F1    C     F2            	! ANGLE	  107.1326
+ANGL F1    C     S             	! ANGLE	  111.7459
+ANGL F2    C     S             	! ANGLE	  111.7459
+ANGL O     S     O1            	! ANGLE	  115.3458
+ANGL O     S     O2            	! ANGLE	  115.3458
+ANGL O1    S     O2            	! ANGLE	  115.3600
+
+DIHE F     C     S     O    	! DIHE	 -180.0000
+DIHE F1    C     S     O    	! DIHE	  -60.0184
+DIHE F2    C     S     O    	! DIHE	   60.0184
+DIHE F     C     S     O1   	! DIHE	  -60.0079
+DIHE F1    C     S     O1   	! DIHE	   59.9737
+DIHE F2    C     S     O1   	! DIHE	 -179.9895
+DIHE F     C     S     O2   	! DIHE	   60.0079
+DIHE F1    C     S     O2   	! DIHE	  179.9895
+DIHE F2    C     S     O2   	! DIHE	  -59.9737
+
+
+!==================================================================
+!DCA
+!==================================================================
+RESI DCA  -1.000
+GROUP
+ATOM N      N1      -0.611  ALPHA -0.405  THOLE 1.211
+ATOM C      CG       0.419  ALPHA -1.042  THOLE 1.298
+ATOM N1     NE      -0.616  ALPHA -0.983  THOLE 1.337
+ATOM C1     CG       0.419  ALPHA -1.042  THOLE 1.298
+ATOM N2     N1      -0.611  ALPHA -0.405  THOLE 1.211
+
+BOND N     C            	! DIST	    1.1508
+BOND C     N1           	! DIST	    1.3125
+BOND N1    C1           	! DIST	    1.3125
+BOND C1    N2           	! DIST	    1.1508
+
+ANGL N     C     N1            	! ANGLE	  175.1727
+ANGL C     N1    C1            	! ANGLE	  118.5067
+ANGL N1    C1    N2            	! ANGLE	  175.1727
+
+DIHE N     C     N1    C1   	! DIHE	 -180.0000
+DIHE C     N1    C1    N2   	! DIHE	 -179.9999
+
+!==================================================================
+!OAC
+!==================================================================
+RESI OAC -1.000
+GROUP
+ATOM C      C3      -0.426  ALPHA -1.837  THOLE 1.104
+ATOM H      HC       0.058
+ATOM H1     HC       0.058
+ATOM H2     HC       0.058
+ATOM C1     C        0.438  ALPHA -1.243  THOLE 0.979
+ATOM O      OA      -0.317  ALPHA -0.322  THOLE 1.020
+ATOM LPAO   LP      -0.110
+ATOM LPBO   LP      -0.148
+ATOM O1     OA      -0.317  ALPHA -0.322  THOLE 1.020
+ATOM LPAO1  LP      -0.100
+ATOM LPBO1  LP      -0.194
+
+BOND C     H            	! DIST	    1.0885
+BOND C     H1           	! DIST	    1.0890
+BOND C     H2           	! DIST	    1.0858
+BOND C     C1           	! DIST	    1.5538
+BOND C1    O            	! DIST	    1.2333
+BOND C1    O1           	! DIST	    1.2354
+BOND        O    LPAO         O    LPBO
+BOND       O1   LPAO1        O1   LPBO1
+
+LONEPAIR relative LPAO   O      C1     C       distance 0.35 angle 110.00 dihe   0.00
+LONEPAIR relative LPBO   O      C1     C       distance 0.35 angle 110.00 dihe 180.00
+ANISOTROPY       O      C1    LPAO    LPBO  A11  0.62676 A22  1.00186 
+LONEPAIR relative LPAO1  O1     C1     C       distance 0.35 angle 110.00 dihe   0.00
+LONEPAIR relative LPBO1  O1     C1     C       distance 0.35 angle 110.00 dihe 180.00
+ANISOTROPY      O1      C1   LPAO1   LPBO1  A11  0.62676 A22  1.00186 
+
+ANGL C     C1    O             	! ANGLE	  116.0140
+ANGL C     C1    O1            	! ANGLE	  114.5436
+ANGL H     C     H1            	! ANGLE	  106.6972
+ANGL H     C     H2            	! ANGLE	  109.2573
+ANGL H     C     C1            	! ANGLE	  109.6829
+ANGL H1    C     H2            	! ANGLE	  109.2436
+ANGL H1    C     C1            	! ANGLE	  109.7254
+ANGL H2    C     C1            	! ANGLE	  112.0849
+ANGL O     C1    O1            	! ANGLE	  129.4425
+
+DIHE H     C     C1    O    	! DIHE	 -121.4873
+DIHE H1    C     C1    O    	! DIHE	  121.6133
+DIHE H2    C     C1    O    	! DIHE	    0.0569
+DIHE H     C     C1    O1   	! DIHE	   58.5127
+DIHE H1    C     C1    O1   	! DIHE	  -58.3867
+DIHE H2    C     C1    O1   	! DIHE	 -179.9431
+
+IMPH C     O     C1    O1   
+
+!==================================================================
+!WATER
+!==================================================================
+RESI SWM4          0.000
+GROUP
+ATOM     OH2   ODW      0.00000 ALPHA -0.97825258 THOLE 1.3   
+ATOM     OM    LP      -1.11466
+ATOM     H1    HDW      0.55733
+ATOM     H2    HDW      0.55733
+
+BOND     OH2   H1
+BOND     OH2   H2
+BOND     OH2   OM
+BOND     H1    H2 ! for SHAKE
+
+ANGLE    H1    OH2 H2
+
+LONEPAIR bisector OM OH2 H1 H2 distance 0.24034492 angle 0.0 dihe 0.0
+IC   H1   OH2   H2    H1    0.9572 104.52     0.00   37.74   1.5139
+IC   H1   OM   *OH2   H2    0.9572  52.26   180.00   52.26   0.9572
+IC   H2   H1    OH2   OM    1.5139  37.74     0.01   52.26   0.24034492
+END
