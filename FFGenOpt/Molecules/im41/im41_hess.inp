@@ -1,0 +1,50 @@
+import psi4
+import numpy as np
+import sys
+
+outfile = 'im41_normalmodes.out'
+psi4.core.set_output_file(outfile, False)
+
+inp_mol = psi4.geometry("""
+1 1
+ C  3.7609804645       -0.9393946197        0.4294270455
+ H  4.0264616574       -0.8569057005        1.4842058857
+ H  3.6899062278       -2.0029324986        0.1961658951
+ H  4.5894915834       -0.5351263056       -0.1534018008
+ N  2.5155355497       -0.2197812330        0.1386503877
+ C  1.4133447501       -0.7242609973       -0.3700270041
+ H  1.2728940602       -1.7621504344       -0.6351312572
+ N  0.4995836793        0.2119069997       -0.5060179445
+ C  2.2933195407        1.1232487476        0.3634739512
+ H  3.0565168366        1.7647576374        0.7898274127
+ C  1.0385139157        1.3890639323       -0.0265425922
+ H  0.4687585915        2.3115678483       -0.0157826796
+ C -0.8823308584        0.0270603761       -0.9713440008
+ H -1.1438871754        0.8295599598       -1.6631414478
+ H -0.9688964508       -0.8922117226       -1.5535690270
+ C -1.8982435906       -0.0063085333        0.1824032091
+ H -1.6427256840       -0.8075269550        0.8786465926
+ H -1.8464556554        0.9211154926        0.7557011034
+ C -3.3341317584       -0.2118791227       -0.3141399512
+ H -3.6104440843        0.5875700990       -1.0040149357
+ H -3.4064655879       -1.1429336004       -0.8792888543
+ C -4.3440177712       -0.2484283036        0.8397014470
+ H -5.3582471679       -0.3952879434        0.4648869760
+ H -4.1325762664       -1.0634143441        1.5338180471
+ H -4.3388549848        0.6830282119        1.4079620510
+""")
+
+scf_e, scf_wfn = psi4.optimize('scf/cc-pvdz', molecule=inp_mol, return_wfn = True)
+hess, wfn = psi4.driver.hessian('scf/cc-pvdz', return_wfn = True)
+hess_arr = np.asarray(hess)
+geom = np.asarray(inp_mol.geometry())
+masses = np.asarray([inp_mol.mass(i) for i in range(inp_mol.natom())])
+ir_labels = inp_mol.irrep_labels()
+basis = wfn.basisset()
+symbols = [inp_mol.symbol(at) for at in range(inp_mol.natom())]
+
+vibinfo, vibtext = psi4.driver.qcdb.vib.harmonic_analysis(hess_arr, geom, masses, basis, ir_labels)
+
+#psi4.driver.vibanal_wfn(wfn)
+with open(outfile, 'a') as f:
+    print(psi4.driver.qcdb.vib.print_vibs(vibinfo, normco='q', ncprec=5, atom_lbl=symbols), file=f)

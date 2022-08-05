@@ -1,0 +1,35 @@
+import psi4
+import numpy as np
+import sys
+
+outfile = 'bf4_hess.out'
+psi4.core.set_output_file(outfile, False)
+
+inp_mol = psi4.geometry("""
+-1 1
+B      -3.344  20.666  -5.033
+F      -2.610  21.775  -5.474
+F      -2.868  19.527  -5.698
+F      -3.166  20.510  -3.667
+F      -4.689  20.852  -5.334
+""")
+
+scf_e, scf_wfn = psi4.optimize('scf/cc-pvdz', molecule=inp_mol, return_wfn = True)
+hess, wfn = psi4.driver.hessian('scf/cc-pvdz', return_wfn = True)
+#print(inp_mol.__dict__)
+#print(dir(inp_mol))
+hess_arr = np.asarray(hess)
+geom = np.asarray(inp_mol.geometry())
+masses = np.asarray([inp_mol.mass(i) for i in range(inp_mol.natom())])
+ir_labels = inp_mol.irrep_labels()
+basis = wfn.basisset()
+#wfn.hessian().print_out()
+
+vibinfo, vibtext = psi4.driver.qcdb.vib.harmonic_analysis(hess_arr, geom, masses, basis, ir_labels)
+#print(vibinfo['omega'])
+#print(vibinfo['q'])
+#print(vibtext)
+
+#psi4.driver.vibanal_wfn(wfn)
+with open(outfile, 'a') as f:
+    print(psi4.driver.qcdb.vib.print_vibs(vibinfo, normco='q', ncprec=5), file=f)

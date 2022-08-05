@@ -48,7 +48,7 @@ C3 HC   @im21b10 1.092 ! orig: 337.30  1.092
 C3 F   @otfb1   1.344 ! orig: 363.80
 C3 S6  @otfb2   1.774 ! orig: 254.00
 O  S6  @otfb3   1.436 ! orig: 541.10
-O  LP  @otfb4   0.000 ! orig: 0.00
+O  LP  0.00     0.000 ! orig: 0.00
 !
 ! DCA
 !

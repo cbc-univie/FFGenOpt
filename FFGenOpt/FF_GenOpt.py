@@ -6,7 +6,6 @@ from os import path
 from FF_GenOpt_conf import Config
 from FF_GenOpt_fitness import TestFitnessFunction
 from FF_GenOpt_fitness import FitnessFunction
-import time
 np.set_printoptions(precision=2)
 
 class ParameterSettings:
@@ -219,10 +218,12 @@ class FileLogger:
             out.write(content)
 
 class GenOptCore:
-    def __init__(self,paramSettings,conf,fitnessFunction,generations,populationSize,mutationsPerGeneration,stepSize,selectionProbabilities,minimumImprovement,minimumDiversity):
+    def __init__(self,paramSettings,conf,fitnessFunction,generations,populationSize,
+            mutationsPerGeneration,stepSize,selectionProbabilities,minimumImprovement,minimumDiversity):
         self.paramSettings = paramSettings
         self.fitnessFunction = fitnessFunction
-        self.p = Population(paramSettings,self.fitnessFunction,maxSize=populationSize,mutationsPerGeneration=mutationsPerGeneration)
+        self.p = Population(paramSettings,self.fitnessFunction,maxSize=populationSize,
+            mutationsPerGeneration=mutationsPerGeneration)
         self.go = GeneticOperators(paramSettings)
         self.rs = RandomSearch(paramSettings)
         self.generations = generations
@@ -246,31 +247,18 @@ class GenOptCore:
         assert(np.sum(self.probabilities)==1.0)
         probabilities = np.cumsum(self.probabilities)
         for i in range(self.p.mutationsPerGeneration):
-            print("MUTPERGEN:", i)
             p1 = selection(self.p)
             p2 = selection(self.p)
             rn = np.random.rand()
             if(probabilities[0]>rn):
-                print("BRANCH 1")
-                start = time.time()
                 offspring = self.go.crossoverBLX(p1.values,p2.values)
-                end = time.time()
-                print("CROSSOVER TOOK", end-start)
                 newMembers.append(PopulationMember(offspring,self.fitnessFunction.compute(offspring,"genetic")))
             elif(probabilities[1]>rn):
-                start = time.time()
-                print("BRANCH 2")
                 offspring1,offspring2 = self.go.crossoverSBX(p1.values,p2.values)
-                end = time.time()
-                print("CROSSOVER TOOK", end-start)
                 newMembers.append(PopulationMember(offspring1,self.fitnessFunction.compute(offspring1,"genetic")))
                 newMembers.append(PopulationMember(offspring2,self.fitnessFunction.compute(offspring2,"genetic")))
             elif(probabilities[2]>rn):
-                start = time.time()
-                print("BRANCH 3")
                 offspring = self.go.crossoverUniform(p1.values,p2.values)
-                end = time.time()
-                print("CROSSOVER TOOK", end-start)
                 newMembers.append(PopulationMember(offspring,self.fitnessFunction.compute(offspring,"genetic")))
         for i in range(self.p.mutationsPerGeneration):
             p = selection(self.p)
@@ -319,7 +307,6 @@ class GenOptCore:
         print(overhead)
         for i in range(self.generations):
             if(self.p.estimateDiversity()<self.minimumDiversity):
-                print("MINDIV TOO LOW")
                 self.p.cutPopulation(1)
                 self.p.generateInitialPopulation(self.p.maxSize)
             self.geneticOptimization(self.go.rankSelection)
@@ -330,7 +317,8 @@ class GenOptCore:
             logLine = self.logLineSummary(i)
             print(logLine)
             self.fileLogger.write(logLine+"\n")
-            self.populationLogger.write("Generation "+str(i+1)+"\n"+self.p.dumpPopulation()+"\n"+self.fitnessFunction.dumpFrequencies(self.p.members[0].values)+"\n"+self.dumpParametersCHARMM())
+            self.populationLogger.write("Generation "+str(i+1)+"\n"+self.p.dumpPopulation()+"\n"
+                +self.fitnessFunction.dumpFrequencies(self.p.members[0].values)+"\n"+self.dumpParametersCHARMM())
         print("Gen\tBestF\tMeanF\tTEvals\tGEvals\tREvals\tt\tt/eval\tDelta\tImprov\tDivers\n")
         return self.bestFitness[-1]
 
@@ -340,9 +328,13 @@ conf.load()
 paramSettings = ParameterSettings()
 for p in conf.PARAMETER_SETTINGS:
     paramSettings.addParameterSetting(name=p[0],ptype=p[1],pmin=p[2],pmax=p[3],initVal=p[4])
-fitnessFunction = FitnessFunction(paramSettings,conf.extern,conf.psf,conf.crd,conf.params,conf.varfile,conf.mdexec,conf.mdinp,conf.mdout,conf.qmout,conf.paramfilename)
+fitnessFunction = FitnessFunction(paramSettings,conf.extern,conf.psf,conf.crd,conf.params,
+    conf.varfile,conf.mdexec,conf.mdinp,conf.mdout,conf.qmout,conf.paramfilename)
 
-core = GenOptCore(paramSettings,conf,fitnessFunction,generations=conf.GENERATIONS,populationSize=conf.POPULATION_SIZE,mutationsPerGeneration=conf.MUTATIONS_PER_GENERATION,stepSize=conf.STEP_SIZE,selectionProbabilities=[conf.CROSSOVER_BLX,conf.CROSSOVER_SBX,conf.CROSSOVER_UNIFORM],minimumImprovement=conf.MINIMUM_IMPROVEMENT,minimumDiversity=conf.MINIMUM_DIVERSITY)
+core = GenOptCore(paramSettings,conf,fitnessFunction,generations=conf.GENERATIONS,
+    populationSize=conf.POPULATION_SIZE,mutationsPerGeneration=conf.MUTATIONS_PER_GENERATION,
+    stepSize=conf.STEP_SIZE,selectionProbabilities=[conf.CROSSOVER_BLX,conf.CROSSOVER_SBX,
+    conf.CROSSOVER_UNIFORM],minimumImprovement=conf.MINIMUM_IMPROVEMENT,minimumDiversity=conf.MINIMUM_DIVERSITY)
 
 print(core.start())
 

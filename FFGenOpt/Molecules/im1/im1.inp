@@ -40,7 +40,6 @@ mini sd   nstep  5000 nprint 50 !tolene 0.0001
 mini abnr nstep 10000 nprint 50 !tolene 0.0001
 
 ioformat extended
-!write coor card name "im1_opt.crd"
 !write coor pdb name "im1.pdb"
 
 !=======================================================================
@@ -55,6 +54,7 @@ scalar charge add -0.430 sele atom * * N2 end ! add LPN21 charge to N2
 
 delete atom sele type LP* end ! delete Lonepairs
 write psf  card name "im1.psf"
+write coor card name "im1.cor"
 
 vibran nmod
 diag  finite step 0.001 

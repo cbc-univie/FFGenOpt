@@ -1,19 +1,11 @@
 REMARK  CHARMM NORMAL MODE                                                            
-REMARK   DATE:    12/ 3/20     10:22:36      CREATED BY USER: florian                 
-ATOM      1  C1  OAC     1      -1.355   0.052   0.000  1.00  0.00      OAC 
-ATOM      2  DC1 OAC     1      -1.355   0.052   0.000  1.00  0.00      OAC 
-ATOM      3  H1  OAC     1      -1.738   1.088   0.000  1.00  0.00      OAC 
-ATOM      4  H2  OAC     1      -1.750  -0.483   0.885  1.00  0.00      OAC 
-ATOM      5  H3  OAC     1      -1.750  -0.483  -0.885  1.00  0.00      OAC 
-ATOM      6  C2  OAC     1       0.221  -0.002   0.000  1.00  0.00      OAC 
-ATOM      7  DC2 OAC     1       0.221  -0.002   0.000  1.00  0.00      OAC 
-ATOM      8  O1  OAC     1       0.805   1.110   0.000  1.00  0.00      OAC 
-ATOM      9  DO1 OAC     1       0.805   1.110   0.000  1.00  0.00      OAC 
-ATOM     10  O2  OAC     1       0.701  -1.163   0.000  1.00  0.00      OAC 
-ATOM     11  DO2 OAC     1       0.701  -1.163   0.000  1.00  0.00      OAC 
-ATOM     12 LPO1 OAC     1       0.569   1.369   0.000  1.00  0.00      OAC 
-ATOM     13 LPO1 OAC     1       1.151   1.063   0.000  1.00  0.00      OAC 
-ATOM     14 LPO2 OAC     1       0.442  -1.399   0.000  1.00  0.00      OAC 
-ATOM     15 LPO2 OAC     1       1.050  -1.148  -0.000  1.00  0.00      OAC 
-TER      16      OAC      1
+REMARK   DATE:     7/29/22     12:55:20      CREATED BY USER: andras                  
+ATOM      1  C1  OAC     1      -1.354   0.041   0.000  1.00  0.00      OAC 
+ATOM      2  H1  OAC     1      -1.706   1.040   0.336  1.00  0.00      OAC 
+ATOM      3  H2  OAC     1      -1.762  -0.721   0.698  1.00  0.00      OAC 
+ATOM      4  H3  OAC     1      -1.733  -0.158  -1.025  1.00  0.00      OAC 
+ATOM      5  C2  OAC     1       0.193  -0.014  -0.026  1.00  0.00      OAC 
+ATOM      6  O1  OAC     1       0.793   1.093  -0.218  1.00  0.00      OAC 
+ATOM      7  O2  OAC     1       0.721  -1.142   0.239  1.00  0.00      OAC 
+TER       8      OAC      1
 END

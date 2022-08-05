@@ -1,0 +1,36 @@
+import psi4
+import numpy as np
+import sys
+
+outfile = 'oac_normalmodes.out'
+psi4.core.set_output_file(outfile, False)
+
+inp_mol = psi4.geometry("""
+-1 1
+ C -0.043692   -1.352505    0.000000
+ H  0.493964   -1.741499    0.885628
+ H  0.493964   -1.741499   -0.885628
+ H -1.077327   -1.741279    0.000000
+ C  0.000000    0.221645    0.000000
+ O  1.164239    0.704092    0.000000
+ O -1.120294    0.797088    0.000000
+""")
+
+scf_e, scf_wfn = psi4.optimize('scf/cc-pvdz', molecule=inp_mol, return_wfn = True)
+hess, wfn = psi4.driver.hessian('scf/cc-pvdz', return_wfn = True)
+hess_arr = np.asarray(hess)
+geom = np.asarray(inp_mol.geometry())
+masses = np.asarray([inp_mol.mass(i) for i in range(inp_mol.natom())])
+ir_labels = inp_mol.irrep_labels()
+basis = wfn.basisset()
+symbols = [inp_mol.symbol(at) for at in range(inp_mol.natom())]
+
+vibinfo, vibtext = psi4.driver.qcdb.vib.harmonic_analysis(hess_arr, geom, masses, basis, ir_labels)
+
+#psi4.driver.vibanal_wfn(wfn)
+with open(outfile, 'a') as f:
+    print(psi4.driver.qcdb.vib.print_vibs(vibinfo, normco='q', ncprec=5, atom_lbl=symbols), file=f)
+
+with open("oac.molden", 'w') as handle:
+    handle.write(psi4.driver.qcdb.vib.print_molden_vibs(vibinfo, symbols, geom, standalone=True))
+

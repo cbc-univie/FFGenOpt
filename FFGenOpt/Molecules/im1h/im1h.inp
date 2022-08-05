@@ -55,6 +55,7 @@ ioformat extended
 drude reset
 delete atom sele type D* end
 write psf  card name "im1h.psf"
+write coor card name "im1h.cor"
 
 vibran nmod
 diag  finite step 0.001 

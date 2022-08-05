@@ -1,7 +1,7 @@
 <?xml version="1.0" ?>
 <ForceField>
   <Info>
-    <DateGenerated>2022-07-26</DateGenerated>
+    <DateGenerated>2022-08-01</DateGenerated>
   </Info>
   <AtomTypes>
     <Type name="IM21-C" class="C3" mass="12.01" element="C"/>
@@ -86,26 +86,26 @@
   </AtomTypes>
   <Residues>
     <Residue name="IM21">
-      <Atom name="C" type="IM21-C" charge="2.514458921872184"/>
-      <Atom name="DC" type="Drude-IM21-C" charge="-2.469458921872184"/>
+      <Atom name="C" type="IM21-C" charge="2.5144589218721842"/>
+      <Atom name="DC" type="Drude-IM21-C" charge="-2.4694589218721843"/>
       <Atom name="H" type="IM21-H" charge="0.053"/>
       <Atom name="H1" type="IM21-H1" charge="0.053"/>
       <Atom name="H2" type="IM21-H2" charge="0.053"/>
-      <Atom name="N" type="IM21-N" charge="1.7492203084117837"/>
-      <Atom name="DN" type="Drude-IM21-N" charge="-1.6472203084117836"/>
+      <Atom name="N" type="IM21-N" charge="1.749220308411784"/>
+      <Atom name="DN" type="Drude-IM21-N" charge="-1.647220308411784"/>
       <Atom name="C1" type="IM21-C1" charge="2.1516237402000242"/>
       <Atom name="DC1" type="Drude-IM21-C1" charge="-2.148623740200024"/>
-      <Atom name="N1" type="IM21-N1" charge="1.7492203084117837"/>
-      <Atom name="DN1" type="Drude-IM21-N1" charge="-1.6472203084117836"/>
-      <Atom name="C2" type="IM21-C2" charge="2.0935455943789534"/>
-      <Atom name="DC2" type="Drude-IM21-C2" charge="-2.1695455943789534"/>
-      <Atom name="C3" type="IM21-C3" charge="2.0935455943789534"/>
-      <Atom name="DC3" type="Drude-IM21-C3" charge="-2.1695455943789534"/>
+      <Atom name="N1" type="IM21-N1" charge="1.749220308411784"/>
+      <Atom name="DN1" type="Drude-IM21-N1" charge="-1.647220308411784"/>
+      <Atom name="C2" type="IM21-C2" charge="2.093545594378954"/>
+      <Atom name="DC2" type="Drude-IM21-C2" charge="-2.169545594378954"/>
+      <Atom name="C3" type="IM21-C3" charge="2.093545594378954"/>
+      <Atom name="DC3" type="Drude-IM21-C3" charge="-2.169545594378954"/>
       <Atom name="H3" type="IM21-H3" charge="0.183"/>
       <Atom name="H4" type="IM21-H4" charge="0.168"/>
       <Atom name="H5" type="IM21-H5" charge="0.168"/>
-      <Atom name="C4" type="IM21-C4" charge="2.2409324923524037"/>
-      <Atom name="DC4" type="Drude-IM21-C4" charge="-2.2459324923524036"/>
+      <Atom name="C4" type="IM21-C4" charge="2.240932492352404"/>
+      <Atom name="DC4" type="Drude-IM21-C4" charge="-2.245932492352404"/>
       <Atom name="H6" type="IM21-H6" charge="0.075"/>
       <Atom name="H7" type="IM21-H7" charge="0.075"/>
       <Atom name="C5" type="IM21-C5" charge="2.492049648079627"/>
@@ -135,25 +135,25 @@
     </Residue>
     <Residue name="OTF">
       <Atom name="C" type="OTF-C" charge="2.288257543552287"/>
-      <Atom name="DC" type="Drude-OTF-C" charge="-1.9222575435522868"/>
-      <Atom name="F" type="OTF-F" charge="0.10038107467393248"/>
-      <Atom name="DF" type="Drude-OTF-F" charge="-0.2903810746739325"/>
-      <Atom name="F1" type="OTF-F1" charge="0.10038107467393248"/>
-      <Atom name="DF1" type="Drude-OTF-F1" charge="-0.2903810746739325"/>
-      <Atom name="F2" type="OTF-F2" charge="0.10038107467393248"/>
-      <Atom name="DF2" type="Drude-OTF-F2" charge="-0.2903810746739325"/>
-      <Atom name="S" type="OTF-S" charge="3.8272203996199474"/>
-      <Atom name="DS" type="Drude-OTF-S" charge="-2.829220399619947"/>
-      <Atom name="O" type="OTF-O" charge="0.5503872107498995"/>
-      <Atom name="DO" type="Drude-OTF-O" charge="-0.9033872107498995"/>
+      <Atom name="DC" type="Drude-OTF-C" charge="-1.922257543552287"/>
+      <Atom name="F" type="OTF-F" charge="0.10038107467393254"/>
+      <Atom name="DF" type="Drude-OTF-F" charge="-0.29038107467393254"/>
+      <Atom name="F1" type="OTF-F1" charge="0.10038107467393254"/>
+      <Atom name="DF1" type="Drude-OTF-F1" charge="-0.29038107467393254"/>
+      <Atom name="F2" type="OTF-F2" charge="0.10038107467393254"/>
+      <Atom name="DF2" type="Drude-OTF-F2" charge="-0.29038107467393254"/>
+      <Atom name="S" type="OTF-S" charge="3.8272203996199483"/>
+      <Atom name="DS" type="Drude-OTF-S" charge="-2.829220399619948"/>
+      <Atom name="O" type="OTF-O" charge="0.5503872107498997"/>
+      <Atom name="DO" type="Drude-OTF-O" charge="-0.9033872107498997"/>
       <Atom name="LPAO" type="OTF-LPAO" charge="-0.145"/>
       <Atom name="LPBO" type="OTF-LPBO" charge="-0.1"/>
-      <Atom name="O1" type="OTF-O1" charge="0.5503872107498995"/>
-      <Atom name="DO1" type="Drude-OTF-O1" charge="-0.9033872107498995"/>
+      <Atom name="O1" type="OTF-O1" charge="0.5503872107498997"/>
+      <Atom name="DO1" type="Drude-OTF-O1" charge="-0.9033872107498997"/>
       <Atom name="LPAO1" type="OTF-LPAO1" charge="-0.145"/>
       <Atom name="LPBO1" type="OTF-LPBO1" charge="-0.1"/>
-      <Atom name="O2" type="OTF-O2" charge="0.5503872107498995"/>
-      <Atom name="DO2" type="Drude-OTF-O2" charge="-0.9033872107498995"/>
+      <Atom name="O2" type="OTF-O2" charge="0.5503872107498997"/>
+      <Atom name="DO2" type="Drude-OTF-O2" charge="-0.9033872107498997"/>
       <Atom name="LPAO2" type="OTF-LPAO2" charge="-0.145"/>
       <Atom name="LPBO2" type="OTF-LPBO2" charge="-0.1"/>
       <Bond atomName1="C" atomName2="F"/>
@@ -171,16 +171,16 @@
       <VirtualSite type="localCoords" siteName="LPBO2" atomName1="O2" atomName2="S" atomName3="C" wo1="1" wo2="0" wo3="0" wx1="-1.0" wx2="0.0" wx3="1.0" wy1="0" wy2="-1" wy3="1" p1="-0.011970705016398403" p2="0.03288924172750679" p3="0"/>
     </Residue>
     <Residue name="DCA">
-      <Atom name="N" type="DCA-N" charge="0.49337560338990905"/>
-      <Atom name="DN" type="Drude-DCA-N" charge="-1.104375603389909"/>
-      <Atom name="C" type="DCA-C" charge="2.190426559977227"/>
-      <Atom name="DC" type="Drude-DCA-C" charge="-1.771426559977227"/>
-      <Atom name="N1" type="DCA-N1" charge="1.1045450617235737"/>
-      <Atom name="DN1" type="Drude-DCA-N1" charge="-1.7205450617235738"/>
-      <Atom name="C1" type="DCA-C1" charge="2.190426559977227"/>
-      <Atom name="DC1" type="Drude-DCA-C1" charge="-1.771426559977227"/>
-      <Atom name="N2" type="DCA-N2" charge="0.49337560338990905"/>
-      <Atom name="DN2" type="Drude-DCA-N2" charge="-1.104375603389909"/>
+      <Atom name="N" type="DCA-N" charge="0.49337560338990927"/>
+      <Atom name="DN" type="Drude-DCA-N" charge="-1.1043756033899093"/>
+      <Atom name="C" type="DCA-C" charge="2.1904265599772272"/>
+      <Atom name="DC" type="Drude-DCA-C" charge="-1.7714265599772272"/>
+      <Atom name="N1" type="DCA-N1" charge="1.1045450617235741"/>
+      <Atom name="DN1" type="Drude-DCA-N1" charge="-1.7205450617235742"/>
+      <Atom name="C1" type="DCA-C1" charge="2.1904265599772272"/>
+      <Atom name="DC1" type="Drude-DCA-C1" charge="-1.7714265599772272"/>
+      <Atom name="N2" type="DCA-N2" charge="0.49337560338990927"/>
+      <Atom name="DN2" type="Drude-DCA-N2" charge="-1.1043756033899093"/>
       <Bond atomName1="N" atomName2="C"/>
       <Bond atomName1="C" atomName2="N1"/>
       <Bond atomName1="N1" atomName2="C1"/>
@@ -193,13 +193,13 @@
       <Atom name="H1" type="OAC-H1" charge="0.058"/>
       <Atom name="H2" type="OAC-H2" charge="0.058"/>
       <Atom name="C1" type="OAC-C1" charge="2.3727500067495195"/>
-      <Atom name="DC1" type="Drude-OAC-C1" charge="-1.9347500067495194"/>
-      <Atom name="O" type="OAC-O" charge="0.6677301346465747"/>
-      <Atom name="DO" type="Drude-OAC-O" charge="-0.9847301346465748"/>
+      <Atom name="DC1" type="Drude-OAC-C1" charge="-1.9347500067495196"/>
+      <Atom name="O" type="OAC-O" charge="0.6677301346465749"/>
+      <Atom name="DO" type="Drude-OAC-O" charge="-0.984730134646575"/>
       <Atom name="LPAO" type="OAC-LPAO" charge="-0.11"/>
       <Atom name="LPBO" type="OAC-LPBO" charge="-0.148"/>
-      <Atom name="O1" type="OAC-O1" charge="0.6677301346465747"/>
-      <Atom name="DO1" type="Drude-OAC-O1" charge="-0.9847301346465748"/>
+      <Atom name="O1" type="OAC-O1" charge="0.6677301346465749"/>
+      <Atom name="DO1" type="Drude-OAC-O1" charge="-0.984730134646575"/>
       <Atom name="LPAO1" type="OAC-LPAO1" charge="-0.1"/>
       <Atom name="LPBO1" type="OAC-LPBO1" charge="-0.194"/>
       <Bond atomName1="C" atomName2="H"/>
@@ -214,8 +214,8 @@
       <VirtualSite type="localCoords" siteName="LPBO1" atomName1="O1" atomName2="C1" atomName3="C" wo1="1" wo2="0" wo3="0" wx1="-1.0" wx2="0.0" wx3="1.0" wy1="0" wy2="-1" wy3="1" p1="-0.011970705016398403" p2="0.03288924172750679" p3="0"/>
     </Residue>
     <Residue name="SWM4">
-      <Atom name="OH2" type="SWM4-OH2" charge="1.716385328260503"/>
-      <Atom name="DOH2" type="Drude-SWM4-OH2" charge="-1.716385328260503"/>
+      <Atom name="OH2" type="SWM4-OH2" charge="1.7163853282605033"/>
+      <Atom name="DOH2" type="Drude-SWM4-OH2" charge="-1.7163853282605033"/>
       <Atom name="OM" type="SWM4-OM" charge="-1.11466"/>
       <Atom name="H1" type="SWM4-H1" charge="0.55733"/>
       <Atom name="H2" type="SWM4-H2" charge="0.55733"/>
@@ -361,31 +361,31 @@
     <Atom class="DRUD" sigma="1.0" epsilon="0.0"/>
   </LennardJonesForce>
   <DrudeForce>
-    <Particle type1="Drude-IM21-C" type2="IM21-C" charge="-2.469458921872184" polarizability="0.0020250000000000003" thole="1.135"/>
-    <Particle type1="Drude-IM21-N" type2="IM21-N" charge="-1.6472203084117836" polarizability="0.0009010000000000002" thole="1.138"/>
+    <Particle type1="Drude-IM21-C" type2="IM21-C" charge="-2.4694589218721843" polarizability="0.0020250000000000003" thole="1.135"/>
+    <Particle type1="Drude-IM21-N" type2="IM21-N" charge="-1.647220308411784" polarizability="0.0009010000000000002" thole="1.138"/>
     <Particle type1="Drude-IM21-C1" type2="IM21-C1" charge="-2.148623740200024" polarizability="0.0015330000000000003" thole="1.409"/>
-    <Particle type1="Drude-IM21-N1" type2="IM21-N1" charge="-1.6472203084117836" polarizability="0.0009010000000000002" thole="1.138"/>
-    <Particle type1="Drude-IM21-C2" type2="IM21-C2" charge="-2.1695455943789534" polarizability="0.0015630000000000004" thole="1.324"/>
-    <Particle type1="Drude-IM21-C3" type2="IM21-C3" charge="-2.1695455943789534" polarizability="0.0015630000000000004" thole="1.324"/>
-    <Particle type1="Drude-IM21-C4" type2="IM21-C4" charge="-2.2459324923524036" polarizability="0.0016750000000000005" thole="1.109"/>
+    <Particle type1="Drude-IM21-N1" type2="IM21-N1" charge="-1.647220308411784" polarizability="0.0009010000000000002" thole="1.138"/>
+    <Particle type1="Drude-IM21-C2" type2="IM21-C2" charge="-2.169545594378954" polarizability="0.0015630000000000004" thole="1.324"/>
+    <Particle type1="Drude-IM21-C3" type2="IM21-C3" charge="-2.169545594378954" polarizability="0.0015630000000000004" thole="1.324"/>
+    <Particle type1="Drude-IM21-C4" type2="IM21-C4" charge="-2.245932492352404" polarizability="0.0016750000000000005" thole="1.109"/>
     <Particle type1="Drude-IM21-C5" type2="IM21-C5" charge="-2.484049648079627" polarizability="0.0020490000000000005" thole="1.125"/>
-    <Particle type1="Drude-OTF-C" type2="OTF-C" charge="-1.9222575435522868" polarizability="0.0012270000000000004" thole="1.068"/>
-    <Particle type1="Drude-OTF-F" type2="OTF-F" charge="-0.2903810746739325" polarizability="2.8000000000000006e-05" thole="1.45"/>
-    <Particle type1="Drude-OTF-F1" type2="OTF-F1" charge="-0.2903810746739325" polarizability="2.8000000000000006e-05" thole="1.45"/>
-    <Particle type1="Drude-OTF-F2" type2="OTF-F2" charge="-0.2903810746739325" polarizability="2.8000000000000006e-05" thole="1.45"/>
-    <Particle type1="Drude-OTF-S" type2="OTF-S" charge="-2.829220399619947" polarizability="0.0026580000000000006" thole="1.128"/>
-    <Particle type1="Drude-OTF-O" type2="OTF-O" charge="-0.9033872107498995" polarizability="0.0002710000000000001" thole="1.471" type3="OTF-S" type4="OTF-LPAO" type5="OTF-LPBO" aniso12="0.5675" aniso34="0.37401"/>
-    <Particle type1="Drude-OTF-O1" type2="OTF-O1" charge="-0.9033872107498995" polarizability="0.0002710000000000001" thole="1.471" type3="OTF-S" type4="OTF-LPAO1" type5="OTF-LPBO1" aniso12="0.5675" aniso34="0.37401"/>
-    <Particle type1="Drude-OTF-O2" type2="OTF-O2" charge="-0.9033872107498995" polarizability="0.0002710000000000001" thole="1.471" type3="OTF-S" type4="OTF-LPAO2" type5="OTF-LPBO2" aniso12="0.5675" aniso34="0.37401"/>
-    <Particle type1="Drude-DCA-N" type2="DCA-N" charge="-1.104375603389909" polarizability="0.00040500000000000014" thole="1.211"/>
-    <Particle type1="Drude-DCA-C" type2="DCA-C" charge="-1.771426559977227" polarizability="0.0010420000000000004" thole="1.298"/>
-    <Particle type1="Drude-DCA-N1" type2="DCA-N1" charge="-1.7205450617235738" polarizability="0.0009830000000000001" thole="1.337"/>
-    <Particle type1="Drude-DCA-C1" type2="DCA-C1" charge="-1.771426559977227" polarizability="0.0010420000000000004" thole="1.298"/>
-    <Particle type1="Drude-DCA-N2" type2="DCA-N2" charge="-1.104375603389909" polarizability="0.00040500000000000014" thole="1.211"/>
+    <Particle type1="Drude-OTF-C" type2="OTF-C" charge="-1.922257543552287" polarizability="0.0012270000000000004" thole="1.068"/>
+    <Particle type1="Drude-OTF-F" type2="OTF-F" charge="-0.29038107467393254" polarizability="2.8000000000000006e-05" thole="1.45"/>
+    <Particle type1="Drude-OTF-F1" type2="OTF-F1" charge="-0.29038107467393254" polarizability="2.8000000000000006e-05" thole="1.45"/>
+    <Particle type1="Drude-OTF-F2" type2="OTF-F2" charge="-0.29038107467393254" polarizability="2.8000000000000006e-05" thole="1.45"/>
+    <Particle type1="Drude-OTF-S" type2="OTF-S" charge="-2.829220399619948" polarizability="0.0026580000000000006" thole="1.128"/>
+    <Particle type1="Drude-OTF-O" type2="OTF-O" charge="-0.9033872107498997" polarizability="0.0002710000000000001" thole="1.471" type3="OTF-S" type4="OTF-LPAO" type5="OTF-LPBO" aniso12="0.5675" aniso34="0.37401"/>
+    <Particle type1="Drude-OTF-O1" type2="OTF-O1" charge="-0.9033872107498997" polarizability="0.0002710000000000001" thole="1.471" type3="OTF-S" type4="OTF-LPAO1" type5="OTF-LPBO1" aniso12="0.5675" aniso34="0.37401"/>
+    <Particle type1="Drude-OTF-O2" type2="OTF-O2" charge="-0.9033872107498997" polarizability="0.0002710000000000001" thole="1.471" type3="OTF-S" type4="OTF-LPAO2" type5="OTF-LPBO2" aniso12="0.5675" aniso34="0.37401"/>
+    <Particle type1="Drude-DCA-N" type2="DCA-N" charge="-1.1043756033899093" polarizability="0.00040500000000000014" thole="1.211"/>
+    <Particle type1="Drude-DCA-C" type2="DCA-C" charge="-1.7714265599772272" polarizability="0.0010420000000000004" thole="1.298"/>
+    <Particle type1="Drude-DCA-N1" type2="DCA-N1" charge="-1.7205450617235742" polarizability="0.0009830000000000001" thole="1.337"/>
+    <Particle type1="Drude-DCA-C1" type2="DCA-C1" charge="-1.7714265599772272" polarizability="0.0010420000000000004" thole="1.298"/>
+    <Particle type1="Drude-DCA-N2" type2="DCA-N2" charge="-1.1043756033899093" polarizability="0.00040500000000000014" thole="1.211"/>
     <Particle type1="Drude-OAC-C" type2="OAC-C" charge="-2.3520354907078698" polarizability="0.0018370000000000003" thole="1.104"/>
-    <Particle type1="Drude-OAC-C1" type2="OAC-C1" charge="-1.9347500067495194" polarizability="0.0012430000000000004" thole="0.979"/>
-    <Particle type1="Drude-OAC-O" type2="OAC-O" charge="-0.9847301346465748" polarizability="0.0003220000000000001" thole="1.02" type3="OAC-C1" type4="OAC-LPAO" type5="OAC-LPBO" aniso12="0.62676" aniso34="1.00186"/>
-    <Particle type1="Drude-OAC-O1" type2="OAC-O1" charge="-0.9847301346465748" polarizability="0.0003220000000000001" thole="1.02" type3="OAC-C1" type4="OAC-LPAO1" type5="OAC-LPBO1" aniso12="0.62676" aniso34="1.00186"/>
-    <Particle type1="Drude-SWM4-OH2" type2="SWM4-OH2" charge="-1.716385328260503" polarizability="0.0009782525800000003" thole="1.3"/>
+    <Particle type1="Drude-OAC-C1" type2="OAC-C1" charge="-1.9347500067495196" polarizability="0.0012430000000000004" thole="0.979"/>
+    <Particle type1="Drude-OAC-O" type2="OAC-O" charge="-0.984730134646575" polarizability="0.0003220000000000001" thole="1.02" type3="OAC-C1" type4="OAC-LPAO" type5="OAC-LPBO" aniso12="0.62676" aniso34="1.00186"/>
+    <Particle type1="Drude-OAC-O1" type2="OAC-O1" charge="-0.984730134646575" polarizability="0.0003220000000000001" thole="1.02" type3="OAC-C1" type4="OAC-LPAO1" type5="OAC-LPBO1" aniso12="0.62676" aniso34="1.00186"/>
+    <Particle type1="Drude-SWM4-OH2" type2="SWM4-OH2" charge="-1.7163853282605033" polarizability="0.0009782525800000003" thole="1.3"/>
   </DrudeForce>
 </ForceField>

@@ -96,12 +96,12 @@ CA     NA    CT         @im41a5             119.8 ! orig: 70.0000
 CR     NA    CW         @im41a6             108.0 ! orig: 69.9532 
 CR     NA    HN         @im41a7             125.4 ! orig: 35.0000
 CT     CO    O2         @im41a8             117.0 ! orig: 70.0000
-CT     CT    CT         @im41a9             112.7  ! orig: 58.3142
+CT     CT    CT         @im41a9             112.7 ! orig: 58.3142
 CT     CT    HC         @im41a10            110.7 ! orig: 37.4749
-CT     CT    NA         @im41a11            112.7  ! orig: 58.3142
-CT     CT    NT         @im41a12            109.5  ! orig: 80.0000
+CT     CT    NA         @im41a11            112.7 ! orig: 58.3142
+CT     CT    NT         @im41a12            109.5 ! orig: 80.0000
 CT     CT    OC         @im41a13            107.8 ! orig: 91.4302
-CT     CT    OH         @im41a14            109.5 ! orig:50.0000 
+CT     CT    OH         @im41a14            109.5 ! orig: 50.0000 
 CT     NA    CW         @im41a15            125.6 ! orig: 69.9532
 CT     NA    CR         @im41a16            126.4 ! orig: 69.9532 
 CT     NT    CT         @im41a17            109.5 ! orig: 50.0000
@@ -117,24 +117,24 @@ F      B     F          @bf4a1              109.5 ! orig: 80.0000 !  <----- BF4 
 FY     CT    FY         @im41a26            107.1 ! orig: 93.2694
 FY     CT    SY         @im41a27            111.8 ! orig: 82.8796
 HA     CA    NA         @im41a28            120.0 ! orig: 35.0000
-HA     CR    NA         @im41a29            125.1 ! orig:34.9766 
+HA     CR    NA         @im41a29            125.1 ! orig: 34.9766 
 HA     CW    NA         @im41a30            122.0 ! orig: 34.9766
 HC     CT    CO         @im41a31            109.5 ! orig: 35.7000
 HC     CT    NA         @im41a32            110.7 ! orig: 37.4749
-HC     CT    NT         @im41a33            109.5  ! orig: 25.0000
+HC     CT    NT         @im41a33            109.5 ! orig: 25.0000
 HC     CT    HC         @im41a34            107.8 ! orig: 33.0000
 HC     CT    OC         @im41a35            109.7 ! orig: 58.3620  
 HC     CT    OH         @im41a36            109.5 ! orig: 35.0000 
 HC     CT    SO         @im41a37            107.3 ! orig: 46.6108 
-HN     NT    CT         @im41a38            109.5  ! orig: 50.0000
-HN     NT    HN         @im41a39            109.5  ! orig: 43.6000 ! J.Am.Chem.Soc. 121(1999),4827
+HN     NT    CT         @im41a38            109.5 ! orig: 50.0000
+HN     NT    HN         @im41a39            109.5 ! orig: 43.6000 ! J.Am.Chem.Soc. 121(1999),4827
 NA     CR    NA         @im41a40            109.8 ! orig: 69.9532
 NY     SY    OY         @im41a41            113.6 ! orig: 94.2247 
 OC     SO    OS         @im41a42            103.5 ! orig: 148.0367 
 ON     NO    ON         @im41a43            120.0 ! orig: 120.7366
-OS     SO    OS         @im41a44            114.0  ! orig: 115.7208
+OS     SO    OS         @im41a44            114.0 ! orig: 115.7208
 OY     SY    OY         @im41a45            118.5 ! orig: 115.7209
-O2     CO    O2         @im41a46            126.0 ! orig:79.9417  
+O2     CO    O2         @im41a46            126.0 ! orig: 79.9417  
 SY     NY    SY         @im41a47            125.6 ! orig: 80.1328
 CZ     NY    CZ         @im41a48            118.5 ! orig: 43.2311 
 NY     CZ    NZ         @im41a49            175.2 ! orig: 50.7547

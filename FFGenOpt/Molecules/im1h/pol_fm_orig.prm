@@ -204,12 +204,13 @@ CD2R5A   ND2R5B   CD2R5A   HDR5A       0.500   0     0.00 ! IMID, imidazole
 CD2R5B   ND2R5A   ND2R5B   HDR5B       0.500   0     0.00 ! IMID, imidazole 
 CD2R5B   ND2R5B   ND2R5A   HDR5B       0.500   0     0.00 ! IMID, imidazole 
 CD2R5A   CD2R5A   ND2R5A   HDR5A       0.500   0     0.00 ! IMID, imidazole 
+ND2R5A   CD2R5B   CD2R5A   CD33G        0.450  0     0.00 ! orig: 0.450   0     0.00
 CD2R5A   ND2R5A   CD2R5A   HDR5A       0.500   0     0.00 ! IMID, imidazole 
 ND2R5C   CD2R5E   CD2R5D   HDP1A       0.450   0     0.00 ! IMIM, from IMID (EH) 
 CD2R5D   CD2R5D   ND2R5C   HDR5D       0.500   0     0.00 ! IMIM, from IMID (EH) 
 CD2R5E   ND2R5C   ND2R5C   HDR5E       0.500   0     0.00 ! IMIM, from IMID (EH) 
 CD2O3A   OD31F    CD33C    OD2C3A     85.000   0     0.00 ! ACEH, PEML 
-
+ND2R5C   CD2R5E   CD2R5D   CD33F        0.450  0     0.00 ! orig: 0.450   0     0.00 ! IMIM, from IMID (EH)
 
 NONBONDED nbxmod  5 atom vatom cdiel vdistance switch vswitch - 
 cutnb 16.0 ctofnb 12.0 ctonnb 10.0 eps 1.0 e14fac 1.0 wmin 1.5 

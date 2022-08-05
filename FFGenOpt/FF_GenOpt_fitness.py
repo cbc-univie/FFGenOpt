@@ -11,7 +11,6 @@ from FF_GenOpt_extern import to_change
 from FF_GenOpt_extern import get_varnames
 from FF_GenOpt_extern import normal_mode
 from pathlib import Path
-import time
 
 class TestFitnessFunction:
     def __init__(self,paramSettings):
@@ -43,16 +42,17 @@ class FitnessFunction:
         self.qmout = qmout
         self.paramfilename = paramfilename
         self.extern = extern
-        self.simulation = None
         self.mod = None
+        self.context = None
         self.system = None
+        self.topology = None
         self.integrator = None
         self.psf = None
         self.bonds = None
         self.angles = None
         self.dihedrals = None
         if self.extern == "False":
-            self.simulation,self.mod,self.system,self.integrator,self.psf, = create_context(
+            self.context,self.mod,self.system,self.integrator,self.psf,self.topology, = create_context(
                 psf,crd,params)
             self.bonds, self.angles, self.dihedrals = to_change(self.parameterNames, varfile, self.psf)
     def writeParameters(self, plist):
@@ -79,18 +79,13 @@ class FitnessFunction:
         else:
             #try:
             varnames = get_varnames(self.paramfilename)
-            update_context(self.system[0],self.simulation[0].context,varnames,self.bonds,self.angles,self.dihedrals)
-            update_context(self.system[1],self.simulation[1].context,varnames,self.bonds,self.angles,self.dihedrals)
-            start = time.time()
-            self.mdfreq, mdX, mdY, mdZ = normal_mode(self.simulation)
-            end = time.time()
-            print("NORMAL MODE TOOK:", end-start)
+            update_context(self.system[0],self.context[0],varnames,self.bonds,self.angles,self.dihedrals)
+            update_context(self.system[1],self.context[1],varnames,self.bonds,self.angles,self.dihedrals)
+            self.mdfreq, mdX, mdY, mdZ = normal_mode(self.system, self.integrator,
+                    self.context, self.topology)
             #raise StopIteration
             qmfreq, qmX, qmY, qmZ = self.qmReferenceData
-            start = time.time()
             fitness = Compute(self.mdfreq, mdX, mdY, mdZ, qmfreq, qmX, qmY, qmZ)[0]
-            end = time.time()
-            print("CAPITAL COMPUTE TOOK:", end-start)
             return fitness
             #except:
             #    return 9999999.0

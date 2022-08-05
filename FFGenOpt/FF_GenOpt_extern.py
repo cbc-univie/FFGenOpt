@@ -7,7 +7,6 @@ from simtk.openmm import *
 from simtk.openmm.app import *
 from simtk.unit import *
 import parmed
-from copy import deepcopy
 
 from normalmodeanalysis import NormalModeAnalysis
 
@@ -140,15 +139,22 @@ def Compute(mdfreq, mdX, mdY, mdZ, qmfreq, qmX, qmY, qmZ):
             # gets the correct values and does the dot product
             mdstart = mdidx * N
             qmstart = qmidx * N
-            proj = DotProduct(mdX[mdstart:mdstart+N], mdY[mdstart:mdstart+N], mdZ[mdstart:mdstart+N], qmX[qmstart:qmstart+N], qmY[qmstart:qmstart+N], qmZ[qmstart:qmstart+N])
+            proj = DotProduct(mdX[mdstart:mdstart+N], mdY[mdstart:mdstart+N], mdZ[mdstart:mdstart+N],
+                qmX[qmstart:qmstart+N], qmY[qmstart:qmstart+N], qmZ[qmstart:qmstart+N])
             #build the costmatrix
             try:
-                costmatrix[mdidx][qmidx] = proj * min([mdfreq[mdidx]/qmfreq[qmidx], qmfreq[qmidx]/mdfreq[mdidx]])    #1-proj if not maximizue=True
+                costmatrix[mdidx][qmidx] = proj * min([mdfreq[mdidx]/qmfreq[qmidx],
+                    qmfreq[qmidx]/mdfreq[mdidx]])    #1-proj if not maximizue=True
             except ZeroDivisionError:
                 print(f"MDFREQ: {mdfreq[mdidx]}, QMFREQ: {qmfreq[mdidx]}")
                 costmatrix[mdidx][qmidx] = 0.0
     #hungarian method, to ensure the best 1:1 mapping of QM and MM freqs
-    row_ind, col_ind = linear_sum_assignment(costmatrix, maximize=True)
+    try:
+        row_ind, col_ind = linear_sum_assignment(costmatrix, maximize=True)
+    except ValueError:
+        print("VALUE ERROR IN COSTMATRIX")
+        print(costmatrix)
+        quit()
     maxprojidxs = col_ind
 
     for pos, maxprojidx in enumerate(maxprojidxs):
@@ -237,10 +243,14 @@ def create_context(psffile,crdfile,paramsfile):
 
     platform = Platform.getPlatformByName('CPU')
 
-    topology = psf.topology
+    topology = []
+
     positions = crd.positions
-    mod = Modeller(topology, positions)
+    mod = Modeller(psf.topology, positions)
     mod.addExtraParticles(ff)
+
+    topology.append(mod.topology)
+    topology.append(psf.topology)
 
     system = []
     system.append(ff.createSystem(mod.topology, nonbondedCutoff=nonbondedCutoff))
@@ -251,13 +261,13 @@ def create_context(psffile,crdfile,paramsfile):
     integrator[0].setConstraintTolerance(constraintTolerance)
     integrator.append(NoseHooverIntegrator(temperature, coll_freq, dt))
     integrator[1].setConstraintTolerance(constraintTolerance)
-    simulation = []
-    simulation.append(Simulation(mod.topology, system[0], integrator[0], platform))
-    simulation[0].context.setPositions(mod.positions)
-    simulation.append(Simulation(psf.topology, system[1], integrator[1], platform))
-    simulation[1].context.setPositions(crd.positions)
+    context = []
+    context.append(Context(system[0], integrator[0], platform))
+    context[0].setPositions(mod.positions)
+    context.append(Context(system[1], integrator[1], platform))
+    context[1].setPositions(crd.positions)
 
-    return simulation, mod, system, integrator, psf
+    return context, mod, system, integrator, psf, topology
 
 def get_varnames(streamfile):
     """Get new force constants from stream file"""
@@ -274,6 +284,48 @@ def get_varnames(streamfile):
 
 def to_change(vars, varfile, psf):
     """Determine which parameters are being optimized"""
+
+    def explicit_params(pnames, param_names):
+        """Substitute wildcards by explicit atomtypes"""
+        if len(pnames) != 6:
+            print("Currently only dihedral/improper wildcards supported. Exiting.")
+            sys.exit(-1)
+        expl_attypes = []
+        if pnames[1] == 'X' and pnames[4] == 'X':
+            for i in range(len(psf.dihedral_list)):
+                if psf.dihedral_list[i].atom2.attype == pnames[2]\
+                    and psf.dihedral_list[i].atom3.attype == pnames[3]:
+                    expl_attypes.append((pnames[0], psf.dihedral_list[i].atom1.attype,
+                    psf.dihedral_list[i].atom2.attype, psf.dihedral_list[i].atom3.attype,
+                    psf.dihedral_list[i].atom4.attype, pnames[5]))
+
+                elif psf.dihedral_list[i].atom2.attype == pnames[3]\
+                    and psf.dihedral_list[i].atom3.attype == pnames[2]:
+                    expl_attypes.append((pnames[0], psf.dihedral_list[i].atom4.attype,
+                    psf.dihedral_list[i].atom3.attype, psf.dihedral_list[i].atom2.attype,
+                    psf.dihedral_list[i].atom1.attype, pnames[5]))
+
+
+        if pnames[2] == 'X' and pnames[3] == 'X':
+            for i in range(len(psf.improper_list)):
+                if psf.improper_list[i].atom1.attype == pnames[1]\
+                    and psf.improper_list[i].atom4.attype == pnames[4]:
+                    expl_attypes.append((pnames[0], psf.improper_list[i].atom1.attype,
+                    psf.improper_list[i].atom2.attype, psf.improper_list[i].atom3.attype,
+                    psf.improper_list[i].atom4.attype, pnames[5]))
+
+                elif psf.improper_list[i].atom1.attype == pnames[4]\
+                    and psf.improper_list[i].atom4.attype == pnames[1]:
+                    expl_attypes.append((pnames[0], psf.improper_list[i].atom4.attype,
+                    psf.improper_list[i].atom3.attype, psf.improper_list[i].atom2.attype,
+                    psf.improper_list[i].atom1.attype, pnames[5]))
+
+        clean_attypes = list(set(expl_attypes))
+        list_attypes  = [list(a) for a in clean_attypes]
+        for i in range(len(list_attypes)):
+            list_attypes[i][0] += f'_{i}'
+            varnames[list_attypes[i][0]] = varnames[clean_attypes[i][0]]
+            param_names.append(list_attypes[i])
 
     param_names = []
     bond_types = {}
@@ -292,6 +344,10 @@ def to_change(vars, varfile, psf):
                 pnames = [i[1:]]
                 for j in range(last_elem):
                     pnames.append(x.split()[j])
+                if last_elem == 4:
+                    pnames.append(x.split()[5])
+                if 'X' in pnames:
+                    explicit_params(pnames, param_names)
                 param_names.append(pnames)
         x = param_orig.readline()
     #print(param_names)
@@ -302,8 +358,8 @@ def to_change(vars, varfile, psf):
             bond_types[param_names[i][0]] = param_names[i][1:3]
         elif len(param_names[i]) == 4:
             angle_types[param_names[i][0]] = param_names[i][1:4]
-        elif len(param_names[i]) == 5:
-            dih_types[param_names[i][0]] = param_names[i][1:5]
+        elif len(param_names[i]) == 6:
+            dih_types[param_names[i][0]] = param_names[i][1:6]
         else:
             print("Paramter", i, "not recognized as bond, angle, or dihedral. Exiting")
             sys.exit(-1)
@@ -361,7 +417,8 @@ def to_change(vars, varfile, psf):
                 and psf.dihedral_list[j].atom4.attype == dih_types[i][0]):
     
                 dihs_to_change[(psf.dihedral_list[j].atom1.idx, psf.dihedral_list[j].atom2.idx,
-                    psf.dihedral_list[j].atom3.idx, psf.dihedral_list[j].atom4.idx)] = i
+                    psf.dihedral_list[j].atom3.idx, psf.dihedral_list[j].atom4.idxi,
+                    int(dih_types[i][4]))] = i
     
     for i in dih_types:
         for j in range(len(psf.improper_list)):
@@ -406,12 +463,11 @@ def update_context(system, context, varnames, bonds_to_change, angles_to_change,
         elif type(f).__name__ == "PeriodicTorsionForce":
             for didx in range(f.getNumTorsions()):
                 dih = f.getTorsionParameters(didx)
-                dihinfo = (dih[0], dih[1], dih[2], dih[3])
-                n = dih[4]
+                dihinfo = (dih[0], dih[1], dih[2], dih[3], dih[4])
                 delta = dih[5]
                 if dihinfo in dihs_to_change:
                     f.setTorsionParameters(didx, dihinfo[0], dihinfo[1], dihinfo[2],
-                        dihinfo[3], n, delta,
+                        dihinfo[3], dihinfo[4], delta,
                         varnames[dihs_to_change[dihinfo]]*kilocalories*mole**-1)
                     f.updateParametersInContext(context)
     
@@ -423,35 +479,38 @@ def update_context(system, context, varnames, bonds_to_change, angles_to_change,
                 if impinfo in dihs_to_change:
                     f.setTorsionParameters(iidx, impinfo[0], impinfo[1],
                         impinfo[2], impinfo[3],
-                        (varnames[dihs_to_change[dihinfo]], theta0))
+                        (varnames[dihs_to_change[impinfo]], theta0))
                     f.updateParametersInContext(context)
 
-def normal_mode(simulation):
+def normal_mode(system, integrator, context, topology):
     """Compute frequencies and normal modes"""
-    platform = Platform.getPlatformByName('CPU')
-    nma = NormalModeAnalysis(simulation[0].topology, simulation[0].system,
-            simulation[0].integrator,
-            simulation[0].context.getState(getPositions=True).getPositions(asNumpy=True),
+    nma = NormalModeAnalysis(topology[0], system[0],
+            integrator[0],
+            context[0].getState(getPositions=True).getPositions(asNumpy=True),
             CPUOnly=True)
     nma.CPUPreMinimization()
     nma.CPUMinimizationCycle()
 
-    # TODO update mod topology and positions
     heavy_atoms = []
-    for i,j in enumerate(simulation[0].topology.atoms()):
+    for i,j in enumerate(topology[0].atoms()):
         if j.element is not None:
             heavy_atoms.append(i)
 
     minState = nma.CPUSimulation.context.getState(getPositions=True, getEnergy=True, getForces=True)
     minPos   = minState.getPositions(asNumpy=True)[heavy_atoms]
-    simulation[1].context.setPositions(minPos)
-    nma2 = NormalModeAnalysis(simulation[1].topology, simulation[1].system,
-            simulation[1].integrator,
-            simulation[1].context.getState(getPositions=True).getPositions(asNumpy=True),
+    context[1].setPositions(minPos)
+    nma2 = NormalModeAnalysis(topology[1], system[1],
+            integrator[1],
+            context[1].getState(getPositions=True).getPositions(asNumpy=True),
             CPUOnly=True)
 
     nma2.CalculateNormalModes()
     vib_spec = []
+    cycles = 0
+    while float(nma2.VibrationalSpectrum[0]._value) != float(nma2.VibrationalSpectrum[0]._value) and cycles < 1000:
+        nma2.CPUMinimizationCycle()
+        nma2.CalculateNormalModes()
+        cycles += 1
     for i in nma2.VibrationalSpectrum:
         vib_spec.append(float(i._value))
-    return vib_spec, nma2.NormalModes[6:,0::3].flatten(), nma2.NormalModes[6:,1::3].flatten(),nma2.NormalModes[6:,2::3].flatten(),
+    return vib_spec, nma2.NormalModes[6:,0::3].flatten(), nma2.NormalModes[6:,1::3].flatten(),nma2.NormalModes[6:,2::3].flatten()

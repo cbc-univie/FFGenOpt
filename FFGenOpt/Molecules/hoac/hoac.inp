@@ -5,7 +5,7 @@
 !stream dihedrals.str
 
 !stream new.par
-stream "/home/andras/git_test/ir_optimization/FF_GenOpt_results/hoac/parameters.str"
+stream "/home/andras/git_test/ir_optimization/FF_GenOpt/FF_GenOpt_results/hoac/parameters.str"
 
 ioformat extended
 bomblev -1
@@ -44,7 +44,6 @@ mini sd   nstep  5000 nprint 50 tolene 0.001
 mini abnr nstep 10000 nprint 50 tolene 0.001
 
 ioformat extended
-!write coor card name "oac_opt.crd"
 !write coor pdb name "oac.pdb"
 
 !=======================================================================
@@ -61,6 +60,7 @@ scalar charge add -0.638 sele atom * * O2 end ! add LP2A and LP2B charge to O2
 delete atom sele type LP* end ! delete Lonepairs
 
 write psf  card name "hoac.psf"
+write coor card name "hoac.cor"
 vibran nmod
 diag  finite step 0.001 !dscf ganz cool, liefert quasi gleiches ergebnis wie ohne aber dauert 1s statt 0.03s...
 mass

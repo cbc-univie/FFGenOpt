@@ -197,18 +197,19 @@ IMPROPERS
 !~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 OD2C2A   CD33A    OD2C2A   CD2O2A     71.000   0     0.00 ! ACET 
 !CD2O2A   OD2C2A   OD2C2A   CD33A      71.000   0     0.00 ! acetate 
-ND2R5A   CD2R5A   CD2R5B   HDP1A       0.450   0     0.00 ! IMID, imidazole 
-ND2R5A   CD2R5B   CD2R5A   HDP1A       0.450   0     0.00 ! IMID, imidazole 
+CD2O3A   OD31F    CD33C    OD2C3A     85.000   0     0.00 ! ACEH, PEML 
 CD2R5A   CD2R5A   ND2R5B   HDR5A       0.500   0     0.00 ! IMID, imidazole 
-CD2R5A   ND2R5B   CD2R5A   HDR5A       0.500   0     0.00 ! IMID, imidazole 
 CD2R5B   ND2R5A   ND2R5B   HDR5B       0.500   0     0.00 ! IMID, imidazole 
-CD2R5B   ND2R5B   ND2R5A   HDR5B       0.500   0     0.00 ! IMID, imidazole 
 CD2R5A   CD2R5A   ND2R5A   HDR5A       0.500   0     0.00 ! IMID, imidazole 
-CD2R5A   ND2R5A   CD2R5A   HDR5A       0.500   0     0.00 ! IMID, imidazole 
+ND2R5A   CD2R5B   CD2R5A   CD33G        0.450  0     0.00 ! orig: 0.450   0     0.00
+ND2R5A   CD2R5A   CD2R5B   HDP1A       0.450   0     0.00 ! IMID, imidazole 
 ND2R5C   CD2R5E   CD2R5D   HDP1A       0.450   0     0.00 ! IMIM, from IMID (EH) 
 CD2R5D   CD2R5D   ND2R5C   HDR5D       0.500   0     0.00 ! IMIM, from IMID (EH) 
 CD2R5E   ND2R5C   ND2R5C   HDR5E       0.500   0     0.00 ! IMIM, from IMID (EH) 
-CD2O3A   OD31F    CD33C    OD2C3A     85.000   0     0.00 ! ACEH, PEML 
+CD2R5B   ND2R5B   ND2R5A   HDR5B       0.500   0     0.00 ! IMID, imidazole 
+ND2R5A   CD2R5B   CD2R5A   HDP1A       0.450   0     0.00 ! IMID, imidazole 
+CD2R5A   ND2R5A   CD2R5A   HDR5A       0.500   0     0.00 ! IMID, imidazole 
+CD2R5A   ND2R5B   CD2R5A   HDR5A       0.500   0     0.00 ! IMID, imidazole 
 
 
 NONBONDED nbxmod  5 atom vatom cdiel vdistance switch vswitch - 
