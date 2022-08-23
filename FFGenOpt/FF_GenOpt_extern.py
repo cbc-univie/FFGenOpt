@@ -417,7 +417,7 @@ def to_change(vars, varfile, psf):
                 and psf.dihedral_list[j].atom4.attype == dih_types[i][0]):
     
                 dihs_to_change[(psf.dihedral_list[j].atom1.idx, psf.dihedral_list[j].atom2.idx,
-                    psf.dihedral_list[j].atom3.idx, psf.dihedral_list[j].atom4.idxi,
+                    psf.dihedral_list[j].atom3.idx, psf.dihedral_list[j].atom4.idx,
                     int(dih_types[i][4]))] = i
     
     for i in dih_types:

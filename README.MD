@@ -1,8 +1,8 @@
-FF_GenOpt was developed and tested on Debian with Linux kernel 4.9. It is written in Python and works with Python 3.5.3+. It consists of multiple modular components which can be adapted for other fitness functions and use cases. 
+FF_GenOpt was developed and tested on Debian with Linux kernel 4.9. It is written in Python and works with Python 3.6+. It consists of multiple modular components which can be adapted for other fitness functions and use cases. 
 
 **Requirements**
 
-The program requires a Python interpreter with numpy and matplotlib. The fitness computation modules requires scipy and a CHARMM installation.
+The program requires a Python interpreter with numpy and matplotlib. The fitness computation modules requires scipy and either a CHARMM installation or the OpenMM module.
 
 **Architecture**
 
@@ -14,14 +14,19 @@ FF_GenOpt_conf.py contains the configuration file management.
 
 FF_GenOpt_fitness.py wraps the fitness function which depends on the file below.
 
-FF_GenOpt_extern.py contains modified code from AFMM and Florian Jörg (from the Department of Computational Biological Chemistry at the University of Vienna) for calculating the fitness function.
+FF_GenOpt_extern.py contains modified code from AFMM and Florian Jörg (from the Department of Computational Biological Chemistry at the University of Vienna) for calculating the fitness function. The plugin for normal mode calculation using OpenMM has been taken from https://github.com/Hong-Rui/Normal_Mode_Analysis
 
 **Configuration**
 
-FF_GenOpt uses configuration files that can be created and edited in any editor. The configuration files contain the execution command for CHARMM, the path to input files and output files, the optimization algorithm settings, and the parameter names, type, range, and initial values. Similar to Python, comments can be added by using \# in the beginning. A typical configuration file is shown below:
+FF_GenOpt uses configuration files that can be created and edited in any editor. The configuration files contain the execution command for the MD software, the path to input files and output files, the optimization algorithm settings, and the parameter names, type, range, and initial values. Similar to Python, comments can be added by using \# in the beginning. A typical configuration file is shown below:
 
 ```
-MDEXEC                      charmm
+EXTERN                      False
+MDEXEC                      python3
+PSF                         Molecules/oac/oac.psf
+CRD                         Molecules/oac/oac.cor
+PARAMS                      Molecules/oac/toppar.str
+VARFILE                     Molecules/oac/pol_fm.prm
 MDINP                       Molecules/oac/oac.inp
 MDOUT                       /dev/shm/opt.log
 QMOUT                       Molecules/oac/oac.log
@@ -53,12 +58,17 @@ PARAMETER oacd1 dihedral 0 30 0.0
 PARAMETER oaci1 improper 0 200 71.000
 ```
 
+EXTERN describes whether an external MD program (i.e. CHARMM) should be called to calcuate the normal modes
 
-MDINP points at the CHARMM input file, which contains all commands for reading the force field parameters, computing the normal modes with vibran, and must point at the same file as PARAM_FILENAME (which is rewritten each time the fitness function is computed).
+PSF, CRD, PARAMS and VARFILE are required only if EXTERN is False. They point to the psf, coordindates and to the parameters with variables and explicit parameters, respectively.
+
+MDEXEC is the executable for the MD normal mode calculations.
+
+MDINP points at the CHARMM input file (used only if EXTERN is True), which contains all commands for reading the force field parameters, computing the normal modes with vibran, and must point at the same file as PARAM_FILENAME (which is rewritten each time the fitness function is computed).
 
 MDOUT contains the output of CHARMM and is only used to compute the fitness function.
 
-QMOUT contains the output of Gaussian with the QM-calculated normal modes. This file should not change during the optimization.
+QMOUT contains the output of Gaussian or Psi4 with the QM-calculated normal modes. This file should not change during the optimization.
 
 POPULATION_FILENAME contains the current population with all parameters, fitness values, the vibrational frequencies, and a small CHARMM script for setting the best set of parameters (on top). This file is rewritten after each generation, which enables the user to stop the algorithm at any time and take the best results.
 

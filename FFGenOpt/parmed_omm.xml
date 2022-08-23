@@ -1,391 +1,423 @@
 <?xml version="1.0" ?>
 <ForceField>
   <Info>
-    <DateGenerated>2022-08-01</DateGenerated>
+    <DateGenerated>2022-08-18</DateGenerated>
   </Info>
   <AtomTypes>
-    <Type name="IM21-C" class="C3" mass="12.01" element="C"/>
-    <Type name="Drude-IM21-C" class="DRUD" mass="0.0"/>
-    <Type name="IM21-H" class="H1" mass="1.008" element="H"/>
-    <Type name="IM21-H1" class="H1" mass="1.008" element="H"/>
-    <Type name="IM21-H2" class="H1" mass="1.008" element="H"/>
-    <Type name="IM21-N" class="NA" mass="14.01" element="N"/>
-    <Type name="Drude-IM21-N" class="DRUD" mass="0.0"/>
-    <Type name="IM21-C1" class="CC" mass="12.01" element="C"/>
-    <Type name="Drude-IM21-C1" class="DRUD" mass="0.0"/>
-    <Type name="IM21-N1" class="NA" mass="14.01" element="N"/>
-    <Type name="Drude-IM21-N1" class="DRUD" mass="0.0"/>
-    <Type name="IM21-C2" class="CC" mass="12.01" element="C"/>
-    <Type name="Drude-IM21-C2" class="DRUD" mass="0.0"/>
-    <Type name="IM21-C3" class="CD" mass="12.01" element="C"/>
-    <Type name="Drude-IM21-C3" class="DRUD" mass="0.0"/>
-    <Type name="IM21-H3" class="H5" mass="1.008" element="H"/>
-    <Type name="IM21-H4" class="H4" mass="1.008" element="H"/>
-    <Type name="IM21-H5" class="H4" mass="1.008" element="H"/>
-    <Type name="IM21-C4" class="C3" mass="12.01" element="C"/>
-    <Type name="Drude-IM21-C4" class="DRUD" mass="0.0"/>
-    <Type name="IM21-H6" class="H1" mass="1.008" element="H"/>
-    <Type name="IM21-H7" class="H1" mass="1.008" element="H"/>
-    <Type name="IM21-C5" class="C3" mass="12.01" element="C"/>
-    <Type name="Drude-IM21-C5" class="DRUD" mass="0.0"/>
-    <Type name="IM21-H8" class="HC" mass="1.008" element="H"/>
-    <Type name="IM21-H9" class="HC" mass="1.008" element="H"/>
-    <Type name="IM21-H10" class="HC" mass="1.008" element="H"/>
-    <Type name="OTF-C" class="C3" mass="12.01" element="C"/>
-    <Type name="Drude-OTF-C" class="DRUD" mass="0.0"/>
-    <Type name="OTF-F" class="F" mass="19.0" element="F"/>
-    <Type name="Drude-OTF-F" class="DRUD" mass="0.0"/>
-    <Type name="OTF-F1" class="F" mass="19.0" element="F"/>
-    <Type name="Drude-OTF-F1" class="DRUD" mass="0.0"/>
-    <Type name="OTF-F2" class="F" mass="19.0" element="F"/>
-    <Type name="Drude-OTF-F2" class="DRUD" mass="0.0"/>
-    <Type name="OTF-S" class="S6" mass="32.06" element="S"/>
-    <Type name="Drude-OTF-S" class="DRUD" mass="0.0"/>
-    <Type name="OTF-O" class="O" mass="16.0" element="O"/>
-    <Type name="Drude-OTF-O" class="DRUD" mass="0.0"/>
-    <Type name="OTF-LPAO" class="LP" mass="0.0"/>
-    <Type name="OTF-LPBO" class="LP" mass="0.0"/>
-    <Type name="OTF-O1" class="O" mass="16.0" element="O"/>
-    <Type name="Drude-OTF-O1" class="DRUD" mass="0.0"/>
-    <Type name="OTF-LPAO1" class="LP" mass="0.0"/>
-    <Type name="OTF-LPBO1" class="LP" mass="0.0"/>
-    <Type name="OTF-O2" class="O" mass="16.0" element="O"/>
-    <Type name="Drude-OTF-O2" class="DRUD" mass="0.0"/>
-    <Type name="OTF-LPAO2" class="LP" mass="0.0"/>
-    <Type name="OTF-LPBO2" class="LP" mass="0.0"/>
-    <Type name="DCA-N" class="N1" mass="14.01" element="N"/>
-    <Type name="Drude-DCA-N" class="DRUD" mass="0.0"/>
-    <Type name="DCA-C" class="CG" mass="12.01" element="C"/>
-    <Type name="Drude-DCA-C" class="DRUD" mass="0.0"/>
-    <Type name="DCA-N1" class="NE" mass="14.01" element="N"/>
-    <Type name="Drude-DCA-N1" class="DRUD" mass="0.0"/>
-    <Type name="DCA-C1" class="CG" mass="12.01" element="C"/>
-    <Type name="Drude-DCA-C1" class="DRUD" mass="0.0"/>
-    <Type name="DCA-N2" class="N1" mass="14.01" element="N"/>
-    <Type name="Drude-DCA-N2" class="DRUD" mass="0.0"/>
-    <Type name="OAC-C" class="C3" mass="12.01" element="C"/>
-    <Type name="Drude-OAC-C" class="DRUD" mass="0.0"/>
-    <Type name="OAC-H" class="HC" mass="1.008" element="H"/>
-    <Type name="OAC-H1" class="HC" mass="1.008" element="H"/>
-    <Type name="OAC-H2" class="HC" mass="1.008" element="H"/>
-    <Type name="OAC-C1" class="C" mass="12.01" element="C"/>
+    <Type name="IM1H-C1" class="CD33F" mass="12.011" element="C"/>
+    <Type name="Drude-IM1H-C1" class="DRUD" mass="0.0"/>
+    <Type name="IM1H-N1" class="ND2R5C" mass="14.007" element="N"/>
+    <Type name="Drude-IM1H-N1" class="DRUD" mass="0.0"/>
+    <Type name="IM1H-C2" class="CD2R5D" mass="12.011" element="C"/>
+    <Type name="Drude-IM1H-C2" class="DRUD" mass="0.0"/>
+    <Type name="IM1H-C3" class="CD2R5D" mass="12.011" element="C"/>
+    <Type name="Drude-IM1H-C3" class="DRUD" mass="0.0"/>
+    <Type name="IM1H-N2" class="ND2R5C" mass="14.007" element="N"/>
+    <Type name="Drude-IM1H-N2" class="DRUD" mass="0.0"/>
+    <Type name="IM1H-H1" class="HDP1A" mass="1.008" element="H"/>
+    <Type name="IM1H-C4" class="CD2R5E" mass="12.011" element="C"/>
+    <Type name="Drude-IM1H-C4" class="DRUD" mass="0.0"/>
+    <Type name="IM1H-H2" class="HDA3A" mass="1.008" element="H"/>
+    <Type name="IM1H-H3" class="HDA3A" mass="1.008" element="H"/>
+    <Type name="IM1H-H4" class="HDA3A" mass="1.008" element="H"/>
+    <Type name="IM1H-H5" class="HDR5D" mass="1.008" element="H"/>
+    <Type name="IM1H-H6" class="HDR5D" mass="1.008" element="H"/>
+    <Type name="IM1H-H7" class="HDR5E" mass="1.008" element="H"/>
+    <Type name="IM1-N1" class="ND2R5A" mass="14.007" element="N"/>
+    <Type name="Drude-IM1-N1" class="DRUD" mass="0.0"/>
+    <Type name="IM1-C1" class="CD2R5B" mass="12.011" element="C"/>
+    <Type name="Drude-IM1-C1" class="DRUD" mass="0.0"/>
+    <Type name="IM1-N2" class="ND2R5B" mass="14.007" element="N"/>
+    <Type name="Drude-IM1-N2" class="DRUD" mass="0.0"/>
+    <Type name="IM1-C2" class="CD2R5A" mass="12.011" element="C"/>
+    <Type name="Drude-IM1-C2" class="DRUD" mass="0.0"/>
+    <Type name="IM1-C3" class="CD2R5A" mass="12.011" element="C"/>
+    <Type name="Drude-IM1-C3" class="DRUD" mass="0.0"/>
+    <Type name="IM1-C4" class="CD33G" mass="12.011" element="C"/>
+    <Type name="Drude-IM1-C4" class="DRUD" mass="0.0"/>
+    <Type name="IM1-H1" class="HDR5B" mass="1.008" element="H"/>
+    <Type name="IM1-H2" class="HDR5A" mass="1.008" element="H"/>
+    <Type name="IM1-H3" class="HDR5A" mass="1.008" element="H"/>
+    <Type name="IM1-H4" class="HDA3A" mass="1.008" element="H"/>
+    <Type name="IM1-H5" class="HDA3A" mass="1.008" element="H"/>
+    <Type name="IM1-H6" class="HDA3A" mass="1.008" element="H"/>
+    <Type name="IM1-LPN21" class="LPD" mass="0.0"/>
+    <Type name="OAC-C1" class="CD33A" mass="12.011" element="C"/>
     <Type name="Drude-OAC-C1" class="DRUD" mass="0.0"/>
-    <Type name="OAC-O" class="OA" mass="16.0" element="O"/>
-    <Type name="Drude-OAC-O" class="DRUD" mass="0.0"/>
-    <Type name="OAC-LPAO" class="LP" mass="0.0"/>
-    <Type name="OAC-LPBO" class="LP" mass="0.0"/>
-    <Type name="OAC-O1" class="OA" mass="16.0" element="O"/>
+    <Type name="OAC-H1" class="HDA3A" mass="1.008" element="H"/>
+    <Type name="OAC-H2" class="HDA3A" mass="1.008" element="H"/>
+    <Type name="OAC-H3" class="HDA3A" mass="1.008" element="H"/>
+    <Type name="OAC-C2" class="CD2O2A" mass="12.011" element="C"/>
+    <Type name="Drude-OAC-C2" class="DRUD" mass="0.0"/>
+    <Type name="OAC-O1" class="OD2C2A" mass="15.9994" element="O"/>
     <Type name="Drude-OAC-O1" class="DRUD" mass="0.0"/>
-    <Type name="OAC-LPAO1" class="LP" mass="0.0"/>
-    <Type name="OAC-LPBO1" class="LP" mass="0.0"/>
-    <Type name="SWM4-OH2" class="ODW" mass="15.9994" element="O"/>
-    <Type name="Drude-SWM4-OH2" class="DRUD" mass="0.0"/>
-    <Type name="SWM4-OM" class="LP" mass="0.0"/>
-    <Type name="SWM4-H1" class="HDW" mass="1.008" element="H"/>
-    <Type name="SWM4-H2" class="HDW" mass="1.008" element="H"/>
+    <Type name="OAC-O2" class="OD2C2A" mass="15.9994" element="O"/>
+    <Type name="Drude-OAC-O2" class="DRUD" mass="0.0"/>
+    <Type name="OAC-LPO11" class="LPD" mass="0.0"/>
+    <Type name="OAC-LPO12" class="LPD" mass="0.0"/>
+    <Type name="OAC-LPO21" class="LPD" mass="0.0"/>
+    <Type name="OAC-LPO22" class="LPD" mass="0.0"/>
+    <Type name="HOAC-C1" class="CD33C" mass="12.011" element="C"/>
+    <Type name="Drude-HOAC-C1" class="DRUD" mass="0.0"/>
+    <Type name="HOAC-H1" class="HDA3A" mass="1.008" element="H"/>
+    <Type name="HOAC-H2" class="HDA3A" mass="1.008" element="H"/>
+    <Type name="HOAC-H3" class="HDA3A" mass="1.008" element="H"/>
+    <Type name="HOAC-C2" class="CD2O3A" mass="12.011" element="C"/>
+    <Type name="Drude-HOAC-C2" class="DRUD" mass="0.0"/>
+    <Type name="HOAC-O2" class="OD2C3A" mass="15.9994" element="O"/>
+    <Type name="Drude-HOAC-O2" class="DRUD" mass="0.0"/>
+    <Type name="HOAC-LP2A" class="LPD" mass="0.0"/>
+    <Type name="HOAC-LP2B" class="LPD" mass="0.0"/>
+    <Type name="HOAC-O1" class="OD31F" mass="15.999" element="O"/>
+    <Type name="Drude-HOAC-O1" class="DRUD" mass="0.0"/>
+    <Type name="HOAC-LP1A" class="LPD" mass="0.0"/>
+    <Type name="HOAC-LP1B" class="LPD" mass="0.0"/>
+    <Type name="HOAC-HO1" class="HDP1A" mass="1.008" element="H"/>
   </AtomTypes>
   <Residues>
-    <Residue name="IM21">
-      <Atom name="C" type="IM21-C" charge="2.5144589218721842"/>
-      <Atom name="DC" type="Drude-IM21-C" charge="-2.4694589218721843"/>
-      <Atom name="H" type="IM21-H" charge="0.053"/>
-      <Atom name="H1" type="IM21-H1" charge="0.053"/>
-      <Atom name="H2" type="IM21-H2" charge="0.053"/>
-      <Atom name="N" type="IM21-N" charge="1.749220308411784"/>
-      <Atom name="DN" type="Drude-IM21-N" charge="-1.647220308411784"/>
-      <Atom name="C1" type="IM21-C1" charge="2.1516237402000242"/>
-      <Atom name="DC1" type="Drude-IM21-C1" charge="-2.148623740200024"/>
-      <Atom name="N1" type="IM21-N1" charge="1.749220308411784"/>
-      <Atom name="DN1" type="Drude-IM21-N1" charge="-1.647220308411784"/>
-      <Atom name="C2" type="IM21-C2" charge="2.093545594378954"/>
-      <Atom name="DC2" type="Drude-IM21-C2" charge="-2.169545594378954"/>
-      <Atom name="C3" type="IM21-C3" charge="2.093545594378954"/>
-      <Atom name="DC3" type="Drude-IM21-C3" charge="-2.169545594378954"/>
-      <Atom name="H3" type="IM21-H3" charge="0.183"/>
-      <Atom name="H4" type="IM21-H4" charge="0.168"/>
-      <Atom name="H5" type="IM21-H5" charge="0.168"/>
-      <Atom name="C4" type="IM21-C4" charge="2.240932492352404"/>
-      <Atom name="DC4" type="Drude-IM21-C4" charge="-2.245932492352404"/>
-      <Atom name="H6" type="IM21-H6" charge="0.075"/>
-      <Atom name="H7" type="IM21-H7" charge="0.075"/>
-      <Atom name="C5" type="IM21-C5" charge="2.492049648079627"/>
-      <Atom name="DC5" type="Drude-IM21-C5" charge="-2.484049648079627"/>
-      <Atom name="H8" type="IM21-H8" charge="0.023"/>
-      <Atom name="H9" type="IM21-H9" charge="0.023"/>
-      <Atom name="H10" type="IM21-H10" charge="0.023"/>
-      <Bond atomName1="C" atomName2="H"/>
-      <Bond atomName1="C" atomName2="H1"/>
-      <Bond atomName1="C" atomName2="H2"/>
-      <Bond atomName1="C" atomName2="N1"/>
-      <Bond atomName1="N" atomName2="C1"/>
-      <Bond atomName1="N" atomName2="C3"/>
-      <Bond atomName1="N" atomName2="C4"/>
+    <Residue name="IM1H">
+      <Atom name="C1" type="IM1H-C1" charge="1.9614220042056913"/>
+      <Atom name="DC1" type="Drude-IM1H-C1" charge="-1.7414220042056914"/>
+      <Atom name="N1" type="IM1H-N1" charge="1.1480687908688645"/>
+      <Atom name="DN1" type="Drude-IM1H-N1" charge="-1.6860687908688645"/>
+      <Atom name="C2" type="IM1H-C2" charge="2.051679066517857"/>
+      <Atom name="DC2" type="Drude-IM1H-C2" charge="-1.886679066517857"/>
+      <Atom name="C3" type="IM1H-C3" charge="2.0744769853805614"/>
+      <Atom name="DC3" type="Drude-IM1H-C3" charge="-1.8874769853805615"/>
+      <Atom name="N2" type="IM1H-N2" charge="1.376668691419292"/>
+      <Atom name="DN2" type="Drude-IM1H-N2" charge="-1.853668691419292"/>
+      <Atom name="H1" type="IM1H-H1" charge="0.42"/>
+      <Atom name="C4" type="IM1H-C4" charge="2.2925169990667422"/>
+      <Atom name="DC4" type="Drude-IM1H-C4" charge="-1.9425169990667424"/>
+      <Atom name="H2" type="IM1H-H2" charge="0.09"/>
+      <Atom name="H3" type="IM1H-H3" charge="0.09"/>
+      <Atom name="H4" type="IM1H-H4" charge="0.09"/>
+      <Atom name="H5" type="IM1H-H5" charge="0.116"/>
+      <Atom name="H6" type="IM1H-H6" charge="0.12"/>
+      <Atom name="H7" type="IM1H-H7" charge="0.167"/>
       <Bond atomName1="C1" atomName2="N1"/>
+      <Bond atomName1="C1" atomName2="H2"/>
       <Bond atomName1="C1" atomName2="H3"/>
+      <Bond atomName1="C1" atomName2="H4"/>
       <Bond atomName1="N1" atomName2="C2"/>
+      <Bond atomName1="N1" atomName2="C4"/>
       <Bond atomName1="C2" atomName2="C3"/>
-      <Bond atomName1="C2" atomName2="H4"/>
-      <Bond atomName1="C3" atomName2="H5"/>
-      <Bond atomName1="C4" atomName2="H6"/>
+      <Bond atomName1="C2" atomName2="H5"/>
+      <Bond atomName1="C3" atomName2="N2"/>
+      <Bond atomName1="C3" atomName2="H6"/>
+      <Bond atomName1="N2" atomName2="H1"/>
+      <Bond atomName1="N2" atomName2="C4"/>
       <Bond atomName1="C4" atomName2="H7"/>
-      <Bond atomName1="C4" atomName2="C5"/>
-      <Bond atomName1="C5" atomName2="H8"/>
-      <Bond atomName1="C5" atomName2="H9"/>
-      <Bond atomName1="C5" atomName2="H10"/>
     </Residue>
-    <Residue name="OTF">
-      <Atom name="C" type="OTF-C" charge="2.288257543552287"/>
-      <Atom name="DC" type="Drude-OTF-C" charge="-1.922257543552287"/>
-      <Atom name="F" type="OTF-F" charge="0.10038107467393254"/>
-      <Atom name="DF" type="Drude-OTF-F" charge="-0.29038107467393254"/>
-      <Atom name="F1" type="OTF-F1" charge="0.10038107467393254"/>
-      <Atom name="DF1" type="Drude-OTF-F1" charge="-0.29038107467393254"/>
-      <Atom name="F2" type="OTF-F2" charge="0.10038107467393254"/>
-      <Atom name="DF2" type="Drude-OTF-F2" charge="-0.29038107467393254"/>
-      <Atom name="S" type="OTF-S" charge="3.8272203996199483"/>
-      <Atom name="DS" type="Drude-OTF-S" charge="-2.829220399619948"/>
-      <Atom name="O" type="OTF-O" charge="0.5503872107498997"/>
-      <Atom name="DO" type="Drude-OTF-O" charge="-0.9033872107498997"/>
-      <Atom name="LPAO" type="OTF-LPAO" charge="-0.145"/>
-      <Atom name="LPBO" type="OTF-LPBO" charge="-0.1"/>
-      <Atom name="O1" type="OTF-O1" charge="0.5503872107498997"/>
-      <Atom name="DO1" type="Drude-OTF-O1" charge="-0.9033872107498997"/>
-      <Atom name="LPAO1" type="OTF-LPAO1" charge="-0.145"/>
-      <Atom name="LPBO1" type="OTF-LPBO1" charge="-0.1"/>
-      <Atom name="O2" type="OTF-O2" charge="0.5503872107498997"/>
-      <Atom name="DO2" type="Drude-OTF-O2" charge="-0.9033872107498997"/>
-      <Atom name="LPAO2" type="OTF-LPAO2" charge="-0.145"/>
-      <Atom name="LPBO2" type="OTF-LPBO2" charge="-0.1"/>
-      <Bond atomName1="C" atomName2="F"/>
-      <Bond atomName1="C" atomName2="F1"/>
-      <Bond atomName1="C" atomName2="F2"/>
-      <Bond atomName1="C" atomName2="S"/>
-      <Bond atomName1="S" atomName2="O"/>
-      <Bond atomName1="S" atomName2="O1"/>
-      <Bond atomName1="S" atomName2="O2"/>
-      <VirtualSite type="localCoords" siteName="LPAO" atomName1="O" atomName2="S" atomName3="C" wo1="1" wo2="0" wo3="0" wx1="-1.0" wx2="0.0" wx3="1.0" wy1="0" wy2="-1" wy3="1" p1="-0.011970705016398403" p2="-0.03288924172750679" p3="0"/>
-      <VirtualSite type="localCoords" siteName="LPBO" atomName1="O" atomName2="S" atomName3="C" wo1="1" wo2="0" wo3="0" wx1="-1.0" wx2="0.0" wx3="1.0" wy1="0" wy2="-1" wy3="1" p1="-0.011970705016398403" p2="0.03288924172750679" p3="0"/>
-      <VirtualSite type="localCoords" siteName="LPAO1" atomName1="O1" atomName2="S" atomName3="C" wo1="1" wo2="0" wo3="0" wx1="-1.0" wx2="0.0" wx3="1.0" wy1="0" wy2="-1" wy3="1" p1="-0.011970705016398403" p2="-0.03288924172750679" p3="0"/>
-      <VirtualSite type="localCoords" siteName="LPBO1" atomName1="O1" atomName2="S" atomName3="C" wo1="1" wo2="0" wo3="0" wx1="-1.0" wx2="0.0" wx3="1.0" wy1="0" wy2="-1" wy3="1" p1="-0.011970705016398403" p2="0.03288924172750679" p3="0"/>
-      <VirtualSite type="localCoords" siteName="LPAO2" atomName1="O2" atomName2="S" atomName3="C" wo1="1" wo2="0" wo3="0" wx1="-1.0" wx2="0.0" wx3="1.0" wy1="0" wy2="-1" wy3="1" p1="-0.011970705016398403" p2="-0.03288924172750679" p3="0"/>
-      <VirtualSite type="localCoords" siteName="LPBO2" atomName1="O2" atomName2="S" atomName3="C" wo1="1" wo2="0" wo3="0" wx1="-1.0" wx2="0.0" wx3="1.0" wy1="0" wy2="-1" wy3="1" p1="-0.011970705016398403" p2="0.03288924172750679" p3="0"/>
-    </Residue>
-    <Residue name="DCA">
-      <Atom name="N" type="DCA-N" charge="0.49337560338990927"/>
-      <Atom name="DN" type="Drude-DCA-N" charge="-1.1043756033899093"/>
-      <Atom name="C" type="DCA-C" charge="2.1904265599772272"/>
-      <Atom name="DC" type="Drude-DCA-C" charge="-1.7714265599772272"/>
-      <Atom name="N1" type="DCA-N1" charge="1.1045450617235741"/>
-      <Atom name="DN1" type="Drude-DCA-N1" charge="-1.7205450617235742"/>
-      <Atom name="C1" type="DCA-C1" charge="2.1904265599772272"/>
-      <Atom name="DC1" type="Drude-DCA-C1" charge="-1.7714265599772272"/>
-      <Atom name="N2" type="DCA-N2" charge="0.49337560338990927"/>
-      <Atom name="DN2" type="Drude-DCA-N2" charge="-1.1043756033899093"/>
-      <Bond atomName1="N" atomName2="C"/>
-      <Bond atomName1="C" atomName2="N1"/>
+    <Residue name="IM1">
+      <Atom name="N1" type="IM1-N1" charge="2.053187786060855"/>
+      <Atom name="DN1" type="Drude-IM1-N1" charge="-1.7891877860608547"/>
+      <Atom name="C1" type="IM1-C1" charge="2.1441096044572974"/>
+      <Atom name="DC1" type="Drude-IM1-C1" charge="-1.9541096044572974"/>
+      <Atom name="N2" type="IM1-N2" charge="1.852856213321344"/>
+      <Atom name="DN2" type="Drude-IM1-N2" charge="-1.852856213321344"/>
+      <Atom name="C2" type="IM1-C2" charge="1.9454440024282404"/>
+      <Atom name="DC2" type="Drude-IM1-C2" charge="-2.0304440024282404"/>
+      <Atom name="C3" type="IM1-C3" charge="1.7507488379151692"/>
+      <Atom name="DC3" type="Drude-IM1-C3" charge="-2.043748837915169"/>
+      <Atom name="C4" type="IM1-C4" charge="1.8483252683643299"/>
+      <Atom name="DC4" type="Drude-IM1-C4" charge="-2.13032526836433"/>
+      <Atom name="H1" type="IM1-H1" charge="0.101"/>
+      <Atom name="H2" type="IM1-H2" charge="0.092"/>
+      <Atom name="H3" type="IM1-H3" charge="0.14"/>
+      <Atom name="H4" type="IM1-H4" charge="0.101"/>
+      <Atom name="H5" type="IM1-H5" charge="0.101"/>
+      <Atom name="H6" type="IM1-H6" charge="0.101"/>
+      <Atom name="LPN21" type="IM1-LPN21" charge="-0.43"/>
       <Bond atomName1="N1" atomName2="C1"/>
+      <Bond atomName1="N1" atomName2="C3"/>
+      <Bond atomName1="N1" atomName2="C4"/>
       <Bond atomName1="C1" atomName2="N2"/>
+      <Bond atomName1="C1" atomName2="H1"/>
+      <Bond atomName1="C3" atomName2="C2"/>
+      <Bond atomName1="C3" atomName2="H3"/>
+      <Bond atomName1="C4" atomName2="H4"/>
+      <Bond atomName1="C4" atomName2="H5"/>
+      <Bond atomName1="C4" atomName2="H6"/>
+      <Bond atomName1="N2" atomName2="C2"/>
+      <Bond atomName1="C2" atomName2="H2"/>
+      <VirtualSite type="localCoords" siteName="LPN21" atomName1="N2" atomName2="C1" atomName3="C2" wo1="1" wo2="0" wo3="0" wx1="-1.0" wx2="0.5" wx3="0.5" wy1="0" wy2="-1" wy3="1" p1="-0.029999999543073873" p2="5.235987649654799e-06" p3="9.138522500807017e-10"/>
     </Residue>
     <Residue name="OAC">
-      <Atom name="C" type="OAC-C" charge="1.9260354907078698"/>
-      <Atom name="DC" type="Drude-OAC-C" charge="-2.3520354907078698"/>
-      <Atom name="H" type="OAC-H" charge="0.058"/>
-      <Atom name="H1" type="OAC-H1" charge="0.058"/>
-      <Atom name="H2" type="OAC-H2" charge="0.058"/>
-      <Atom name="C1" type="OAC-C1" charge="2.3727500067495195"/>
-      <Atom name="DC1" type="Drude-OAC-C1" charge="-1.9347500067495196"/>
-      <Atom name="O" type="OAC-O" charge="0.6677301346465749"/>
-      <Atom name="DO" type="Drude-OAC-O" charge="-0.984730134646575"/>
-      <Atom name="LPAO" type="OAC-LPAO" charge="-0.11"/>
-      <Atom name="LPBO" type="OAC-LPBO" charge="-0.148"/>
-      <Atom name="O1" type="OAC-O1" charge="0.6677301346465749"/>
-      <Atom name="DO1" type="Drude-OAC-O1" charge="-0.984730134646575"/>
-      <Atom name="LPAO1" type="OAC-LPAO1" charge="-0.1"/>
-      <Atom name="LPBO1" type="OAC-LPBO1" charge="-0.194"/>
-      <Bond atomName1="C" atomName2="H"/>
-      <Bond atomName1="C" atomName2="H1"/>
-      <Bond atomName1="C" atomName2="H2"/>
-      <Bond atomName1="C" atomName2="C1"/>
-      <Bond atomName1="C1" atomName2="O"/>
-      <Bond atomName1="C1" atomName2="O1"/>
-      <VirtualSite type="localCoords" siteName="LPAO" atomName1="O" atomName2="C1" atomName3="C" wo1="1" wo2="0" wo3="0" wx1="-1.0" wx2="0.0" wx3="1.0" wy1="0" wy2="-1" wy3="1" p1="-0.011970705016398403" p2="-0.03288924172750679" p3="0"/>
-      <VirtualSite type="localCoords" siteName="LPBO" atomName1="O" atomName2="C1" atomName3="C" wo1="1" wo2="0" wo3="0" wx1="-1.0" wx2="0.0" wx3="1.0" wy1="0" wy2="-1" wy3="1" p1="-0.011970705016398403" p2="0.03288924172750679" p3="0"/>
-      <VirtualSite type="localCoords" siteName="LPAO1" atomName1="O1" atomName2="C1" atomName3="C" wo1="1" wo2="0" wo3="0" wx1="-1.0" wx2="0.0" wx3="1.0" wy1="0" wy2="-1" wy3="1" p1="-0.011970705016398403" p2="-0.03288924172750679" p3="0"/>
-      <VirtualSite type="localCoords" siteName="LPBO1" atomName1="O1" atomName2="C1" atomName3="C" wo1="1" wo2="0" wo3="0" wx1="-1.0" wx2="0.0" wx3="1.0" wy1="0" wy2="-1" wy3="1" p1="-0.011970705016398403" p2="0.03288924172750679" p3="0"/>
+      <Atom name="C1" type="OAC-C1" charge="2.565165984501062"/>
+      <Atom name="DC1" type="Drude-OAC-C1" charge="-2.759165984501062"/>
+      <Atom name="H1" type="OAC-H1" charge="0.004"/>
+      <Atom name="H2" type="OAC-H2" charge="0.004"/>
+      <Atom name="H3" type="OAC-H3" charge="0.004"/>
+      <Atom name="C2" type="OAC-C2" charge="2.4571866193957588"/>
+      <Atom name="DC2" type="Drude-OAC-C2" charge="-1.749186619395759"/>
+      <Atom name="O1" type="OAC-O1" charge="1.4538679274541495"/>
+      <Atom name="DO1" type="Drude-OAC-O1" charge="-1.4508679274541496"/>
+      <Atom name="O2" type="OAC-O2" charge="1.4538679274541495"/>
+      <Atom name="DO2" type="Drude-OAC-O2" charge="-1.4508679274541496"/>
+      <Atom name="LPO11" type="OAC-LPO11" charge="-0.383"/>
+      <Atom name="LPO12" type="OAC-LPO12" charge="-0.383"/>
+      <Atom name="LPO21" type="OAC-LPO21" charge="-0.383"/>
+      <Atom name="LPO22" type="OAC-LPO22" charge="-0.383"/>
+      <Bond atomName1="C1" atomName2="C2"/>
+      <Bond atomName1="C2" atomName2="O1"/>
+      <Bond atomName1="C2" atomName2="O2"/>
+      <Bond atomName1="C1" atomName2="H1"/>
+      <Bond atomName1="C1" atomName2="H2"/>
+      <Bond atomName1="C1" atomName2="H3"/>
+      <VirtualSite type="localCoords" siteName="LPO11" atomName1="O1" atomName2="C2" atomName3="C1" wo1="1" wo2="0" wo3="0" wx1="-1.0" wx2="0.0" wx3="1.0" wy1="0" wy2="-1" wy3="1" p1="-0.011970705016398403" p2="-0.03288924172750679" p3="0"/>
+      <VirtualSite type="localCoords" siteName="LPO12" atomName1="O1" atomName2="C2" atomName3="C1" wo1="1" wo2="0" wo3="0" wx1="-1.0" wx2="0.0" wx3="1.0" wy1="0" wy2="-1" wy3="1" p1="-0.011970705016398403" p2="0.03288924172750679" p3="0"/>
+      <VirtualSite type="localCoords" siteName="LPO21" atomName1="O2" atomName2="C2" atomName3="C1" wo1="1" wo2="0" wo3="0" wx1="-1.0" wx2="0.0" wx3="1.0" wy1="0" wy2="-1" wy3="1" p1="-0.011970705016398403" p2="-0.03288924172750679" p3="0"/>
+      <VirtualSite type="localCoords" siteName="LPO22" atomName1="O2" atomName2="C2" atomName3="C1" wo1="1" wo2="0" wo3="0" wx1="-1.0" wx2="0.0" wx3="1.0" wy1="0" wy2="-1" wy3="1" p1="-0.011970705016398403" p2="0.03288924172750679" p3="0"/>
     </Residue>
-    <Residue name="SWM4">
-      <Atom name="OH2" type="SWM4-OH2" charge="1.7163853282605033"/>
-      <Atom name="DOH2" type="Drude-SWM4-OH2" charge="-1.7163853282605033"/>
-      <Atom name="OM" type="SWM4-OM" charge="-1.11466"/>
-      <Atom name="H1" type="SWM4-H1" charge="0.55733"/>
-      <Atom name="H2" type="SWM4-H2" charge="0.55733"/>
-      <Bond atomName1="OH2" atomName2="H1"/>
-      <Bond atomName1="OH2" atomName2="H2"/>
-      <VirtualSite type="localCoords" siteName="OM" atomName1="OH2" atomName2="H1" atomName3="H2" wo1="1" wo2="0" wo3="0" wx1="-1.0" wx2="0.5" wx3="0.5" wy1="0" wy2="-1" wy3="1" p1="0.024034491999999998" p2="0" p3="0"/>
+    <Residue name="HOAC">
+      <Atom name="C1" type="HOAC-C1" charge="2.223142529450822"/>
+      <Atom name="DC1" type="Drude-HOAC-C1" charge="-2.523142529450822"/>
+      <Atom name="H1" type="HOAC-H1" charge="0.092"/>
+      <Atom name="H2" type="HOAC-H2" charge="0.092"/>
+      <Atom name="H3" type="HOAC-H3" charge="0.092"/>
+      <Atom name="C2" type="HOAC-C2" charge="2.764526857311924"/>
+      <Atom name="DC2" type="Drude-HOAC-C2" charge="-1.906526857311924"/>
+      <Atom name="O2" type="HOAC-O2" charge="1.6663059805572338"/>
+      <Atom name="DO2" type="Drude-HOAC-O2" charge="-1.6663059805572338"/>
+      <Atom name="LP2A" type="HOAC-LP2A" charge="-0.319"/>
+      <Atom name="LP2B" type="HOAC-LP2B" charge="-0.319"/>
+      <Atom name="O1" type="HOAC-O1" charge="1.9633344060265052"/>
+      <Atom name="DO1" type="Drude-HOAC-O1" charge="-1.9633344060265052"/>
+      <Atom name="LP1A" type="HOAC-LP1A" charge="-0.285"/>
+      <Atom name="LP1B" type="HOAC-LP1B" charge="-0.285"/>
+      <Atom name="HO1" type="HOAC-HO1" charge="0.374"/>
+      <Bond atomName1="C2" atomName2="O1"/>
+      <Bond atomName1="O1" atomName2="HO1"/>
+      <Bond atomName1="C2" atomName2="O2"/>
+      <Bond atomName1="C1" atomName2="C2"/>
+      <Bond atomName1="C1" atomName2="H1"/>
+      <Bond atomName1="C1" atomName2="H2"/>
+      <Bond atomName1="C1" atomName2="H3"/>
+      <VirtualSite type="localCoords" siteName="LP2A" atomName1="O2" atomName2="C2" atomName3="O1" wo1="1" wo2="0" wo3="0" wx1="-1.0" wx2="0.0" wx3="1.0" wy1="0" wy2="-1" wy3="1" p1="-0.0005235721931185043" p2="-0.029995430854691738" p3="0"/>
+      <VirtualSite type="localCoords" siteName="LP2B" atomName1="O2" atomName2="C2" atomName3="O1" wo1="1" wo2="0" wo3="0" wx1="-1.0" wx2="0.0" wx3="1.0" wy1="0" wy2="-1" wy3="1" p1="-0.0005235721931185043" p2="0.029995430854691738" p3="0"/>
+      <VirtualSite type="localCoords" siteName="LP1A" atomName1="O1" atomName2="C2" atomName3="HO1" wo1="1" wo2="0" wo3="0" wx1="-1.0" wx2="0.0" wx3="1.0" wy1="0" wy2="-1" wy3="1" p1="-0.012485829976186883" p2="0.0005706440663482743" p3="0.03269217666591343"/>
+      <VirtualSite type="localCoords" siteName="LP1B" atomName1="O1" atomName2="C2" atomName3="HO1" wo1="1" wo2="0" wo3="0" wx1="-1.0" wx2="0.0" wx3="1.0" wy1="0" wy2="-1" wy3="1" p1="-0.012485829976186883" p2="0.0005706440663482743" p3="-0.03269217666591343"/>
     </Residue>
   </Residues>
   <HarmonicBondForce>
-    <Bond class1="C3" class2="H1" length="0.10930000000000001" k="281081.11999999994"/>
-    <Bond class1="C3" class2="NA" length="0.1456" k="280076.95999999996"/>
-    <Bond class1="CC" class2="NA" length="0.1371" k="367187.83999999997"/>
-    <Bond class1="CD" class2="NA" length="0.1371" k="367187.83999999997"/>
-    <Bond class1="CC" class2="H5" length="0.1079" k="297900.79999999993"/>
-    <Bond class1="CC" class2="CD" length="0.1371" k="421747.1999999999"/>
-    <Bond class1="CC" class2="H4" length="0.10830000000000001" k="292963.67999999993"/>
-    <Bond class1="CD" class2="H4" length="0.10830000000000001" k="292963.67999999993"/>
-    <Bond class1="C3" class2="C3" length="0.1535" k="253634.07999999996"/>
-    <Bond class1="C3" class2="HC" length="0.10920000000000002" k="282252.63999999996"/>
-    <Bond class1="C3" class2="F" length="0.13440000000000002" k="304427.83999999997"/>
-    <Bond class1="C3" class2="S6" length="0.1774" k="212547.19999999995"/>
-    <Bond class1="O" class2="S6" length="0.1436" k="452792.4799999999"/>
-    <Bond class1="O" class2="LP" length="0.0" k="0.0"/>
-    <Bond class1="CG" class2="NE" length="0.13260000000000002" k="426349.5999999999"/>
-    <Bond class1="CG" class2="N1" length="0.11430000000000001" k="832364.9599999998"/>
-    <Bond class1="C" class2="C3" length="0.15080000000000002" k="274721.43999999994"/>
-    <Bond class1="C" class2="OA" length="0.12140000000000001" k="542246.3999999999"/>
-    <Bond class1="OA" class2="LP" length="0.0" k="0.0"/>
-    <Bond class1="C" class2="DRUD" length="0.0" k="418399.99999999994"/>
-    <Bond class1="C3" class2="DRUD" length="0.0" k="418399.99999999994"/>
-    <Bond class1="CC" class2="DRUD" length="0.0" k="418399.99999999994"/>
-    <Bond class1="CD" class2="DRUD" length="0.0" k="418399.99999999994"/>
-    <Bond class1="CG" class2="DRUD" length="0.0" k="418399.99999999994"/>
-    <Bond class1="O" class2="DRUD" length="0.0" k="418399.99999999994"/>
-    <Bond class1="OA" class2="DRUD" length="0.0" k="418399.99999999994"/>
-    <Bond class1="ODW" class2="DRUD" length="0.0" k="418399.99999999994"/>
-    <Bond class1="NA" class2="DRUD" length="0.0" k="418399.99999999994"/>
-    <Bond class1="N1" class2="DRUD" length="0.0" k="418399.99999999994"/>
-    <Bond class1="NE" class2="DRUD" length="0.0" k="418399.99999999994"/>
-    <Bond class1="F" class2="DRUD" length="0.0" k="418399.99999999994"/>
-    <Bond class1="S6" class2="DRUD" length="0.0" k="418399.99999999994"/>
-    <Bond class1="ODW" class2="HDW" length="0.09572000000000001" k="376559.99999999994"/>
-    <Bond class1="ODW" class2="LP" length="0.024034492" k="0.0"/>
-    <Bond class1="HDW" class2="HDW" length="0.15139000000000002" k="0.0"/>
+    <Bond class1="DRUD" class2="X" length="0.0" k="836799.9999999999"/>
+    <Bond class1="CD33F" class2="HDA3A" length="0.1111" k="269449.6"/>
+    <Bond class1="CD2R5D" class2="CD2R5D" length="0.14347000000000001" k="458599.87199999986"/>
+    <Bond class1="CD2R5D" class2="HDR5D" length="0.10830000000000001" k="305431.99999999994"/>
+    <Bond class1="CD2R5D" class2="ND2R5C" length="0.1405" k="330092.496"/>
+    <Bond class1="CD2R5E" class2="HDR5E" length="0.10900000000000001" k="284511.99999999994"/>
+    <Bond class1="CD2R5E" class2="ND2R5C" length="0.13781000000000002" k="418726.3519999999"/>
+    <Bond class1="CD33F" class2="ND2R5C" length="0.14686" k="217676.78399999996"/>
+    <Bond class1="ND2R5C" class2="HDP1A" length="0.1" k="389948.79999999993"/>
+    <Bond class1="CD33G" class2="HDA3A" length="0.1111" k="269449.6"/>
+    <Bond class1="CD33G" class2="ND2R5A" length="0.14239" k="180581.43999999997"/>
+    <Bond class1="CD2R5A" class2="ND2R5A" length="0.14223" k="345908.01599999995"/>
+    <Bond class1="CD2R5B" class2="ND2R5A" length="0.14293" k="359932.7839999999"/>
+    <Bond class1="CD2R5A" class2="ND2R5B" length="0.14164000000000002" k="274495.5039999999"/>
+    <Bond class1="CD2R5B" class2="ND2R5B" length="0.13677" k="407086.4639999999"/>
+    <Bond class1="CD2R5A" class2="CD2R5A" length="0.14679" k="432014.7359999999"/>
+    <Bond class1="CD2R5A" class2="HDR5A" length="0.10830000000000001" k="305431.99999999994"/>
+    <Bond class1="CD2R5B" class2="HDR5B" length="0.10900000000000001" k="284511.99999999994"/>
+    <Bond class1="ND2R5B" class2="LPD" length="0.0" k="0.0"/>
+    <Bond class1="CD33A" class2="HDA3A" length="0.1111" k="269449.6"/>
+    <Bond class1="CD2O2A" class2="CD33A" length="0.1535" k="92047.99999999999"/>
+    <Bond class1="OD2C2A" class2="CD2O2A" length="0.125" k="440993.5999999999"/>
+    <Bond class1="OD2C2A" class2="LPD" length="0.0" k="0.0"/>
+    <Bond class1="CD33C" class2="HDA3A" length="0.1111" k="269449.6"/>
+    <Bond class1="CD2O3A" class2="CD33C" length="0.15100000000000002" k="111294.39999999998"/>
+    <Bond class1="OD2C3A" class2="CD2O3A" length="0.12" k="610863.9999999999"/>
+    <Bond class1="OD31F" class2="HDP1A" length="0.0969" k="401998.7199999999"/>
+    <Bond class1="OD31F" class2="CD2O3A" length="0.12689999999999999" k="171962.39999999997"/>
+    <Bond class1="OD2C3A" class2="LPD" length="0.0" k="0.0"/>
+    <Bond class1="OD31F" class2="LPD" length="0.0" k="0.0"/>
   </HarmonicBondForce>
   <HarmonicAngleForce>
-    <Angle class1="C3" class2="NA" class3="CC" angle="2.183232361319707" k="523.5020800000001"/>
-    <Angle class1="H1" class2="C3" class3="H1" angle="1.912008195559788" k="327.85824"/>
-    <Angle class1="H1" class2="C3" class3="NA" angle="1.9102628663077938" k="417.5632"/>
-    <Angle class1="NA" class2="CC" class3="NA" angle="1.9081684712054006" k="616.3032000000001"/>
-    <Angle class1="NA" class2="CC" class3="H5" angle="2.131047016685076" k="416.39168"/>
-    <Angle class1="NA" class2="CD" class3="CC" angle="1.9097392675321954" k="610.11088"/>
-    <Angle class1="NA" class2="CD" class3="H4" angle="2.0884609829364145" k="420.24096000000003"/>
-    <Angle class1="NA" class2="C3" class3="C3" angle="1.9689059291748032" k="550.0286400000001"/>
-    <Angle class1="CC" class2="NA" class3="CD" angle="2.2341959754779412" k="534.5478400000001"/>
-    <Angle class1="CC" class2="NA" class3="CC" angle="1.9181168479417683" k="576.88992"/>
-    <Angle class1="NA" class2="CC" class3="CD" angle="1.9097392675321954" k="610.11088"/>
-    <Angle class1="NA" class2="CC" class3="H4" angle="2.0884609829364145" k="420.24096000000003"/>
-    <Angle class1="CC" class2="CD" class3="H4" angle="2.253394597249879" k="394.88592"/>
-    <Angle class1="CD" class2="NA" class3="C3" angle="2.183232361319707" k="523.5020800000001"/>
-    <Angle class1="CD" class2="CC" class3="H4" angle="2.253394597249879" k="394.88592"/>
-    <Angle class1="C3" class2="C3" class3="HC" angle="1.9207348418197596" k="388.02416"/>
-    <Angle class1="H1" class2="C3" class3="C3" angle="1.9210839076701585" k="387.94048000000004"/>
-    <Angle class1="HC" class2="C3" class3="HC" angle="1.8910642445358559" k="329.95024"/>
-    <Angle class1="C3" class2="S6" class3="O" angle="1.8905406457602576" k="348.61088"/>
-    <Angle class1="F" class2="C3" class3="F" angle="1.8702948264371235" k="596.3036800000001"/>
-    <Angle class1="F" class2="C3" class3="S6" angle="1.9141025906621811" k="679.64896"/>
-    <Angle class1="O" class2="S6" class3="O" angle="2.089682713412811" k="390.45088"/>
-    <Angle class1="CG" class2="NE" class3="CG" angle="2.443460952792061" k="552.288"/>
-    <Angle class1="NE" class2="CG" class3="N1" angle="3.038094628946529" k="544.25472"/>
-    <Angle class1="C3" class2="C" class3="OA" angle="2.148674842130219" k="569.27504"/>
-    <Angle class1="HC" class2="C3" class3="C" angle="1.9142771235873808" k="394.9696"/>
-    <Angle class1="OA" class2="C" class3="OA" angle="2.275560278750207" k="654.12656"/>
-    <Angle class1="HDW" class2="ODW" class3="HDW" angle="1.8242181341844732" k="0.0"/>
-    <Angle class1="LP" class2="ODW" class3="HDW" angle="0.0" k="0.0"/>
-    <Angle class1="ODW" class2="HDW" class3="HDW" angle="0.0" k="0.0"/>
+    <Angle class1="HDA3A" class2="CD33F" class3="HDA3A" angle="1.8919369091618534" k="297.064"/>
+    <Angle class1="CD2R5D" class2="CD2R5D" class3="HDR5D" angle="2.552544031041707" k="307.35663999999997"/>
+    <Angle class1="CD2R5D" class2="CD2R5D" class3="ND2R5C" angle="1.4990632945379296" k="816.04736"/>
+    <Angle class1="CD2R5D" class2="ND2R5C" class3="CD2R5E" angle="1.5341444125030157" k="786.592"/>
+    <Angle class1="CD2R5D" class2="ND2R5C" class3="CD33F" angle="2.1509437701578116" k="412.04032"/>
+    <Angle class1="CD2R5D" class2="ND2R5C" class3="HDP1A" angle="1.9669860669976094" k="240.32896"/>
+    <Angle class1="CD2R5E" class2="ND2R5C" class3="CD33F" angle="2.1471040458034243" k="410.95248000000004"/>
+    <Angle class1="CD2R5E" class2="ND2R5C" class3="HDP1A" angle="1.8432422230312113" k="232.79776"/>
+    <Angle class1="HDA3A" class2="CD33F" class3="ND2R5C" angle="1.8771016105199014" k="474.96768000000003"/>
+    <Angle class1="HDR5D" class2="CD2R5D" class3="ND2R5C" angle="2.3246040307312477" k="362.75280000000004"/>
+    <Angle class1="HDR5E" class2="CD2R5E" class3="ND2R5C" angle="2.404540110472588" k="333.38112000000007"/>
+    <Angle class1="ND2R5C" class2="CD2R5E" class3="ND2R5C" angle="1.6969836317140867" k="936.96496"/>
+    <Angle class1="HDA3A" class2="CD33G" class3="HDA3A" angle="1.8919369091618534" k="297.064"/>
+    <Angle class1="CD2R5A" class2="CD2R5A" class3="HDR5A" angle="2.58238916125081" k="304.76256"/>
+    <Angle class1="CD2R5A" class2="ND2R5A" class3="CD2R5B" angle="1.4482742133048947" k="667.5990400000001"/>
+    <Angle class1="CD2R5A" class2="ND2R5B" class3="CD2R5B" angle="1.4622368473208494" k="789.68816"/>
+    <Angle class1="CD2R5A" class2="ND2R5A" class3="CD33G" angle="2.076069145247255" k="384.17488"/>
+    <Angle class1="CD2R5B" class2="ND2R5A" class3="CD33G" angle="2.059313984428109" k="353.29696"/>
+    <Angle class1="HDA3A" class2="CD33G" class3="ND2R5A" angle="1.8753562812679072" k="432.79296"/>
+    <Angle class1="HDR5A" class2="CD2R5A" class3="ND2R5A" angle="2.3305381501880285" k="342.16752"/>
+    <Angle class1="HDR5B" class2="CD2R5B" class3="ND2R5A" angle="2.5225243679074043" k="376.64368"/>
+    <Angle class1="CD2R5A" class2="CD2R5A" class3="ND2R5A" angle="1.4803882715415901" k="742.15792"/>
+    <Angle class1="HDR5A" class2="CD2R5A" class3="ND2R5B" angle="2.3774875070666757" k="380.24192"/>
+    <Angle class1="HDR5B" class2="CD2R5B" class3="ND2R5B" angle="2.5225243679074043" k="369.69824"/>
+    <Angle class1="CD2R5A" class2="CD2R5A" class3="ND2R5B" angle="1.584235362035253" k="804.41584"/>
+    <Angle class1="ND2R5A" class2="CD2R5B" class3="ND2R5B" angle="1.6744688843633597" k="851.61136"/>
+    <Angle class1="HDA3A" class2="CD33A" class3="HDA3A" angle="1.8919369091618534" k="297.064"/>
+    <Angle class1="OD2C2A" class2="CD2O2A" class3="OD2C2A" angle="2.2322761133007476" k="700.4016"/>
+    <Angle class1="OD2C2A" class2="CD2O2A" class3="CD33A" angle="2.1467549799530254" k="199.1584"/>
+    <Angle class1="CD2O2A" class2="CD33A" class3="HDA3A" angle="1.8762289458939043" k="231.7936"/>
+    <Angle class1="HDA3A" class2="CD33C" class3="HDA3A" angle="1.8919369091618534" k="297.064"/>
+    <Angle class1="CD2O3A" class2="OD31F" class3="HDP1A" angle="1.9233528356977512" k="492.8752"/>
+    <Angle class1="CD2O3A" class2="CD33C" class3="HDA3A" angle="1.911135530933791" k="276.144"/>
+    <Angle class1="OD2C3A" class2="CD2O3A" class3="CD33C" angle="2.199114857512855" k="585.76"/>
+    <Angle class1="OD31F" class2="CD2O3A" class3="CD33C" angle="1.9792033717615698" k="405.848"/>
+    <Angle class1="OD2C3A" class2="CD2O3A" class3="OD31F" angle="2.050761871093337" k="826.7584"/>
   </HarmonicAngleForce>
   <!--Urey-Bradley terms-->
-  <AmoebaUreyBradleyForce/>
+  <AmoebaUreyBradleyForce>
+    <UreyBradley class1="OD2C2A" class2="CD2O2A" class3="OD2C2A" d="0.2379" k="53889.920000000006"/>
+    <UreyBradley class1="OD2C2A" class2="CD2O2A" class3="CD33A" d="0.2391" k="14602.16"/>
+    <UreyBradley class1="CD33A" class2="CD2O2A" class3="OD2C2A" d="0.2391" k="14602.16"/>
+    <UreyBradley class1="CD2O2A" class2="CD33A" class3="HDA3A" d="0.2167" k="10585.52"/>
+    <UreyBradley class1="HDA3A" class2="CD33A" class3="CD2O2A" d="0.2167" k="10585.52"/>
+    <UreyBradley class1="CD2O3A" class2="OD31F" class3="HDP1A" d="0.2377" k="6317.84"/>
+    <UreyBradley class1="HDP1A" class2="OD31F" class3="CD2O3A" d="0.2377" k="6317.84"/>
+    <UreyBradley class1="CD2O3A" class2="CD33C" class3="HDA3A" d="0.2163" k="12552.000000000002"/>
+    <UreyBradley class1="HDA3A" class2="CD33C" class3="CD2O3A" d="0.2163" k="12552.000000000002"/>
+    <UreyBradley class1="OD2C3A" class2="CD2O3A" class3="CD33C" d="0.24420000000000003" k="8368.0"/>
+    <UreyBradley class1="CD33C" class2="CD2O3A" class3="OD2C3A" d="0.24420000000000003" k="8368.0"/>
+    <UreyBradley class1="OD31F" class2="CD2O3A" class3="CD33C" d="0.23370000000000002" k="11213.12"/>
+    <UreyBradley class1="CD33C" class2="CD2O3A" class3="OD31F" d="0.23370000000000002" k="11213.12"/>
+    <UreyBradley class1="OD2C3A" class2="CD2O3A" class3="OD31F" d="0.2424" k="74600.72000000002"/>
+    <UreyBradley class1="OD31F" class2="CD2O3A" class3="OD2C3A" d="0.2424" k="74600.72000000002"/>
+  </AmoebaUreyBradleyForce>
   <PeriodicTorsionForce>
-    <Proper class1="" class2="C3" class3="NA" class4="" periodicity1="2" phase1="0.0" k1="0.0"/>
-    <Proper class1="" class2="CC" class3="NA" class4="" periodicity1="2" phase1="3.141592653589793" k1="7.1128"/>
-    <Proper class1="" class2="CD" class3="NA" class4="" periodicity1="2" phase1="3.141592653589793" k1="7.1128"/>
-    <Proper class1="" class2="CC" class3="CD" class4="" periodicity1="2" phase1="3.141592653589793" k1="16.736"/>
-    <Proper class1="" class2="C3" class3="C3" class4="" periodicity1="3" phase1="0.0" k1="0.6527040000000001"/>
-    <Proper class1="CC" class2="NA" class3="C3" class4="C3" periodicity1="1" phase1="0.0" k1="0.112968" periodicity2="2" phase2="3.141592653589793" k2="0.9706880000000001" periodicity3="3" phase3="3.141592653589793" k3="1.313776" periodicity4="4" phase4="3.141592653589793" k4="0.138072"/>
-    <Proper class1="CC" class2="NA" class3="C" class4="C3" periodicity1="6" phase1="0.0" k1="0.106692"/>
-    <Proper class1="F" class2="C3" class3="S6" class4="O" periodicity1="3" phase1="0.0" k1="0.602496"/>
-    <Proper class1="" class2="CG" class3="NE" class4="" periodicity1="2" phase1="3.141592653589793" k1="0.0"/>
-    <Proper class1="CG" class2="NE" class3="CG" class4="N1" periodicity1="2" phase1="3.141592653589793" k1="0.0"/>
-    <Proper class1="" class2="C" class3="C3" class4="" periodicity1="2" phase1="3.141592653589793" k1="0.0"/>
-    <Proper class1="HC" class2="C3" class3="C" class4="OA" periodicity1="1" phase1="0.0" k1="3.3472000000000004" periodicity2="3" phase2="3.141592653589793" k2="0.33472"/>
-    <Improper class1="NA" class2="C3" class3="CC" class4="CD" periodicity1="2" phase1="3.141592653589793" k1="4.6024"/>
-    <Improper class1="CC" class2="H5" class3="NA" class4="NA" periodicity1="2" phase1="3.141592653589793" k1="4.6024"/>
-    <Improper class1="NA" class2="C3" class3="CC" class4="CC" periodicity1="2" phase1="3.141592653589793" k1="4.6024"/>
-    <Improper class1="CC" class2="CD" class3="H4" class4="NA" periodicity1="2" phase1="3.141592653589793" k1="4.6024"/>
-    <Improper class1="CD" class2="CC" class3="H4" class4="NA" periodicity1="2" phase1="3.141592653589793" k1="4.6024"/>
-    <Improper class1="C" class2="" class3="OA" class4="OA" periodicity1="2" phase1="3.141592653589793" k1="4.6024"/>
+    <Proper class1="CD2R5D" class2="CD2R5D" class3="ND2R5C" class4="CD2R5E" periodicity1="2" phase1="3.141592653589793" k1="62.255953520000006"/>
+    <Proper class1="CD2R5D" class2="CD2R5D" class3="ND2R5C" class4="CD33F" periodicity1="2" phase1="3.141592653589793" k1="13.280350720000001"/>
+    <Proper class1="CD2R5D" class2="CD2R5D" class3="ND2R5C" class4="HDP1A" periodicity1="2" phase1="3.141592653589793" k1="15.80602232"/>
+    <Proper class1="HDA3A" class2="CD33F" class3="ND2R5C" class4="CD2R5D" periodicity1="3" phase1="0.0" k1="0.80035736"/>
+    <Proper class1="HDA3A" class2="CD33F" class3="ND2R5C" class4="CD2R5E" periodicity1="3" phase1="0.0" k1="0.3508284"/>
+    <Proper class1="HDR5D" class2="CD2R5D" class3="CD2R5D" class4="HDR5D" periodicity1="2" phase1="3.141592653589793" k1="4.77574312"/>
+    <Proper class1="HDR5D" class2="CD2R5D" class3="CD2R5D" class4="ND2R5C" periodicity1="2" phase1="3.141592653589793" k1="18.54587288"/>
+    <Proper class1="HDR5D" class2="CD2R5D" class3="ND2R5C" class4="CD2R5E" periodicity1="2" phase1="3.141592653589793" k1="16.58596176"/>
+    <Proper class1="HDR5D" class2="CD2R5D" class3="ND2R5C" class4="CD33F" periodicity1="2" phase1="3.141592653589793" k1="3.37791056"/>
+    <Proper class1="HDR5D" class2="CD2R5D" class3="ND2R5C" class4="HDP1A" periodicity1="2" phase1="3.141592653589793" k1="3.2453614400000004"/>
+    <Proper class1="HDR5E" class2="CD2R5E" class3="ND2R5C" class4="CD2R5D" periodicity1="2" phase1="3.141592653589793" k1="14.97650248"/>
+    <Proper class1="HDR5E" class2="CD2R5E" class3="ND2R5C" class4="CD33F" periodicity1="2" phase1="3.141592653589793" k1="5.52028592"/>
+    <Proper class1="HDR5E" class2="CD2R5E" class3="ND2R5C" class4="HDP1A" periodicity1="2" phase1="3.141592653589793" k1="4.901472320000001"/>
+    <Proper class1="ND2R5C" class2="CD2R5D" class3="CD2R5D" class4="ND2R5C" periodicity1="2" phase1="3.141592653589793" k1="95.99987168000001"/>
+    <Proper class1="ND2R5C" class2="CD2R5E" class3="ND2R5C" class4="CD2R5D" periodicity1="2" phase1="3.141592653589793" k1="76.36109616"/>
+    <Proper class1="ND2R5C" class2="CD2R5E" class3="ND2R5C" class4="CD33F" periodicity1="2" phase1="3.141592653589793" k1="27.385995440000002"/>
+    <Proper class1="ND2R5C" class2="CD2R5E" class3="ND2R5C" class4="HDP1A" periodicity1="2" phase1="3.141592653589793" k1="19.47446984"/>
+    <Proper class1="HDR5A" class2="CD2R5A" class3="CD2R5A" class4="HDR5A" periodicity1="2" phase1="3.141592653589793" k1="3.62263272"/>
+    <Proper class1="HDA3A" class2="CD33G" class3="ND2R5A" class4="CD2R5A" periodicity1="3" phase1="0.0" k1="0.82943616"/>
+    <Proper class1="HDR5B" class2="CD2R5B" class3="ND2R5A" class4="CD2R5A" periodicity1="2" phase1="3.141592653589793" k1="14.25128976"/>
+    <Proper class1="HDR5B" class2="CD2R5B" class3="ND2R5B" class4="CD2R5A" periodicity1="2" phase1="3.141592653589793" k1="22.770708720000002"/>
+    <Proper class1="HDA3A" class2="CD33G" class3="ND2R5A" class4="CD2R5B" periodicity1="3" phase1="0.0" k1="0.6497752"/>
+    <Proper class1="HDR5A" class2="CD2R5A" class3="ND2R5A" class4="CD2R5B" periodicity1="2" phase1="3.141592653589793" k1="14.72730344"/>
+    <Proper class1="HDR5A" class2="CD2R5A" class3="ND2R5B" class4="CD2R5B" periodicity1="2" phase1="3.141592653589793" k1="21.829559760000002"/>
+    <Proper class1="CD2R5A" class2="CD2R5A" class3="ND2R5A" class4="CD2R5B" periodicity1="2" phase1="3.141592653589793" k1="70.21019776"/>
+    <Proper class1="CD2R5A" class2="CD2R5A" class3="ND2R5B" class4="CD2R5B" periodicity1="2" phase1="3.141592653589793" k1="64.31172008"/>
+    <Proper class1="HDR5A" class2="CD2R5A" class3="ND2R5A" class4="CD33G" periodicity1="2" phase1="3.141592653589793" k1="1.7169462400000002"/>
+    <Proper class1="HDR5B" class2="CD2R5B" class3="ND2R5A" class4="CD33G" periodicity1="2" phase1="3.141592653589793" k1="1.64146688"/>
+    <Proper class1="CD2R5A" class2="CD2R5A" class3="ND2R5A" class4="CD33G" periodicity1="2" phase1="3.141592653589793" k1="12.081760240000001"/>
+    <Proper class1="HDR5A" class2="CD2R5A" class3="CD2R5A" class4="ND2R5A" periodicity1="2" phase1="3.141592653589793" k1="16.44240872"/>
+    <Proper class1="HDR5A" class2="CD2R5A" class3="CD2R5A" class4="ND2R5B" periodicity1="2" phase1="3.141592653589793" k1="16.10032488"/>
+    <Proper class1="ND2R5A" class2="CD2R5A" class3="CD2R5A" class4="ND2R5B" periodicity1="2" phase1="3.141592653589793" k1="85.4065276"/>
+    <Proper class1="ND2R5A" class2="CD2R5B" class3="ND2R5B" class4="CD2R5A" periodicity1="2" phase1="3.141592653589793" k1="82.63977392000001"/>
+    <Proper class1="ND2R5B" class2="CD2R5B" class3="ND2R5A" class4="CD2R5A" periodicity1="2" phase1="3.141592653589793" k1="67.81079928000001"/>
+    <Proper class1="ND2R5B" class2="CD2R5B" class3="ND2R5A" class4="CD33G" periodicity1="2" phase1="3.141592653589793" k1="17.58041488"/>
+    <Proper class1="OD2C2A" class2="CD2O2A" class3="CD33A" class4="HDA3A" periodicity1="3" phase1="3.141592653589793" k1="1.75728"/>
+    <Proper class1="HDP1A" class2="OD31F" class3="CD2O3A" class4="CD33C" periodicity1="2" phase1="3.141592653589793" k1="15.73184"/>
+    <Proper class1="HDP1A" class2="OD31F" class3="CD2O3A" class4="OD2C3A" periodicity1="2" phase1="3.141592653589793" k1="4.644240000000001"/>
+    <Proper class1="OD2C3A" class2="CD2O3A" class3="CD33C" class4="HDA3A" periodicity1="3" phase1="3.141592653589793" k1="0.0"/>
+    <Proper class1="OD31F" class2="CD2O3A" class3="CD33C" class4="HDA3A" periodicity1="6" phase1="3.141592653589793" k1="0.0"/>
   </PeriodicTorsionForce>
+  <CustomTorsionForce energy="k*(theta-theta0)^2">
+    <PerTorsionParameter name="k"/>
+    <PerTorsionParameter name="theta0"/>
+    <Improper class1="OD2C2A" class2="CD33A" class3="OD2C2A" class4="CD2O2A" k="297.064" theta0="0.0"/>
+    <Improper class1="ND2R5A" class2="CD2R5A" class3="CD2R5B" class4="HDP1A" k="3.7656" theta0="0.0"/>
+    <Improper class1="CD2R5A" class2="CD2R5A" class3="ND2R5B" class4="HDR5A" k="4.184" theta0="0.0"/>
+    <Improper class1="CD2R5B" class2="ND2R5A" class3="ND2R5B" class4="HDR5B" k="4.184" theta0="0.0"/>
+    <Improper class1="CD2R5A" class2="CD2R5A" class3="ND2R5A" class4="HDR5A" k="4.184" theta0="0.0"/>
+    <Improper class1="ND2R5A" class2="CD2R5B" class3="CD2R5A" class4="CD33G" k="1.8828" theta0="0.0"/>
+    <Improper class1="ND2R5C" class2="CD2R5E" class3="CD2R5D" class4="HDP1A" k="1.8828" theta0="0.0"/>
+    <Improper class1="CD2R5D" class2="CD2R5D" class3="ND2R5C" class4="HDR5D" k="2.092" theta0="0.0"/>
+    <Improper class1="CD2R5E" class2="ND2R5C" class3="ND2R5C" class4="HDR5E" k="2.092" theta0="0.0"/>
+    <Improper class1="CD2O3A" class2="OD31F" class3="CD33C" class4="OD2C3A" k="355.64" theta0="0.0"/>
+    <Improper class1="ND2R5C" class2="CD2R5E" class3="CD2R5D" class4="CD33F" k="1.8828" theta0="0.0"/>
+  </CustomTorsionForce>
   <NonbondedForce coulomb14scale="1.0" lj14scale="1.0">
     <UseAttributeFromResidue name="charge"/>
-    <Atom class="H1" sigma="1.0" epsilon="0.0"/>
-    <Atom class="H4" sigma="1.0" epsilon="0.0"/>
-    <Atom class="H5" sigma="1.0" epsilon="0.0"/>
-    <Atom class="HC" sigma="1.0" epsilon="0.0"/>
-    <Atom class="C3" sigma="1.0" epsilon="0.0"/>
-    <Atom class="CC" sigma="1.0" epsilon="0.0"/>
-    <Atom class="CD" sigma="1.0" epsilon="0.0"/>
-    <Atom class="CG" sigma="1.0" epsilon="0.0"/>
-    <Atom class="O" sigma="1.0" epsilon="0.0"/>
-    <Atom class="N1" sigma="1.0" epsilon="0.0"/>
-    <Atom class="NA" sigma="1.0" epsilon="0.0"/>
-    <Atom class="NE" sigma="1.0" epsilon="0.0"/>
-    <Atom class="F" sigma="1.0" epsilon="0.0"/>
-    <Atom class="S6" sigma="1.0" epsilon="0.0"/>
-    <Atom class="C" sigma="1.0" epsilon="0.0"/>
-    <Atom class="OA" sigma="1.0" epsilon="0.0"/>
-    <Atom class="ODW" sigma="1.0" epsilon="0.0"/>
-    <Atom class="HDW" sigma="1.0" epsilon="0.0"/>
-    <Atom class="LP" sigma="1.0" epsilon="0.0"/>
+    <Atom class="HDP1A" sigma="1.0" epsilon="0.0"/>
+    <Atom class="HDA3A" sigma="1.0" epsilon="0.0"/>
+    <Atom class="HDR5A" sigma="1.0" epsilon="0.0"/>
+    <Atom class="HDR5B" sigma="1.0" epsilon="0.0"/>
+    <Atom class="HDR5D" sigma="1.0" epsilon="0.0"/>
+    <Atom class="HDR5E" sigma="1.0" epsilon="0.0"/>
+    <Atom class="CD2O2A" sigma="1.0" epsilon="0.0"/>
+    <Atom class="CD2O3A" sigma="1.0" epsilon="0.0"/>
+    <Atom class="CD2R5A" sigma="1.0" epsilon="0.0"/>
+    <Atom class="CD2R5B" sigma="1.0" epsilon="0.0"/>
+    <Atom class="CD2R5D" sigma="1.0" epsilon="0.0"/>
+    <Atom class="CD2R5E" sigma="1.0" epsilon="0.0"/>
+    <Atom class="CD33A" sigma="1.0" epsilon="0.0"/>
+    <Atom class="CD33C" sigma="1.0" epsilon="0.0"/>
+    <Atom class="ND2R5A" sigma="1.0" epsilon="0.0"/>
+    <Atom class="ND2R5B" sigma="1.0" epsilon="0.0"/>
+    <Atom class="ND2R5C" sigma="1.0" epsilon="0.0"/>
+    <Atom class="OD2C2A" sigma="1.0" epsilon="0.0"/>
+    <Atom class="OD2C3A" sigma="1.0" epsilon="0.0"/>
+    <Atom class="OD31F" sigma="1.0" epsilon="0.0"/>
+    <Atom class="LPD" sigma="1.0" epsilon="0.0"/>
     <Atom class="DRUD" sigma="1.0" epsilon="0.0"/>
+    <Atom class="CD33F" sigma="1.0" epsilon="0.0"/>
+    <Atom class="CD33G" sigma="1.0" epsilon="0.0"/>
   </NonbondedForce>
   <LennardJonesForce lj14scale="1.0">
-    <Atom class="H1" sigma="0.2471353044121301" epsilon="0.06568879999999999" epsilon14="0.032426" sigma14="0.2471353044121301"/>
-    <Atom class="H4" sigma="0.2510552587719476" epsilon="0.06276" epsilon14="0.03138" sigma14="0.2510552587719476"/>
-    <Atom class="H5" sigma="0.24214627159054422" epsilon="0.06276" epsilon14="0.03138" sigma14="0.24214627159054422"/>
-    <Atom class="HC" sigma="0.2649532787749369" epsilon="0.06568879999999999" epsilon14="0.032426" sigma14="0.2649532787749369"/>
-    <Atom class="C3" sigma="0.3399669508423535" epsilon="0.3100344" epsilon14="0.15522640000000001" sigma14="0.3399669508423535"/>
-    <Atom class="CC" sigma="0.3399669508423535" epsilon="0.2518768" epsilon14="0.1259384" sigma14="0.3399669508423535"/>
-    <Atom class="CD" sigma="0.3399669508423535" epsilon="0.25104" epsilon14="0.12552" sigma14="0.3399669508423535"/>
-    <Atom class="CG" sigma="0.3399669508423535" epsilon="0.7125352" epsilon14="0.3560584" sigma14="0.3399669508423535"/>
-    <Atom class="O" sigma="0.2959921901149463" epsilon="0.8388920000000001" epsilon14="0.4196552" sigma14="0.2959921901149463"/>
-    <Atom class="N1" sigma="0.3249998523775958" epsilon="0.6627456" epsilon14="0.3313728" sigma14="0.3249998523775958"/>
-    <Atom class="NA" sigma="0.3249998523775958" epsilon="0.5970567999999999" epsilon14="0.2983192" sigma14="0.3249998523775958"/>
-    <Atom class="NE" sigma="0.3249998523775958" epsilon="0.5853416" epsilon14="0.29246160000000004" sigma14="0.3249998523775958"/>
-    <Atom class="F" sigma="0.3118145513491188" epsilon="0.2539688" epsilon14="0.12719360000000002" sigma14="0.3118145513491188"/>
-    <Atom class="S6" sigma="0.35635948725613575" epsilon="0.41840000000000005" epsilon14="0.20920000000000002" sigma14="0.35635948725613575"/>
-    <Atom class="C" sigma="0.3399669508423535" epsilon="0.359824" epsilon14="0.179912" sigma14="0.3399669508423535"/>
-    <Atom class="OA" sigma="0.2959921901149463" epsilon="0.87864" epsilon14="0.43932" sigma14="0.2959921901149463"/>
-    <Atom class="ODW" sigma="0.31838938388899446" epsilon="0.8824056" epsilon14="0.4412028" sigma14="0.31838938388899446"/>
-    <Atom class="HDW" sigma="1.0" epsilon="0.0"/>
-    <Atom class="LP" sigma="1.0" epsilon="0.0"/>
+    <Atom class="HDP1A" sigma="0.07127189745122715" epsilon="0.04184"/>
+    <Atom class="HDA3A" sigma="0.23876085646161097" epsilon="0.100416"/>
+    <Atom class="HDR5A" sigma="0.22272467953508485" epsilon="0.23012000000000002"/>
+    <Atom class="HDR5B" sigma="0.19653225722175885" epsilon="0.364008"/>
+    <Atom class="HDR5D" sigma="0.1247258205396475" epsilon="0.14644000000000001"/>
+    <Atom class="HDR5E" sigma="0.09799885899543734" epsilon="0.41840000000000005"/>
+    <Atom class="CD2O2A" sigma="0.32072353853052216" epsilon="0.9623200000000001"/>
+    <Atom class="CD2O3A" sigma="0.29399657698631193" epsilon="0.384928"/>
+    <Atom class="CD2R5A" sigma="0.36883206931010043" epsilon="0.39748"/>
+    <Atom class="CD2R5B" sigma="0.35279589238357434" epsilon="0.389112"/>
+    <Atom class="CD2R5D" sigma="0.32072353853052216" epsilon="0.20920000000000002"/>
+    <Atom class="CD2R5E" sigma="0.3296325257119256" epsilon="0.41840000000000005"/>
+    <Atom class="CD33A" sigma="0.3634866770012585" epsilon="0.32635200000000003" epsilon14="0.04184" sigma14="0.3385415128933289"/>
+    <Atom class="CD33C" sigma="0.3456687026384517" epsilon="0.32635200000000003"/>
+    <Atom class="ND2R5A" sigma="0.3315925028918343" epsilon="0.364008"/>
+    <Atom class="ND2R5B" sigma="0.34851957853650073" epsilon="0.288696"/>
+    <Atom class="ND2R5C" sigma="0.3296325257119256" epsilon="0.43932"/>
+    <Atom class="OD2C2A" sigma="0.3403233103296096" epsilon="0.8368000000000001"/>
+    <Atom class="OD2C3A" sigma="0.33497791802076754" epsilon="0.66944"/>
+    <Atom class="OD31F" sigma="0.304687361603996" epsilon="0.719648"/>
+    <Atom class="LPD" sigma="0.0017817974362806786" epsilon="0.0"/>
     <Atom class="DRUD" sigma="1.0" epsilon="0.0"/>
+    <Atom class="CD33F" sigma="0.3634866770012585" epsilon="0.32635200000000003" epsilon14="0.04184" sigma14="0.3385415128933289"/>
+    <Atom class="CD33G" sigma="0.3634866770012585" epsilon="0.32635200000000003" epsilon14="0.04184" sigma14="0.3385415128933289"/>
   </LennardJonesForce>
   <DrudeForce>
-    <Particle type1="Drude-IM21-C" type2="IM21-C" charge="-2.4694589218721843" polarizability="0.0020250000000000003" thole="1.135"/>
-    <Particle type1="Drude-IM21-N" type2="IM21-N" charge="-1.647220308411784" polarizability="0.0009010000000000002" thole="1.138"/>
-    <Particle type1="Drude-IM21-C1" type2="IM21-C1" charge="-2.148623740200024" polarizability="0.0015330000000000003" thole="1.409"/>
-    <Particle type1="Drude-IM21-N1" type2="IM21-N1" charge="-1.647220308411784" polarizability="0.0009010000000000002" thole="1.138"/>
-    <Particle type1="Drude-IM21-C2" type2="IM21-C2" charge="-2.169545594378954" polarizability="0.0015630000000000004" thole="1.324"/>
-    <Particle type1="Drude-IM21-C3" type2="IM21-C3" charge="-2.169545594378954" polarizability="0.0015630000000000004" thole="1.324"/>
-    <Particle type1="Drude-IM21-C4" type2="IM21-C4" charge="-2.245932492352404" polarizability="0.0016750000000000005" thole="1.109"/>
-    <Particle type1="Drude-IM21-C5" type2="IM21-C5" charge="-2.484049648079627" polarizability="0.0020490000000000005" thole="1.125"/>
-    <Particle type1="Drude-OTF-C" type2="OTF-C" charge="-1.922257543552287" polarizability="0.0012270000000000004" thole="1.068"/>
-    <Particle type1="Drude-OTF-F" type2="OTF-F" charge="-0.29038107467393254" polarizability="2.8000000000000006e-05" thole="1.45"/>
-    <Particle type1="Drude-OTF-F1" type2="OTF-F1" charge="-0.29038107467393254" polarizability="2.8000000000000006e-05" thole="1.45"/>
-    <Particle type1="Drude-OTF-F2" type2="OTF-F2" charge="-0.29038107467393254" polarizability="2.8000000000000006e-05" thole="1.45"/>
-    <Particle type1="Drude-OTF-S" type2="OTF-S" charge="-2.829220399619948" polarizability="0.0026580000000000006" thole="1.128"/>
-    <Particle type1="Drude-OTF-O" type2="OTF-O" charge="-0.9033872107498997" polarizability="0.0002710000000000001" thole="1.471" type3="OTF-S" type4="OTF-LPAO" type5="OTF-LPBO" aniso12="0.5675" aniso34="0.37401"/>
-    <Particle type1="Drude-OTF-O1" type2="OTF-O1" charge="-0.9033872107498997" polarizability="0.0002710000000000001" thole="1.471" type3="OTF-S" type4="OTF-LPAO1" type5="OTF-LPBO1" aniso12="0.5675" aniso34="0.37401"/>
-    <Particle type1="Drude-OTF-O2" type2="OTF-O2" charge="-0.9033872107498997" polarizability="0.0002710000000000001" thole="1.471" type3="OTF-S" type4="OTF-LPAO2" type5="OTF-LPBO2" aniso12="0.5675" aniso34="0.37401"/>
-    <Particle type1="Drude-DCA-N" type2="DCA-N" charge="-1.1043756033899093" polarizability="0.00040500000000000014" thole="1.211"/>
-    <Particle type1="Drude-DCA-C" type2="DCA-C" charge="-1.7714265599772272" polarizability="0.0010420000000000004" thole="1.298"/>
-    <Particle type1="Drude-DCA-N1" type2="DCA-N1" charge="-1.7205450617235742" polarizability="0.0009830000000000001" thole="1.337"/>
-    <Particle type1="Drude-DCA-C1" type2="DCA-C1" charge="-1.7714265599772272" polarizability="0.0010420000000000004" thole="1.298"/>
-    <Particle type1="Drude-DCA-N2" type2="DCA-N2" charge="-1.1043756033899093" polarizability="0.00040500000000000014" thole="1.211"/>
-    <Particle type1="Drude-OAC-C" type2="OAC-C" charge="-2.3520354907078698" polarizability="0.0018370000000000003" thole="1.104"/>
-    <Particle type1="Drude-OAC-C1" type2="OAC-C1" charge="-1.9347500067495196" polarizability="0.0012430000000000004" thole="0.979"/>
-    <Particle type1="Drude-OAC-O" type2="OAC-O" charge="-0.984730134646575" polarizability="0.0003220000000000001" thole="1.02" type3="OAC-C1" type4="OAC-LPAO" type5="OAC-LPBO" aniso12="0.62676" aniso34="1.00186"/>
-    <Particle type1="Drude-OAC-O1" type2="OAC-O1" charge="-0.984730134646575" polarizability="0.0003220000000000001" thole="1.02" type3="OAC-C1" type4="OAC-LPAO1" type5="OAC-LPBO1" aniso12="0.62676" aniso34="1.00186"/>
-    <Particle type1="Drude-SWM4-OH2" type2="SWM4-OH2" charge="-1.7163853282605033" polarizability="0.0009782525800000003" thole="1.3"/>
+    <Particle type1="Drude-IM1H-C1" type2="IM1H-C1" charge="-1.7414220042056914" polarizability="0.001007" thole="1.3"/>
+    <Particle type1="Drude-IM1H-N1" type2="IM1H-N1" charge="-1.6860687908688645" polarizability="0.0009440000000000002" thole="1.3"/>
+    <Particle type1="Drude-IM1H-C2" type2="IM1H-C2" charge="-1.886679066517857" polarizability="0.0011820000000000003" thole="1.3"/>
+    <Particle type1="Drude-IM1H-C3" type2="IM1H-C3" charge="-1.8874769853805615" polarizability="0.0011830000000000002" thole="1.3"/>
+    <Particle type1="Drude-IM1H-N2" type2="IM1H-N2" charge="-1.853668691419292" polarizability="0.0011410000000000003" thole="1.3"/>
+    <Particle type1="Drude-IM1H-C4" type2="IM1H-C4" charge="-1.9425169990667424" polarizability="0.0012530000000000002" thole="1.3"/>
+    <Particle type1="Drude-IM1-N1" type2="IM1-N1" charge="-1.7891877860608547" polarizability="0.0010630000000000001" thole="1.3"/>
+    <Particle type1="Drude-IM1-C1" type2="IM1-C1" charge="-1.9541096044572974" polarizability="0.0012680000000000002" thole="1.3"/>
+    <Particle type1="Drude-IM1-N2" type2="IM1-N2" charge="-1.852856213321344" polarizability="0.0011400000000000002" thole="1.3" type3="IM1-LPN21" type4="IM1-C1" type5="IM1-C2" aniso12="0.808" aniso34="1.384"/>
+    <Particle type1="Drude-IM1-C2" type2="IM1-C2" charge="-2.0304440024282404" polarizability="0.0013690000000000004" thole="1.3"/>
+    <Particle type1="Drude-IM1-C3" type2="IM1-C3" charge="-2.043748837915169" polarizability="0.0013870000000000004" thole="1.3"/>
+    <Particle type1="Drude-IM1-C4" type2="IM1-C4" charge="-2.13032526836433" polarizability="0.0015070000000000003" thole="1.3"/>
+    <Particle type1="Drude-OAC-C1" type2="OAC-C1" charge="-2.759165984501062" polarizability="0.0025280000000000007" thole="1.414"/>
+    <Particle type1="Drude-OAC-C2" type2="OAC-C2" charge="-1.749186619395759" polarizability="0.0010160000000000002" thole="0.899"/>
+    <Particle type1="Drude-OAC-O1" type2="OAC-O1" charge="-1.4508679274541496" polarizability="0.0006990000000000001" thole="2.399" type3="OAC-C2" type4="OAC-LPO11" type5="OAC-LPO12" aniso12="0.7229" aniso34="1.265"/>
+    <Particle type1="Drude-OAC-O2" type2="OAC-O2" charge="-1.4508679274541496" polarizability="0.0006990000000000001" thole="2.399" type3="OAC-C2" type4="OAC-LPO21" type5="OAC-LPO22" aniso12="0.7229" aniso34="1.265"/>
+    <Particle type1="Drude-HOAC-C1" type2="HOAC-C1" charge="-2.523142529450822" polarizability="0.0021140000000000004" thole="0.75"/>
+    <Particle type1="Drude-HOAC-C2" type2="HOAC-C2" charge="-1.906526857311924" polarizability="0.0012070000000000004" thole="0.708"/>
+    <Particle type1="Drude-HOAC-O2" type2="HOAC-O2" charge="-1.6663059805572338" polarizability="0.0009220000000000003" thole="1.539" type3="HOAC-C2" type4="HOAC-LP2A" type5="HOAC-LP2B" aniso12="0.6968" aniso34="1.2194"/>
+    <Particle type1="Drude-HOAC-O1" type2="HOAC-O1" charge="-1.9633344060265052" polarizability="0.0012800000000000003" thole="1.124" type3="HOAC-C2" type4="HOAC-LP1A" type5="HOAC-LP1B" aniso12="0.8108" aniso34="1.2162"/>
   </DrudeForce>
 </ForceField>
