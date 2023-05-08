@@ -1,0 +1,81 @@
+****************************************************************************
+* CHARMM computation of normal modes
+****************************************************************************
+*
+
+!=======================================================================
+! Read topology and force field of molecules
+!=======================================================================
+iofo exte
+stream "/home/andras/git_test/ir_optimization/FFGenOpt/FF_GenOpt_results/oac/parameters.str"
+
+
+stream "/home/andras/git_test/ir_optimization/FFGenOpt/Molecules/oac/toppar_drude_master_protein_2019g.str"
+stream "/home/andras/git_test/ir_optimization/FFGenOpt/Molecules/oac/toppar_drude_model_2019g.str"
+
+read sequence ACET 1
+generate ACET setup warni drud dmas 0.4 firs none last none
+
+!=======================================================================
+! Optimize new coordinates 
+!=======================================================================
+read coor card name "/home/andras/git_test/ir_optimization/FFGenOpt/Molecules/oac/new_dgenff.crd"
+
+!coor sdru
+!coor shake
+
+scalar charge add -0.766 sele atom * * O1 end ! add LPO11 and LPO12 charge to O1
+scalar charge add -0.766 sele atom * * O2 end ! add LPO21 and LPO22 charge to O2
+
+delete atom sele type LP* end ! delete Lonepairs
+drud rese
+dele atom sele type D* end
+
+coor copy comp
+
+energy nbonds elec atom fswitch vdw vatom vshift cdie eps 1.0 wmin 1.5  -
+       CUTNB 14.0 CTONNB 12.0 CTOFNB 14.0
+
+mini sd   nstep  500 nprint 100 
+mini abnr nstep 1000 nprint 100
+
+coor orie rms
+
+!write coor card name "new_dgenff.crd"
+!write psf  card name "new.psf"
+
+!=======================================================================
+! Normal mode analysis
+!=======================================================================
+
+calc NLAST = 3 * ?NATOM
+!print coor sele .not. DUMMY end
+!calc NFIRST = @NLAST - (3 * ?NSEL -6 ) + 1
+
+define DUMMY sele type LP* .or. type D* end
+
+!coor prin
+vibran nmod
+diag  finite step 0.001 
+mass
+print norm mode 1 thru @NLAST vect sele .not. DUMMY end
+!open writ unfo unit 50 name mode_7.dcd
+!open writ unfo unit 51 name mode_8.dcd
+!open writ unfo unit 52 name mode_9.dcd
+!open writ unfo unit 53 name mode_10.dcd
+!open writ unfo unit 54 name mode_11.dcd
+!open writ unfo unit 55 name mode_12.dcd
+!open writ unfo unit 56 name mode_13.dcd
+!open writ unfo unit 57 name mode_14.dcd
+!open writ unfo unit 58 name mode_15.dcd
+!open writ unfo unit 59 name mode_16.dcd
+!open writ unfo unit 60 name mode_17.dcd
+!open writ unfo unit 61 name mode_18.dcd
+!open writ unfo unit 62 name mode_19.dcd
+!open writ unfo unit 63 name mode_20.dcd
+!open writ unfo unit 64 name mode_21.dcd
+!open writ unfo unit 50 name mode_all.dcd
+!WRIT TRAJ MODE 7 THRU @NLAST unit 50 !@NLAST
+end
+
+

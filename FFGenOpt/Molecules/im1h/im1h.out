@@ -1,0 +1,2234 @@
+1
+                 Chemistry at HARvard Macromolecular Mechanics
+           (CHARMM) - Developmental Version 47a1     August 15, 2021            
+                                Revision unknown                                
+       Copyright(c) 1984-2020  President and Fellows of Harvard College
+                              All Rights Reserved
+  Current operating system: Linux-5.10.0-19-amd64(x86_64)@lambda.mdy.univie.a   
+                 Created on 11/21/22 at  9:34:56 by user: andras      
+
+            Maximum number of ATOMS:    360720, and RESidues:      120240
+ RDTITL> * CHARMM NORMAL MODE
+ RDTITL> *
+  
+ CHARMM>    !stream bonds.str
+ CHARMM>    !stream angles.str
+ CHARMM>    !stream dihedrals.str
+ CHARMM>     
+  
+ CHARMM>    !stream new.par
+ CHARMM>     
+  
+ CHARMM>    ioformat extended
+ MISCOM> Expanded I/O format is used.
+  
+ CHARMM>    bomblev -1
+  
+ CHARMM>     
+  
+ CHARMM>    !stream params.str
+ CHARMM>    !stream original_params_im1h.str
+ CHARMM>    stream "/home/aleksandar/Project/FF_GenOpt_results/im1h/parameters.str"
+ VOPEN> Attempting to open::/home/aleksandar/Project/FF_GenOpt_results/im1h/parameters.str::
+ OPNLGU> Unit 99 opened for READONLY access to /home/aleksandar/Project/FF_GenOpt_results/im1h/parameters.str
+
+                    INPUT STREAM SWITCHING TO UNIT    99
+ RDTITL> SET IM1HB1 355.37800397316283
+ RDTITL> No title read.
+
+      ***** LEVEL  1 WARNING FROM <RDTITL> *****
+      ***** Title expected.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+ Parameter: IN1 <- "" <empty>
+  
+ CHARMM>    set im1hb1 355.37800397316283
+ Parameter: IM1HB1 <- "355.37800397316283"
+  
+ CHARMM>    set im1hb2 396.4225729982791
+ Parameter: IM1HB2 <- "396.4225729982791"
+  
+ CHARMM>    set im1hb3 396.58948778288186
+ Parameter: IM1HB3 <- "396.58948778288186"
+  
+ CHARMM>    set im1hb4 364.671107869657
+ Parameter: IM1HB4 <- "364.671107869657"
+  
+ CHARMM>    set im1hb5 377.50422522280064
+ Parameter: IM1HB5 <- "377.50422522280064"
+  
+ CHARMM>    set im1hb6 421.56723303108146
+ Parameter: IM1HB6 <- "421.56723303108146"
+  
+ CHARMM>    set im1hb7 328.60133334618297
+ Parameter: IM1HB7 <- "328.60133334618297"
+  
+ CHARMM>    set im1hb8 465.0235837395536
+ Parameter: IM1HB8 <- "465.0235837395536"
+  
+ CHARMM>    set im1ha1 32.4720730464402
+ Parameter: IM1HA1 <- "32.4720730464402"
+  
+ CHARMM>    set im1ha2 16.12292048521975
+ Parameter: IM1HA2 <- "16.12292048521975"
+  
+ CHARMM>    set im1ha3 80.92283131071997
+ Parameter: IM1HA3 <- "80.92283131071997"
+  
+ CHARMM>    set im1ha4 121.42815581641163
+ Parameter: IM1HA4 <- "121.42815581641163"
+  
+ CHARMM>    set im1ha5 25.36394091423319
+ Parameter: IM1HA5 <- "25.36394091423319"
+  
+ CHARMM>    set im1ha6 46.41758819606471
+ Parameter: IM1HA6 <- "46.41758819606471"
+  
+ CHARMM>    set im1ha7 45.62898481243781
+ Parameter: IM1HA7 <- "45.62898481243781"
+  
+ CHARMM>    set im1ha8 17.725256805441617
+ Parameter: IM1HA8 <- "17.725256805441617"
+  
+ CHARMM>    set im1ha9 49.60795647127343
+ Parameter: IM1HA9 <- "49.60795647127343"
+  
+ CHARMM>    set im1ha10 45.93476442005342
+ Parameter: IM1HA10 <- "45.93476442005342"
+  
+ CHARMM>    set im1ha11 26.570248701568133
+ Parameter: IM1HA11 <- "26.570248701568133"
+  
+ CHARMM>    set im1ha12 141.44919640052277
+ Parameter: IM1HA12 <- "141.44919640052277"
+  
+ CHARMM>    set im1hd1 24.713401771305445
+ Parameter: IM1HD1 <- "24.713401771305445"
+  
+ CHARMM>    set im1hd2 28.377704221286777
+ Parameter: IM1HD2 <- "28.377704221286777"
+  
+ CHARMM>    set im1hd3 2.1209167956598733
+ Parameter: IM1HD3 <- "2.1209167956598733"
+  
+ CHARMM>    set im1hd4 2.5994122088210347
+ Parameter: IM1HD4 <- "2.5994122088210347"
+  
+ CHARMM>    set im1hd5 1.0727095530122872
+ Parameter: IM1HD5 <- "1.0727095530122872"
+  
+ CHARMM>    set im1hd6 0.18703336350914812
+ Parameter: IM1HD6 <- "0.18703336350914812"
+  
+ CHARMM>    set im1hd7 1.0674065662945464
+ Parameter: IM1HD7 <- "1.0674065662945464"
+  
+ CHARMM>    set im1hd8 2.0013068812802604
+ Parameter: IM1HD8 <- "2.0013068812802604"
+  
+ CHARMM>    set im1hd9 0.08687245196058935
+ Parameter: IM1HD9 <- "0.08687245196058935"
+  
+ CHARMM>    set im1hd10 0.18602613847696797
+ Parameter: IM1HD10 <- "0.18602613847696797"
+  
+ CHARMM>    set im1hd11 1.4562677761004543
+ Parameter: IM1HD11 <- "1.4562677761004543"
+  
+ CHARMM>    set im1hd12 0.4377312185385346
+ Parameter: IM1HD12 <- "0.4377312185385346"
+  
+ CHARMM>    set im1hd13 1.3760510725962172
+ Parameter: IM1HD13 <- "1.3760510725962172"
+  
+ CHARMM>    set im1hd14 17.444110010570494
+ Parameter: IM1HD14 <- "17.444110010570494"
+  
+ CHARMM>    set im1hd15 5.919942713398292
+ Parameter: IM1HD15 <- "5.919942713398292"
+  
+ CHARMM>    set im1hd16 1.5888042694547986
+ Parameter: IM1HD16 <- "1.5888042694547986"
+  
+ CHARMM>    set im1hd17 3.3824619985235103
+ Parameter: IM1HD17 <- "3.3824619985235103"
+  
+ CHARMM>    set im1hi1 1.1167160452320128
+ Parameter: IM1HI1 <- "1.1167160452320128"
+  
+ CHARMM>    set im1hi2 1.4097200916053876
+ Parameter: IM1HI2 <- "1.4097200916053876"
+  
+ CHARMM>    set im1hi3 1.8818282104513604
+ Parameter: IM1HI3 <- "1.8818282104513604"
+  
+ CHARMM>    set im1hi4 1.4028406915825047
+ Parameter: IM1HI4 <- "1.4028406915825047"
+  
+ VCLOSE: Closing unit   99 with status "KEEP"
+
+                    RETURNING TO INPUT STREAM     5
+  
+ CHARMM>    !stream optimized_params_final.dat
+ CHARMM>     
+  
+ CHARMM>    !open  unit 10 read form name "pol_fm.rtf"
+ CHARMM>    open  unit 10 read form name "/home/aleksandar/Project/Molecules/pol_fm.rtf"
+ VOPEN> Attempting to open::/home/aleksandar/Project/Molecules/pol_fm.rtf::
+ OPNLGU> Unit 10 opened for READONLY access to /home/aleksandar/Project/Molecules/pol_fm.rtf
+  
+ CHARMM>    read  unit 10 rtf card
+ MAINIO> Residue topology file being read from unit  10.
+ TITLE> * TOPOLOGY FILE FOR IM1H, OAC, IM1, HOAC
+ TITLE> * BASED ON DGENFF WITH FM OPTIMIZED
+ TITLE> * SEPT 2020
+ TITLE> *
+
+ DRUDES PARTICLES WILL BE GENERATED AUTOMATICALLY FOR ALL ATOMS WITH NON-ZERO ALPHA
+ Thole-type dipole screening, Slater-Delta shape {S(u) = 1 - (1+u/2)*exp(-u)}, default radius =  1.300000
+  
+ CHARMM>    close unit 10
+ VCLOSE: Closing unit   10 with status "KEEP"
+  
+ CHARMM>     
+  
+ CHARMM>    !open  unit 10 read form name "pol_fm.prm"
+ CHARMM>    open  unit 10 read form name "/home/aleksandar/Project/Molecules/pol_fm.prm"
+ VOPEN> Attempting to open::/home/aleksandar/Project/Molecules/pol_fm.prm::
+ OPNLGU> Unit 10 opened for READONLY access to /home/aleksandar/Project/Molecules/pol_fm.prm
+  
+ CHARMM>    read  unit 10 para card
+
+          PARAMETER FILE BEING READ FROM UNIT 10
+ TITLE> * PARAMETER FILE FOR IM1H, OAC, IM1, HOAC
+ TITLE> * BASED ON DGENFF WITH FM OPTIMIZED FOR IM1H AND IM1
+ TITLE> * OAC, HOAC ORIG DGENFF
+ TITLE> * SEPT 2020
+ TITLE> *
+
+ PARRDR> WARNING: ATOMS IN BOND DRUD     X        1000.00000   0.00000 DONT EXIST
+  * WARNING * <PARSUB> Command ignored. Token not found: >IM1B1<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >IM1B2<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >IM1B3<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >IM1B4<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >IM1B5<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >IM1B6<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >IM1B7<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >IM1B8<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >IM1B9<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >OACB1<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >OACB2<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >OACB3<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >HOACB1<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >HOACB2<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >HOACB3<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >HOACB4<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >HOACB5<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >IM1A1<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >IM1A2<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >IM1A3<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >IM1A4<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >IM1A5<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >IM1A6<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >IM1A7<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >IM1A8<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >IM1A9<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >IM1A10<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >IM1A11<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >IM1A12<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >IM1A13<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >IM1A14<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >OACA1<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >OACA2<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >OACA3<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >OACA4<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >HOACA1<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >HOACA2<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >HOACA3<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >HOACA4<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >HOACA5<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >HOACA6<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >IM1D1<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >IM1D2<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >IM1D3<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >IM1D4<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >IM1D5<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >IM1D6<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >IM1D7<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >IM1D8<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >IM1D9<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >IM1D10<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >IM1D11<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >IM1D12<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >IM1D13<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >IM1D14<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >IM1D15<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >IM1D16<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >IM1D17<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >IM1D18<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >OACD1<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >HOACD1<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >HOACD2<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >HOACD3<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >HOACD4<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >OACI1<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >HOACI1<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >IM1I1<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >IM1I2<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >IM1I3<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+  * WARNING * <PARSUB> Command ignored. Token not found: >IM1I4<
+
+      ***** LEVEL  0 WARNING FROM <PARSE1> *****
+      ***** Error in parameter substitution.
+      ******************************************
+      BOMLEV ( -1) IS NOT REACHED. WRNLEV IS  5
+
+ PARMIO> NONBOND, HBOND lists and IMAGE atoms cleared.
+  
+ CHARMM>    close unit 10
+ VCLOSE: Closing unit   10 with status "KEEP"
+  
+ CHARMM>     
+  
+ CHARMM>    read sequence IM1H 1
+  
+ CHARMM>    generate IM1H setup warn drude dmass 0.4
+ Drude polarizability will be setup for SEGID: IM1H    mass of Drudes particles =    0.4000
+ NO PATCHING WILL BE DONE ON THE FIRST RESIDUE
+ NO PATCHING WILL BE DONE ON THE LAST  RESIDUE
+
+ MKDRUDE generate list and setup for drude polarizability
+
+ All okay for      6 added Drude particles 
+
+ GENPSF> Segment   1 has been generated. Its identifier is IM1H.
+ PSFSUM> PSF modified: NONBOND lists and IMAGE atoms cleared.
+ PSFSUM> Summary of the structure file counters :
+         Number of segments      =        1   Number of residues   =        1
+         Number of atoms         =       19   Number of groups     =        1
+         Number of bonds         =       19   Number of angles     =       21
+         Number of dihedrals     =       26   Number of impropers  =        5
+         Number of cross-terms   =        0
+         Number of HB acceptors  =        0   Number of HB donors  =        0
+         Number of NB exclusions =        0   Total charge =    1.00000
+         Number of Drudes        =        6
+         Number of true-bonds    =       19   Number of zero-bonds =        0
+         Number of aniso. terms  =        0   Number of lone-pairs =        0
+  
+ CHARMM>     
+  
+ CHARMM>    !=======================================================================
+ CHARMM>    ! Optimize new coordinates
+ CHARMM>    !=======================================================================
+ CHARMM>    read coor card name "/home/aleksandar/Project/Molecules/im1h/im1h.cor"
+ VOPEN> Attempting to open::/home/aleksandar/Project/Molecules/im1h/im1h.cor::
+          SPATIAL COORDINATES BEING READ FROM UNIT 90
+ TITLE> * GAUSSIAN FILE = IM1H.LOG
+ TITLE> 13
+ ** WARNING ** After reading, there are no coordinates for selected atom:     2     1 IM1H DC1 
+ ** WARNING ** After reading, there are no coordinates for selected atom:     4     1 IM1H DN1 
+ ** WARNING ** After reading, there are no coordinates for selected atom:     6     1 IM1H DC2 
+ ** WARNING ** After reading, there are no coordinates for selected atom:     8     1 IM1H DC3 
+ ** WARNING ** After reading, there are no coordinates for selected atom:    10     1 IM1H DN2 
+ ** WARNING ** After reading, there are no coordinates for selected atom:    13     1 IM1H DC4 
+
+ ** A total of     6 selected atoms have no coordinates
+ *** LEVEL  2 WARNING *** BOMLEV IS   -1
+ VCLOSE: Closing unit   90 with status "KEEP"
+  
+ CHARMM>     
+  
+ CHARMM>    coor sdrude
+  
+ CHARMM>    coor shake
+ SELECTED COORDINATES CONSTRAINED IN THE MAIN SET.
+
+  
+ CHARMM>     
+  
+ CHARMM>     
+  
+ CHARMM>    energy
+
+ NONBOND OPTION FLAGS: 
+     ELEC     VDW      ATOMs    CDIElec  SWITch   VATOm    VSWItch 
+     BYGRoup  NOEXtnd  NOEWald 
+ CUTNB  = 16.000 CTEXNB =999.000 CTONNB = 10.000 CTOFNB = 12.000
+ CGONNB =  0.000 CGOFNB = 10.000
+ WMIN   =  1.500 WRNMXD =  0.500 E14FAC =  1.000 EPS    =  1.000
+ NBXMOD =      5
+ There are        0 atom  pairs and        0 atom  exclusions.
+ There are        0 group pairs and        0 group exclusions.
+ <MAKINB> with mode   5 found     97 exclusions and     43 interactions(1-4)
+ <MAKGRP> found      0 group exclusions.
+ Generating nonbond list with Exclusion mode = 5
+ == PRIMARY == SPACE FOR      723 ATOM PAIRS AND        0 GROUP PAIRS
+
+ General atom nonbond list generation found:
+       74 ATOM PAIRS WERE FOUND FOR ATOM LIST
+        0 GROUP PAIRS REQUIRED ATOM SEARCHES
+
+ENER ENR:  Eval#     ENERgy      Delta-E         GRMS
+ENER INTERN:          BONDs       ANGLes       UREY-b    DIHEdrals    IMPRopers
+ENER EXTERN:        VDWaals         ELEC       HBONds          ASP         USER
+ ----------       ---------    ---------    ---------    ---------    ---------
+ENER>        0    129.30002      0.00000     27.31458
+ENER INTERN>        3.86630     72.71427      0.00000      6.43649      0.00000
+ENER EXTERN>       -0.31075     46.59371      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+  
+ CHARMM>    nbonds elec atom fswitch vdw vatom vshift cdie eps 1.0 wmin 1.5  -
+ CHARMM>           CUTNB 14.0 CTONNB 8.0 CTOFNB 12.0
+
+ NONBOND OPTION FLAGS: 
+     ELEC     VDW      ATOMs    CDIElec  FSWItch  VATOm    VSHIft  
+     BYGRoup  NOEXtnd  NOEWald 
+ CUTNB  = 14.000 CTEXNB =999.000 CTONNB =  8.000 CTOFNB = 12.000
+ CGONNB =  0.000 CGOFNB = 10.000
+ WMIN   =  1.500 WRNMXD =  0.500 E14FAC =  1.000 EPS    =  1.000
+ NBXMOD =      5
+ There are       74 atom  pairs and      140 atom  exclusions.
+ There are        0 group pairs and        0 group exclusions.
+ Generating nonbond list with Exclusion mode = 5
+ == PRIMARY == SPACE FOR      723 ATOM PAIRS AND        0 GROUP PAIRS
+
+ General atom nonbond list generation found:
+       74 ATOM PAIRS WERE FOUND FOR ATOM LIST
+        0 GROUP PAIRS REQUIRED ATOM SEARCHES
+
+  
+ CHARMM>     
+  
+ CHARMM>    mini sd   nstep  5000 nprint 50 !tolene 0.001
+
+ NONBOND OPTION FLAGS: 
+     ELEC     VDW      ATOMs    CDIElec  FSWItch  VATOm    VSHIft  
+     BYGRoup  NOEXtnd  NOEWald 
+ CUTNB  = 14.000 CTEXNB =999.000 CTONNB =  8.000 CTOFNB = 12.000
+ CGONNB =  0.000 CGOFNB = 10.000
+ WMIN   =  1.500 WRNMXD =  0.500 E14FAC =  1.000 EPS    =  1.000
+ NBXMOD =      5
+ There are       74 atom  pairs and      140 atom  exclusions.
+ There are        0 group pairs and        0 group exclusions.
+ Generating nonbond list with Exclusion mode = 5
+ == PRIMARY == SPACE FOR      723 ATOM PAIRS AND        0 GROUP PAIRS
+
+ General atom nonbond list generation found:
+       74 ATOM PAIRS WERE FOUND FOR ATOM LIST
+        0 GROUP PAIRS REQUIRED ATOM SEARCHES
+
+
+
+ STEEPD> An energy minimization has been requested.
+
+ NSTEP  =         5000   NPRINT =           50
+ STEP   =    0.0200000   TOLFUN =    0.0000000
+ TOLGRD =    0.0000000   TOLSTP =    0.0000000
+
+MINI MIN: Cycle      ENERgy      Delta-E         GRMS    Step-size
+MINI INTERN:          BONDs       ANGLes       UREY-b    DIHEdrals    IMPRopers
+MINI EXTERN:        VDWaals         ELEC       HBONds          ASP         USER
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>        0    113.23739     16.06263     27.31458      0.02000
+MINI INTERN>        3.86630     72.71427      0.00000      6.43649      0.00000
+MINI EXTERN>       -0.30965     30.52998      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>       50    106.15659      7.08080      0.87444      0.00036
+MINI INTERN>        1.12112     71.40015      0.00000      6.43629      0.00000
+MINI EXTERN>       -0.36878     27.56781      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>      100    106.07285      0.08375      0.32686      0.00009
+MINI INTERN>        1.15095     71.39254      0.00000      6.43631      0.00000
+MINI EXTERN>       -0.38929     27.48233      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>      150    106.06688      0.00597      0.08016      0.00002
+MINI INTERN>        1.16022     71.39840      0.00000      6.43631      0.00000
+MINI EXTERN>       -0.39409     27.46603      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>      200    106.06640      0.00048      0.01615      0.00001
+MINI INTERN>        1.16412     71.40000      0.00000      6.43631      0.00000
+MINI EXTERN>       -0.39528     27.46125      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>      250    106.06635      0.00005      0.01484      0.00000
+MINI INTERN>        1.16533     71.40035      0.00000      6.43631      0.00000
+MINI EXTERN>       -0.39557     27.45993      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>      300    106.06634      0.00001      0.00239      0.00000
+MINI INTERN>        1.16555     71.40024      0.00000      6.43631      0.00000
+MINI EXTERN>       -0.39562     27.45987      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>      350    106.06634      0.00000      0.00140      0.00000
+MINI INTERN>        1.16575     71.40014      0.00000      6.43631      0.00000
+MINI EXTERN>       -0.39561     27.45974      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>      400    106.06634      0.00000      0.00291      0.00000
+MINI INTERN>        1.16593     71.40006      0.00000      6.43631      0.00000
+MINI EXTERN>       -0.39558     27.45962      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>      450    106.06634      0.00000      0.00050      0.00000
+MINI INTERN>        1.16586     71.40002      0.00000      6.43631      0.00000
+MINI EXTERN>       -0.39556     27.45972      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>      500    106.06634      0.00000      0.00110      0.00000
+MINI INTERN>        1.16592     71.39998      0.00000      6.43631      0.00000
+MINI EXTERN>       -0.39554     27.45968      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>      550    106.06634      0.00000      0.00058      0.00000
+MINI INTERN>        1.16588     71.39996      0.00000      6.43631      0.00000
+MINI EXTERN>       -0.39553     27.45973      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>      600    106.06634      0.00000      0.00019      0.00000
+MINI INTERN>        1.16590     71.39994      0.00000      6.43631      0.00000
+MINI EXTERN>       -0.39552     27.45972      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>      650    106.06634      0.00000      0.00048      0.00000
+MINI INTERN>        1.16591     71.39992      0.00000      6.43631      0.00000
+MINI EXTERN>       -0.39552     27.45972      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>      700    106.06634      0.00000      0.00016      0.00000
+MINI INTERN>        1.16591     71.39991      0.00000      6.43631      0.00000
+MINI EXTERN>       -0.39551     27.45972      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>      750    106.06634      0.00000      0.00042      0.00000
+MINI INTERN>        1.16590     71.39991      0.00000      6.43631      0.00000
+MINI EXTERN>       -0.39551     27.45973      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>      800    106.06634      0.00000      0.00063      0.00000
+MINI INTERN>        1.16592     71.39991      0.00000      6.43631      0.00000
+MINI EXTERN>       -0.39551     27.45972      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>      850    106.06634      0.00000      0.00026      0.00000
+MINI INTERN>        1.16592     71.39990      0.00000      6.43631      0.00000
+MINI EXTERN>       -0.39551     27.45972      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>      900    106.06634      0.00000      0.00052      0.00000
+MINI INTERN>        1.16593     71.39990      0.00000      6.43631      0.00000
+MINI EXTERN>       -0.39551     27.45971      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>      950    106.06634      0.00000      0.00082      0.00000
+MINI INTERN>        1.16591     71.39989      0.00000      6.43631      0.00000
+MINI EXTERN>       -0.39551     27.45974      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>     1000    106.06634      0.00000      0.00024      0.00000
+MINI INTERN>        1.16592     71.39990      0.00000      6.43631      0.00000
+MINI EXTERN>       -0.39551     27.45972      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>     1050    106.06634      0.00000      0.00072      0.00000
+MINI INTERN>        1.16593     71.39990      0.00000      6.43631      0.00000
+MINI EXTERN>       -0.39551     27.45971      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>     1100    106.06634      0.00000      0.00097      0.00000
+MINI INTERN>        1.16593     71.39990      0.00000      6.43631      0.00000
+MINI EXTERN>       -0.39551     27.45971      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>     1150    106.06634      0.00000      0.00033      0.00000
+MINI INTERN>        1.16592     71.39989      0.00000      6.43631      0.00000
+MINI EXTERN>       -0.39551     27.45972      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>     1200    106.06634      0.00000      0.00059      0.00000
+MINI INTERN>        1.16594     71.39989      0.00000      6.43631      0.00000
+MINI EXTERN>       -0.39551     27.45971      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>     1250    106.06634      0.00000      0.00121      0.00000
+MINI INTERN>        1.16591     71.39989      0.00000      6.43631      0.00000
+MINI EXTERN>       -0.39551     27.45974      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>     1300    106.06634      0.00000      0.00169      0.00000
+MINI INTERN>        1.16593     71.39988      0.00000      6.43631      0.00000
+MINI EXTERN>       -0.39551     27.45972      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>     1350    106.06634      0.00000      0.00072      0.00000
+MINI INTERN>        1.16591     71.39989      0.00000      6.43631      0.00000
+MINI EXTERN>       -0.39551     27.45973      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>     1400    106.06634      0.00000      0.00155      0.00000
+MINI INTERN>        1.16587     71.39990      0.00000      6.43631      0.00000
+MINI EXTERN>       -0.39551     27.45976      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>     1450    106.06634      0.00000      0.00065      0.00000
+MINI INTERN>        1.16593     71.39989      0.00000      6.43631      0.00000
+MINI EXTERN>       -0.39551     27.45971      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>     1500    106.06634      0.00000      0.00068      0.00000
+MINI INTERN>        1.16593     71.39989      0.00000      6.43631      0.00000
+MINI EXTERN>       -0.39551     27.45971      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>     1550    106.06634      0.00000      0.00100      0.00000
+MINI INTERN>        1.16593     71.39988      0.00000      6.43632      0.00000
+MINI EXTERN>       -0.39551     27.45971      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>     1600    106.06634      0.00000      0.00240      0.00000
+MINI INTERN>        1.16593     71.39987      0.00000      6.43632      0.00000
+MINI EXTERN>       -0.39551     27.45973      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>     1650    106.06634      0.00000      0.00358      0.00000
+MINI INTERN>        1.16601     71.39987      0.00000      6.43632      0.00000
+MINI EXTERN>       -0.39551     27.45965      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>     1700    106.06634      0.00000      0.00165      0.00000
+MINI INTERN>        1.16588     71.39989      0.00000      6.43632      0.00000
+MINI EXTERN>       -0.39551     27.45975      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>     1750    106.06634      0.00000      0.00359      0.00000
+MINI INTERN>        1.16597     71.39990      0.00000      6.43632      0.00000
+MINI EXTERN>       -0.39550     27.45965      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>     1800    106.06634      0.00000      0.00454      0.00000
+MINI INTERN>        1.16591     71.39990      0.00000      6.43632      0.00000
+MINI EXTERN>       -0.39550     27.45971      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>     1850    106.06633      0.00000      0.00190      0.00000
+MINI INTERN>        1.16594     71.39986      0.00000      6.43632      0.00000
+MINI EXTERN>       -0.39551     27.45971      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>     1900    106.06633      0.00000      0.00414      0.00000
+MINI INTERN>        1.16606     71.39985      0.00000      6.43633      0.00000
+MINI EXTERN>       -0.39551     27.45960      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>     1950    106.06633      0.00000      0.00550      0.00000
+MINI INTERN>        1.16593     71.39983      0.00000      6.43633      0.00000
+MINI EXTERN>       -0.39551     27.45975      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>     2000    106.06633      0.00000      0.00192      0.00000
+MINI INTERN>        1.16591     71.39986      0.00000      6.43634      0.00000
+MINI EXTERN>       -0.39551     27.45973      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>     2050    106.06632      0.00000      0.00355      0.00000
+MINI INTERN>        1.16594     71.39986      0.00000      6.43634      0.00000
+MINI EXTERN>       -0.39550     27.45969      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>     2100    106.06632      0.00000      0.00223      0.00000
+MINI INTERN>        1.16594     71.39983      0.00000      6.43635      0.00000
+MINI EXTERN>       -0.39551     27.45971      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>     2150    106.06632      0.00000      0.00245      0.00000
+MINI INTERN>        1.16595     71.39982      0.00000      6.43636      0.00000
+MINI EXTERN>       -0.39551     27.45970      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>     2200    106.06631      0.00001      0.00456      0.00000
+MINI INTERN>        1.16606     71.39979      0.00000      6.43637      0.00000
+MINI EXTERN>       -0.39551     27.45961      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>     2250    106.06630      0.00001      0.00882      0.00000
+MINI INTERN>        1.16628     71.39975      0.00000      6.43638      0.00000
+MINI EXTERN>       -0.39551     27.45940      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>     2300    106.06630      0.00001      0.01342      0.00000
+MINI INTERN>        1.16563     71.39970      0.00000      6.43640      0.00000
+MINI EXTERN>       -0.39551     27.46007      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>     2350    106.06629      0.00001      0.00376      0.00000
+MINI INTERN>        1.16587     71.39974      0.00000      6.43641      0.00000
+MINI EXTERN>       -0.39551     27.45977      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>     2400    106.06627      0.00001      0.01085      0.00000
+MINI INTERN>        1.16594     71.39975      0.00000      6.43644      0.00000
+MINI EXTERN>       -0.39550     27.45965      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>     2450    106.06626      0.00001      0.01501      0.00000
+MINI INTERN>        1.16543     71.39972      0.00000      6.43647      0.00000
+MINI EXTERN>       -0.39551     27.46014      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>     2500    106.06624      0.00002      0.00520      0.00000
+MINI INTERN>        1.16599     71.39958      0.00000      6.43650      0.00001
+MINI EXTERN>       -0.39551     27.45968      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>     2550    106.06622      0.00002      0.00838      0.00000
+MINI INTERN>        1.16602     71.39949      0.00000      6.43654      0.00001
+MINI EXTERN>       -0.39551     27.45968      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>     2600    106.06619      0.00003      0.01719      0.00000
+MINI INTERN>        1.16623     71.39935      0.00000      6.43660      0.00001
+MINI EXTERN>       -0.39552     27.45952      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>     2650    106.06615      0.00004      0.00781      0.00000
+MINI INTERN>        1.16583     71.39936      0.00000      6.43666      0.00001
+MINI EXTERN>       -0.39551     27.45981      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>     2700    106.06611      0.00004      0.01144      0.00000
+MINI INTERN>        1.16565     71.39926      0.00000      6.43674      0.00001
+MINI EXTERN>       -0.39551     27.45997      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>     2750    106.06606      0.00005      0.02414      0.00001
+MINI INTERN>        1.16520     71.39917      0.00000      6.43683      0.00002
+MINI EXTERN>       -0.39551     27.46036      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>     2800    106.06600      0.00006      0.03733      0.00001
+MINI INTERN>        1.16424     71.39896      0.00000      6.43695      0.00002
+MINI EXTERN>       -0.39552     27.46136      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>     2850    106.06592      0.00008      0.01032      0.00001
+MINI INTERN>        1.16604     71.39862      0.00000      6.43709      0.00002
+MINI EXTERN>       -0.39553     27.45967      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>     2900    106.06583      0.00009      0.03011      0.00001
+MINI INTERN>        1.16704     71.39824      0.00000      6.43727      0.00003
+MINI EXTERN>       -0.39553     27.45879      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>     2950    106.06572      0.00012      0.01244      0.00000
+MINI INTERN>        1.16583     71.39805      0.00000      6.43748      0.00003
+MINI EXTERN>       -0.39553     27.45986      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>     3000    106.06558      0.00014      0.01390      0.00001
+MINI INTERN>        1.16591     71.39764      0.00000      6.43774      0.00004
+MINI EXTERN>       -0.39554     27.45978      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>     3050    106.06540      0.00018      0.02189      0.00001
+MINI INTERN>        1.16576     71.39717      0.00000      6.43807      0.00005
+MINI EXTERN>       -0.39554     27.45989      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>     3100    106.06520      0.00020      0.05687      0.00001
+MINI INTERN>        1.16378     71.39667      0.00000      6.43847      0.00006
+MINI EXTERN>       -0.39555     27.46177      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>     3150    106.06494      0.00026      0.02169      0.00001
+MINI INTERN>        1.16607     71.39561      0.00000      6.43894      0.00008
+MINI EXTERN>       -0.39557     27.45982      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>     3200    106.06462      0.00031      0.03016      0.00001
+MINI INTERN>        1.16609     71.39461      0.00000      6.43953      0.00009
+MINI EXTERN>       -0.39559     27.45990      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>     3250    106.06424      0.00038      0.06389      0.00002
+MINI INTERN>        1.16776     71.39323      0.00000      6.44027      0.00012
+MINI EXTERN>       -0.39562     27.45848      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>     3300    106.06378      0.00045      0.09047      0.00002
+MINI INTERN>        1.16478     71.39172      0.00000      6.44115      0.00014
+MINI EXTERN>       -0.39566     27.46166      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>     3350    106.06319      0.00059      0.02825      0.00001
+MINI INTERN>        1.16558     71.39050      0.00000      6.44221      0.00017
+MINI EXTERN>       -0.39565     27.46037      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>     3400    106.06247      0.00072      0.07511      0.00002
+MINI INTERN>        1.16611     71.38859      0.00000      6.44360      0.00021
+MINI EXTERN>       -0.39566     27.45960      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>     3450    106.06164      0.00083      0.09990      0.00003
+MINI INTERN>        1.16521     71.38620      0.00000      6.44520      0.00026
+MINI EXTERN>       -0.39569     27.46045      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>     3500    106.06058      0.00106      0.03824      0.00002
+MINI INTERN>        1.16637     71.38249      0.00000      6.44712      0.00032
+MINI EXTERN>       -0.39578     27.46006      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>     3550    106.05928      0.00130      0.05330      0.00002
+MINI INTERN>        1.16602     71.37845      0.00000      6.44958      0.00039
+MINI EXTERN>       -0.39585     27.46069      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>     3600    106.05778      0.00151      0.12888      0.00003
+MINI INTERN>        1.16657     71.37326      0.00000      6.45253      0.00047
+MINI EXTERN>       -0.39595     27.46089      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>     3650    106.05596      0.00181      0.19400      0.00005
+MINI INTERN>        1.16593     71.36718      0.00000      6.45613      0.00058
+MINI EXTERN>       -0.39607     27.46221      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>     3700    106.05355      0.00241      0.07071      0.00003
+MINI INTERN>        1.16612     71.36154      0.00000      6.46048      0.00071
+MINI EXTERN>       -0.39607     27.46078      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>     3750    106.05083      0.00272      0.17512      0.00004
+MINI INTERN>        1.16060     71.35351      0.00000      6.46588      0.00086
+MINI EXTERN>       -0.39619     27.46617      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>     3800    106.04760      0.00323      0.26556      0.00006
+MINI INTERN>        1.15432     71.34310      0.00000      6.47234      0.00105
+MINI EXTERN>       -0.39638     27.47317      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>     3850    106.04342      0.00418      0.07326      0.00004
+MINI INTERN>        1.16717     71.33019      0.00000      6.47998      0.00127
+MINI EXTERN>       -0.39657     27.46138      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>     3900    106.03864      0.00478      0.21326      0.00005
+MINI INTERN>        1.17367     71.31417      0.00000      6.48962      0.00155
+MINI EXTERN>       -0.39684     27.45646      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>     3950    106.03266      0.00597      0.08793      0.00003
+MINI INTERN>        1.16564     71.29718      0.00000      6.50113      0.00188
+MINI EXTERN>       -0.39706     27.46389      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>     4000    106.02575      0.00692      0.09777      0.00004
+MINI INTERN>        1.16537     71.27554      0.00000      6.51496      0.00227
+MINI EXTERN>       -0.39738     27.46498      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>     4050    106.01770      0.00805      0.23853      0.00006
+MINI INTERN>        1.16314     71.25047      0.00000      6.53169      0.00274
+MINI EXTERN>       -0.39770     27.46736      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>     4100    106.00796      0.00974      0.33044      0.00009
+MINI INTERN>        1.15985     71.21909      0.00000      6.55225      0.00332
+MINI EXTERN>       -0.39815     27.47160      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>     4150    105.99632      0.01164      0.12239      0.00005
+MINI INTERN>        1.16826     71.18061      0.00000      6.57590      0.00398
+MINI EXTERN>       -0.39881     27.46637      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>     4200    105.98333      0.01299      0.29816      0.00008
+MINI INTERN>        1.17412     71.13554      0.00000      6.60457      0.00477
+MINI EXTERN>       -0.39953     27.46385      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>     4250    105.96884      0.01448      0.42547      0.00011
+MINI INTERN>        1.18275     71.08521      0.00000      6.63754      0.00567
+MINI EXTERN>       -0.40025     27.45791      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>     4300    105.95149      0.01735      0.14872      0.00007
+MINI INTERN>        1.16733     71.02950      0.00000      6.67617      0.00671
+MINI EXTERN>       -0.40098     27.47276      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>     4350    105.93277      0.01872      0.39620      0.00010
+MINI INTERN>        1.15354     70.96235      0.00000      6.72237      0.00794
+MINI EXTERN>       -0.40191     27.48848      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>     4400    105.91252      0.02025      0.55373      0.00014
+MINI INTERN>        1.14883     70.88653      0.00000      6.77484      0.00930
+MINI EXTERN>       -0.40295     27.49596      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>     4450    105.88895      0.02357      0.16889      0.00008
+MINI INTERN>        1.16894     70.79798      0.00000      6.83428      0.01082
+MINI EXTERN>       -0.40426     27.48119      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>     4500    105.86533      0.02362      0.47550      0.00012
+MINI INTERN>        1.17549     70.69828      0.00000      6.90304      0.01255
+MINI EXTERN>       -0.40573     27.48170      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>     4550    105.84118      0.02415      0.68078      0.00017
+MINI INTERN>        1.19174     70.59190      0.00000      6.97887      0.01440
+MINI EXTERN>       -0.40713     27.47141      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>     4600    105.81460      0.02658      0.39176      0.00010
+MINI INTERN>        1.16884     70.48311      0.00000      7.06249      0.01638
+MINI EXTERN>       -0.40830     27.49208      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>     4650    105.78871      0.02589      0.17259      0.00006
+MINI INTERN>        1.17111     70.35945      0.00000      7.15289      0.01849
+MINI EXTERN>       -0.41000     27.49678      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>     4700    105.76413      0.02458      0.31161      0.00009
+MINI INTERN>        1.17328     70.23002      0.00000      7.25043      0.02069
+MINI EXTERN>       -0.41166     27.50137      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>     4750    105.74153      0.02259      0.47444      0.00013
+MINI INTERN>        1.18235     70.09944      0.00000      7.35102      0.02290
+MINI EXTERN>       -0.41325     27.49907      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>     4800    105.71944      0.02210      0.16552      0.00008
+MINI INTERN>        1.17096     69.97092      0.00000      7.45508      0.02513
+MINI EXTERN>       -0.41460     27.51195      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>     4850    105.70042      0.01901      0.45454      0.00011
+MINI INTERN>        1.17338     69.83857      0.00000      7.56342      0.02738
+MINI EXTERN>       -0.41597     27.51364      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>     4900    105.68267      0.01776      0.14106      0.00006
+MINI INTERN>        1.17204     69.70812      0.00000      7.66820      0.02951
+MINI EXTERN>       -0.41755     27.52235      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>     4950    105.66790      0.01477      0.35357      0.00009
+MINI INTERN>        1.18360     69.57886      0.00000      7.77493      0.03162
+MINI EXTERN>       -0.41895     27.51783      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>     5000    105.65467      0.01323      0.12276      0.00006
+MINI INTERN>        1.17247     69.45869      0.00000      7.87856      0.03362
+MINI EXTERN>       -0.42008     27.53142      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+
+ STEEPD> Minimization exiting with number of steps limit (      5000) exceeded.
+
+STPD MIN: Cycle      ENERgy      Delta-E         GRMS    Step-size
+STPD INTERN:          BONDs       ANGLes       UREY-b    DIHEdrals    IMPRopers
+STPD EXTERN:        VDWaals         ELEC       HBONds          ASP         USER
+ ----------       ---------    ---------    ---------    ---------    ---------
+STPD>     5000    105.65467      0.01323      0.12276      0.00007
+STPD INTERN>        1.17247     69.45869      0.00000      7.87856      0.03362
+STPD EXTERN>       -0.42008     27.53142      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+  
+ CHARMM>    mini abnr nstep 10000 nprint 50 !tolene 0.001
+
+ NONBOND OPTION FLAGS: 
+     ELEC     VDW      ATOMs    CDIElec  FSWItch  VATOm    VSHIft  
+     BYGRoup  NOEXtnd  NOEWald 
+ CUTNB  = 14.000 CTEXNB =999.000 CTONNB =  8.000 CTOFNB = 12.000
+ CGONNB =  0.000 CGOFNB = 10.000
+ WMIN   =  1.500 WRNMXD =  0.500 E14FAC =  1.000 EPS    =  1.000
+ NBXMOD =      5
+ There are       74 atom  pairs and      140 atom  exclusions.
+ There are        0 group pairs and        0 group exclusions.
+ Generating nonbond list with Exclusion mode = 5
+ == PRIMARY == SPACE FOR      723 ATOM PAIRS AND        0 GROUP PAIRS
+
+ General atom nonbond list generation found:
+       74 ATOM PAIRS WERE FOUND FOR ATOM LIST
+        0 GROUP PAIRS REQUIRED ATOM SEARCHES
+
+
+
+ ABNER> An energy minimization has been requested.
+
+ EIGRNG =    0.0005000   MINDIM =            5
+ NPRINT =           50   NSTEP  =        10000
+ PSTRCT =    0.0000000   SDSTP  =    0.0200000
+ STPLIM =    1.0000000   STRICT =    0.1000000
+ TOLFUN =    0.0000000   TOLGRD =    0.0000000
+ TOLITR =          100   TOLSTP =    0.0000000
+ FMEM   =    0.0000000
+MINI MIN: Cycle      ENERgy      Delta-E         GRMS    Step-size
+MINI INTERN:          BONDs       ANGLes       UREY-b    DIHEdrals    IMPRopers
+MINI EXTERN:        VDWaals         ELEC       HBONds          ASP         USER
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>        0    105.65467      0.01323      0.12276      0.00000
+MINI INTERN>        1.17247     69.45869      0.00000      7.87856      0.03362
+MINI EXTERN>       -0.42008     27.53142      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>       50    105.60182      0.05285      0.07436      0.00012
+MINI INTERN>        1.17864     68.33146      0.00000      8.89954      0.05114
+MINI EXTERN>       -0.42929     27.57033      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>      100    105.60166      0.00016      0.00214      0.00000
+MINI INTERN>        1.17623     68.28014      0.00000      8.94944      0.05177
+MINI EXTERN>       -0.42966     27.57373      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>      150    105.60166      0.00000      0.00008      0.00000
+MINI INTERN>        1.17625     68.27934      0.00000      8.95021      0.05180
+MINI EXTERN>       -0.42968     27.57373      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>      200    105.60166      0.00000      0.00002      0.00000
+MINI INTERN>        1.17624     68.27961      0.00000      8.94996      0.05179
+MINI EXTERN>       -0.42967     27.57373      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>      250    105.60166      0.00000      0.00001      0.00000
+MINI INTERN>        1.17624     68.27960      0.00000      8.94997      0.05179
+MINI EXTERN>       -0.42967     27.57373      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>      300    105.60166      0.00000      0.00001      0.00000
+MINI INTERN>        1.17624     68.27960      0.00000      8.94997      0.05179
+MINI EXTERN>       -0.42967     27.57373      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+
+ ABNER> Minimization exiting with function tolerance ( 0.0000000) satisfied.
+
+ABNR MIN: Cycle      ENERgy      Delta-E         GRMS    Step-size
+ABNR INTERN:          BONDs       ANGLes       UREY-b    DIHEdrals    IMPRopers
+ABNR EXTERN:        VDWaals         ELEC       HBONds          ASP         USER
+ ----------       ---------    ---------    ---------    ---------    ---------
+ABNR>      310    105.60166      0.00000      0.00000      0.00000
+ABNR INTERN>        1.17624     68.27959      0.00000      8.94997      0.05179
+ABNR EXTERN>       -0.42967     27.57373      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+  
+ CHARMM>     
+  
+ CHARMM>    ioformat extended
+ MISCOM> Expanded I/O format is used.
+  
+ CHARMM>    !write coor card name "im1h_opt.crd"
+ CHARMM>    !write coor pdb name "im1h.pdb"
+ CHARMM>     
+  
+ CHARMM>    !=======================================================================
+ CHARMM>    ! Normal mode analysis
+ CHARMM>    !=======================================================================
+ CHARMM>    !define DUMMY sele type LP* .or. type D* end
+ CHARMM>     
+  
+ CHARMM>    drude reset
+ DRUDE> Drude particles ready to be deleted
+
+        Call: DELETE ATOMS SELECT TYPE D* END
+
+ PSFSUM> PSF modified: NONBOND lists and IMAGE atoms cleared.
+ PSFSUM> Summary of the structure file counters :
+         Number of segments      =        1   Number of residues   =        1
+         Number of atoms         =       19   Number of groups     =        1
+         Number of bonds         =       19   Number of angles     =       21
+         Number of dihedrals     =       26   Number of impropers  =        5
+         Number of cross-terms   =        0
+         Number of HB acceptors  =        0   Number of HB donors  =        0
+         Number of NB exclusions =        0   Total charge =    1.00000
+  
+ CHARMM>    delete atom sele type D* end
+ SELRPN>      6 atoms have been selected out of     19
+
+ Message from MAPIC: Atom numbers are changed.
+ DELTIC:         6 bonds deleted
+ PSFSUM> PSF modified: NONBOND lists and IMAGE atoms cleared.
+ PSFSUM> Summary of the structure file counters :
+         Number of segments      =        1   Number of residues   =        1
+         Number of atoms         =       13   Number of groups     =        1
+         Number of bonds         =       13   Number of angles     =       21
+         Number of dihedrals     =       26   Number of impropers  =        5
+         Number of cross-terms   =        0
+         Number of HB acceptors  =        0   Number of HB donors  =        0
+         Number of NB exclusions =        0   Total charge =    1.00000
+  
+ CHARMM>    !write psf  card name "im1h.psf"
+ CHARMM>    !write coor card name "im1h.cor"
+ CHARMM>     
+  
+ CHARMM>    vibran nmod
+
+ NONBOND OPTION FLAGS: 
+     ELEC     VDW      ATOMs    CDIElec  FSWItch  VATOm    VSHIft  
+     BYGRoup  NOEXtnd  NOEWald 
+ CUTNB  = 14.000 CTEXNB =999.000 CTONNB =  8.000 CTOFNB = 12.000
+ CGONNB =  0.000 CGOFNB = 10.000
+ WMIN   =  1.500 WRNMXD =  0.500 E14FAC =  1.000 EPS    =  1.000
+ NBXMOD =      5
+ There are        0 atom  pairs and        0 atom  exclusions.
+ There are        0 group pairs and        0 group exclusions.
+ <MAKINB> with mode   5 found     34 exclusions and     21 interactions(1-4)
+ <MAKGRP> found      0 group exclusions.
+ Generating nonbond list with Exclusion mode = 5
+ == PRIMARY == SPACE FOR      723 ATOM PAIRS AND        0 GROUP PAIRS
+
+ General atom nonbond list generation found:
+       44 ATOM PAIRS WERE FOUND FOR ATOM LIST
+        0 GROUP PAIRS REQUIRED ATOM SEARCHES
+
+ VIBRAN: Space allocated for    39 vectors of length    39
+  
+ VIBRAN>    diag  finite step 0.001
+ SECOND DERIVATIVE CALCULATED BY FINITE DIFFERENCES
+ NUMBER OF ENERGY EVALUATIONS:       79
+ TOTAL NUMBER OF CYCLES:             39
+VIBR ENR:  Eval#     ENERgy      Delta-E         GRMS
+VIBR INTERN:          BONDs       ANGLes       UREY-b    DIHEdrals    IMPRopers
+VIBR EXTERN:        VDWaals         ELEC       HBONds          ASP         USER
+ ----------       ---------    ---------    ---------    ---------    ---------
+VIBR>        1    106.90626     -1.30460      0.16420
+VIBR INTERN>        0.14562     68.27960      0.00000      8.94997      0.05179
+VIBR EXTERN>       -0.42967     29.90896      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+
+               DIAGONALIZATION COMPLETED
+
+               FREQUENCIES
+
+   1  -18.922914   2  -15.947046   3  -12.821292   4   -0.000045   5    0.000930
+   6    0.001186   7  219.842671   8  293.832988   9  344.894050  10  486.953980
+  11  538.957907  12  579.369733  13  626.772587  14  701.326365  15  768.358945
+  16  800.214838  17  881.689516  18  903.133522  19  966.217880  20  995.213504
+  21 1032.347790  22 1084.830327  23 1116.648023  24 1127.324379  25 1248.874331
+  26 1378.907437  27 1393.857488  28 1400.432166  29 1439.129817  30 1485.977103
+  31 1576.373366  32 1633.730978  33 2929.701446  34 3047.988409  35 3049.529374
+  36 3113.473105  37 3183.229005  38 3185.997605  39 3422.694051
+  
+ VIBRAN>    mass
+  
+ VIBRAN>    print norm mode 1 thru 39 vect !sele .not. DUMMY end
+
+               NORMAL MODES
+
+     1    -18.92     2    -15.95     3    -12.82     4     -0.00     5      0.00
+     6      0.00     7    219.84     8    293.83     9    344.89    10    486.95
+    11    538.96    12    579.37    13    626.77    14    701.33    15    768.36
+    16    800.21    17    881.69    18    903.13    19    966.22    20    995.21
+    21   1032.35    22   1084.83    23   1116.65    24   1127.32    25   1248.87
+    26   1378.91    27   1393.86    28   1400.43    29   1439.13    30   1485.98
+    31   1576.37    32   1633.73    33   2929.70    34   3047.99    35   3049.53
+    36   3113.47    37   3183.23    38   3186.00    39   3422.69
+
+  VIBRATION MODE   1  FREQUENCY=  -18.922914  TRANS ROT %=   99.996349
+  EIGENVALUE=   -0.030365  ENERGY DERIVATIVE=   -0.000362
+  TYPE  'FACT'    1.0000   MASS   NORM  STEP=    1.000000
+
+   EIGENVECTOR:
+              1    1 IM1H     C1         0.00002   0.00491  -0.12303
+              2    1 IM1H     N1         0.00497   0.00990  -0.04063
+              3    1 IM1H     C2        -0.00285  -0.00051  -0.10141
+              4    1 IM1H     C3        -0.00136  -0.00278   0.01501
+              5    1 IM1H     N2         0.00289  -0.00090   0.14268
+              6    1 IM1H     H1        -0.00359  -0.01500   0.24336
+              7    1 IM1H     C4        -0.00308  -0.00972   0.10827
+              8    1 IM1H     H2        -0.05837  -0.08994  -0.16536
+              9    1 IM1H     H3         0.01650   0.02933  -0.05196
+             10    1 IM1H     H4         0.03853   0.07218  -0.21477
+             11    1 IM1H     H5        -0.00506   0.00045  -0.21581
+             12    1 IM1H     H6        -0.00192  -0.00329   0.00470
+             13    1 IM1H     H7        -0.00870  -0.02254   0.18766
+
+  VIBRATION MODE   2  FREQUENCY=  -15.947046  TRANS ROT %=   99.999976
+  EIGENVALUE=   -0.021566  ENERGY DERIVATIVE=    0.000059
+  TYPE  'FACT'    1.0000   MASS   NORM  STEP=    1.000000
+
+   EIGENVECTOR:
+              1    1 IM1H     C1        -0.00002   0.15125   0.01799
+              2    1 IM1H     N1        -0.00084   0.05013   0.00588
+              3    1 IM1H     C2        -0.07931  -0.00675  -0.00939
+              4    1 IM1H     C3        -0.04944  -0.10051  -0.01732
+              5    1 IM1H     N2         0.04706  -0.09794  -0.00658
+              6    1 IM1H     H1         0.08613  -0.15606  -0.00936
+              7    1 IM1H     C4         0.07570  -0.00862   0.00720
+              8    1 IM1H     H2        -0.01024   0.16488   0.01850
+              9    1 IM1H     H3         0.06736   0.18032   0.02876
+             10    1 IM1H     H4        -0.05714   0.18497   0.01580
+             11    1 IM1H     H5        -0.15050   0.01591  -0.01443
+             12    1 IM1H     H6        -0.09355  -0.16077  -0.02928
+             13    1 IM1H     H7         0.14821   0.01349   0.01775
+
+  VIBRATION MODE   3  FREQUENCY=  -12.821292  TRANS ROT %=   99.999730
+  EIGENVALUE=   -0.013940  ENERGY DERIVATIVE=   -0.000034
+  TYPE  'FACT'    1.0000   MASS   NORM  STEP=    1.000000
+
+   EIGENVECTOR:
+              1    1 IM1H     C1         0.00002  -0.01871   0.12757
+              2    1 IM1H     N1        -0.00512   0.00188   0.04164
+              3    1 IM1H     C2         0.00999   0.00050  -0.10960
+              4    1 IM1H     C3         0.00579   0.01287  -0.14954
+              5    1 IM1H     N2        -0.00726   0.01432  -0.02111
+              6    1 IM1H     H1        -0.00437   0.00961  -0.01961
+              7    1 IM1H     C4        -0.00342  -0.00807   0.09163
+              8    1 IM1H     H2         0.06233  -0.11491   0.12101
+              9    1 IM1H     H3        -0.02335   0.00103   0.24178
+             10    1 IM1H     H4        -0.03533   0.04279   0.08415
+             11    1 IM1H     H5         0.01864  -0.00208  -0.18412
+             12    1 IM1H     H6         0.01029   0.02175  -0.25811
+             13    1 IM1H     H7        -0.00387  -0.02395   0.20521
+
+  VIBRATION MODE   4  FREQUENCY=   -0.000045  TRANS ROT %=  100.000000
+  EIGENVALUE=   -0.000000  ENERGY DERIVATIVE=    0.000000
+  TYPE  'FACT'    1.0000   MASS   NORM  STEP=    1.000000
+
+   EIGENVECTOR:
+              1    1 IM1H     C1        -0.10840   0.00502   0.01601
+              2    1 IM1H     N1        -0.10840   0.00502   0.01601
+              3    1 IM1H     C2        -0.10840   0.00502   0.01601
+              4    1 IM1H     C3        -0.10840   0.00502   0.01601
+              5    1 IM1H     N2        -0.10840   0.00502   0.01601
+              6    1 IM1H     H1        -0.10840   0.00502   0.01601
+              7    1 IM1H     C4        -0.10840   0.00502   0.01601
+              8    1 IM1H     H2        -0.10840   0.00502   0.01601
+              9    1 IM1H     H3        -0.10840   0.00502   0.01601
+             10    1 IM1H     H4        -0.10840   0.00502   0.01601
+             11    1 IM1H     H5        -0.10840   0.00502   0.01601
+             12    1 IM1H     H6        -0.10840   0.00502   0.01601
+             13    1 IM1H     H7        -0.10840   0.00502   0.01601
+
+  VIBRATION MODE   5  FREQUENCY=    0.000930  TRANS ROT %=  100.000000
+  EIGENVALUE=    0.000000  ENERGY DERIVATIVE=    0.000000
+  TYPE  'FACT'    1.0000   MASS   NORM  STEP=    1.000000
+
+   EIGENVECTOR:
+              1    1 IM1H     C1         0.00883   0.10606   0.02656
+              2    1 IM1H     N1         0.00883   0.10606   0.02656
+              3    1 IM1H     C2         0.00883   0.10606   0.02654
+              4    1 IM1H     C3         0.00883   0.10606   0.02654
+              5    1 IM1H     N2         0.00883   0.10606   0.02655
+              6    1 IM1H     H1         0.00883   0.10606   0.02655
+              7    1 IM1H     C4         0.00883   0.10606   0.02656
+              8    1 IM1H     H2         0.00884   0.10605   0.02656
+              9    1 IM1H     H3         0.00883   0.10606   0.02657
+             10    1 IM1H     H4         0.00883   0.10607   0.02656
+             11    1 IM1H     H5         0.00883   0.10606   0.02654
+             12    1 IM1H     H6         0.00883   0.10606   0.02654
+             13    1 IM1H     H7         0.00884   0.10606   0.02657
+
+  VIBRATION MODE   6  FREQUENCY=    0.001186  TRANS ROT %=  100.000000
+  EIGENVALUE=    0.000000  ENERGY DERIVATIVE=    0.000000
+  TYPE  'FACT'    1.0000   MASS   NORM  STEP=    1.000000
+
+   EIGENVECTOR:
+              1    1 IM1H     C1         0.01426  -0.02753   0.10523
+              2    1 IM1H     N1         0.01426  -0.02753   0.10522
+              3    1 IM1H     C2         0.01426  -0.02753   0.10522
+              4    1 IM1H     C3         0.01426  -0.02753   0.10521
+              5    1 IM1H     N2         0.01426  -0.02753   0.10521
+              6    1 IM1H     H1         0.01426  -0.02753   0.10520
+              7    1 IM1H     C4         0.01426  -0.02753   0.10521
+              8    1 IM1H     H2         0.01427  -0.02753   0.10523
+              9    1 IM1H     H3         0.01426  -0.02753   0.10523
+             10    1 IM1H     H4         0.01426  -0.02753   0.10523
+             11    1 IM1H     H5         0.01426  -0.02753   0.10522
+             12    1 IM1H     H6         0.01426  -0.02753   0.10521
+             13    1 IM1H     H7         0.01426  -0.02753   0.10521
+
+  VIBRATION MODE   7  FREQUENCY=  219.842671  TRANS ROT %=    0.003179
+  EIGENVALUE=    4.098532  ENERGY DERIVATIVE=    0.047466
+  TYPE  'FACT'    1.0000   MASS   NORM  STEP=    1.000000
+
+   EIGENVECTOR:
+              1    1 IM1H     C1        -0.00823  -0.00036   0.05052
+              2    1 IM1H     N1        -0.00679  -0.01016   0.05085
+              3    1 IM1H     C2         0.00752  -0.00882  -0.06900
+              4    1 IM1H     C3         0.00455  -0.00785  -0.00905
+              5    1 IM1H     N2         0.01014  -0.00590   0.13760
+              6    1 IM1H     H1         0.03820  -0.00102  -0.05853
+              7    1 IM1H     C4        -0.00881   0.03154  -0.15583
+              8    1 IM1H     H2        -0.00719  -0.15562   0.01049
+              9    1 IM1H     H3         0.00156   0.04434   0.21286
+             10    1 IM1H     H4        -0.02126   0.11458  -0.06072
+             11    1 IM1H     H5         0.01326  -0.01050  -0.12162
+             12    1 IM1H     H6         0.00492  -0.00778   0.00999
+             13    1 IM1H     H7        -0.01676   0.06628  -0.42620
+
+  VIBRATION MODE   8  FREQUENCY=  293.832988  TRANS ROT %=    0.000022
+  EIGENVALUE=    7.321592  ENERGY DERIVATIVE=   -0.040905
+  TYPE  'FACT'    1.0000   MASS   NORM  STEP=    1.000000
+
+   EIGENVECTOR:
+              1    1 IM1H     C1        -0.01483   0.12166  -0.04534
+              2    1 IM1H     N1        -0.00400  -0.08822   0.08342
+              3    1 IM1H     C2         0.06532  -0.05888   0.02032
+              4    1 IM1H     C3         0.04584   0.02271  -0.01037
+              5    1 IM1H     N2        -0.03695   0.01983  -0.03837
+              6    1 IM1H     H1        -0.06307   0.07442  -0.10426
+              7    1 IM1H     C4        -0.04786  -0.05189   0.01237
+              8    1 IM1H     H2        -0.15962   0.00041  -0.12121
+              9    1 IM1H     H3         0.16493   0.22683   0.08610
+             10    1 IM1H     H4        -0.06501   0.31452  -0.21546
+             11    1 IM1H     H5         0.12454  -0.07810   0.03172
+             12    1 IM1H     H6         0.08696   0.07939  -0.03410
+             13    1 IM1H     H7        -0.09722  -0.06742   0.00562
+
+  VIBRATION MODE   9  FREQUENCY=  344.894050  TRANS ROT %=    0.000075
+  EIGENVALUE=   10.087320  ENERGY DERIVATIVE=   -0.058639
+  TYPE  'FACT'    1.0000   MASS   NORM  STEP=    1.000000
+
+   EIGENVECTOR:
+              1    1 IM1H     C1         0.00816   0.07923   0.05434
+              2    1 IM1H     N1        -0.00114  -0.05112  -0.09001
+              3    1 IM1H     C2         0.03687  -0.03248  -0.02802
+              4    1 IM1H     C3         0.02678   0.01277  -0.01092
+              5    1 IM1H     N2        -0.02498   0.01044   0.06738
+              6    1 IM1H     H1        -0.05663   0.03785   0.15257
+              7    1 IM1H     C4        -0.04263  -0.04123  -0.01950
+              8    1 IM1H     H2         0.10478   0.47364   0.18712
+              9    1 IM1H     H3         0.06189   0.02477  -0.24909
+             10    1 IM1H     H4        -0.13663  -0.13678   0.36310
+             11    1 IM1H     H5         0.07773  -0.04571  -0.05331
+             12    1 IM1H     H6         0.05451   0.05064  -0.01660
+             13    1 IM1H     H7        -0.09056  -0.05709  -0.02041
+
+  VIBRATION MODE  10  FREQUENCY=  486.953980  TRANS ROT %=    0.000277
+  EIGENVALUE=   20.108526  ENERGY DERIVATIVE=    0.046360
+  TYPE  'FACT'    1.0000   MASS   NORM  STEP=    1.000000
+
+   EIGENVECTOR:
+              1    1 IM1H     C1        -0.00514  -0.01218  -0.05427
+              2    1 IM1H     N1         0.00032   0.00327   0.03053
+              3    1 IM1H     C2        -0.00289   0.00461   0.06303
+              4    1 IM1H     C3        -0.00352  -0.00329  -0.09308
+              5    1 IM1H     N2         0.00483  -0.00253   0.08767
+              6    1 IM1H     H1         0.08613  -0.00583  -0.40995
+              7    1 IM1H     C4         0.00274   0.01264   0.03279
+              8    1 IM1H     H2        -0.08928   0.12805  -0.04411
+              9    1 IM1H     H3        -0.00483  -0.06174  -0.25089
+             10    1 IM1H     H4         0.07318  -0.12235   0.01303
+             11    1 IM1H     H5        -0.02000   0.00967   0.29775
+             12    1 IM1H     H6        -0.01850  -0.01298  -0.52627
+             13    1 IM1H     H7         0.00654   0.03363  -0.10801
+
+  VIBRATION MODE  11  FREQUENCY=  538.957907  TRANS ROT %=    0.000312
+  EIGENVALUE=   24.632817  ENERGY DERIVATIVE=    0.039554
+  TYPE  'FACT'    1.0000   MASS   NORM  STEP=    1.000000
+
+   EIGENVECTOR:
+              1    1 IM1H     C1         0.00162   0.00197   0.00318
+              2    1 IM1H     N1         0.00013   0.00492  -0.00396
+              3    1 IM1H     C2         0.00122   0.00017  -0.04212
+              4    1 IM1H     C3         0.00282  -0.00272   0.05212
+              5    1 IM1H     N2        -0.01018  -0.00442   0.00296
+              6    1 IM1H     H1         0.09027   0.02862  -0.77455
+              7    1 IM1H     C4        -0.00478  -0.00366   0.05755
+              8    1 IM1H     H2         0.01382   0.08119   0.02775
+              9    1 IM1H     H3        -0.00525  -0.01923  -0.07005
+             10    1 IM1H     H4        -0.00122  -0.05667   0.06591
+             11    1 IM1H     H5         0.02100  -0.00527  -0.38552
+             12    1 IM1H     H6         0.01424   0.00569   0.34067
+             13    1 IM1H     H7        -0.00371   0.00919  -0.03290
+
+  VIBRATION MODE  12  FREQUENCY=  579.369733  TRANS ROT %=    0.000007
+  EIGENVALUE=   28.465315  ENERGY DERIVATIVE=   -0.221995
+  TYPE  'FACT'    1.0000   MASS   NORM  STEP=    1.000000
+
+   EIGENVECTOR:
+              1    1 IM1H     C1         0.18344   0.00901   0.00451
+              2    1 IM1H     N1         0.06149  -0.00939  -0.02990
+              3    1 IM1H     C2        -0.04757  -0.04169   0.00827
+              4    1 IM1H     C3        -0.09184   0.00388   0.00044
+              5    1 IM1H     N2        -0.08529   0.02100   0.01113
+              6    1 IM1H     H1        -0.07986   0.03077  -0.08104
+              7    1 IM1H     C4        -0.03862   0.01079   0.00558
+              8    1 IM1H     H2         0.27185  -0.07984   0.00596
+              9    1 IM1H     H3         0.22299   0.05143   0.11862
+             10    1 IM1H     H4         0.17380   0.07330  -0.05225
+             11    1 IM1H     H5        -0.12664  -0.01905   0.09991
+             12    1 IM1H     H6        -0.10006  -0.00163  -0.02461
+             13    1 IM1H     H7        -0.09599  -0.00167  -0.02957
+
+  VIBRATION MODE  13  FREQUENCY=  626.772587  TRANS ROT %=    0.000015
+  EIGENVALUE=   33.313816  ENERGY DERIVATIVE=    0.019958
+  TYPE  'FACT'    1.0000   MASS   NORM  STEP=    1.000000
+
+   EIGENVECTOR:
+              1    1 IM1H     C1        -0.03701   0.00881   0.01958
+              2    1 IM1H     N1        -0.01480   0.00487  -0.10974
+              3    1 IM1H     C2         0.01621   0.01616  -0.02691
+              4    1 IM1H     C3         0.03526  -0.00063  -0.01660
+              5    1 IM1H     N2         0.01177  -0.00796   0.04020
+              6    1 IM1H     H1         0.04567   0.00675  -0.23259
+              7    1 IM1H     C4        -0.00680  -0.02484   0.01787
+              8    1 IM1H     H2         0.11086  -0.16458   0.01962
+              9    1 IM1H     H3        -0.06844   0.06522   0.28816
+             10    1 IM1H     H4        -0.17269   0.14076  -0.03905
+             11    1 IM1H     H5        -0.00503   0.02236   0.64072
+             12    1 IM1H     H6         0.05765   0.02137   0.24441
+             13    1 IM1H     H7        -0.01716  -0.04311   0.11730
+
+  VIBRATION MODE  14  FREQUENCY=  701.326365  TRANS ROT %=    0.000012
+  EIGENVALUE=   41.710436  ENERGY DERIVATIVE=   -0.011032
+  TYPE  'FACT'    1.0000   MASS   NORM  STEP=    1.000000
+
+   EIGENVECTOR:
+              1    1 IM1H     C1        -0.01896   0.00775   0.01116
+              2    1 IM1H     N1        -0.00579   0.01043  -0.09977
+              3    1 IM1H     C2         0.01198   0.01942   0.06816
+              4    1 IM1H     C3         0.02657  -0.00447   0.10644
+              5    1 IM1H     N2        -0.00244  -0.01433  -0.00639
+              6    1 IM1H     H1        -0.00509   0.01080  -0.09881
+              7    1 IM1H     C4        -0.00940  -0.02019   0.00087
+              8    1 IM1H     H2         0.15138  -0.15102   0.02143
+              9    1 IM1H     H3        -0.06020   0.05950   0.27683
+             10    1 IM1H     H4        -0.15669   0.12048  -0.02611
+             11    1 IM1H     H5         0.06340   0.00523  -0.30790
+             12    1 IM1H     H6         0.01931   0.00066  -0.59200
+             13    1 IM1H     H7        -0.01922  -0.02126  -0.02207
+
+  VIBRATION MODE  15  FREQUENCY=  768.358945  TRANS ROT %=    0.000004
+  EIGENVALUE=   50.064824  ENERGY DERIVATIVE=    0.118052
+  TYPE  'FACT'    1.0000   MASS   NORM  STEP=    1.000000
+
+   EIGENVECTOR:
+              1    1 IM1H     C1        -0.03168  -0.01634   0.00211
+              2    1 IM1H     N1         0.00701  -0.08041  -0.01655
+              3    1 IM1H     C2        -0.06534  -0.08983   0.01096
+              4    1 IM1H     C3        -0.08724   0.08921   0.01129
+              5    1 IM1H     N2         0.09912   0.10322   0.01525
+              6    1 IM1H     H1         0.17721   0.02115  -0.06906
+              7    1 IM1H     C4         0.07392  -0.00760  -0.03455
+              8    1 IM1H     H2        -0.04314   0.02067   0.00947
+              9    1 IM1H     H3         0.06135   0.02877   0.03920
+             10    1 IM1H     H4        -0.16060   0.04457   0.01042
+             11    1 IM1H     H5        -0.09687  -0.08739  -0.04214
+             12    1 IM1H     H6        -0.16610  -0.00340  -0.03542
+             13    1 IM1H     H7         0.06812  -0.04869   0.22705
+
+  VIBRATION MODE  16  FREQUENCY=  800.214838  TRANS ROT %=    0.000023
+  EIGENVALUE=   54.302221  ENERGY DERIVATIVE=   -0.031978
+  TYPE  'FACT'    1.0000   MASS   NORM  STEP=    1.000000
+
+   EIGENVECTOR:
+              1    1 IM1H     C1         0.01810   0.00428   0.00323
+              2    1 IM1H     N1        -0.00464   0.01716   0.02814
+              3    1 IM1H     C2         0.02006   0.02119   0.00802
+              4    1 IM1H     C3         0.01853  -0.03433   0.00886
+              5    1 IM1H     N2        -0.02233  -0.02740   0.03363
+              6    1 IM1H     H1        -0.00200  -0.02183  -0.13364
+              7    1 IM1H     C4        -0.03253   0.03441  -0.13377
+              8    1 IM1H     H2        -0.01847   0.00458  -0.00788
+              9    1 IM1H     H3         0.00686  -0.01280  -0.04683
+             10    1 IM1H     H4         0.09183  -0.02119  -0.01114
+             11    1 IM1H     H5         0.04105   0.01673  -0.04344
+             12    1 IM1H     H6         0.02501  -0.02847  -0.04744
+             13    1 IM1H     H7        -0.05733  -0.09903   0.78651
+
+  VIBRATION MODE  17  FREQUENCY=  881.689516  TRANS ROT %=    0.000002
+  EIGENVALUE=   65.922816  ENERGY DERIVATIVE=    0.012649
+  TYPE  'FACT'    1.0000   MASS   NORM  STEP=    1.000000
+
+   EIGENVECTOR:
+              1    1 IM1H     C1        -0.00544   0.00085   0.01746
+              2    1 IM1H     N1         0.00680   0.00504   0.04232
+              3    1 IM1H     C2         0.00561  -0.04507  -0.17012
+              4    1 IM1H     C3         0.00738  -0.01913   0.15316
+              5    1 IM1H     N2        -0.00934   0.01753  -0.04374
+              6    1 IM1H     H1        -0.04020   0.06464  -0.05075
+              7    1 IM1H     C4         0.00541   0.03260   0.00619
+              8    1 IM1H     H2        -0.08129   0.07765   0.01673
+              9    1 IM1H     H3        -0.00474  -0.02796  -0.09666
+             10    1 IM1H     H4         0.05039  -0.05845   0.04853
+             11    1 IM1H     H5        -0.07858  -0.02333   0.33646
+             12    1 IM1H     H6        -0.00612  -0.02816  -0.31325
+             13    1 IM1H     H7         0.04128   0.04835  -0.00107
+
+  VIBRATION MODE  18  FREQUENCY=  903.133522  TRANS ROT %=    0.000000
+  EIGENVALUE=   69.168494  ENERGY DERIVATIVE=   -0.085425
+  TYPE  'FACT'    1.0000   MASS   NORM  STEP=    1.000000
+
+   EIGENVECTOR:
+              1    1 IM1H     C1         0.04248  -0.01367   0.00976
+              2    1 IM1H     N1        -0.02959  -0.03905   0.03036
+              3    1 IM1H     C2        -0.03916   0.16312  -0.04188
+              4    1 IM1H     C3        -0.01401   0.08052   0.03239
+              5    1 IM1H     N2         0.04481  -0.03867  -0.00406
+              6    1 IM1H     H1         0.08255  -0.08862  -0.01661
+              7    1 IM1H     C4        -0.00746  -0.14044  -0.01895
+              8    1 IM1H     H2        -0.02468   0.03988   0.00423
+              9    1 IM1H     H3         0.17929   0.02009  -0.05619
+             10    1 IM1H     H4         0.06553   0.01054  -0.02699
+             11    1 IM1H     H5        -0.08122   0.19050   0.04995
+             12    1 IM1H     H6        -0.04736   0.04610  -0.06487
+             13    1 IM1H     H7        -0.16931  -0.20541  -0.03249
+
+  VIBRATION MODE  19  FREQUENCY=  966.217880  TRANS ROT %=    0.000004
+  EIGENVALUE=   79.168886  ENERGY DERIVATIVE=   -0.026897
+  TYPE  'FACT'    1.0000   MASS   NORM  STEP=    1.000000
+
+   EIGENVECTOR:
+              1    1 IM1H     C1         0.00338   0.00974   0.00120
+              2    1 IM1H     N1        -0.00133   0.00903   0.00072
+              3    1 IM1H     C2        -0.03723  -0.01374   0.01091
+              4    1 IM1H     C3         0.06974  -0.09315  -0.00823
+              5    1 IM1H     N2         0.08371   0.07337  -0.01153
+              6    1 IM1H     H1         0.05504   0.12708   0.01672
+              7    1 IM1H     C4        -0.05916   0.02231   0.01435
+              8    1 IM1H     H2         0.00937  -0.01667  -0.00392
+              9    1 IM1H     H3        -0.04241  -0.00783  -0.00249
+             10    1 IM1H     H4         0.04428  -0.00738  -0.00315
+             11    1 IM1H     H5        -0.27644   0.05976  -0.03779
+             12    1 IM1H     H6        -0.03767  -0.26163   0.01571
+             13    1 IM1H     H7        -0.61942  -0.14666  -0.05205
+
+  VIBRATION MODE  20  FREQUENCY=  995.213504  TRANS ROT %=    0.000000
+  EIGENVALUE=   83.991805  ENERGY DERIVATIVE=    0.035784
+  TYPE  'FACT'    1.0000   MASS   NORM  STEP=    1.000000
+
+   EIGENVECTOR:
+              1    1 IM1H     C1        -0.00164  -0.01735  -0.00575
+              2    1 IM1H     N1         0.00340  -0.01223  -0.00046
+              3    1 IM1H     C2         0.08457   0.04645  -0.01398
+              4    1 IM1H     C3        -0.08536  -0.01540   0.00676
+              5    1 IM1H     N2         0.01918  -0.00435  -0.01189
+              6    1 IM1H     H1         0.12285  -0.16470   0.01532
+              7    1 IM1H     C4        -0.03107   0.05024   0.01945
+              8    1 IM1H     H2         0.00025   0.05530   0.01367
+              9    1 IM1H     H3         0.10861   0.02959   0.01798
+             10    1 IM1H     H4        -0.12417   0.03657   0.00530
+             11    1 IM1H     H5         0.53498  -0.08872   0.05984
+             12    1 IM1H     H6        -0.38782  -0.41890   0.01014
+             13    1 IM1H     H7        -0.16927   0.01936  -0.02787
+
+  VIBRATION MODE  21  FREQUENCY= 1032.347790  TRANS ROT %=    0.000001
+  EIGENVALUE=   90.376696  ENERGY DERIVATIVE=    0.093815
+  TYPE  'FACT'    1.0000   MASS   NORM  STEP=    1.000000
+
+   EIGENVECTOR:
+              1    1 IM1H     C1        -0.00447   0.10520   0.01146
+              2    1 IM1H     N1        -0.00144   0.01026  -0.00336
+              3    1 IM1H     C2         0.01326  -0.04143  -0.00463
+              4    1 IM1H     C3        -0.04291   0.04946   0.00649
+              5    1 IM1H     N2         0.01809  -0.00831   0.00007
+              6    1 IM1H     H1         0.06882  -0.08172  -0.00265
+              7    1 IM1H     C4         0.00947  -0.05264  -0.00610
+              8    1 IM1H     H2         0.10024  -0.22424  -0.04575
+              9    1 IM1H     H3        -0.56226  -0.10549  -0.02098
+             10    1 IM1H     H4         0.46848  -0.16104   0.03387
+             11    1 IM1H     H5         0.20056  -0.10622   0.02545
+             12    1 IM1H     H6        -0.05935   0.04097  -0.00702
+             13    1 IM1H     H7        -0.15432  -0.11152  -0.02327
+
+  VIBRATION MODE  22  FREQUENCY= 1084.830327  TRANS ROT %=    0.000001
+  EIGENVALUE=   99.799423  ENERGY DERIVATIVE=   -0.001313
+  TYPE  'FACT'    1.0000   MASS   NORM  STEP=    1.000000
+
+   EIGENVECTOR:
+              1    1 IM1H     C1        -0.00916  -0.00901   0.12201
+              2    1 IM1H     N1         0.03821   0.01287  -0.09442
+              3    1 IM1H     C2         0.01178  -0.00131   0.01757
+              4    1 IM1H     C3        -0.01103  -0.00610   0.00163
+              5    1 IM1H     N2        -0.01977   0.00789   0.00788
+              6    1 IM1H     H1        -0.05391   0.06264  -0.01881
+              7    1 IM1H     C4         0.01491  -0.01242   0.00145
+              8    1 IM1H     H2        -0.65479  -0.05502  -0.06211
+              9    1 IM1H     H3         0.13806  -0.03196  -0.17254
+             10    1 IM1H     H4         0.28963   0.15430  -0.20048
+             11    1 IM1H     H5         0.00944  -0.00007  -0.02153
+             12    1 IM1H     H6        -0.04630  -0.05300   0.00019
+             13    1 IM1H     H7        -0.01579  -0.02172  -0.02198
+
+  VIBRATION MODE  23  FREQUENCY= 1116.648023  TRANS ROT %=    0.000002
+  EIGENVALUE=  105.739438  ENERGY DERIVATIVE=    0.073669
+  TYPE  'FACT'    1.0000   MASS   NORM  STEP=    1.000000
+
+   EIGENVECTOR:
+              1    1 IM1H     C1         0.01643  -0.02390   0.01650
+              2    1 IM1H     N1        -0.04145   0.02953  -0.01575
+              3    1 IM1H     C2        -0.01777  -0.06100  -0.00212
+              4    1 IM1H     C3        -0.00771   0.03751   0.01019
+              5    1 IM1H     N2         0.04258  -0.05868  -0.01569
+              6    1 IM1H     H1         0.28903  -0.44031   0.03164
+              7    1 IM1H     C4        -0.03543   0.08120   0.01777
+              8    1 IM1H     H2        -0.04909   0.04222   0.01741
+              9    1 IM1H     H3         0.19787   0.02859  -0.03228
+             10    1 IM1H     H4         0.01918   0.04756  -0.05898
+             11    1 IM1H     H5         0.10112  -0.10926   0.01539
+             12    1 IM1H     H6         0.26656   0.42180  -0.02183
+             13    1 IM1H     H7        -0.31044   0.01150  -0.01892
+
+  VIBRATION MODE  24  FREQUENCY= 1127.324379  TRANS ROT %=    0.000000
+  EIGENVALUE=  107.771069  ENERGY DERIVATIVE=   -0.062675
+  TYPE  'FACT'    1.0000   MASS   NORM  STEP=    1.000000
+
+   EIGENVECTOR:
+              1    1 IM1H     C1        -0.04905  -0.01131  -0.02134
+              2    1 IM1H     N1         0.15266   0.02367   0.02236
+              3    1 IM1H     C2         0.04919   0.00415  -0.00476
+              4    1 IM1H     C3        -0.05919   0.03056  -0.00236
+              5    1 IM1H     N2        -0.05909  -0.04423   0.00132
+              6    1 IM1H     H1        -0.04262  -0.08743  -0.00409
+              7    1 IM1H     C4         0.05781  -0.00054  -0.00893
+              8    1 IM1H     H2        -0.12926   0.05643  -0.02837
+              9    1 IM1H     H3        -0.19023  -0.04279   0.06472
+             10    1 IM1H     H4        -0.32631   0.02090   0.09319
+             11    1 IM1H     H5        -0.21511   0.09186  -0.00819
+             12    1 IM1H     H6        -0.00698   0.12012   0.00177
+             13    1 IM1H     H7        -0.37496  -0.14589  -0.00254
+
+  VIBRATION MODE  25  FREQUENCY= 1248.874331  TRANS ROT %=    0.000004
+  EIGENVALUE=  132.264067  ENERGY DERIVATIVE=    0.027150
+  TYPE  'FACT'    1.0000   MASS   NORM  STEP=    1.000000
+
+   EIGENVECTOR:
+              1    1 IM1H     C1        -0.00000   0.03054   0.00934
+              2    1 IM1H     N1         0.02194  -0.07952  -0.01673
+              3    1 IM1H     C2         0.07137   0.01593   0.00538
+              4    1 IM1H     C3         0.02116   0.02898   0.00275
+              5    1 IM1H     N2        -0.00565  -0.00089  -0.00878
+              6    1 IM1H     H1         0.26017  -0.41110   0.02717
+              7    1 IM1H     C4        -0.09556   0.04390   0.01194
+              8    1 IM1H     H2        -0.04048  -0.06678  -0.02797
+              9    1 IM1H     H3        -0.13826  -0.01939  -0.00211
+             10    1 IM1H     H4         0.06518  -0.01435   0.02823
+             11    1 IM1H     H5        -0.47139   0.19721  -0.03926
+             12    1 IM1H     H6        -0.11868  -0.16370   0.00522
+             13    1 IM1H     H7         0.25327   0.17333   0.01275
+
+  VIBRATION MODE  26  FREQUENCY= 1378.907437  TRANS ROT %=    0.000000
+  EIGENVALUE=  161.240680  ENERGY DERIVATIVE=    0.133038
+  TYPE  'FACT'    1.0000   MASS   NORM  STEP=    1.000000
+
+   EIGENVECTOR:
+              1    1 IM1H     C1         0.04268   0.04909  -0.00165
+              2    1 IM1H     N1         0.03493  -0.08337  -0.00483
+              3    1 IM1H     C2        -0.05810   0.07823  -0.00636
+              4    1 IM1H     C3        -0.03039  -0.09282   0.00325
+              5    1 IM1H     N2         0.01157   0.03935  -0.00350
+              6    1 IM1H     H1         0.04796  -0.00574   0.00613
+              7    1 IM1H     C4        -0.01031   0.03490   0.00820
+              8    1 IM1H     H2        -0.21635  -0.37681  -0.19861
+              9    1 IM1H     H3        -0.05344  -0.00007  -0.08710
+             10    1 IM1H     H4        -0.21134  -0.12355   0.34414
+             11    1 IM1H     H5         0.20905   0.00834   0.01383
+             12    1 IM1H     H6         0.20642   0.22038  -0.01058
+             13    1 IM1H     H7         0.04042   0.06224   0.00679
+
+  VIBRATION MODE  27  FREQUENCY= 1393.857488  TRANS ROT %=    0.000000
+  EIGENVALUE=  164.755962  ENERGY DERIVATIVE=   -0.014852
+  TYPE  'FACT'    1.0000   MASS   NORM  STEP=    1.000000
+
+   EIGENVECTOR:
+              1    1 IM1H     C1        -0.01749   0.01950   0.04787
+              2    1 IM1H     N1        -0.01280   0.01810   0.00649
+              3    1 IM1H     C2         0.02006  -0.01942   0.00079
+              4    1 IM1H     C3         0.00708   0.02934   0.00116
+              5    1 IM1H     N2        -0.00519  -0.01978   0.00098
+              6    1 IM1H     H1        -0.03902   0.02621  -0.00359
+              7    1 IM1H     C4         0.01479   0.00245  -0.00059
+              8    1 IM1H     H2         0.31472  -0.46402   0.03499
+              9    1 IM1H     H3         0.09707  -0.11050  -0.66066
+             10    1 IM1H     H4        -0.24109   0.26240  -0.05796
+             11    1 IM1H     H5        -0.06925   0.00567  -0.00367
+             12    1 IM1H     H6        -0.06144  -0.05978   0.00228
+             13    1 IM1H     H7        -0.04212  -0.01639  -0.00182
+
+  VIBRATION MODE  28  FREQUENCY= 1400.432166  TRANS ROT %=    0.000000
+  EIGENVALUE=  166.313900  ENERGY DERIVATIVE=    0.053970
+  TYPE  'FACT'    1.0000   MASS   NORM  STEP=    1.000000
+
+   EIGENVECTOR:
+              1    1 IM1H     C1         0.03414  -0.02837   0.02375
+              2    1 IM1H     N1         0.02800  -0.04389   0.00674
+              3    1 IM1H     C2        -0.03417   0.04272  -0.00488
+              4    1 IM1H     C3        -0.01918  -0.05951   0.00319
+              5    1 IM1H     N2         0.00842   0.03671  -0.00236
+              6    1 IM1H     H1         0.06603  -0.04123   0.00648
+              7    1 IM1H     C4        -0.02104   0.00094   0.00129
+              8    1 IM1H     H2         0.10698   0.34036   0.14879
+              9    1 IM1H     H3        -0.43425  -0.26209  -0.11955
+             10    1 IM1H     H4        -0.08279   0.42972  -0.37989
+             11    1 IM1H     H5         0.12490   0.00033   0.00908
+             12    1 IM1H     H6         0.12271   0.12718  -0.00681
+             13    1 IM1H     H7         0.06992   0.03244   0.00295
+
+  VIBRATION MODE  29  FREQUENCY= 1439.129817  TRANS ROT %=    0.000001
+  EIGENVALUE=  175.632279  ENERGY DERIVATIVE=    0.039938
+  TYPE  'FACT'    1.0000   MASS   NORM  STEP=    1.000000
+
+   EIGENVECTOR:
+              1    1 IM1H     C1         0.11579  -0.01032  -0.01120
+              2    1 IM1H     N1        -0.01824   0.10249   0.01781
+              3    1 IM1H     C2        -0.02995  -0.05864   0.00060
+              4    1 IM1H     C3         0.05282   0.05032  -0.00111
+              5    1 IM1H     N2         0.00725   0.00779   0.00033
+              6    1 IM1H     H1         0.07812  -0.09558   0.00439
+              7    1 IM1H     C4        -0.06497  -0.07328  -0.01387
+              8    1 IM1H     H2        -0.31076  -0.00719  -0.15173
+              9    1 IM1H     H3        -0.20356  -0.14386   0.01949
+             10    1 IM1H     H4        -0.37774   0.09752   0.17381
+             11    1 IM1H     H5         0.05536  -0.10563   0.00854
+             12    1 IM1H     H6        -0.08949  -0.15236   0.00437
+             13    1 IM1H     H7         0.12254  -0.03001  -0.00623
+
+  VIBRATION MODE  30  FREQUENCY= 1485.977103  TRANS ROT %=    0.000002
+  EIGENVALUE=  187.252933  ENERGY DERIVATIVE=   -0.054122
+  TYPE  'FACT'    1.0000   MASS   NORM  STEP=    1.000000
+
+   EIGENVECTOR:
+              1    1 IM1H     C1        -0.06491  -0.00848   0.00003
+              2    1 IM1H     N1         0.04652   0.07629   0.01457
+              3    1 IM1H     C2         0.00325  -0.00214  -0.00108
+              4    1 IM1H     C3        -0.00161  -0.07788   0.00420
+              5    1 IM1H     N2        -0.05906   0.12788   0.00243
+              6    1 IM1H     H1         0.27831  -0.37362   0.01922
+              7    1 IM1H     C4        -0.00158  -0.10685  -0.02077
+              8    1 IM1H     H2         0.12837  -0.04749   0.05520
+              9    1 IM1H     H3         0.19683   0.08779  -0.04780
+             10    1 IM1H     H4         0.06998  -0.06943  -0.03027
+             11    1 IM1H     H5         0.07092  -0.02439   0.00652
+             12    1 IM1H     H6         0.08962   0.02344  -0.00367
+             13    1 IM1H     H7         0.11278  -0.10587  -0.02533
+
+  VIBRATION MODE  31  FREQUENCY= 1576.373366  TRANS ROT %=    0.000000
+  EIGENVALUE=  210.728158  ENERGY DERIVATIVE=   -0.038458
+  TYPE  'FACT'    1.0000   MASS   NORM  STEP=    1.000000
+
+   EIGENVECTOR:
+              1    1 IM1H     C1        -0.00755  -0.00391  -0.00068
+              2    1 IM1H     N1         0.01080   0.06183   0.00518
+              3    1 IM1H     C2         0.10946  -0.01540   0.00402
+              4    1 IM1H     C3        -0.13042  -0.04805  -0.00084
+              5    1 IM1H     N2         0.10934  -0.00773  -0.00373
+              6    1 IM1H     H1        -0.05180   0.28246  -0.00561
+              7    1 IM1H     C4        -0.11691  -0.04933  -0.00273
+              8    1 IM1H     H2         0.00499  -0.01184   0.00223
+              9    1 IM1H     H3         0.05266   0.01749  -0.01027
+             10    1 IM1H     H4        -0.01828  -0.00919   0.00710
+             11    1 IM1H     H5        -0.12742   0.06750  -0.00858
+             12    1 IM1H     H6         0.05912   0.26185  -0.00577
+             13    1 IM1H     H7         0.14418   0.03033   0.00352
+
+  VIBRATION MODE  32  FREQUENCY= 1633.730978  TRANS ROT %=    0.000000
+  EIGENVALUE=  226.342174  ENERGY DERIVATIVE=    0.042795
+  TYPE  'FACT'    1.0000   MASS   NORM  STEP=    1.000000
+
+   EIGENVECTOR:
+              1    1 IM1H     C1         0.07461  -0.00084  -0.00448
+              2    1 IM1H     N1        -0.14979  -0.00431  -0.00697
+              3    1 IM1H     C2         0.12207   0.00121   0.00561
+              4    1 IM1H     C3        -0.05283  -0.05547   0.00323
+              5    1 IM1H     N2        -0.04418   0.05182   0.00459
+              6    1 IM1H     H1         0.04013  -0.07682   0.00200
+              7    1 IM1H     C4         0.12271  -0.00159   0.00028
+              8    1 IM1H     H2        -0.09222   0.01969  -0.06157
+              9    1 IM1H     H3        -0.08729  -0.06931   0.02961
+             10    1 IM1H     H4        -0.07338   0.04968   0.04568
+             11    1 IM1H     H5        -0.18717   0.11631  -0.01783
+             12    1 IM1H     H6         0.03352   0.06973  -0.00132
+             13    1 IM1H     H7        -0.11444  -0.09406  -0.01863
+
+  VIBRATION MODE  33  FREQUENCY= 2929.701446  TRANS ROT %=    0.000000
+  EIGENVALUE=  727.865483  ENERGY DERIVATIVE=    0.178436
+  TYPE  'FACT'    1.0000   MASS   NORM  STEP=    1.000000
+
+   EIGENVECTOR:
+              1    1 IM1H     C1         0.05415   0.00013  -0.00329
+              2    1 IM1H     N1        -0.00430  -0.00002   0.00019
+              3    1 IM1H     C2         0.00042  -0.00021   0.00002
+              4    1 IM1H     C3         0.00001  -0.00006   0.00001
+              5    1 IM1H     N2        -0.00002   0.00007   0.00002
+              6    1 IM1H     H1        -0.00045  -0.00035  -0.00008
+              7    1 IM1H     C4         0.00056   0.00037   0.00006
+              8    1 IM1H     H2        -0.16808  -0.13693   0.52327
+              9    1 IM1H     H3        -0.21060   0.50839  -0.12765
+             10    1 IM1H     H4        -0.21830  -0.37366  -0.35990
+             11    1 IM1H     H5         0.00003   0.00102  -0.00005
+             12    1 IM1H     H6        -0.00007   0.00006   0.00001
+             13    1 IM1H     H7         0.00057  -0.00215  -0.00035
+
+  VIBRATION MODE  34  FREQUENCY= 3047.988409  TRANS ROT %=    0.000000
+  EIGENVALUE=  787.827282  ENERGY DERIVATIVE=    0.032669
+  TYPE  'FACT'    1.0000   MASS   NORM  STEP=    1.000000
+
+   EIGENVECTOR:
+              1    1 IM1H     C1        -0.00096   0.09499  -0.00754
+              2    1 IM1H     N1         0.00016  -0.00201  -0.00016
+              3    1 IM1H     C2         0.00010  -0.00010  -0.00000
+              4    1 IM1H     C3        -0.00001  -0.00002   0.00003
+              5    1 IM1H     N2        -0.00001   0.00004  -0.00001
+              6    1 IM1H     H1         0.00008  -0.00010   0.00001
+              7    1 IM1H     C4        -0.00003  -0.00097  -0.00004
+              8    1 IM1H     H2        -0.06909  -0.07861   0.23389
+              9    1 IM1H     H3         0.26084  -0.68634   0.17047
+             10    1 IM1H     H4        -0.18011  -0.34445  -0.31411
+             11    1 IM1H     H5         0.00120   0.00409  -0.00003
+             12    1 IM1H     H6        -0.00010   0.00006  -0.00000
+             13    1 IM1H     H7        -0.00429   0.01385   0.00206
+
+  VIBRATION MODE  35  FREQUENCY= 3049.529374  TRANS ROT %=    0.000000
+  EIGENVALUE=  788.624084  ENERGY DERIVATIVE=   -0.009996
+  TYPE  'FACT'    1.0000   MASS   NORM  STEP=    1.000000
+
+   EIGENVECTOR:
+              1    1 IM1H     C1        -0.00574  -0.00773  -0.09533
+              2    1 IM1H     N1        -0.00001   0.00050   0.00241
+              3    1 IM1H     C2        -0.00002   0.00003   0.00014
+              4    1 IM1H     C3        -0.00003  -0.00002  -0.00070
+              5    1 IM1H     N2         0.00000   0.00000  -0.00004
+              6    1 IM1H     H1         0.00000   0.00001   0.00010
+              7    1 IM1H     C4        -0.00001   0.00028   0.00003
+              8    1 IM1H     H2        -0.19464  -0.16936   0.67424
+              9    1 IM1H     H3         0.05011  -0.12518   0.04817
+             10    1 IM1H     H4         0.21167   0.38231   0.38719
+             11    1 IM1H     H5        -0.00017  -0.00075   0.00012
+             12    1 IM1H     H6         0.00048  -0.00034   0.00007
+             13    1 IM1H     H7         0.00170  -0.00522  -0.00047
+
+  VIBRATION MODE  36  FREQUENCY= 3113.473105  TRANS ROT %=    0.000000
+  EIGENVALUE=  822.043181  ENERGY DERIVATIVE=   -0.264580
+  TYPE  'FACT'    1.0000   MASS   NORM  STEP=    1.000000
+
+   EIGENVECTOR:
+              1    1 IM1H     C1        -0.00011   0.00185   0.00058
+              2    1 IM1H     N1         0.00120  -0.00549  -0.00101
+              3    1 IM1H     C2        -0.00071   0.00096  -0.00010
+              4    1 IM1H     C3         0.00004   0.00116  -0.00007
+              5    1 IM1H     N2         0.00200  -0.00514  -0.00079
+              6    1 IM1H     H1         0.00083   0.00642   0.00127
+              7    1 IM1H     C4        -0.02802   0.08568   0.01228
+              8    1 IM1H     H2         0.00057  -0.00005  -0.00132
+              9    1 IM1H     H3         0.00387  -0.01035   0.00250
+             10    1 IM1H     H4        -0.00275  -0.00621  -0.00588
+             11    1 IM1H     H5        -0.00416  -0.01272   0.00007
+             12    1 IM1H     H6         0.01013  -0.00732  -0.00010
+             13    1 IM1H     H7         0.29037  -0.89023  -0.12276
+
+  VIBRATION MODE  37  FREQUENCY= 3183.229005  TRANS ROT %=    0.000000
+  EIGENVALUE=  859.290797  ENERGY DERIVATIVE=    0.048139
+  TYPE  'FACT'    1.0000   MASS   NORM  STEP=    1.000000
+
+   EIGENVECTOR:
+              1    1 IM1H     C1         0.00005   0.00047  -0.00002
+              2    1 IM1H     N1        -0.00075  -0.00340  -0.00009
+              3    1 IM1H     C2         0.01943   0.06706   0.00014
+              4    1 IM1H     C3         0.04122  -0.03359  -0.00073
+              5    1 IM1H     N2        -0.00229   0.00215   0.00007
+              6    1 IM1H     H1         0.00057  -0.00526   0.00015
+              7    1 IM1H     C4         0.00127  -0.00001   0.00006
+              8    1 IM1H     H2        -0.00028  -0.00052   0.00080
+              9    1 IM1H     H3         0.00032  -0.00164   0.00063
+             10    1 IM1H     H4        -0.00061  -0.00123  -0.00138
+             11    1 IM1H     H5        -0.23094  -0.71881  -0.00211
+             12    1 IM1H     H6        -0.46441   0.33784   0.00846
+             13    1 IM1H     H7        -0.00093   0.00268   0.00033
+
+  VIBRATION MODE  38  FREQUENCY= 3185.997605  TRANS ROT %=    0.000000
+  EIGENVALUE=  860.786177  ENERGY DERIVATIVE=    0.104283
+  TYPE  'FACT'    1.0000   MASS   NORM  STEP=    1.000000
+
+   EIGENVECTOR:
+              1    1 IM1H     C1         0.00002   0.00036   0.00008
+              2    1 IM1H     N1        -0.00017  -0.00192  -0.00004
+              3    1 IM1H     C2         0.02079   0.04966   0.00005
+              4    1 IM1H     C3        -0.05945   0.03812   0.00098
+              5    1 IM1H     N2         0.00256  -0.00210   0.00010
+              6    1 IM1H     H1        -0.00651   0.00353  -0.00115
+              7    1 IM1H     C4         0.00050  -0.00227  -0.00011
+              8    1 IM1H     H2        -0.00019  -0.00031   0.00031
+              9    1 IM1H     H3         0.00017  -0.00100   0.00040
+             10    1 IM1H     H4        -0.00071  -0.00118  -0.00131
+             11    1 IM1H     H5        -0.17905  -0.54488  -0.00167
+             12    1 IM1H     H6         0.61263  -0.43940  -0.01124
+             13    1 IM1H     H7        -0.00513   0.01589   0.00215
+
+  VIBRATION MODE  39  FREQUENCY= 3422.694051  TRANS ROT %=    0.000000
+  EIGENVALUE=  993.437510  ENERGY DERIVATIVE=    0.638744
+  TYPE  'FACT'    1.0000   MASS   NORM  STEP=    1.000000
+
+   EIGENVECTOR:
+              1    1 IM1H     C1        -0.00007  -0.00001   0.00000
+              2    1 IM1H     N1         0.00073  -0.00050  -0.00008
+              3    1 IM1H     C2        -0.00039   0.00057  -0.00014
+              4    1 IM1H     C3         0.00272   0.00277   0.00006
+              5    1 IM1H     N2        -0.06248  -0.04082  -0.00892
+              6    1 IM1H     H1         0.79067   0.52169   0.12536
+              7    1 IM1H     C4         0.00403   0.00151  -0.00003
+              8    1 IM1H     H2        -0.00027  -0.00009   0.00030
+              9    1 IM1H     H3        -0.00038   0.00031  -0.00007
+             10    1 IM1H     H4        -0.00025  -0.00020  -0.00018
+             11    1 IM1H     H5        -0.00115  -0.00362  -0.00002
+             12    1 IM1H     H6        -0.00021  -0.00633   0.00016
+             13    1 IM1H     H7        -0.00517   0.00474   0.00086
+  
+ VIBRAN>    end
+  
+ CHARMM>    !write para used card name "parameters.par"
+ CHARMM>     
+  
+ CHARMM>     
+  
+ CHARMM>     
+  
+      $$$$$$  New timer profile Local node$$$$$
+   Shake time                      0.00 Other:            0.00
+      Heuristic check                 0.00 Other:            0.00
+   List time                       0.00 Other:            0.00
+         Electrostatic & VDW             0.00 Other:            0.00
+      Nonbond force                   0.03 Other:            0.03
+         Bond energy                     0.01 Other:            0.00
+         Angle energy                    0.01 Other:            0.00
+         Dihedral energy                 0.01 Other:            0.00
+         Restraints energy               0.00 Other:            0.00
+      INTRNL energy                   0.05 Other:            0.02
+      Comm energy                     0.00 Other:            0.00
+      Comm force                      0.00 Other:            0.00
+   Energy time                     0.10 Other:            0.01
+ Total time                      0.15 Other:            0.04
+         $$$$$$  Average   profile $$$$$
+   Shake time                      0.00 Other:            0.00
+      Heuristic check                 0.00 Other:            0.00
+   List time                       0.00 Other:            0.00
+         Electrostatic & VDW             0.00 Other:            0.00
+      Nonbond force                   0.03 Other:            0.03
+         Bond energy                     0.01 Other:            0.00
+         Angle energy                    0.01 Other:            0.00
+         Dihedral energy                 0.01 Other:            0.00
+         Restraints energy               0.00 Other:            0.00
+      INTRNL energy                   0.05 Other:            0.02
+      Comm energy                     0.00 Other:            0.00
+      Comm force                      0.00 Other:            0.00
+   Energy time                     0.10 Other:            0.01
+ Total time                      0.15 Other:            0.04
+
+                    NORMAL TERMINATION BY END OF FILE
+                    MOST SEVERE WARNING WAS AT LEVEL  0
+
+                    $$$$$ JOB ACCOUNTING INFORMATION $$$$$
+                     ELAPSED TIME:     0.17  SECONDS 
+                         CPU TIME:     0.13  SECONDS 
