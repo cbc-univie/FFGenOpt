@@ -7,10 +7,20 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: actions/setup-python@v3
-      - name: Install dependencies
-        run: |
-          pip install sphinx sphinx_rtd_theme
+      - name: Setup Mambaforge
+        uses: conda-incubator/setup-miniconda@v2
+        with:
+            miniforge-variant: Mambaforge
+            miniforge-version: latest
+            activate-environment: docs
+            auto-activate-base: false
+            use-mamba: true
+      - name: Update environment
+        run: mamba env update -n docs -f docs/requirements.yaml
+      #- uses: actions/setup-python@v3
+      #- name: Install dependencies
+      #  run: |
+      #    pip install sphinx sphinx_rtd_theme
       - name: Sphinx build
         run: |
           sphinx-build doc _build
