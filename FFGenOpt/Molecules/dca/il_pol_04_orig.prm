@@ -165,7 +165,7 @@ F  C3 S6 O      0.144        3       0.0  ! orig: 0.144
 !
 ! DCA
 !
-X    CG   NE   X       0.000         2     180.0  ! orig: 0.000
+!X    CG   NE   X       0.000         2     180.0  ! orig: 0.000
 CG   NE   CG   N1      0.000         2     180.0  ! orig: 0.000      ! SAME AS X  C1 NE X 
 
 !

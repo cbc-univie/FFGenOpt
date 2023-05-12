@@ -116,7 +116,7 @@ def read_gaussian(filename):
             Z = Z + bz1 + bz2 + bz3
         x = input.readline()
     input.close()
-    
+
     return freq, X, Y, Z
 
 #source: from afmm_read_gaupy.py:
@@ -143,8 +143,8 @@ def Compute(mdfreq, mdX, mdY, mdZ, qmfreq, qmX, qmY, qmZ):
                 qmX[qmstart:qmstart+N], qmY[qmstart:qmstart+N], qmZ[qmstart:qmstart+N])
             #build the costmatrix
             try:
-                costmatrix[mdidx][qmidx] = proj * min([mdfreq[mdidx]/qmfreq[qmidx],
-                    qmfreq[qmidx]/mdfreq[mdidx]])    #1-proj if not maximizue=True
+                costmatrix[mdidx][qmidx] = proj #* min([mdfreq[mdidx]/qmfreq[qmidx],
+                    #qmfreq[qmidx]/mdfreq[mdidx]])    #1-proj if not maximizue=True
             except ZeroDivisionError:
                 print(f"MDFREQ: {mdfreq[mdidx]}, QMFREQ: {qmfreq[mdidx]}")
                 costmatrix[mdidx][qmidx] = 0.0

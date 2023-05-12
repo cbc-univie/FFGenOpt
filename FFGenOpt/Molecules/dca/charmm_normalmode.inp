@@ -1,0 +1,65 @@
+****************************************************************************
+* CHARMM computation of normal modes
+****************************************************************************
+*
+
+!=======================================================================
+! Read topology and force field of molecules
+!=======================================================================
+stream "/home/andras/git_test/ir_optimization/FFGenOpt/FF_GenOpt_results/dca/parameters.str"
+
+open  unit 10 read form name "/home/andras/git_test/ir_optimization/FFGenOpt/Molecules/dca/il_pol.rtf"
+read  unit 10 rtf card 
+close unit 10
+
+boml -1
+open  unit 10 read form name "/home/andras/git_test/ir_optimization/FFGenOpt/Molecules/dca/il_pol_04.prm"
+read  unit 10 para card
+close unit 10
+boml 0
+
+read sequence DCA 1
+generate DCA setup warn drude dmass 0.4
+
+!=======================================================================
+! Optimize new coordinates 
+!=======================================================================
+read coor card name "/home/andras/git_test/ir_optimization/FFGenOpt/Molecules/dca/dca.crd"
+drude reset
+delete atom sele type D* end
+coor copy comp
+
+energy nbonds elec atom fswitch vdw vatom vshift cdie eps 1.0 wmin 1.5  -
+       CUTNB 14.0 CTONNB 12.0 CTOFNB 14.0
+
+mini sd   nstep  500 nprint 100 
+mini abnr nstep 1000 nprint 100 
+coor orie rms
+
+ioformat extended
+coor prin
+!write coor card name "new_mini.crd"
+!write psf  card name "new.psf"
+
+!=======================================================================
+! Normal mode analysis
+!=======================================================================
+!scalar charge add -0.766 sele atom * * O1 end ! add LPO11 and LPO12 charge to O1
+!scalar charge add -0.766 sele atom * * O2 end ! add LPO21 and LPO22 charge to O2
+
+!delete atom sele type LP* end ! delete Lonepairs
+
+define DUMMY sele type LP* .or. type D* end
+
+calc NLAST = 3 * ?NATOM
+!print coor sele .not. DUMMY end
+!calc NFIRST = @NLAST - (3 * ?NSEL -6 ) + 1
+
+
+vibran nmod
+diag  finite step 0.001 
+mass
+print norm mode 1 thru @NLAST vect sele .not. DUMMY end
+end
+
+

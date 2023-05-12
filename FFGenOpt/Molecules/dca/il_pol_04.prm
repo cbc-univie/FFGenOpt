@@ -165,8 +165,8 @@ F  C3 S6 O      @otfd1         3       0.0  ! orig: 0.144
 !
 ! DCA
 !
-X    CG   NE   X       @dcad1         2     180.0  ! orig: 0.000
-CG   NE   CG   N1      @dcad2         2     180.0  ! orig: 0.000      ! SAME AS X  C1 NE X 
+!X    CG   NE   X       @dcad1         2     180.0  ! orig: 0.000
+CG   NE   CG   N1      @dcad1         2     180.0  ! orig: 0.000      ! SAME AS X  C1 NE X 
 
 !
 ! OAc

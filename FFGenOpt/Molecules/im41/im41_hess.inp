@@ -2,7 +2,7 @@ import psi4
 import numpy as np
 import sys
 
-outfile = 'im41_normalmodes.out'
+outfile = 'im41_hess.out'
 psi4.core.set_output_file(outfile, False)
 
 inp_mol = psi4.geometry("""
@@ -36,6 +36,9 @@ inp_mol = psi4.geometry("""
 
 scf_e, scf_wfn = psi4.optimize('scf/cc-pvdz', molecule=inp_mol, return_wfn = True)
 hess, wfn = psi4.driver.hessian('scf/cc-pvdz', return_wfn = True)
+dipder = wfn.variables().get("CURRENT DIPOLE GRADIENT", None)
+if dipder is not None:
+    dipder = np.asarray(dipder).T
 hess_arr = np.asarray(hess)
 geom = np.asarray(inp_mol.geometry())
 masses = np.asarray([inp_mol.mass(i) for i in range(inp_mol.natom())])
@@ -43,7 +46,7 @@ ir_labels = inp_mol.irrep_labels()
 basis = wfn.basisset()
 symbols = [inp_mol.symbol(at) for at in range(inp_mol.natom())]
 
-vibinfo, vibtext = psi4.driver.qcdb.vib.harmonic_analysis(hess_arr, geom, masses, basis, ir_labels)
+vibinfo, vibtext = psi4.driver.qcdb.vib.harmonic_analysis(hess_arr, geom, masses, basis, ir_labels, dipder)
 
 #psi4.driver.vibanal_wfn(wfn)
 with open(outfile, 'a') as f:

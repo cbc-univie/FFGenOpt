@@ -7,10 +7,10 @@ from scipy.constants import pi, Boltzmann, hbar, Avogadro
 from math import pi
 from copy import deepcopy 
 from warnings import warn
-import matplotlib
-matplotlib.use('Agg')
-import matplotlib.pyplot as plt
-matplotlib.rcParams['figure.dpi'] = 600
+#import matplotlib
+#matplotlib.use('Agg')
+#import matplotlib.pyplot as plt
+#matplotlib.rcParams['figure.dpi'] = 600
 
 class NormalModeAnalysis(object):
     """
@@ -251,24 +251,24 @@ class NormalModeAnalysis(object):
         self.VibrationalSpectrum = VibrationalSpectrum * (1/centimeter)
         self.TransRotFreq = TransRotFreq * (1/centimeter)
 
-    def PlotVibrationalSpectrum(self, binNum=1000, colorStr='salmon', labelStr='Vibrational Power Spectrum'):
-        """
-            Plot the histogram of vibrational power spectrum intensities.
-            X-axis (cm^-1): Wave number.
-            Y-axis (dimensionless number): Intensity of the histogram.
-            Args:
-            binNum (int=1000): Number of bins to generate the histogram.
-            colorStr (string='salmon'): The matplotlib color string.`
-            labelStr (string='Vibrational Power Spectrum'): The string used to show the label of current histogram. 
-        """
-        matplotlib.rcParams['figure.dpi'] = 600
-        fig, ax = plt.subplots()
-        ax.hist(self.VibrationalSpectrum, bins=binNum, color=colorStr,label=labelStr)
-        ax.legend()
-        plt.xlabel(r'Wave number($cm^{-1}$)')
-        plt.ylabel(r'Intensity')
-        plt.xlim(0,4000)
-        plt.savefig("hist.png")
+#    def PlotVibrationalSpectrum(self, binNum=1000, colorStr='salmon', labelStr='Vibrational Power Spectrum'):
+#        """
+#            Plot the histogram of vibrational power spectrum intensities.
+#            X-axis (cm^-1): Wave number.
+#            Y-axis (dimensionless number): Intensity of the histogram.
+#            Args:
+#            binNum (int=1000): Number of bins to generate the histogram.
+#            colorStr (string='salmon'): The matplotlib color string.`
+#            labelStr (string='Vibrational Power Spectrum'): The string used to show the label of current histogram. 
+#        """
+#        matplotlib.rcParams['figure.dpi'] = 600
+#        fig, ax = plt.subplots()
+#        ax.hist(self.VibrationalSpectrum, bins=binNum, color=colorStr,label=labelStr)
+#        ax.legend()
+#        plt.xlabel(r'Wave number($cm^{-1}$)')
+#        plt.ylabel(r'Intensity')
+#        plt.xlim(0,4000)
+#        plt.savefig("hist.png")
 
     def getVibrationalEntropyCM(self, Temperature=300*kelvin):
         SquareAngularFreqAKMA = self.SquareAngularFreq.value_in_unit(kilocalorie/(gram*angstrom**2))[6:]

@@ -74,8 +74,9 @@ class FitnessFunction:
                 qmfreq, qmX, qmY, qmZ = self.qmReferenceData
                 fitness = Compute(mdfreq, mdX, mdY, mdZ, qmfreq, qmX, qmY, qmZ)[0]
                 return fitness
-            except:
-                return 9999999.0
+            except IndexError:
+                print(len(mdX), len(mdY), len(mdZ), len(qmX), len(qmY), len(qmZ))
+                quit()
         else:
             #try:
             varnames = get_varnames(self.paramfilename)
