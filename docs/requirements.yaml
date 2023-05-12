@@ -1,0 +1,17 @@
+name: docs
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+    # Base depends
+  - python
+  - pip
+
+  # Documentation
+  - sphinx~=6.2.1 #https://github.com/kivy/kivy/issues/8230, had the same problem
+  - sphinx_rtd_theme
+
+    # Pip-only installs
+  - pip:
+    # Doku emojis
+    - sphinxemoji
