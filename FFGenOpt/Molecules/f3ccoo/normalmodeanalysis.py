@@ -119,7 +119,7 @@ class NormalModeAnalysis(object):
             if currentMeanForce < self.MiniForceThreshold:
                 break
               
-    def CPUMinimizationCycle(self, MiniTolerance=0, MaxMiniCycle=1, NumMiniStepPerCycle=10000, MiniForceRatio=1e-6):
+    def CPUMinimizationCycle(self, MiniTolerance=0, MaxMiniCycle=1000, NumMiniStepPerCycle=10000, MiniForceRatio=1e-6):
         """
             Similar to CUDAMinimizationCycle() but with CPU only
             Args:
