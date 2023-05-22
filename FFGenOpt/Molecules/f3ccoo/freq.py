@@ -9,8 +9,10 @@ from normalmodeanalysis import NormalModeAnalysis
 
 # Input Files
 
-psf = CharmmPsfFile('f3coo_omm.psf')
-crd = CharmmCrdFile('f3coo_init.crd')
+#psf = CharmmPsfFile('f3coo_omm.psf')
+crd = CharmmCrdFile('f3coo_mp2.crd')
+psf = CharmmPsfFile('ligandrm.psf')
+#crd = CharmmCrdFile('ligandrm.crd')
 
 paramsfile = 'ff.str'
 parFiles = ()
@@ -21,27 +23,42 @@ for line in open(paramsfile, 'r'):
 
 params = CharmmParameterSet( *parFiles )
 
-#params = CharmmParameterSet('toppar_drude_master_protein_2019g_orig.str',
-#                            'toppar_drude_model_2019g.str',
-#                            'f3coo_all_d.str',
-#                            )
-
 # System Configuration
 
 nonbondedCutoff = 100.*nanometers
 constraints = None
 constraintTolerance = 0.000001
 
-# Integration Options
-
 # parmed xml
 
-parmed_prm = parmed.charmm.CharmmParameterSet( *parFiles )
-pmff = parmed.openmm.parameters.OpenMMParameterSet.from_parameterset(parmed_prm,
-    unique_atom_types = True)
-pmff.write('parmed_omm.xml', separate_ljforce = True, charmm_imp = True)
-quit()
-                                                                     
+#parmed_prm = parmed.charmm.CharmmParameterSet( *parFiles )
+#pmff = parmed.openmm.parameters.OpenMMParameterSet.from_parameterset(parmed_prm,
+#    unique_atom_types = True)
+#pmff.write('parmed_omm.xml', separate_ljforce = True, charmm_imp = True)
+
+
+#ff = ForceField('parmed_omm.xml')
+
+#mod = Modeller(psf.topology, crd.positions)
+#mod.addExtraParticles(ff)
+#
+#for i in mod.topology.atoms():
+#    print(i)
+#print("BEFORE DELETE")
+#to_delete = []
+#for i in mod.topology.atoms():
+#    if i.element is None:
+#        to_delete.append(i)
+#
+#print(to_delete)
+#mod.delete(to_delete)
+#for i in mod.topology.atoms():
+#    print(i)
+#
+#print(mod.positions)
+
+# Integration Options
+
 dt = 0.001*picoseconds
 temperature = 300*kelvin
 friction = 1.0/picosecond
@@ -55,6 +72,8 @@ topology = psf.topology
 positions = crd.positions
 system = psf.createSystem(params, nonbondedCutoff=nonbondedCutoff,
     constraints=constraints)
+#system = ff.createSystem(mod.topology, nonbondedCutoff=nonbondedCutoff,
+#    constraints=constraints)
 integrator = NoseHooverIntegrator(temperature, friction, dt)
 integrator.setConstraintTolerance(constraintTolerance)
 simulation = Simulation(topology, system, integrator, platform)
@@ -72,8 +91,8 @@ nma = NormalModeAnalysis(topology, system, integrator, positions, CPUOnly=True)
 nma.CPUPreMinimization()
 nma.CPUMinimizationCycle()
 nma.CalculateNormalModes()
-print(nma.VibrationalSpectrum)
-print(nma.TransRotFreq)
+#print(nma.VibrationalSpectrum)
+#print(nma.TransRotFreq)
 #print(nma.NormalModes[6:])
 #colors = ["black",]*9
 #nma.PlotVibrationalSpectrum(colorStr=colors)
