@@ -100,23 +100,23 @@ def read_gaussian(filename):
             bx3 = []
             by3 = []
             bz3 = []
-            while len(l) == 11:
-                bx1.append(float(l[2]))
-                by1.append(float(l[3]))
-                bz1.append(float(l[4]))
-                bx2.append(float(l[5]))
-                by2.append(float(l[6]))
-                bz2.append(float(l[7]))
-                bx3.append(float(l[8]))
-                by3.append(float(l[9]))
-                bz3.append(float(l[10]))
+            while len(l) != 0:
+                bx1.append(float(l[-9]))
+                by1.append(float(l[-8]))
+                bz1.append(float(l[-7]))
+                bx2.append(float(l[-6]))
+                by2.append(float(l[-5]))
+                bz2.append(float(l[-4]))
+                bx3.append(float(l[-3]))
+                by3.append(float(l[-2]))
+                bz3.append(float(l[-1]))
                 l = input.readline().split()
             X = X + bx1 + bx2 + bx3
             Y = Y + by1 + by2 + by3
             Z = Z + bz1 + bz2 + bz3
         x = input.readline()
     input.close()
-
+ 
     return freq, X, Y, Z
 
 #source: from afmm_read_gaupy.py:
@@ -143,8 +143,8 @@ def Compute(mdfreq, mdX, mdY, mdZ, qmfreq, qmX, qmY, qmZ):
                 qmX[qmstart:qmstart+N], qmY[qmstart:qmstart+N], qmZ[qmstart:qmstart+N])
             #build the costmatrix
             try:
-                costmatrix[mdidx][qmidx] = proj #* min([mdfreq[mdidx]/qmfreq[qmidx],
-                    #qmfreq[qmidx]/mdfreq[mdidx]])    #1-proj if not maximizue=True
+                costmatrix[mdidx][qmidx] = proj * min([mdfreq[mdidx]/qmfreq[qmidx],
+                    qmfreq[qmidx]/mdfreq[mdidx]])    #1-proj if not maximizue=True
             except ZeroDivisionError:
                 print(f"MDFREQ: {mdfreq[mdidx]}, QMFREQ: {qmfreq[mdidx]}")
                 costmatrix[mdidx][qmidx] = 0.0
@@ -277,13 +277,14 @@ def get_varnames(streamfile):
     while len(x) != 0:
         varnames[x.split()[1]] = float(x.split()[2])
         x = parfile.readline()
-    #print(varnames)
     parfile.close()
 
     return varnames
 
-def to_change(vars, varfile, psf):
+def to_change(vars, varfile, psf, streamfile, varnames):
     """Determine which parameters are being optimized"""
+    if varnames is None:
+        varnames = get_varnames(streamfile)
 
     def explicit_params(pnames, param_names):
         """Substitute wildcards by explicit atomtypes"""
@@ -435,7 +436,7 @@ def to_change(vars, varfile, psf):
                     psf.improper_list[j].atom3.idx, psf.improper_list[j].atom4.idx)] = i
     
     #print(dihs_to_change)
-    return bonds_to_change, angles_to_change, dihs_to_change
+    return bonds_to_change, angles_to_change, dihs_to_change, varnames
 
 def update_context(system, context, varnames, bonds_to_change, angles_to_change, dihs_to_change):
     """Update force constants in OpenMM context"""
