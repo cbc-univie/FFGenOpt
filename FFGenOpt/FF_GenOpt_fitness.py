@@ -51,10 +51,12 @@ class FitnessFunction:
         self.bonds = None
         self.angles = None
         self.dihedrals = None
+        self.varnames = None
         if self.extern == "False":
             self.context,self.mod,self.system,self.integrator,self.psf,self.topology, = create_context(
                 psf,crd,params)
-            self.bonds, self.angles, self.dihedrals = to_change(self.parameterNames, varfile, self.psf)
+            self.bonds, self.angles, self.dihedrals, self.varnames = to_change(self.parameterNames, varfile, self.psf,
+                                                                               self.paramfilename, self.varnames)
     def writeParameters(self, plist):
         assert(len(plist)==self.dim)
         output = ""
@@ -74,14 +76,12 @@ class FitnessFunction:
                 qmfreq, qmX, qmY, qmZ = self.qmReferenceData
                 fitness = Compute(mdfreq, mdX, mdY, mdZ, qmfreq, qmX, qmY, qmZ)[0]
                 return fitness
-            except IndexError:
-                print(len(mdX), len(mdY), len(mdZ), len(qmX), len(qmY), len(qmZ))
-                quit()
+            except:
+                return 9999999.0
         else:
             #try:
-            varnames = get_varnames(self.paramfilename)
-            update_context(self.system[0],self.context[0],varnames,self.bonds,self.angles,self.dihedrals)
-            update_context(self.system[1],self.context[1],varnames,self.bonds,self.angles,self.dihedrals)
+            update_context(self.system[0],self.context[0],self.varnames,self.bonds,self.angles,self.dihedrals)
+            update_context(self.system[1],self.context[1],self.varnames,self.bonds,self.angles,self.dihedrals)
             self.mdfreq, mdX, mdY, mdZ = normal_mode(self.system, self.integrator,
                     self.context, self.topology)
             #raise StopIteration
