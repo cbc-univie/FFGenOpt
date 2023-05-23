@@ -4,5 +4,133 @@
 Using FFGenOpt
 ==============
 
-If you already have a working force field that you want to refine using
-**FFGenOpt**, then
+Start by creating a directory under *Molecules* via
+
+.. code-block:: bash
+
+   mkdir /path/to/FFGenOpt/Molecules/f3ccoo
+
+Copy your .psf and coordinate files to this directory, as well as the output of
+the Psi4 QM job. Since the initial parameters for trifluoroacetate are based on
+DGenFF, you should also copy ``toppar_drude_master_protein_2019g_orig.str``
+from the ``Molecules/oac`` directory.
+
+If you plan on using **CHARMM** as your MD engine for the calculation of the
+normal modes, then you will need ``drude_oac.inp``. If you plan on using OpenMM
+instead, you will need ``freq.py``, 
+and ``normalmodeanalysis.py`` from ``Molecules/bf4``.
+In either case, make sure to modifiy the copied files so that the correct
+coordinates and topologies are read.
+
+If you have been using
+**ffparam** (and don't have access to **CHARMM**), you should also copy
+``psf_megre.py``, ``str_merge.py`` and ``crd_merge.py`` from ``bf4``.
+These scripts will generate stream files, .psfs and coordinates with polarizable
+atom types but without any extra particles such as lone pairs or Drudes,
+respectively. Execute each of them via
+
+.. code-block:: bash
+
+   python xxx_merge.py cgenff_file dgenff_file
+
+substituting the command line arguments with the names of your files.
+The resulting new files will serve as the basis for the parametrization in the
+next paragraph.
+
+Defining Force Constants
+========================
+
+Now we can take a look at the config files that **FFGenOpt** uses to set up a
+molecular system. You can use *e.g.* ``FF_GenOpt_conf/FF_GenOpt_bf4.cfg`` as a
+template for trifluoroacetate. The ready-to-deploy file might look like this::
+
+   EXTERN                      False                                            # False: use OpenMM for MD freqs, True: use MDEXEC
+   MDEXEC                      python3                                          # charmm executable
+   PSF                         Molecules/f3ccoo/cgen_pol.psf                    # MD PSF file
+   CRD                         Molecules/f3ccoo/f3coo_mp2.crd                   # MD crd file
+   PARAMS                      Molecules/f3ccoo/ff.str                          # MD parameters
+   VARFILE                     Molecules/f3ccoo/var.str                         # parameterfiles with variables
+   MDINP                       Molecules/f3ccoo/freq.py                         # MD input file
+   MDOUT                       Molecules/f3ccoo/charmm_normalmode.out           # MD run output
+   QMOUT                       Molecules/f3ccoo/f3coo_hess.out                  # QM reference
+   PARAM_FILENAME              FF_GenOpt_results/f3coo/parameters.str           # Write parameters here, they will be read by MDINP
+   POPULATION_FILENAME         FF_GenOpt_results/f3coo/lastPopulation_f3coo.txt
+   LOG_FILENAME                FF_GenOpt_results/f3coo/convergence_f3coo.log
+   
+   GENERATIONS                 100             #Number of generations to be created
+   POPULATION_SIZE             200             #Size of population
+   MUTATIONS_PER_GENERATION    50              #Crossovers and mutations per generation
+   STEP_SIZE                   0.05            #Maximum step size for random algorithm
+   CROSSOVER_BLX               0.7             #Probability of choosing BLX method... has to sum up to 1
+   CROSSOVER_SBX               0.25            #Probability of choosing SBX method... has to sum up to 1
+   CROSSOVER_UNIFORM           0.05            #Probability of choosing uniform crossover... has to sum up to 1
+   MINIMUM_IMPROVEMENT         0.0001          #Minimum improvement to continue random algorithm direction in percent
+   MINIMUM_DIVERSITY           0.0001          #Minimum population diversity before a new initial population is created
+   
+   #------------------------------------------------
+   #         name  type        min     max     val
+   #------------------------------------------------
+   PARAMETER f3b1 bond 50  500  160.95
+   PARAMETER f3b2 bond 100 1000 525.00
+   PARAMETER f3b2 bond 100 1000 265.00
+   PARAMETER f3a1 angle 20 200   30.98
+   PARAMETER f3a2 angle 20 200  100.00
+   PARAMETER f3a3 angle 20 200   47.24
+   PARAMETER f3a4 angle 20 200  118.00
+   PARAMETER f3d1 dihedral 0.5 5  0.81
+   PARAMETER f3i1 improper 20 200 96.00
+
+.. tip::
+   
+   If you are stuck are overwhelmed by the number of files and how they should
+   be formatted, take a look at the ``tutorial_files`` branch of the github
+   repo.
+   It contains the files created during this tutorial.
+
+The first block defines the location of some crucial files and sets our MD
+executable to use python (you can also use **CHARMM** if you have access to it).
+The **PSF** and **CRD** lines are for the structure
+and coordinate files, respectively, while **PARAMS** is a text file containing
+the paths to the force field (*toppar* in **CHARMM**).
+
+The **VARFILE** entry should be identical to the stream file generated by
+``str_merge.py``, with the values of the force constants substituted by unique
+variable names (see the **PARAMETER** block).
+**MDINP** is the name of the file containing the calculation of normal modes,
+**MDOUT** are the results to be written (can also be redirected to /dev/null
+if no debugging is necessary). **QMOUT** contains the results of the frequency
+and normal mode calculations carried out at the start of the tutorial.
+The next three lines give the locations for optimization results to be written,
+so you should also create the directory specified here.
+
+The second block contains the settings for the genetic algorithm, *e.g.* how
+many generations to compute and the number of members within a generation
+(population size).
+
+The third block contains the names, types, bounds and starting values of the
+force constants that should be optimized. The names have to be identical to
+those in the **VARFILE** (minus the ``@``). The type has to be either ``bond``,
+``angle``, ``dihedral`` or ``improper``. The next three numbers define the min
+and max range that the force constants can take and an initial guess.
+
+Starting FFGenOpt
+=================
+
+If everything is set up correctly (*i.e.* all files exist and the paths point
+to the right location), you can start **FFGenOpt** from the main directory by
+
+.. code-block:: bash
+
+   python FF_GenOpt.py /path/to/config_file
+
+You should first see a message about no population found (if you are starting
+the optimization for the first time) and that an initial population is being
+generated. Once that is done, you will see a summary after each generation
+detailing a best fitness score and average score along with the improvement
+since the last generation, among other things. After the specified number of
+optimization cycles (**GENERATIONS** in the config file) are through, you can
+take a look at your resluts (or the logs if somehting went wrong) in the
+directory specified in the config file. If everything looks sane, then
+congratulations!
+You can now substitute your old force field parameters by those in the
+``FF_GenOpt_results`` directory and start computing new MD trajectories.

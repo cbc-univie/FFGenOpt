@@ -66,7 +66,7 @@ environment via
 
    conda install -n ffgenopt -c psi4 psi4
 
-Your script may look something like this:
+Your QM job script may look something like this:
 
 .. code-block:: python
 
@@ -97,7 +97,7 @@ Your script may look something like this:
    """)
    
    mp2_e, mp2_wfn = psi4.optimize('mp2/cc-pvdz', molecule=inp_mol, return_wfn = True)
-   hess, wfn = psi4.driver.hessian('mp2/aug-cc-pvtz', return_wfn = True)
+   hess, wfn = psi4.driver.hessian('mp2/cc-pvdz', return_wfn = True)
    dipder = wfn.variables().get("CURRENT DIPOLE GRADIENT", None)
    if dipder is not None:
        dipder = np.asarray(dipder).T
