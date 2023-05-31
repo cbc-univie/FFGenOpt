@@ -48,11 +48,11 @@ class NormalModeAnalysis(object):
 
     def __getCPUSimulation__(self):
         if self.CPUProp:
-            CPUPlatform = Platform.getPlatformByName('CPU')
+            CPUPlatform = Platform.getPlatformByName('Reference')
             simulation = Simulation(self.topology, self.CPUSystem, self.CPUIntegrator, CPUPlatform, self.CPUProp)
             return simulation
         else:
-            CPUPlatform = Platform.getPlatformByName('CPU')
+            CPUPlatform = Platform.getPlatformByName('Reference')
             simulation = Simulation(self.topology, self.CPUSystem, self.CPUIntegrator, CPUPlatform)
             return simulation
 
