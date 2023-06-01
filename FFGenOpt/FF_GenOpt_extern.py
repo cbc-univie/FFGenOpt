@@ -488,9 +488,9 @@ def normal_mode(system, integrator, context, topology):
     nma = NormalModeAnalysis(topology[0], system[0],
             integrator[0],
             context[0].getState(getPositions=True).getPositions(asNumpy=True),
-            CPUOnly=True)
+            CPUOnly=False)
     nma.CPUPreMinimization()
-    nma.CPUMinimizationCycle()
+    #nma.CPUMinimizationCycle()
 
     heavy_atoms = []
     for i,j in enumerate(topology[0].atoms()):

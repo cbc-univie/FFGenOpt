@@ -80,6 +80,7 @@ class FitnessFunction:
                 return 9999999.0
         else:
             #try:
+            self.varnames = get_varnames(self.paramfilename)
             update_context(self.system[0],self.context[0],self.varnames,self.bonds,self.angles,self.dihedrals)
             update_context(self.system[1],self.context[1],self.varnames,self.bonds,self.angles,self.dihedrals)
             self.mdfreq, mdX, mdY, mdZ = normal_mode(self.system, self.integrator,
