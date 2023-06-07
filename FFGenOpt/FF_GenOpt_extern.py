@@ -483,12 +483,36 @@ def update_context(system, context, varnames, bonds_to_change, angles_to_change,
                         (varnames[dihs_to_change[impinfo]], theta0))
                     f.updateParametersInContext(context)
 
+# RMSD routine
+def kabsch_rmsd(P, Q):
+    """ Calculate the RMSD fit to a reference and rotate"""
+    Q  = Q - Q.mean(axis=0)
+    CM = P.mean(axis=0)
+    P  = P - P.mean(axis=0)
+
+    # Computation of the covariance matrix
+    C = np.dot(np.transpose(P), Q)
+    V, S, W = np.linalg.svd(C)
+    d = (np.linalg.det(V) * np.linalg.det(W)) < 0.0
+
+    if d:
+        S[-1] = -S[-1]
+        V[:, -1] = -V[:, -1]
+
+    # Create Rotation matrix U and kabsch rotate
+    U = np.dot(V, W)
+    P = np.dot(P, U) + CM
+
+    return P
+
 def normal_mode(system, integrator, context, topology):
     """Compute frequencies and normal modes"""
+    CPUOnly = True
+    refPosAll = context[0].getState(getPositions=True).getPositions(asNumpy=True)._value
     nma = NormalModeAnalysis(topology[0], system[0],
             integrator[0],
-            context[0].getState(getPositions=True).getPositions(asNumpy=True),
-            CPUOnly=False)
+            refPosAll,
+            CPUOnly=CPUOnly)
     nma.CPUPreMinimization()
     #nma.CPUMinimizationCycle()
 
@@ -497,13 +521,23 @@ def normal_mode(system, integrator, context, topology):
         if j.element is not None:
             heavy_atoms.append(i)
 
-    minState = nma.CPUSimulation.context.getState(getPositions=True, getEnergy=True, getForces=True)
-    minPos   = minState.getPositions(asNumpy=True)[heavy_atoms]
+    if CPUOnly:
+        minState = nma.CPUSimulation.context.getState(getPositions=True, getEnergy=True, getForces=True)
+    else:
+        minState = nma.CUDASimulation.context.getState(getPositions=True, getEnergy=True, getForces=True)
+    minPos   = minState.getPositions(asNumpy=True)._value[heavy_atoms]
+    refPos   = refPosAll[heavy_atoms]
     context[1].setPositions(minPos)
     nma2 = NormalModeAnalysis(topology[1], system[1],
             integrator[1],
             context[1].getState(getPositions=True).getPositions(asNumpy=True),
-            CPUOnly=True)
+            CPUOnly=CPUOnly)
+
+    rmsdPos = kabsch_rmsd(minPos, refPos)
+    if CPUOnly:
+        nma2.CPUSimulation.context.setPositions(rmsdPos)
+    else:
+        nma2.CUDASimulation.context.setPositions(rmsdPos)
 
     nma2.CalculateNormalModes()
     vib_spec = []
