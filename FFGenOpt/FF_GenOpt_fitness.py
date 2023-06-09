@@ -27,7 +27,7 @@ class TestFitnessFunction:
         return np.sum((parameters-self.target)**2) #test
 
 class FitnessFunction:
-    def __init__(self,paramSettings,extern,psf,crd,params,varfile,mdexec,mdinp,mdout,qmout,paramfilename):
+    def __init__(self,paramSettings,extern,psf,crd,params,varfile,mdexec,mdinp,mdout,qmout,qmfactor,paramfilename):
         self.parameterNames = paramSettings.names
         self.dim = paramSettings.dim
         self.numOfEvaluations = 0
@@ -40,6 +40,7 @@ class FitnessFunction:
         self.mdinp = mdinp
         self.mdout = mdout
         self.qmout = qmout
+        self.qmfactor = qmfactor
         self.paramfilename = paramfilename
         self.extern = extern
         self.mod = None
@@ -74,7 +75,7 @@ class FitnessFunction:
                 RunMD(self.mdexec, self.mdinp, self.mdout)
                 mdfreq, mdX, mdY, mdZ = read_charmm(self.mdout)
                 qmfreq, qmX, qmY, qmZ = self.qmReferenceData
-                fitness = Compute(mdfreq, mdX, mdY, mdZ, qmfreq, qmX, qmY, qmZ)[0]
+                fitness = Compute(mdfreq, mdX, mdY, mdZ, qmfreq, qmX, qmY, qmZ, self.qmfactor)[0]
                 return fitness
             except:
                 return 9999999.0
@@ -87,14 +88,14 @@ class FitnessFunction:
                     self.context, self.topology)
             #raise StopIteration
             qmfreq, qmX, qmY, qmZ = self.qmReferenceData
-            fitness = Compute(self.mdfreq, mdX, mdY, mdZ, qmfreq, qmX, qmY, qmZ)[0]
+            fitness = Compute(self.mdfreq, mdX, mdY, mdZ, qmfreq, qmX, qmY, qmZ, self.qmfactor)[0]
             return fitness
             #except:
             #    return 9999999.0
     def dumpFrequencies(self, parameters):
         output = ""
         self.compute(parameters)
-        qfreq = np.array(read_gaussian(self.qmout)[0])*0.957 #qm factor from external file
+        qfreq = np.array(read_gaussian(self.qmout)[0])*self.qmfactor
         if self.extern == "True":
             mdfreq = np.array(read_charmm(self.mdout)[0])
         else:

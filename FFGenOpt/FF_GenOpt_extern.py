@@ -10,8 +10,6 @@ import parmed
 
 from normalmodeanalysis import NormalModeAnalysis
 
-qmfactor = 0.957
-
 #source: from afmm_read_gaupy.py:
 def read_charmm(filename):
     """Takes the name of the CHARMM output file that contains
@@ -120,7 +118,7 @@ def read_gaussian(filename):
     return freq, X, Y, Z
 
 #source: from afmm_read_gaupy.py:
-def Compute(mdfreq, mdX, mdY, mdZ, qmfreq, qmX, qmY, qmZ):
+def Compute(mdfreq, mdX, mdY, mdZ, qmfreq, qmX, qmY, qmZ, qmfactor):
     """Computes the Merit function"""
     N = int((len(mdfreq)/3) + 2)
     if (N != ((len(qmfreq)/3) + 2)) or (N == 2):

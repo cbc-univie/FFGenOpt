@@ -67,6 +67,8 @@ class Config:
                         self.mdout = e[1]
                     if(e[0] == "QMOUT"):
                         self.qmout = e[1]
+                    if(e[0] == "QMFACTOR"):
+                        self.qmfactor = float(e[1])
                     if(e[0] == "PARAM_FILENAME"):
                         self.paramfilename = e[1]
                     if(e[0] == "POPULATION_FILENAME"):

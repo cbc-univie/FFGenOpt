@@ -329,7 +329,7 @@ paramSettings = ParameterSettings()
 for p in conf.PARAMETER_SETTINGS:
     paramSettings.addParameterSetting(name=p[0],ptype=p[1],pmin=p[2],pmax=p[3],initVal=p[4])
 fitnessFunction = FitnessFunction(paramSettings,conf.extern,conf.psf,conf.crd,conf.params,
-    conf.varfile,conf.mdexec,conf.mdinp,conf.mdout,conf.qmout,conf.paramfilename)
+    conf.varfile,conf.mdexec,conf.mdinp,conf.mdout,conf.qmout,conf.qmfactor,conf.paramfilename)
 
 core = GenOptCore(paramSettings,conf,fitnessFunction,generations=conf.GENERATIONS,
     populationSize=conf.POPULATION_SIZE,mutationsPerGeneration=conf.MUTATIONS_PER_GENERATION,
