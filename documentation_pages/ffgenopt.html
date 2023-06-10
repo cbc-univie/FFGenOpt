@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Using FFGenOpt &mdash; FFGenOpt  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Generating Initial Force Fields" href="forcefield.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            FFGenOpt
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="qm.html">Quantum Mechanics Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="forcefield.html">Generating Initial Force Fields</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Using FFGenOpt</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#defining-force-constants">Defining Force Constants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#starting-ffgenopt">Starting FFGenOpt</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">FFGenOpt</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Using FFGenOpt</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/documentation_pages/ffgenopt.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="using-ffgenopt">
+<span id="ffgenopt"></span><h1>Using FFGenOpt<a class="headerlink" href="#using-ffgenopt" title="Permalink to this heading"></a></h1>
+<p>Start by creating a directory under <em>Molecules</em> via</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir<span class="w"> </span>/path/to/FFGenOpt/Molecules/f3ccoo
+</pre></div>
+</div>
+<p>Copy your .psf and coordinate files to this directory, as well as the output of
+the Psi4 QM job. Since the initial parameters for trifluoroacetate are based on
+DGenFF, you should also copy <code class="docutils literal notranslate"><span class="pre">toppar_drude_master_protein_2019g_orig.str</span></code>
+from the <code class="docutils literal notranslate"><span class="pre">Molecules/oac</span></code> directory.</p>
+<p>If you plan on using <strong>CHARMM</strong> as your MD engine for the calculation of the
+normal modes, then you will need <code class="docutils literal notranslate"><span class="pre">drude_oac.inp</span></code>. If you plan on using OpenMM
+instead, you will need <code class="docutils literal notranslate"><span class="pre">freq.py</span></code>,
+and <code class="docutils literal notranslate"><span class="pre">normalmodeanalysis.py</span></code> from <code class="docutils literal notranslate"><span class="pre">Molecules/bf4</span></code>.
+In either case, make sure to modifiy the copied files so that the correct
+coordinates and topologies are read.</p>
+<p>If you have been using
+<strong>ffparam</strong> (and don’t have access to <strong>CHARMM</strong>), you should also copy
+<code class="docutils literal notranslate"><span class="pre">psf_megre.py</span></code>, <code class="docutils literal notranslate"><span class="pre">str_merge.py</span></code> and <code class="docutils literal notranslate"><span class="pre">crd_merge.py</span></code> from <code class="docutils literal notranslate"><span class="pre">bf4</span></code>.
+These scripts will generate stream files, .psfs and coordinates with polarizable
+atom types but without any extra particles such as lone pairs or Drudes,
+respectively. Execute each of them via</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>xxx_merge.py<span class="w"> </span>cgenff_file<span class="w"> </span>dgenff_file
+</pre></div>
+</div>
+<p>substituting the command line arguments with the names of your files.
+The resulting new files will serve as the basis for the parametrization in the
+next paragraph.</p>
+<section id="defining-force-constants">
+<h2>Defining Force Constants<a class="headerlink" href="#defining-force-constants" title="Permalink to this heading"></a></h2>
+<p>Now we can take a look at the config files that <strong>FFGenOpt</strong> uses to set up a
+molecular system. You can use <em>e.g.</em> <code class="docutils literal notranslate"><span class="pre">FF_GenOpt_conf/FF_GenOpt_bf4.cfg</span></code> as a
+template for trifluoroacetate. The ready-to-deploy file might look like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">EXTERN</span>                      <span class="kc">False</span>                                            <span class="c1"># False: use OpenMM for MD freqs, True: use MDEXEC</span>
+<span class="n">MDEXEC</span>                      <span class="n">python3</span>                                          <span class="c1"># charmm executable</span>
+<span class="n">PSF</span>                         <span class="n">Molecules</span><span class="o">/</span><span class="n">f3ccoo</span><span class="o">/</span><span class="n">cgen_pol</span><span class="o">.</span><span class="n">psf</span>                    <span class="c1"># MD PSF file</span>
+<span class="n">CRD</span>                         <span class="n">Molecules</span><span class="o">/</span><span class="n">f3ccoo</span><span class="o">/</span><span class="n">f3coo_mp2</span><span class="o">.</span><span class="n">crd</span>                   <span class="c1"># MD crd file</span>
+<span class="n">PARAMS</span>                      <span class="n">Molecules</span><span class="o">/</span><span class="n">f3ccoo</span><span class="o">/</span><span class="n">ff</span><span class="o">.</span><span class="n">str</span>                          <span class="c1"># MD parameters</span>
+<span class="n">VARFILE</span>                     <span class="n">Molecules</span><span class="o">/</span><span class="n">f3ccoo</span><span class="o">/</span><span class="n">var</span><span class="o">.</span><span class="n">str</span>                         <span class="c1"># parameterfiles with variables</span>
+<span class="n">MDINP</span>                       <span class="n">Molecules</span><span class="o">/</span><span class="n">f3ccoo</span><span class="o">/</span><span class="n">freq</span><span class="o">.</span><span class="n">py</span>                         <span class="c1"># MD input file</span>
+<span class="n">MDOUT</span>                       <span class="n">Molecules</span><span class="o">/</span><span class="n">f3ccoo</span><span class="o">/</span><span class="n">charmm_normalmode</span><span class="o">.</span><span class="n">out</span>           <span class="c1"># MD run output</span>
+<span class="n">QMOUT</span>                       <span class="n">Molecules</span><span class="o">/</span><span class="n">f3ccoo</span><span class="o">/</span><span class="n">f3coo_hess</span><span class="o">.</span><span class="n">out</span>                  <span class="c1"># QM reference</span>
+<span class="n">PARAM_FILENAME</span>              <span class="n">FF_GenOpt_results</span><span class="o">/</span><span class="n">f3coo</span><span class="o">/</span><span class="n">parameters</span><span class="o">.</span><span class="n">str</span>           <span class="c1"># Write parameters here, they will be read by MDINP</span>
+<span class="n">POPULATION_FILENAME</span>         <span class="n">FF_GenOpt_results</span><span class="o">/</span><span class="n">f3coo</span><span class="o">/</span><span class="n">lastPopulation_f3coo</span><span class="o">.</span><span class="n">txt</span>
+<span class="n">LOG_FILENAME</span>                <span class="n">FF_GenOpt_results</span><span class="o">/</span><span class="n">f3coo</span><span class="o">/</span><span class="n">convergence_f3coo</span><span class="o">.</span><span class="n">log</span>
+
+<span class="n">GENERATIONS</span>                 <span class="mi">100</span>             <span class="c1">#Number of generations to be created</span>
+<span class="n">POPULATION_SIZE</span>             <span class="mi">200</span>             <span class="c1">#Size of population</span>
+<span class="n">MUTATIONS_PER_GENERATION</span>    <span class="mi">50</span>              <span class="c1">#Crossovers and mutations per generation</span>
+<span class="n">STEP_SIZE</span>                   <span class="mf">0.05</span>            <span class="c1">#Maximum step size for random algorithm</span>
+<span class="n">CROSSOVER_BLX</span>               <span class="mf">0.7</span>             <span class="c1">#Probability of choosing BLX method... has to sum up to 1</span>
+<span class="n">CROSSOVER_SBX</span>               <span class="mf">0.25</span>            <span class="c1">#Probability of choosing SBX method... has to sum up to 1</span>
+<span class="n">CROSSOVER_UNIFORM</span>           <span class="mf">0.05</span>            <span class="c1">#Probability of choosing uniform crossover... has to sum up to 1</span>
+<span class="n">MINIMUM_IMPROVEMENT</span>         <span class="mf">0.0001</span>          <span class="c1">#Minimum improvement to continue random algorithm direction in percent</span>
+<span class="n">MINIMUM_DIVERSITY</span>           <span class="mf">0.0001</span>          <span class="c1">#Minimum population diversity before a new initial population is created</span>
+
+<span class="c1">#------------------------------------------------</span>
+<span class="c1">#         name  type        min     max     val</span>
+<span class="c1">#------------------------------------------------</span>
+<span class="n">PARAMETER</span> <span class="n">f3b1</span> <span class="n">bond</span> <span class="mi">50</span>  <span class="mi">500</span>  <span class="mf">160.95</span>
+<span class="n">PARAMETER</span> <span class="n">f3b2</span> <span class="n">bond</span> <span class="mi">100</span> <span class="mi">1000</span> <span class="mf">525.00</span>
+<span class="n">PARAMETER</span> <span class="n">f3b2</span> <span class="n">bond</span> <span class="mi">100</span> <span class="mi">1000</span> <span class="mf">265.00</span>
+<span class="n">PARAMETER</span> <span class="n">f3a1</span> <span class="n">angle</span> <span class="mi">20</span> <span class="mi">200</span>   <span class="mf">30.98</span>
+<span class="n">PARAMETER</span> <span class="n">f3a2</span> <span class="n">angle</span> <span class="mi">20</span> <span class="mi">200</span>  <span class="mf">100.00</span>
+<span class="n">PARAMETER</span> <span class="n">f3a3</span> <span class="n">angle</span> <span class="mi">20</span> <span class="mi">200</span>   <span class="mf">47.24</span>
+<span class="n">PARAMETER</span> <span class="n">f3a4</span> <span class="n">angle</span> <span class="mi">20</span> <span class="mi">200</span>  <span class="mf">118.00</span>
+<span class="n">PARAMETER</span> <span class="n">f3d1</span> <span class="n">dihedral</span> <span class="mf">0.5</span> <span class="mi">5</span>  <span class="mf">0.81</span>
+<span class="n">PARAMETER</span> <span class="n">f3i1</span> <span class="n">improper</span> <span class="mi">20</span> <span class="mi">200</span> <span class="mf">96.00</span>
+</pre></div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>If you are stuck are overwhelmed by the number of files and how they should
+be formatted, take a look at the <code class="docutils literal notranslate"><span class="pre">tutorial_files</span></code> branch of the github
+repo.
+It contains the files created during this tutorial.</p>
+</div>
+<p>The first block defines the location of some crucial files and sets our MD
+executable to use python (you can also use <strong>CHARMM</strong> if you have access to it).
+The <strong>PSF</strong> and <strong>CRD</strong> lines are for the structure
+and coordinate files, respectively, while <strong>PARAMS</strong> is a text file containing
+the paths to the force field (<em>toppar</em> in <strong>CHARMM</strong>).</p>
+<p>The <strong>VARFILE</strong> entry should be identical to the stream file generated by
+<code class="docutils literal notranslate"><span class="pre">str_merge.py</span></code>, with the values of the force constants substituted by unique
+variable names (see the <strong>PARAMETER</strong> block).
+<strong>MDINP</strong> is the name of the file containing the calculation of normal modes,
+<strong>MDOUT</strong> are the results to be written (can also be redirected to /dev/null
+if no debugging is necessary). <strong>QMOUT</strong> contains the results of the frequency
+and normal mode calculations carried out at the start of the tutorial.
+The next three lines give the locations for optimization results to be written,
+so you should also create the directory specified here.</p>
+<p>The second block contains the settings for the genetic algorithm, <em>e.g.</em> how
+many generations to compute and the number of members within a generation
+(population size).</p>
+<p>The third block contains the names, types, bounds and starting values of the
+force constants that should be optimized. The names have to be identical to
+those in the <strong>VARFILE</strong> (minus the <code class="docutils literal notranslate"><span class="pre">&#64;</span></code>). The type has to be either <code class="docutils literal notranslate"><span class="pre">bond</span></code>,
+<code class="docutils literal notranslate"><span class="pre">angle</span></code>, <code class="docutils literal notranslate"><span class="pre">dihedral</span></code> or <code class="docutils literal notranslate"><span class="pre">improper</span></code>. The next three numbers define the min
+and max range that the force constants can take and an initial guess.</p>
+</section>
+<section id="starting-ffgenopt">
+<h2>Starting FFGenOpt<a class="headerlink" href="#starting-ffgenopt" title="Permalink to this heading"></a></h2>
+<p>If everything is set up correctly (<em>i.e.</em> all files exist and the paths point
+to the right location), you can start <strong>FFGenOpt</strong> from the main directory by</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>FF_GenOpt.py<span class="w"> </span>/path/to/config_file
+</pre></div>
+</div>
+<p>You should first see a message about no population found (if you are starting
+the optimization for the first time) and that an initial population is being
+generated. Once that is done, you will see a summary after each generation
+detailing a best fitness score and average score along with the improvement
+since the last generation, among other things. After the specified number of
+optimization cycles (<strong>GENERATIONS</strong> in the config file) are through, you can
+take a look at your resluts (or the logs if somehting went wrong) in the
+directory specified in the config file. If everything looks sane, then
+congratulations!
+You can now substitute your old force field parameters by those in the
+<code class="docutils literal notranslate"><span class="pre">FF_GenOpt_results</span></code> directory and start computing new MD trajectories.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="forcefield.html" class="btn btn-neutral float-left" title="Generating Initial Force Fields" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Andras Szabadi, Aleksandar Doknic.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quantum Mechanics Setup &mdash; FFGenOpt  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Generating Initial Force Fields" href="forcefield.html" />
+    <link rel="prev" title="Welcome to FFGenOpt’s documentation!" href="../index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            FFGenOpt
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Quantum Mechanics Setup</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#initial-coordinates">Initial Coordinates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#qm-calculation">QM Calculation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="forcefield.html">Generating Initial Force Fields</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ffgenopt.html">Using FFGenOpt</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">FFGenOpt</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Quantum Mechanics Setup</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/documentation_pages/qm.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="quantum-mechanics-setup">
+<span id="id1"></span><h1>Quantum Mechanics Setup<a class="headerlink" href="#quantum-mechanics-setup" title="Permalink to this heading"></a></h1>
+<section id="initial-coordinates">
+<h2>Initial Coordinates<a class="headerlink" href="#initial-coordinates" title="Permalink to this heading"></a></h2>
+<p>Our goal is to generate parameters for the trifluoroacetate ion,
+F<sub>3</sub>CCOO<sup>-</sup>.
+To do this, we will first generate our intial coordinates used in the QM
+calulations by drawing our molecule in avogadro and optimizing its structure
+via Open Babel.</p>
+<p>On debian-based systems, you can install avogadro by</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>avogadro
+</pre></div>
+</div>
+<p>After opening avogadro, you can start building your molecule by clicking on
+the black field. Use the keyboard or the builder menu to construct
+trifluoroacetate.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Clicking on an existing bond increases the bond order, right-clicking on an
+atom deletes it.</p>
+</div>
+<p>You can then use the Open Babel extension to get a reasonable starting
+geometry.</p>
+<img alt="../_images/avo1.png" src="../_images/avo1.png" />
+<p>If the option is greyed out, you can install Open Babel <em>e.g.</em> in a conda
+environment. If you don’t already have it, you can grab the latest version of
+<a class="reference external" href="https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh">Miniconda </a>.
+Execute the script to install Miniconda, and then create a new environment
+by typing</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>create<span class="w"> </span>-n<span class="w"> </span>ffgenopt<span class="w"> </span><span class="nv">python</span><span class="o">=</span><span class="m">3</span>.9
+</pre></div>
+</div>
+<p>Answer yes to the prompt and activate new environment. You can then install
+Open Babel and open avogadro again.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>activate<span class="w"> </span>ffgenopt
+conda<span class="w"> </span>install<span class="w"> </span>-c<span class="w"> </span>conda-forge<span class="w"> </span>openbabel
+</pre></div>
+</div>
+<p>Now you should be able to use the extension in avogadro, provided you started
+it with the ffgenopt environment active. Save the resulting geometry
+(File -&gt; Export -&gt; Molecule) as an .xyz file.</p>
+</section>
+<section id="qm-calculation">
+<h2>QM Calculation<a class="headerlink" href="#qm-calculation" title="Permalink to this heading"></a></h2>
+<p>Now you can start a QM calculation with your software of choice (such as Psi4
+or Gaussian). If you want to use Psi4, you can install it in your ffgenopt
+environment via</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>install<span class="w"> </span>-n<span class="w"> </span>ffgenopt<span class="w"> </span>-c<span class="w"> </span>psi4<span class="w"> </span>psi4
+</pre></div>
+</div>
+<p>Your QM job script may look something like this:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">psi4</span><span class="o">,</span><span class="nn">os</span><span class="o">,</span><span class="nn">importlib</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">mem_bytes</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">sysconf</span><span class="p">(</span><span class="s1">&#39;SC_PAGE_SIZE&#39;</span><span class="p">)</span> <span class="o">*</span> <span class="n">os</span><span class="o">.</span><span class="n">sysconf</span><span class="p">(</span><span class="s1">&#39;SC_PHYS_PAGES&#39;</span><span class="p">)</span>
+<span class="n">mem_gib</span> <span class="o">=</span> <span class="mf">0.75</span><span class="o">*</span><span class="n">mem_bytes</span><span class="o">/</span><span class="p">(</span><span class="mf">1024.</span><span class="o">**</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">mem</span><span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">mem_gib</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39;gb&#39;</span>
+<span class="n">cpu</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">cpu_count</span><span class="p">()</span>
+
+<span class="n">psi4</span><span class="o">.</span><span class="n">set_num_threads</span><span class="p">(</span><span class="n">cpu</span><span class="p">)</span>
+<span class="n">psi4</span><span class="o">.</span><span class="n">set_memory</span><span class="p">(</span><span class="n">mem</span><span class="p">)</span>
+
+<span class="n">outfile</span> <span class="o">=</span> <span class="s1">&#39;f3ccoo_hess.out&#39;</span>
+<span class="n">psi4</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">set_output_file</span><span class="p">(</span><span class="n">outfile</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+<span class="n">psi4</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">IOManager</span><span class="o">.</span><span class="n">shared_object</span><span class="p">()</span><span class="o">.</span><span class="n">set_default_path</span><span class="p">(</span><span class="s1">&#39;/tmp/&#39;</span><span class="p">)</span>
+
+<span class="n">inp_mol</span> <span class="o">=</span> <span class="n">psi4</span><span class="o">.</span><span class="n">geometry</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">-1 1</span>
+<span class="s2">C     -1.60392   -0.46377    0.02162</span>
+<span class="s2">C     -0.36006    0.41501    0.05794</span>
+<span class="s2">F     -1.97453   -0.73962   -1.24327</span>
+<span class="s2">F     -1.40553   -1.63727    0.65260</span>
+<span class="s2">F     -2.65285    0.13123    0.62146</span>
+<span class="s2">O      0.71408   -0.17910   -0.39895</span>
+<span class="s2">O     -0.37609    1.60231    0.32048</span>
+<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+
+<span class="n">mp2_e</span><span class="p">,</span> <span class="n">mp2_wfn</span> <span class="o">=</span> <span class="n">psi4</span><span class="o">.</span><span class="n">optimize</span><span class="p">(</span><span class="s1">&#39;mp2/cc-pvdz&#39;</span><span class="p">,</span> <span class="n">molecule</span><span class="o">=</span><span class="n">inp_mol</span><span class="p">,</span> <span class="n">return_wfn</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+<span class="n">hess</span><span class="p">,</span> <span class="n">wfn</span> <span class="o">=</span> <span class="n">psi4</span><span class="o">.</span><span class="n">driver</span><span class="o">.</span><span class="n">hessian</span><span class="p">(</span><span class="s1">&#39;mp2/cc-pvdz&#39;</span><span class="p">,</span> <span class="n">return_wfn</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+<span class="n">dipder</span> <span class="o">=</span> <span class="n">wfn</span><span class="o">.</span><span class="n">variables</span><span class="p">()</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;CURRENT DIPOLE GRADIENT&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">dipder</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="n">dipder</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">dipder</span><span class="p">)</span><span class="o">.</span><span class="n">T</span>
+<span class="n">hess_arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">hess</span><span class="p">)</span>
+<span class="n">geom</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">inp_mol</span><span class="o">.</span><span class="n">geometry</span><span class="p">())</span>
+<span class="n">masses</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">([</span><span class="n">inp_mol</span><span class="o">.</span><span class="n">mass</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">inp_mol</span><span class="o">.</span><span class="n">natom</span><span class="p">())])</span>
+<span class="n">ir_labels</span> <span class="o">=</span> <span class="n">inp_mol</span><span class="o">.</span><span class="n">irrep_labels</span><span class="p">()</span>
+<span class="n">basis</span> <span class="o">=</span> <span class="n">wfn</span><span class="o">.</span><span class="n">basisset</span><span class="p">()</span>
+
+<span class="n">vibinfo</span><span class="p">,</span> <span class="n">vibtext</span> <span class="o">=</span> <span class="n">psi4</span><span class="o">.</span><span class="n">driver</span><span class="o">.</span><span class="n">qcdb</span><span class="o">.</span><span class="n">vib</span><span class="o">.</span><span class="n">harmonic_analysis</span><span class="p">(</span><span class="n">hess_arr</span><span class="p">,</span> <span class="n">geom</span><span class="p">,</span>
+<span class="n">masses</span><span class="p">,</span> <span class="n">basis</span><span class="p">,</span> <span class="n">ir_labels</span><span class="p">,</span> <span class="n">dipder</span><span class="p">)</span>
+<span class="n">symbols</span> <span class="o">=</span> <span class="p">[</span><span class="n">inp_mol</span><span class="o">.</span><span class="n">symbol</span><span class="p">(</span><span class="n">at</span><span class="p">)</span> <span class="k">for</span> <span class="n">at</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">inp_mol</span><span class="o">.</span><span class="n">natom</span><span class="p">())]</span>
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">outfile</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">psi4</span><span class="o">.</span><span class="n">driver</span><span class="o">.</span><span class="n">qcdb</span><span class="o">.</span><span class="n">vib</span><span class="o">.</span><span class="n">print_vibs</span><span class="p">(</span><span class="n">vibinfo</span><span class="p">,</span> <span class="n">normco</span><span class="o">=</span><span class="s1">&#39;q&#39;</span><span class="p">,</span> <span class="n">ncprec</span><span class="o">=</span><span class="mi">5</span><span class="p">),</span> <span class="n">file</span><span class="o">=</span><span class="n">f</span><span class="p">)</span>
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;f3ccoo.molden&quot;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">handle</span><span class="p">:</span>
+    <span class="n">handle</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">psi4</span><span class="o">.</span><span class="n">driver</span><span class="o">.</span><span class="n">qcdb</span><span class="o">.</span><span class="n">vib</span><span class="o">.</span><span class="n">print_molden_vibs</span><span class="p">(</span><span class="n">vibinfo</span><span class="p">,</span> <span class="n">symbols</span><span class="p">,</span> <span class="n">geom</span><span class="p">,</span>
+    <span class="n">standalone</span><span class="o">=</span><span class="kc">True</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>This file requests a geometry optimization and subsequent frequency calculation
+at the mp2/cc-pvdz level of theory, printing the normal modes at the end of the
+output file, as well as writing them in a molden format for visualization.
+The <code class="docutils literal notranslate"><span class="pre">inp_mol</span></code> block contains the charge, electronic multiplicity as well as
+the starting geometry of your molecule, in this case taken from the avogadro
+output.
+You may want to change the value of <code class="docutils literal notranslate"><span class="pre">set_default_path()</span></code> (<em>i.e.</em> the
+directory where the temporary files are written), since <code class="docutils literal notranslate"><span class="pre">tmp</span></code> is often
+limited in size.</p>
+<p>Save the resulting file using a descriptive name, for instance <code class="docutils literal notranslate"><span class="pre">f3ccoo.py</span></code>.
+If your conda env is activated, you can start calculating the optimized
+geometry and the frequencies via</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python3<span class="w"> </span>f3ccoo.py
+</pre></div>
+</div>
+<p>Once the calculation finishes, inspect the resulting frequencies in the output
+file and make sure none of them are imaginary. If that is the case, then
+you can proceed to the <a class="reference internal" href="forcefield.html#force-field"><span class="std std-ref">next part</span></a> to generate the initial
+set of parameters. Alternatively, you can skip ahead to
+<a class="reference internal" href="ffgenopt.html#ffgenopt"><span class="std std-ref">using FFGenOpt</span></a>.
+If you do see imaginary frequencies, you can inspect the normal modes
+corresponding to those numers with molden. To install molden on debian-based
+systems use the commands</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>snapd
+sudo<span class="w"> </span>snap<span class="w"> </span>install<span class="w"> </span>core
+sudo<span class="w"> </span>snap<span class="w"> </span>install<span class="w"> </span>molden
+</pre></div>
+</div>
+<p>Now you can open the molden-formatted normal mode file by</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>molden<span class="w"> </span>f3ccoo.molden
+</pre></div>
+</div>
+<p>Extract the final geometry from the QM output into an .xyz file and open it
+with avogadro. Using the bond-centric atom manipulation tool, change the value
+of the internal coordinate (<em>e.g.</em> the <strong>F-C-C-O</strong> dihedral) slightly and
+start a geometry optimization with these coordinates. Rinse and repeat until
+only positive frequencies are reported in the output.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../index.html" class="btn btn-neutral float-left" title="Welcome to FFGenOpt’s documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="forcefield.html" class="btn btn-neutral float-right" title="Generating Initial Force Fields" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Andras Szabadi, Aleksandar Doknic.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
