@@ -254,8 +254,16 @@ def create_context(psffile,crdfile,paramsfile):
     system.append(ff.createSystem(mod.topology, nonbondedCutoff=nonbondedCutoff))
     system.append(psf.createSystem(params, nonbondedCutoff=nonbondedCutoff))
 
+    force_names = []
+    for f in system[0].getForces():
+        force_names.append(type(f).__name__)
+    fnames = list(set(force_names))
+
     integrator = []
-    integrator.append(DrudeNoseHooverIntegrator(temperature, coll_freq, drud_temp, drud_coll_freq, dt))
+    if "DrudeForce" in fnames:
+        integrator.append(DrudeNoseHooverIntegrator(temperature, coll_freq, drud_temp, drud_coll_freq, dt))
+    else:
+        integrator.append(NoseHooverIntegrator(temperature, coll_freq, dt))
     integrator[0].setConstraintTolerance(constraintTolerance)
     integrator.append(NoseHooverIntegrator(temperature, coll_freq, dt))
     integrator[1].setConstraintTolerance(constraintTolerance)
@@ -446,7 +454,7 @@ def update_context(system, context, varnames, bonds_to_change, angles_to_change,
                 l  = bond[2]
                 if bondinfo in bonds_to_change:
                     f.setBondParameters(bidx, bondinfo[0], bondinfo[1],
-                        l, varnames[bonds_to_change[bondinfo]]*kilocalories*angstrom**-2*mole**-1)
+                        l, 2.*varnames[bonds_to_change[bondinfo]]*kilocalories*angstrom**-2*mole**-1)
                     f.updateParametersInContext(context)
     
         elif type(f).__name__ == "HarmonicAngleForce":
@@ -456,7 +464,7 @@ def update_context(system, context, varnames, bonds_to_change, angles_to_change,
                 l = angle[3]
                 if angleinfo in angles_to_change:
                     f.setAngleParameters(aidx, angleinfo[0], angleinfo[1], angleinfo[2],
-                        l, varnames[angles_to_change[angleinfo]]*kilocalories*mole**-1*radian**-2)
+                        l, 2.*varnames[angles_to_change[angleinfo]]*kilocalories*mole**-1*radian**-2)
                     f.updateParametersInContext(context)
     
         elif type(f).__name__ == "PeriodicTorsionForce":
@@ -467,7 +475,7 @@ def update_context(system, context, varnames, bonds_to_change, angles_to_change,
                 if dihinfo in dihs_to_change:
                     f.setTorsionParameters(didx, dihinfo[0], dihinfo[1], dihinfo[2],
                         dihinfo[3], dihinfo[4], delta,
-                        varnames[dihs_to_change[dihinfo]]*kilocalories*mole**-1)
+                        2.*varnames[dihs_to_change[dihinfo]]*kilocalories*mole**-1)
                     f.updateParametersInContext(context)
     
         elif type(f).__name__ == "CustomTorsionForce":
@@ -478,14 +486,14 @@ def update_context(system, context, varnames, bonds_to_change, angles_to_change,
                 if impinfo in dihs_to_change:
                     f.setTorsionParameters(iidx, impinfo[0], impinfo[1],
                         impinfo[2], impinfo[3],
-                        (varnames[dihs_to_change[impinfo]], theta0))
+                        (2.*varnames[dihs_to_change[impinfo]], theta0))
                     f.updateParametersInContext(context)
 
 # RMSD routine
 def kabsch_rmsd(P, Q):
     """ Calculate the RMSD fit to a reference and rotate"""
+    CM = Q.mean(axis=0)
     Q  = Q - Q.mean(axis=0)
-    CM = P.mean(axis=0)
     P  = P - P.mean(axis=0)
 
     # Computation of the covariance matrix
